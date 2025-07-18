@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portside India Traders - Crosby® Eye Hoist Hook</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Global Styles */
+    body, h1, h2, h3, p, ul, li, a, section, header, footer {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    
+    a {
+      text-decoration: none;
+      color: #004080;
+    }
+    
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+    
+    section {
+      padding: 40px 0;
+    }
+    
+    /* Header & Navigation */
+    header {
+      background-color: #004080; /* Ocean Blue */
+      color: #fff;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo img {
+      height: 50px;
+      margin-right: 15px;
+      background: #fff;
+      padding: 5px;
+      border-radius: 4px;
+    }
+    
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .logo-text h1 {
+      font-size: 1.5em;
+      margin: 0;
+      color: white;
+    }
+    
+    .logo-text span {
+      font-size: 0.8em;
+      color: #ff9800;
+      margin-top: 3px;
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    
+    nav ul li {
+      margin-left: 20px;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    
+    nav ul li a:hover {
+      color: #ff9800;
+    }
+    
+    /* Hero Section - Solid Color Background */
+    .hero {
+      background: linear-gradient(135deg, #004080, #002b5c);
+      color: white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 20px;
+    }
+    
+    .hero .content {
+      max-width: 800px;
+    }
+    
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
+    
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 25px;
+      color: white;
+      opacity: 0.9;
+    }
+    
+    .hero .cta {
+      background: #fff;
+      color: #004080;
+      padding: 12px 30px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1.1em;
+      display: inline-block;
+      transition: all 0.3s;
+      margin-top: 20px;
+    }
+    
+    .hero .cta:hover {
+      background: #ff9800;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Section Headings */
+    .section-title {
+      text-align: center;
+      color: #004080;
+      margin-bottom: 30px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .section-title:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: #ff9800;
+    }
+    
+    /* Features Section */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
+    }
+    
+    .feature-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      border-top: 4px solid #004080;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .feature-card i {
+      font-size: 2.5rem;
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    .feature-card h3 {
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    /* Tables */
+    .sling-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      font-size: 0.9rem;
+    }
+    
+    .sling-table th {
+      background: #004080;
+      color: white;
+      padding: 15px;
+      text-align: left;
+      font-weight: 600;
+    }
+    
+    .sling-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .sling-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .sling-table tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+    
+    .sling-table tr:hover {
+      background-color: #e3f2fd;
+    }
+    
+    /* Notes Section */
+    .note {
+      background: #fff8e1;
+      border-left: 4px solid #ff9800;
+      padding: 25px;
+      border-radius: 5px;
+      margin: 30px 0;
+    }
+    
+    .note h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .note ul {
+      padding-left: 20px;
+    }
+    
+    .note li {
+      margin-bottom: 10px;
+    }
+    
+    /* Contact Section */
+    .contact-card {
+      background: white;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .contact-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: #e3f2fd;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      color: #004080;
+      font-size: 1.2rem;
+    }
+    
+    .contact-info {
+      flex: 1;
+    }
+    
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 50px 0 20px;
+      margin-top: 50px;
+    }
+    
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+    
+    .footer-column {
+      flex: 1;
+      min-width: 250px;
+      margin-bottom: 30px;
+      padding: 0 15px;
+    }
+    
+    .footer-column h3 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: #ff9800;
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-links a {
+      color: #ddd;
+      transition: color 0.3s;
+    }
+    
+    .footer-links a:hover {
+      color: #ff9800;
+    }
+    
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #444;
+    }
+    
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      
+      .sling-table {
+        display: block;
+        overflow-x: auto;
+      }
+      
+      header .container {
+        flex-direction: column;
+      }
+      
+      nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      nav ul li {
+        margin: 5px 10px;
+      }
+      
+      .contact-item {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .contact-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+      
+      .footer-content {
+        flex-direction: column;
+      }
+    }
+    
+    /* Crosby Branding */
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+    
+    .spec-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      border-left: 4px solid #004080;
+    }
+    
+    .spec-card h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .spec-card i {
+      color: #ff9800;
+    }
+    
+    .features-list {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 25px;
+      margin: 30px 0;
+    }
+    
+    .features-list h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #004080;
+      padding-bottom: 10px;
+    }
+    
+    .features-list ul {
+      padding-left: 20px;
+    }
+    
+    .features-list li {
+      margin-bottom: 10px;
+      padding-left: 10px;
+    }
+    
+    .features-list li:before {
+      content: "✓";
+      color: #004080;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    
+    .technical-details {
+      background: #e3f2fd;
+      border-radius: 8px;
+      padding: 25px;
+      margin: 30px 0;
+    }
+    
+    .dimension-placeholder {
+      background: #f0f0f0;
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      margin: 30px 0;
+      font-style: italic;
+      color: #666;
+    }
+    
+    .safety-badge {
+      background: rgba(0, 64, 128, 0.1); /* 10% opacity */;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 30px 0;
+      text-align: center;
+    }
+    
+    .safety-badge i {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      color: #ff9800;
+    }
+    
+    .feature-icon {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    
+    .feature-icon i {
+      font-size: 1.5rem;
+      color: #004080;
+      background: #e3f2fd;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    /* Material Indicators */
+    .material-indicator {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.85em;
+      font-weight: bold;
+      margin: 0 5px;
+    }
+    
+    .carbon {
+      background-color: #e3f2fd;
+      color: #004080;
+      border: 1px solid #004080;
+    }
+    
+    .alloy {
+      background-color: #fff8e1;
+      color: #ff9800;
+      border: 1px solid #ff9800;
+    }
+    
+    .galvanized {
+      background-color: #e8f5e9;
+      color: #2e7d32;
+      border: 1px solid #2e7d32;
+    }
+  </style>
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HQH77MSRY6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HQH77MSRY6');
+</script>
+
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="Images/FinalLogo.png" alt="Portside India Traders Logo">
+        <div class="logo-text">
+          <h1>Portside India Traders</h1>
+          <span>Strength that Anchors Your Success</span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="Product1.html">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="content">
+      <h1 style="color: white;">Crosby® Eye Hoist Hooks L-320CN</h1>
+      <p>Premium lifting hooks with QUIC-CHECK® deformation indicators for enhanced safety</p>
+      <a href="#contact" class="cta">Request a Quote</a>
+    </div>
+  </section>
+
+  <!-- Product Overview -->
+  <section id="overview">
+    <div class="container">
+      <h2 class="section-title">Eye Hoist Hook Overview</h2>
+      <p>The Crosby® L-320CN Eye Hoist Hook is engineered for superior performance in demanding lifting applications. Available in carbon steel and alloy steel, these hooks are rigorously tested for chemical composition and tensile strength to ensure reliability in critical operations.</p>
+      
+      <div class="safety-badge">
+        <i class="fas fa-certificate"></i>
+        <h3>Fatigue Rated for 20,000 Cycles</h3>
+        <p>Tested at 1.5× Working Load Limit for maximum durability and safety</p>
+      </div>
+      
+      <div class="features-list">
+        <h3>Key Features</h3>
+        <ul>
+          <li>Available in carbon steel and alloy steel</li>
+          <li>Fatigue rated to 20,000 cycles at 1.5× Working Load Limit</li>
+          <li>Each piece tested with chemical analysis and tensile testing</li>
+          <li>Includes QUIC-CHECK® deformation and angle indicators</li>
+          <li>Load rated and marked with Working Load Limit</li>
+          <li>Multiple model variants for various applications</li>
+          <li>Proof load tested for safety assurance</li>
+          <li>Designed with high safety factors</li>
+        </ul>
+      </div>
+      
+      <div class="specs-grid">
+        <div class="spec-card">
+          <h3><i class="fas fa-flask"></i> Material Options</h3>
+          <p>Available in carbon steel and alloy steel variants</p>
+        </div>
+        
+        <div class="spec-card">
+          <h3><i class="fas fa-tachometer-alt"></i> Fatigue Rated</h3>
+          <p>20,000 cycles at 1.5× Working Load Limit</p>
+        </div>
+        
+        <div class="spec-card">
+          <h3><i class="fas fa-check-double"></i> QUIC-CHECK®</h3>
+          <p>Deformation and angle indicators for safety</p>
+        </div>
+        
+        <div class="spec-card">
+          <h3><i class="fas fa-hammer"></i> Rigorous Testing</h3>
+          <p>Chemical analysis and tensile testing on each piece</p>
+        </div>
+      </div>
+      
+      <div class="technical-details">
+        <h3>Model Variants</h3>
+        <div class="features">
+          <div class="feature-card">
+            <h3>L-320C</h3>
+            <p>Frame Size O-T</p>
+          </div>
+          <div class="feature-card">
+            <h3>L-320N / L-320</h3>
+            <p>Standard Eye Hooks</p>
+          </div>
+          <div class="feature-card">
+            <h3>GL-320CN</h3>
+            <p>Galvanized Carbon Steel</p>
+          </div>
+          <div class="feature-card">
+            <h3>L-320A / L-320AN</h3>
+            <p>Alloy Steel Variants</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specifications Section -->
+  <section id="specs" style="background-color: #f8f9fa;">
+    <div class="container">
+      <h2 class="section-title">Technical Specifications</h2>
+      <p>The L-320CN Eye Hoist Hook is available in multiple sizes with varying load capacities. All specifications are in metric tons (t) and kilograms (kg).</p>
+      
+      <div class="technical-details">
+        <h3>Design Factors</h3>
+        <div class="features">
+          <div class="feature-card">
+            <h3>Carbon Hooks</h3>
+            <p>5:1 Design Factor</p>
+          </div>
+          <div class="feature-card">
+            <h3>Alloy Hooks (1t-22t)</h3>
+            <p>5:1 Design Factor</p>
+          </div>
+          <div class="feature-card">
+            <h3>Alloy Hooks (30t-60t)</h3>
+            <p>4.5:1 Design Factor</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="technical-details">
+        <h3>Proof Load Specifications</h3>
+        <div class="features">
+          <div class="feature-card">
+            <h3>3/4t Carbon - 22t Alloy</h3>
+            <p>2.5× Working Load Limit</p>
+          </div>
+          <div class="feature-card">
+            <h3>20t Carbon - 60t Alloy</h3>
+            <p>2× Working Load Limit</p>
+          </div>
+        </div>
+      </div>
+      
+      <table class="sling-table">
+        <thead>
+          <tr>
+            <th>WLL (t)</th>
+            <th>Hook ID Code</th>
+            <th>Carbon Stock No.</th>
+            <th>Galv. Carbon Stock No.</th>
+            <th>Alloy Stock No.</th>
+            <th>Weight (kg)</th>
+            <th>S-4320 Stock No.</th>
+            <th>PL Stock No.</th>
+            <th>SS-4055 Stock No.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0.75</td>
+            <td>+D</td>
+            <td>1022205</td>
+            <td>1022208</td>
+            <td>1022380</td>
+            <td>0.28</td>
+            <td>1096325</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>+F</td>
+            <td>1022216</td>
+            <td>1022219</td>
+            <td>1022391</td>
+            <td>0.40</td>
+            <td>1096374</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>1.6</td>
+            <td>+G</td>
+            <td>1022227</td>
+            <td>1022230</td>
+            <td>1022402</td>
+            <td>0.65</td>
+            <td>1096421</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>+H</td>
+            <td>1022238</td>
+            <td>1022241</td>
+            <td>1022413</td>
+            <td>0.94</td>
+            <td>1096468</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>3.2</td>
+            <td>-</td>
+            <td>1022246</td>
+            <td>1022249</td>
+            <td>1022424</td>
+            <td>1.95</td>
+            <td>1096515</td>
+            <td>1092000</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>+J</td>
+            <td>1022260</td>
+            <td>1022262</td>
+            <td>1022435</td>
+            <td>3.76</td>
+            <td>1096562</td>
+            <td>1092001</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>7.5</td>
+            <td>tK</td>
+            <td>1022271</td>
+            <td>1022274</td>
+            <td>1022446</td>
+            <td>6.80</td>
+            <td>1096609</td>
+            <td>1092002</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>+L</td>
+            <td>1022282</td>
+            <td>1022285</td>
+            <td>1022457</td>
+            <td>9.42</td>
+            <td>1096657</td>
+            <td>1092003</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>+N</td>
+            <td>1022293</td>
+            <td>1022296</td>
+            <td>1022468</td>
+            <td>17.9</td>
+            <td>1096704</td>
+            <td>1092004</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>20</td>
+            <td>O</td>
+            <td>1022302</td>
+            <td>-</td>
+            <td>1022477</td>
+            <td>27.2</td>
+            <td>1093716</td>
+            <td>1090161</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>25</td>
+            <td>P</td>
+            <td>1023306</td>
+            <td>-</td>
+            <td>1023565</td>
+            <td>47.6</td>
+            <td>1093717</td>
+            <td>1090189</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>S</td>
+            <td>1023324</td>
+            <td>-</td>
+            <td>1023583</td>
+            <td>67.0</td>
+            <td>-</td>
+            <td>1090189</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>40</td>
+            <td>T</td>
+            <td>1023342</td>
+            <td>-</td>
+            <td>1023609</td>
+            <td>103.0</td>
+            <td>-</td>
+            <td>1090205</td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <div class="note">
+        <h3><i class="fas fa-exclamation-circle"></i> Important Notes</h3>
+        <ul>
+          <li><strong>Material Options:</strong> Available in carbon steel and alloy steel variants</li>
+          <li><strong>Fatigue Rating:</strong> Rated for 20,000 cycles at 1.5× Working Load Limit</li>
+          <li><strong>Testing:</strong> Each piece tested with chemical analysis and tensile testing</li>
+          <li><strong>Safety Indicators:</strong> QUIC-CHECK® deformation and angle indicators included</li>
+          <li><strong>Design Factors:</strong> 
+            <li>Carbon Hooks: 5:1</li>
+            <li>Alloy Hooks (1t-22t): 5:1</li>
+            <li>Alloy Hooks (30t-60t): 4.5:1</li>
+          </li>
+          <li><strong>Proof Load:</strong> </li>
+           <li> 3/4t Carbon through 22t Alloy = 2.5× WLL</li>
+            <li>20t Carbon through 60t Alloy = 2× WLL</li>
+          </li>
+          <li><strong>Working Load Limit:</strong> Clearly marked on each hook for safety compliance</li>
+          <li><strong>Compatibility:</strong> Designed for various lifting applications including industrial and marine</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Safety Features -->
+  <section id="safety">
+    <div class="container">
+      <h2 class="section-title">Safety Features</h2>
+      <div class="features">
+        <div class="feature-card">
+          <i class="fas fa-check-circle"></i>
+          <h3>QUIC-CHECK® Indicators</h3>
+          <p>Deformation and angle indicators for quick safety verification</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-bolt"></i>
+          <h3>Fatigue Resistance</h3>
+          <p>Rated for 20,000 cycles at 1.5× Working Load Limit</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-flask"></i>
+          <h3>Material Integrity</h3>
+          <p>Each piece undergoes chemical analysis and tensile testing</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-weight-hanging"></i>
+          <h3>Proof Load Tested</h3>
+          <p>Rigorous testing at 2-2.5× WLL depending on material</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-card">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Email</h3>
+            <p><a href="mailto:sales@portsideindia.com">sales@portsideindia.com</a></p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Phone</h3>
+            <p>+91 93071 04214</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Address</h3>
+            <p>I-WING GURUPREM SOCIETY KATRAP, BADALPUR, MUMBAI SUBURBS, 421503</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Portside India Traders</h3>
+          <p>Providing premium maritime lifting equipment engineered for safety and reliability since our founding.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul class="footer-links">
+            <li><a href="ForgedMasterLinks.html">Forged Master Link</a></li>
+            <li><a href="MasterLinkAssembly.html">Master Link Assembly</a></li>
+            <li><a href="ConnectingLinks.html">Connecting Link (Hammer Lock)</a></li>
+            <li><a href="WebSlingConnectors.html">Web Sling Connector</a></li>
+            <li><a href="ClevisChainSlingHook.html">Clevis Chain Sling Hook</a></li>
+            <li><a href="ClevisSelfLockingHook.html">Clevis Self‑Locking Hook</a></li>
+            <li><a href="EyeSelfLockingHook.html">Eye Self‑Locking Hook</a></li>
+            <li><a href="SwivelSelfLockingHook.html">Swivel Self‑Locking Hook</a></li>
+            <li><a href="EyeHoistHook.html">Eye Hoist Hook</a></li>
+            <li><a href="EyeFoundryHook.html">Eye Foundry Hook</a></li>
+            <li><a href="EyeGrabHook.html">Eye Grab Hook</a></li>
+            <li><a href="ClevisGrabHook.html">Clevis Grab Hook</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="Product1.html">All Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Certifications</h3>
+          <ul class="footer-links">
+            <li><a href="#">ASME B30.26 Certified</a></li>
+            <li><a href="#">OSHA Compliant</a></li>
+            <li><a href="#">EN1677-3 Compliant</a></li>
+            <li><a href="#">ISO Quality Standards</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>&copy; 2025 Portside India Traders. All Rights Reserved. Crosby® is a registered trademark of The Crosby Group LLC.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Smooth scrolling for navigation
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

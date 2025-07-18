@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portside India Traders - Crosby Shackles</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Global Styles */
+    body, h1, h2, h3, p, ul, li, a, section, header, footer {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    
+    a {
+      text-decoration: none;
+      color: #004080;
+    }
+    
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+    
+    section {
+      padding: 40px 0;
+    }
+    
+    /* Header & Navigation */
+    header {
+      background-color: #004080; /* Ocean Blue */
+      color: #fff;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo h1 {
+      font-size: 1.5em;
+      margin: 0;
+      color: white;
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    
+    nav ul li {
+      margin-left: 20px;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    
+    nav ul li a:hover {
+      color: #ff9800;
+    }
+    
+    /* Hero Section - Solid Color Background */
+    .hero {
+      background: linear-gradient(135deg, #004080, #002b5c);
+      color: white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 20px;
+    }
+    
+    .hero .content {
+      max-width: 800px;
+    }
+    
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
+    
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 25px;
+      color: white;
+      opacity: 0.9;
+    }
+    
+    .hero .cta {
+      background: #fff;
+      color: #004080;
+      padding: 12px 30px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1.1em;
+      display: inline-block;
+      transition: all 0.3s;
+      margin-top: 20px;
+    }
+    
+    .hero .cta:hover {
+      background: #ff9800;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Section Headings */
+    .section-title {
+      text-align: center;
+      color: #004080;
+      margin-bottom: 30px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .section-title:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: #ff9800;
+    }
+    
+    /* Features Section */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
+    }
+    
+    .feature-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      border-top: 4px solid #004080;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .feature-card i {
+      font-size: 2.5rem;
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    .feature-card h3 {
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    /* Tabs */
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 30px 0;
+      justify-content: center;
+    }
+    
+    .tab-btn {
+      background: #e0e0e0;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+    
+    .tab-btn.active, .tab-btn:hover {
+      background: #004080;
+      color: white;
+    }
+    
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+    
+    .tab-content.active {
+      display: block;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Tables */
+    .sling-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .sling-table th {
+      background: #004080;
+      color: white;
+      padding: 15px;
+      text-align: left;
+      font-weight: 600;
+    }
+    
+    .sling-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .sling-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .sling-table tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+    
+    .sling-table tr:hover {
+      background-color: #e3f2fd;
+    }
+    
+    .crosby-red {
+      color: #e53935;
+      font-weight: bold;
+    }
+    
+    /* Notes Section */
+    .note {
+      background: #fff8e1;
+      border-left: 4px solid #ff9800;
+      padding: 25px;
+      border-radius: 5px;
+      margin: 30px 0;
+    }
+    
+    .note h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .note ul {
+      padding-left: 20px;
+    }
+    
+    .note li {
+      margin-bottom: 10px;
+    }
+    
+    /* Contact Section */
+    .contact-card {
+      background: white;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .contact-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: #e3f2fd;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      color: #004080;
+      font-size: 1.2rem;
+    }
+    
+    .contact-info {
+      flex: 1;
+    }
+    
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 50px 0 20px;
+      margin-top: 50px;
+    }
+    
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+    
+    .footer-column {
+      flex: 1;
+      min-width: 250px;
+      margin-bottom: 30px;
+      padding: 0 15px;
+    }
+    
+    .footer-column h3 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: #ff9800;
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-links a {
+      color: #ddd;
+      transition: color 0.3s;
+    }
+    
+    .footer-links a:hover {
+      color: #ff9800;
+    }
+    
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #444;
+    }
+    
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      
+      .sling-table {
+        display: block;
+        overflow-x: auto;
+      }
+      
+      header .container {
+        flex-direction: column;
+      }
+      
+      nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      nav ul li {
+        margin: 5px 10px;
+      }
+      
+      .contact-item {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .contact-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+      
+      .footer-content {
+        flex-direction: column;
+      }
+    }
+    
+    /* Crosby Branding */
+    .crosby-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    
+    .crosby-logo img {
+      max-width: 200px;
+    }
+    
+    .red-pin {
+      color: #e53935;
+      font-weight: bold;
+      font-style: italic;
+    }
+    
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+    
+    .spec-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      border-left: 4px solid #004080;
+    }
+    
+    .spec-card h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .spec-card i {
+      color: #ff9800;
+    }
+  </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HQH77MSRY6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HQH77MSRY6');
+</script>
+
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1>Portside India Traders</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="Product1.html">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="content">
+      <h1 style="color: white;">Crosby® Brand Shackles</h1>
+      <p>Premium forged shackles engineered for maximum safety and durability</p>
+      
+      <a href="#contact" class="cta">Request a Quote</a>
+    </div>
+  </section>
+
+  <!-- Product Overview -->
+  <section id="overview">
+    <div class="container">
+      <h2 class="section-title">Shackles Overview</h2>
+      <p>Our Crosby® shackles are forged, quenched, and tempered with alloy pins for superior strength. Designed with safety as the top priority, these shackles feature a 6:1 design factor and are rigorously tested to exceed industry standards. Look for the <span class="red-pin">Red Pin®</span> - the mark of genuine Crosby quality.</p>
+      
+      <div class="features">
+        <div class="feature-card">
+          <i class="fas fa-anchor"></i>
+          <h3>Anchor Shackles</h3>
+          <p>Ideal for rigging applications where a larger bow provides more room for multiple connections.</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-link"></i>
+          <h3>Chain Shackles</h3>
+          <p>Designed with a narrower bow width for fitting to chain links and other confined spaces.</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-bolt"></i>
+          <h3>Screw Pin Shackles</h3>
+          <p>Quick and easy to assemble, perfect for temporary connections and non-permanent applications.</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-lock"></i>
+          <h3>Bolt Type Shackles</h3>
+          <p>Secure and permanent connections with nut and bolt assemblies for maximum safety.</p>
+        </div>
+      </div>
+      
+      <div class="specs-grid">
+        <div class="spec-card">
+          <h3><i class="fas fa-certificate"></i> Grade 6 Performance</h3>
+          <p>All shackles meet or exceed Grade 6 performance requirements with permanent WLL markings.</p>
+        </div>
+        
+        <div class="spec-card">
+          <h3><i class="fas fa-temperature-low"></i> Temperature Rated</h3>
+          <p>Approved for use at extreme temperatures from -40°F (-40°C) to 400°F (204°C).</p>
+        </div>
+        
+        <div class="spec-card">
+          <h3><i class="fas fa-hammer"></i> Fatigue Rated</h3>
+          <p>Rated at 1.5 times the Working Load Limit at 20,000 cycles for extended durability.</p>
+        </div>
+        
+        <div class="spec-card">
+          <h3><i class="fas fa-shield-alt"></i> Safety Factor</h3>
+          <p>6:1 Design Factor with maximum proof load at 2 times the Working Load Limit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specifications Section -->
+  <section id="specs" style="background-color: #f8f9fa;">
+    <div class="container">
+      <h2 class="section-title">Technical Specifications</h2>
+      <p>All Crosby shackles feature a 6:1 Design Factor with maximum proof load at 2 times the Working Load Limit. Hot-dip galvanized (G) or self-colored (S) finishes available.</p>
+      
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="anchor-screw">Anchor Screw Pin</button>
+        <button class="tab-btn" data-tab="chain-screw">Chain Screw Pin</button>
+        <button class="tab-btn" data-tab="anchor-bolt">Anchor Bolt Type</button>
+        <button class="tab-btn" data-tab="chain-bolt">Chain Bolt Type</button>
+      </div>
+      
+      <div id="anchor-screw" class="tab-content active">
+        <h3>G-209/S-209 Screw Pin Anchor Shackles</h3>
+        <table class="sling-table">
+          <thead>
+            <tr>
+              <th>Nominal Size (in)</th>
+              <th>WLL (t)</th>
+              <th>Stock No. (G)</th>
+              <th>Stock No. (S)</th>
+              <th>Weight (lb)</th>
+              <th>A (in)</th>
+              <th>B (in)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>3/16</td>
+              <td>0.33</td>
+              <td>1018357</td>
+              <td>-</td>
+              <td>0.06</td>
+              <td>0.38</td>
+              <td>0.25</td>
+            </tr>
+            <tr>
+              <td>1/4</td>
+              <td>0.5</td>
+              <td>1018375</td>
+              <td>1018384</td>
+              <td>0.10</td>
+              <td>0.47</td>
+              <td>0.31</td>
+            </tr>
+            <tr>
+              <td>5/16</td>
+              <td>0.75</td>
+              <td>1018393</td>
+              <td>1018400</td>
+              <td>0.18</td>
+              <td>0.53</td>
+              <td>0.38</td>
+            </tr>
+            <tr>
+              <td>3/8</td>
+              <td>1</td>
+              <td>1018419</td>
+              <td>1018428</td>
+              <td>0.31</td>
+              <td>0.66</td>
+              <td>0.44</td>
+            </tr>
+            <tr>
+              <td>7/16</td>
+              <td>1.5</td>
+              <td>1018437</td>
+              <td>1018446</td>
+              <td>0.38</td>
+              <td>0.75</td>
+              <td>0.50</td>
+            </tr>
+            <tr>
+              <td>1/2</td>
+              <td>2</td>
+              <td>1018455</td>
+              <td>1018464</td>
+              <td>0.72</td>
+              <td>0.81</td>
+              <td>0.62</td>
+            </tr>
+            <tr>
+              <td>5/8</td>
+              <td>3.25</td>
+              <td>1018473</td>
+              <td>1018482</td>
+              <td>1.37</td>
+              <td>1.06</td>
+              <td>0.75</td>
+            </tr>
+            <tr>
+              <td>3/4</td>
+              <td>4.75</td>
+              <td>1018491</td>
+              <td>1018507</td>
+              <td>2.35</td>
+              <td>1.25</td>
+              <td>0.88</td>
+            </tr>
+            <tr>
+              <td>7/8</td>
+              <td>6.5</td>
+              <td>1018516</td>
+              <td>1018525</td>
+              <td>3.62</td>
+              <td>1.44</td>
+              <td>1.00</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>8.5</td>
+              <td>1018534</td>
+              <td>1018543</td>
+              <td>5.03</td>
+              <td>1.69</td>
+              <td>1.12</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div id="chain-screw" class="tab-content">
+        <h3>G-210/S-210 Screw Pin Chain Shackles</h3>
+        <table class="sling-table">
+          <thead>
+            <tr>
+              <th>Nominal Size (in)</th>
+              <th>WLL (t)</th>
+              <th>Stock No. (G)</th>
+              <th>Stock No. (S)</th>
+              <th>Weight (lb)</th>
+              <th>A (in)</th>
+              <th>B (in)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1/4</td>
+              <td>0.5</td>
+              <td>1019150</td>
+              <td>1019169</td>
+              <td>0.11</td>
+              <td>0.47</td>
+              <td>0.31</td>
+            </tr>
+            <tr>
+              <td>5/16</td>
+              <td>0.75</td>
+              <td>1019178</td>
+              <td>1019187</td>
+              <td>0.17</td>
+              <td>0.53</td>
+              <td>0.38</td>
+            </tr>
+            <tr>
+              <td>3/8</td>
+              <td>1</td>
+              <td>1019196</td>
+              <td>1019203</td>
+              <td>0.28</td>
+              <td>0.66</td>
+              <td>0.44</td>
+            </tr>
+            <tr>
+              <td>7/16</td>
+              <td>1.5</td>
+              <td>1019212</td>
+              <td>1019221</td>
+              <td>0.43</td>
+              <td>0.75</td>
+              <td>0.50</td>
+            </tr>
+            <tr>
+              <td>1/2</td>
+              <td>2</td>
+              <td>1019230</td>
+              <td>1019249</td>
+              <td>0.59</td>
+              <td>0.81</td>
+              <td>0.63</td>
+            </tr>
+            <tr>
+              <td>5/8</td>
+              <td>3.25</td>
+              <td>1019258</td>
+              <td>1019267</td>
+              <td>1.25</td>
+              <td>1.06</td>
+              <td>0.75</td>
+            </tr>
+            <tr>
+              <td>3/4</td>
+              <td>4.75</td>
+              <td>1019276</td>
+              <td>1019285</td>
+              <td>2.63</td>
+              <td>1.25</td>
+              <td>0.88</td>
+            </tr>
+            <tr>
+              <td>7/8</td>
+              <td>6.5</td>
+              <td>1019294</td>
+              <td>1019301</td>
+              <td>3.16</td>
+              <td>1.44</td>
+              <td>1.00</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>8.5</td>
+              <td>1019310</td>
+              <td>1019329</td>
+              <td>4.75</td>
+              <td>1.69</td>
+              <td>1.13</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div id="anchor-bolt" class="tab-content">
+        <h3>G-2130/S-2130 Bolt Type Anchor Shackles</h3>
+        <table class="sling-table">
+          <thead>
+            <tr>
+              <th>Nominal Size (in)</th>
+              <th>WLL (t)</th>
+              <th>Stock No. (G)</th>
+              <th>Stock No. (S)</th>
+              <th>Weight (lb)</th>
+              <th>A (in)</th>
+              <th>B (in)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>3/16</td>
+              <td>0.33</td>
+              <td>1019464</td>
+              <td>-</td>
+              <td>0.06</td>
+              <td>0.38</td>
+              <td>0.25</td>
+            </tr>
+            <tr>
+              <td>1/4</td>
+              <td>0.5</td>
+              <td>1019466</td>
+              <td>-</td>
+              <td>0.11</td>
+              <td>0.47</td>
+              <td>0.31</td>
+            </tr>
+            <tr>
+              <td>5/16</td>
+              <td>0.75</td>
+              <td>1019468</td>
+              <td>-</td>
+              <td>0.22</td>
+              <td>0.53</td>
+              <td>0.38</td>
+            </tr>
+            <tr>
+              <td>3/8</td>
+              <td>1</td>
+              <td>1019470</td>
+              <td>-</td>
+              <td>0.33</td>
+              <td>0.66</td>
+              <td>0.44</td>
+            </tr>
+            <tr>
+              <td>7/16</td>
+              <td>1.5</td>
+              <td>1019471</td>
+              <td>-</td>
+              <td>0.49</td>
+              <td>0.75</td>
+              <td>0.50</td>
+            </tr>
+            <tr>
+              <td>1/2</td>
+              <td>2</td>
+              <td>1019472</td>
+              <td>1019481</td>
+              <td>0.79</td>
+              <td>0.81</td>
+              <td>0.64</td>
+            </tr>
+            <tr>
+              <td>5/8</td>
+              <td>3.25</td>
+              <td>1019490</td>
+              <td>1019506</td>
+              <td>1.68</td>
+              <td>1.06</td>
+              <td>0.77</td>
+            </tr>
+            <tr>
+              <td>3/4</td>
+              <td>4.75</td>
+              <td>1019515</td>
+              <td>1019524</td>
+              <td>2.72</td>
+              <td>1.25</td>
+              <td>0.89</td>
+            </tr>
+            <tr>
+              <td>7/8</td>
+              <td>6.5</td>
+              <td>1019533</td>
+              <td>1019542</td>
+              <td>3.95</td>
+              <td>1.44</td>
+              <td>1.02</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div id="chain-bolt" class="tab-content">
+        <h3>G-2150/S-2150 Bolt Type Chain Shackles</h3>
+        <table class="sling-table">
+          <thead>
+            <tr>
+              <th>Nominal Size (in)</th>
+              <th>WLL (t)</th>
+              <th>Stock No. (G)</th>
+              <th>Stock No. (S)</th>
+              <th>Weight (lb)</th>
+              <th>A (in)</th>
+              <th>B (in)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1/4</td>
+              <td>0.5</td>
+              <td>1019788</td>
+              <td>-</td>
+              <td>0.13</td>
+              <td>0.47</td>
+              <td>0.31</td>
+            </tr>
+            <tr>
+              <td>5/16</td>
+              <td>0.75</td>
+              <td>1019770</td>
+              <td>-</td>
+              <td>0.23</td>
+              <td>0.53</td>
+              <td>0.38</td>
+            </tr>
+            <tr>
+              <td>3/8</td>
+              <td>1</td>
+              <td>1019772</td>
+              <td>-</td>
+              <td>0.33</td>
+              <td>0.66</td>
+              <td>0.44</td>
+            </tr>
+            <tr>
+              <td>7/16</td>
+              <td>1.5</td>
+              <td>1019774</td>
+              <td>-</td>
+              <td>0.49</td>
+              <td>0.75</td>
+              <td>0.50</td>
+            </tr>
+            <tr>
+              <td>1/2</td>
+              <td>2</td>
+              <td>1019775</td>
+              <td>1019794</td>
+              <td>0.75</td>
+              <td>0.81</td>
+              <td>0.64</td>
+            </tr>
+            <tr>
+              <td>5/8</td>
+              <td>3.25</td>
+              <td>1019783</td>
+              <td>1019800</td>
+              <td>1.47</td>
+              <td>1.06</td>
+              <td>0.77</td>
+            </tr>
+            <tr>
+              <td>3/4</td>
+              <td>4.75</td>
+              <td>1019819</td>
+              <td>1019828</td>
+              <td>2.52</td>
+              <td>1.25</td>
+              <td>0.89</td>
+            </tr>
+            <tr>
+              <td>7/8</td>
+              <td>6.5</td>
+              <td>1019837</td>
+              <td>1019846</td>
+              <td>3.85</td>
+              <td>1.44</td>
+              <td>1.02</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="note">
+        <h3><i class="fas fa-exclamation-circle"></i> Important Notes</h3>
+        <ul>
+          <li>All shackles meet performance requirements of <span class="crosby-red">Grade 6</span> with permanent WLL markings</li>
+          <li><span class="crosby-red">Hot-dip galvanized (G)</span> or <span class="crosby-red">self-colored (S)</span> finishes available</li>
+          <li>Sizes 3/8" and below are mechanically galvanized</li>
+          <li>Approved for use at <span class="crosby-red">-40°F (-40°C) to 400°F (204°C)</span></li>
+          <li>Meets or exceeds all requirements of <span class="crosby-red">ASME B30.26</span></li>
+          <li>Look for the <span class="red-pin">Red Pin®</span> - the mark of genuine Crosby quality</li>
+          <li>Shackles can be proof tested with certificates to ABS, DNV, Lloyds or other standards upon request</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-card">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Email</h3>
+            <p><a href="mailto:sales@portsideindia.com">sales@portsideindia.com</a></p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Phone</h3>
+            <p>+91 93071 04214</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Address</h3>
+            <p>I-WING GURUPREM SOCIETY KATRAP, BADALPUR, MUMBAI SUBURBS, 421503</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Portside India Traders</h3>
+          <p>Providing premium maritime lifting equipment engineered for safety and reliability since our founding.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul class="footer-links">
+            
+            <li><a href="Shackles.html">Shackles</a></li>
+            <li><a href="Hooks-hardware.html">Hooks & Swivels</a></li>
+            <li><a href="Masterlinkes.html">Master Links</a></li>
+            <li><a href="MetricSwivelAndAlloyChain.html">Metric Swivel & Alloy Chain</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="Product1.html">All Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Certifications</h3>
+          <ul class="footer-links">
+            <li><a href="#">ASME B30.26 Certified</a></li>
+            <li><a href="#">DNV Offshore Certified</a></li>
+            <li><a href="#">OSHA Compliant</a></li>
+            <li><a href="#">ISO Quality Standards</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>&copy; 2025 Portside India Traders. All Rights Reserved. Crosby® is a registered trademark of The Crosby Group LLC.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Tab functionality
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Remove active class from all buttons and content
+          tabBtns.forEach(b => b.classList.remove('active'));
+          document.querySelectorAll('.tab-content').forEach(content => {
+            content.classList.remove('active');
+          });
+          
+          // Add active class to clicked button
+          btn.classList.add('active');
+          
+          // Show corresponding content
+          const tabId = btn.getAttribute('data-tab');
+          document.getElementById(tabId).classList.add('active');
+        });
+      });
+      
+      // Smooth scrolling for navigation
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portside India Traders - Multiple Leg Slings</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Global Styles */
+    body, h1, h2, h3, p, ul, li, a, section, header, footer {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    
+    a {
+      text-decoration: none;
+      color: #004080;
+    }
+    
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+    
+    section {
+      padding: 40px 0;
+    }
+    
+    /* Header & Navigation */
+    header {
+      background-color: #004080; /* Ocean Blue */
+      color: #fff;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo img {
+      height: 50px;
+      margin-right: 15px;
+      background: #fff;
+      padding: 5px;
+      border-radius: 4px;
+    }
+    
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .logo-text h1 {
+      font-size: 1.5em;
+      margin: 0;
+      color: white;
+    }
+    
+    .logo-text span {
+      font-size: 0.8em;
+      color: #ff9800;
+      margin-top: 3px;
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    
+    nav ul li {
+      margin-left: 20px;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    
+    nav ul li a:hover {
+      color: #ff9800;
+    }
+    
+    /* Hero Section - Solid Color Background */
+    .hero {
+      background: linear-gradient(135deg, #004080, #002b5c);
+      color: white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 20px;
+    }
+    
+    .hero .content {
+      max-width: 800px;
+    }
+    
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
+    
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 25px;
+      color: white;
+      opacity: 0.9;
+    }
+    
+    .hero .cta {
+      background: #fff;
+      color: #004080;
+      padding: 12px 30px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1.1em;
+      display: inline-block;
+      transition: all 0.3s;
+      margin-top: 20px;
+    }
+    
+    .hero .cta:hover {
+      background: #ff9800;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Section Headings */
+    .section-title {
+      text-align: center;
+      color: #004080;
+      margin-bottom: 30px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .section-title:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: #ff9800;
+    }
+    
+    /* Features Section */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
+    }
+    
+    .feature-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      border-top: 4px solid #004080;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .feature-card i {
+      font-size: 2.5rem;
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    .feature-card h3 {
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    /* Tables */
+    .sling-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      font-size: 0.9rem;
+    }
+    
+    .sling-table th {
+      background: #004080;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-weight: 600;
+    }
+    
+    .sling-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #e0e0e0;
+      text-align: center;
+    }
+    
+    .sling-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .sling-table tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+    
+    .sling-table tr:hover {
+      background-color: #e3f2fd;
+    }
+    
+    /* Notes Section */
+    .note {
+      background: #fff8e1;
+      border-left: 4px solid #ff9800;
+      padding: 25px;
+      border-radius: 5px;
+      margin: 30px 0;
+    }
+    
+    .note h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .note ul {
+      padding-left: 20px;
+    }
+    
+    .note li {
+      margin-bottom: 10px;
+    }
+    
+    /* Contact Section */
+    .contact-card {
+      background: white;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .contact-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: #e3f2fd;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      color: #004080;
+      font-size: 1.2rem;
+    }
+    
+    .contact-info {
+      flex: 1;
+    }
+    
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 50px 0 20px;
+      margin-top: 50px;
+    }
+    
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+    
+    .footer-column {
+      flex: 1;
+      min-width: 250px;
+      margin-bottom: 30px;
+      padding: 0 15px;
+    }
+    
+    .footer-column h3 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: #ff9800;
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-links a {
+      color: #ddd;
+      transition: color 0.3s;
+    }
+    
+    .footer-links a:hover {
+      color: #ff9800;
+    }
+    
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #444;
+    }
+    
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      
+      .sling-table {
+        display: block;
+        overflow-x: auto;
+      }
+      
+      header .container {
+        flex-direction: column;
+      }
+      
+      nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      nav ul li {
+        margin: 5px 10px;
+      }
+      
+      .contact-item {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .contact-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+      
+      .footer-content {
+        flex-direction: column;
+      }
+    }
+    
+    /* Product Highlights */
+    .product-highlights {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 30px 0;
+    }
+    
+    .highlight-item {
+      text-align: center;
+      width: 200px;
+      padding: 15px;
+    }
+    
+    .highlight-icon {
+      font-size: 2.5rem;
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    /* Sling Type Cards */
+    .sling-type-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      border-top: 4px solid #004080;
+      margin-bottom: 25px;
+    }
+    
+    .sling-type-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .sling-type-card h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #ff9800;
+      padding-bottom: 10px;
+    }
+    
+    .info-panel {
+      background: #e3f2fd;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 30px 0;
+      border-left: 4px solid #004080;
+    }
+    
+    .termination-types {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin: 30px 0;
+    }
+    
+    .termination-card {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      border: 1px solid #e0e6ed;
+    }
+    
+    .termination-card:hover {
+      border-color: #004080;
+      transform: translateY(-3px);
+    }
+    
+    .termination-card h4 {
+      color: #004080;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #ff9800;
+    }
+    
+    /* Usage Grid */
+    .usage-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin: 30px 0;
+    }
+    
+    .usage-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      border-top: 4px solid #004080;
+    }
+    
+    .usage-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .usage-card h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #ff9800;
+      padding-bottom: 10px;
+    }
+    
+    /* Sling Types Section */
+    .sling-types-section {
+      background-color: #e6f0ff;
+      padding: 50px 0;
+    }
+    
+    /* Color Swatches */
+    .color-swatch {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      margin: 0 5px;
+      border: 1px solid #ddd;
+      vertical-align: middle;
+    }
+    
+    .violet { background-color: #9400D3; }
+    .green { background-color: #008000; }
+    .yellow { background-color: #FFFF00; }
+    .grey { background-color: #808080; }
+    .red { background-color: #FF0000; }
+    .brown { background-color: #A52A2A; }
+    .blue { background-color: #0000FF; }
+    .orange { background-color: #FFA500; }
+    
+    /* Material Indicators */
+    .material-indicator {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.85em;
+      font-weight: bold;
+      margin: 0 5px;
+    }
+    
+    .polyester {
+      background-color: #e3f2fd;
+      color: #004080;
+      border: 1px solid #004080;
+    }
+    
+    .highlight {
+      background-color: #e3f2fd;
+      padding: 10px 15px;
+      border-radius: 8px;
+      border-left: 3px solid #004080;
+      margin: 10px 0;
+    }
+    
+    .features-list {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 25px;
+      margin: 30px 0;
+    }
+    
+    .features-list h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #004080;
+      padding-bottom: 10px;
+    }
+    
+    .features-list ul {
+      padding-left: 20px;
+    }
+    
+    .features-list li {
+      margin-bottom: 10px;
+      padding-left: 10px;
+    }
+    
+    .features-list li:before {
+      content: "✓";
+      color: #004080;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+  </style>
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HQH77MSRY6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HQH77MSRY6');
+</script>
+
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="Images/FinalLogo.png" alt="Portside India Traders Logo">
+        <div class="logo-text">
+          <h1>Portside India Traders</h1>
+          <span>Strength that Anchors Your Success</span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="Product1.html">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="content">
+      <h1 style="color: white;">Multiple Leg Slings</h1>
+      <p>Versatile lifting solutions for complex and heavy-duty industrial applications</p>
+      <a href="#contact" class="cta">Request a Quote</a>
+    </div>
+  </section>
+
+  <!-- Product Overview -->
+  <section id="overview">
+    <div class="container">
+      <h2 class="section-title">Multiple Leg Sling Overview</h2>
+      <p>Multiple Leg Slings are specialized lifting assemblies consisting of several wire rope legs connected to a central master link. These slings are designed for lifting large, heavy, or irregularly shaped loads where balanced lifting is essential.</p>
+      
+      <div class="product-highlights">
+        <div class="highlight-item">
+          <div class="highlight-icon">
+            <i class="fas fa-link"></i>
+          </div>
+          <h3>Versatile Configurations</h3>
+          <p>2, 3, or 4 legs for balanced lifting</p>
+        </div>
+        
+        <div class="highlight-item">
+          <div class="highlight-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Safety Certified</h3>
+          <p>High-strength wire rope construction</p>
+        </div>
+        
+        <div class="highlight-item">
+          <div class="highlight-icon">
+            <i class="fas fa-weight-hanging"></i>
+          </div>
+          <h3>Heavy Capacity</h3>
+          <p>Designed for large, irregular loads</p>
+        </div>
+        
+        <div class="highlight-item">
+          <div class="highlight-icon">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <h3>Customizable</h3>
+          <p>Various leg lengths and fittings</p>
+        </div>
+      </div>
+      
+      <div class="features">
+        <div class="feature-card">
+          <i class="fas fa-question-circle"></i>
+          <h3>What are Multiple Leg Slings?</h3>
+          <p>With configurations ranging from 2 to 4 legs, these slings distribute weight evenly and provide stability during lifting operations.</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-star"></i>
+          <h3>Key Features</h3>
+          <ul style="text-align: left;">
+            <li>Versatile configurations (2, 3, or 4 legs)</li>
+            <li>Central master link for balanced weight distribution</li>
+            <li>Available with various termination types</li>
+            <li>High-strength wire rope construction</li>
+          </ul>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-ruler"></i>
+          <h3>Technical Specifications</h3>
+          <ul style="text-align: left;">
+            <li>Wire Rope: Improved Plow Steel (IPS)</li>
+            <li>Core: Independent Wire Rope Core (IWRC)</li>
+            <li>Constructions: 6x19, 6x36, 8x36</li>
+            <li>Tensile Strength: 1770 kN/mm²</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sling Types -->
+  <section class="sling-types-section">
+    <div class="container">
+      <h2 class="section-title">Multiple Leg Sling Combinations</h2>
+      
+      <div class="sling-type-card">
+        <h3>SPL-5B</h3>
+        <p>Leg wire rope sling with master link on top. This configuration provides balanced lifting for irregular loads.</p>
+        <ul>
+          <li>Also available with nut bolt bow shackle</li>
+          <li>Round pin bow shackle option</li>
+          <li>Screw pin D shackle alternative</li>
+          <li>Ideal for construction and manufacturing</li>
+        </ul>
+      </div>
+      
+      <div class="sling-type-card">
+        <h3>SPL-17B</h3>
+        <p>Specialized configuration for heavy-duty lifting applications requiring precise load distribution.</p>
+        <ul>
+          <li>Designed for critical lifting operations</li>
+          <li>Enhanced safety features</li>
+          <li>Common in shipbuilding and energy sectors</li>
+          <li>Available in various sizes and leg configurations</li>
+        </ul>
+      </div>
+      
+      <div class="sling-type-card">
+        <h3>SPL-24B</h3>
+        <p>Robust multiple leg sling configuration suitable for extreme lifting conditions and heavy loads.</p>
+        <ul>
+          <li>High-capacity lifting solution</li>
+          <li>Engineered for industrial applications</li>
+          <li>Available with double ferrule termination</li>
+          <li>Ideal for mining and heavy equipment industries</li>
+        </ul>
+      </div>
+      
+      <div class="sling-type-card">
+        <h3>SPL-18B</h3>
+        <p>Versatile multiple leg sling design with flexible attachment options for various lifting scenarios.</p>
+        <ul>
+          <li>Adaptable to different load types</li>
+          <li>Available with various hook configurations</li>
+          <li>Perfect for material handling and logistics</li>
+          <li>Customizable to specific requirements</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Capacity Section -->
+  <section id="capacity" style="background-color: #f8f9fa;">
+    <div class="container">
+      <h2 class="section-title">Multiple Leg Sling Capacity Specifications</h2>
+      
+      <div class="info-panel">
+        <p><strong>Wire Rope Specifications:</strong> Improved Plow Steel - IWRC - 6 X 19, 6 X 36 AND 8 X 36 fitted with turnback termination. Tensile Strength 1770 kN/mm²</p>
+      </div>
+      
+      <table class="sling-table">
+        <thead>
+          <tr>
+            <th>Wire Rope Size (mm)</th>
+            <th>MBL (kN)</th>
+            <th>Shackle Size</th>
+            <th>Vertical (Single Leg)</th>
+            <th>Choker</th>
+            <th colspan="2">Two Leg Slings (0° - 45°)</th>
+            <th colspan="2">Two Leg Slings (45° - 60°)</th>
+          </tr>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th>Vertical</th>
+            <th>Choker</th>
+            <th>Vertical</th>
+            <th>Choker</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>9</td><td>40.3</td><td>3/8</td><td>7.5</td><td>8.1</td><td>12.5</td><td>15</td><td>12.5</td><td>11.0</td></tr>
+          <tr><td>10</td><td>63.0</td><td>7/16</td><td>11.5</td><td>9.2</td><td>15.0</td><td>15</td><td>24.0</td><td>17.0</td></tr>
+          <tr><td>12</td><td>90.7</td><td>1/2</td><td>17.0</td><td>13.6</td><td>23.0</td><td>17.0</td><td>33.5</td><td>25.0</td></tr>
+          <tr><td>13</td><td>106</td><td>5/8</td><td>22.0</td><td>13.0</td><td>23.0</td><td>23.0</td><td>41.5</td><td>34.0</td></tr>
+          <tr><td>14</td><td>124</td><td>6/8</td><td>22.5</td><td>13.0</td><td>21.5</td><td>22.5</td><td>48.0</td><td>34.0</td></tr>
+          <tr><td>16</td><td>161</td><td>3/4</td><td>30.0</td><td>24.0</td><td>42.0</td><td>30.0</td><td>53.0</td><td>45.0</td></tr>
+          <tr><td>18</td><td>204</td><td>7/8</td><td>37.0</td><td>23.6</td><td>52.0</td><td>37.0</td><td>78.0</td><td>55.5</td></tr>
+          <tr><td>20</td><td>252</td><td>7/8</td><td>45.0</td><td>38.6</td><td>55.0</td><td>45.0</td><td>58.0</td><td>68.0</td></tr>
+          <tr><td>22</td><td>365</td><td>11/8</td><td>53.5</td><td>45.2</td><td>74.0</td><td>53.5</td><td>118.0</td><td>84.0</td></tr>
+          <tr><td>24</td><td>363</td><td>1/8</td><td>67.0</td><td>53.5</td><td>84.0</td><td>67.0</td><td>148.0</td><td>108.0</td></tr>
+          <tr><td>26</td><td>426</td><td>1/8</td><td>78.0</td><td>62.4</td><td>110.0</td><td>78.0</td><td>165.0</td><td>115.0</td></tr>
+          <tr><td>28</td><td>494</td><td>1/8</td><td>90.0</td><td>72.0</td><td>125.0</td><td>90.0</td><td>190.0</td><td>135.0</td></tr>
+          <tr><td>32</td><td>645</td><td>1/8</td><td>118.0</td><td>94.4</td><td>165.0</td><td>118.0</td><td>250.0</td><td>175.0</td></tr>
+          <tr><td>36</td><td>817</td><td>1/8</td><td>150.0</td><td>120.0</td><td>210.0</td><td>150.0</td><td>315.0</td><td>225.0</td></tr>
+        </tbody>
+      </table>
+      
+      <div class="note">
+        <h3><i class="fas fa-info-circle"></i> Important Notes</h3>
+        <ul>
+          <li>Rated capacities based on pin diameter or hook no larger than the natural eye width (1/2 x eye length) or less than the nominal sling diameter</li>
+          <li>Turnback efficiency: k = 0.9 (Eye termination offers higher efficiency)</li>
+          <li>Vertical sling angles greater than 60° are not recommended</li>
+          <li>Refer to prEN 13414-1 for full details</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Double Ferrule Section -->
+  <section id="ferrule" style="background-color: #e6f0ff;">
+    <div class="container">
+      <h2 class="section-title">Double Ferrule Wire Rope Slings</h2>
+      
+      <div class="features">
+        <div class="feature-card">
+          <i class="fas fa-compress-alt"></i>
+          <h3>Double Aluminum Ferrule</h3>
+          <p>Our double ferrule wire rope slings feature high-quality aluminum ferrules for secure termination.</p>
+          <p>Available configurations:</p>
+          <ul style="text-align: left;">
+            <li>SFL-1DF</li>
+            <li>SFL-23DF</li>
+            <li>SFL-2DF</li>
+          </ul>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-link"></i>
+          <h3>Termination Types</h3>
+          <p>We offer various termination options for multiple leg slings:</p>
+          <div class="termination-types">
+            <div class="termination-card">
+              <h4>Turnback Termination</h4>
+              <p>The traditional method with efficiency k = 0.9. Provides reliable performance for standard applications.</p>
+            </div>
+            <div class="termination-card">
+              <h4>Eye Termination</h4>
+              <p>Offers higher efficiency and strength. Recommended for critical lifting operations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="features-list">
+        <h3>Benefits of double ferrule termination</h3>
+        <ul>
+          <li>Enhanced grip strength</li>
+          <li>Superior load distribution</li>
+          <li>Increased durability</li>
+          <li>Corrosion resistance</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Master Links & Hooks -->
+  <section id="accessories">
+    <div class="container">
+      <h2 class="section-title">Master Links & Hooks</h2>
+      
+      <div class="features">
+        <div class="feature-card">
+          <i class="fas fa-link"></i>
+          <h3>Master Links</h3>
+          <p>Master links are available in the following varieties:</p>
+          <ul style="text-align: left;">
+            <li>Standard master links for balanced lifting</li>
+            <li>Heavy-duty master links for extreme loads</li>
+            <li>Rotating master links for load positioning</li>
+            <li>Custom configurations for specialized applications</li>
+          </ul>
+          <p>All master links are manufactured to the highest standards for safety and reliability.</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-hook"></i>
+          <h3>Swivel Self Locking Hooks</h3>
+          <p>Our premium hook options:</p>
+          <ul style="text-align: left;">
+            <li><strong>SPL-320:</strong> Swivel self-locking hook with safety latch</li>
+            <li><strong>SPL-316:</strong> Heavy-duty locking hook for critical applications</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="features-list">
+        <h3>Hook Features</h3>
+        <ul>
+          <li>Automatic locking mechanism</li>
+          <li>360° rotation for load positioning</li>
+          <li>High-strength alloy construction</li>
+          <li>Safety latches to prevent accidental release</li>
+        </ul>
+      </div>
+      
+      <div class="note">
+        <h3><i class="fas fa-exclamation-triangle"></i> Safety Recommendation</h3>
+        <p>Always use appropriate hooks and master links rated for the load. Regularly inspect all components for wear and damage.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-card">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Email</h3>
+            <p><a href="mailto:sales@portsideindia.com">sales@portsideindia.com</a></p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Phone</h3>
+            <p>+91 93071 04214</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Address</h3>
+            <p>I-WING GURUPREM SOCIETY KATRAP, BADALPUR, MUMBAI SUBURBS, 421503</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Portside India Traders</h3>
+          <p>Providing premium maritime lifting equipment engineered for safety and reliability since our founding.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul class="footer-links">
+            <li><a href="WebbingSlings.html">Webbing Slings</a></li>
+            <li><a href="RoundSlings2.html">Round Slings</a></li>
+            <li><a href="SinglePartSlings.html">Single Part Slings</a></li>
+            <li><a href="MultipleLegSlings.html">Multiple-Leg Slings</a></li>
+            <li><a href="GrommetSlings.html">Grommet Slings</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="Product1.html">All Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>&copy; 2025 Portside India Traders. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Smooth scrolling for navigation
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

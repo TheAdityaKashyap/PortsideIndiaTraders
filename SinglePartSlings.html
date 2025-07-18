@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portside India Traders - Single Part Slings</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Global Styles */
+    body, h1, h2, h3, p, ul, li, a, section, header, footer {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    
+    a {
+      text-decoration: none;
+      color: #004080;
+    }
+    
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+    
+    section {
+      padding: 40px 0;
+    }
+    
+    /* Header & Navigation */
+    header {
+      background-color: #004080; /* Ocean Blue */
+      color: #fff;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo img {
+      height: 50px;
+      margin-right: 15px;
+      background: #fff;
+      padding: 5px;
+      border-radius: 4px;
+    }
+    
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .logo-text h1 {
+      font-size: 1.5em;
+      margin: 0;
+      color: white;
+    }
+    
+    .logo-text span {
+      font-size: 0.8em;
+      color: #ff9800;
+      margin-top: 3px;
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    
+    nav ul li {
+      margin-left: 20px;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    
+    nav ul li a:hover {
+      color: #ff9800;
+    }
+    
+    /* Hero Section - Solid Color Background */
+    .hero {
+      background: linear-gradient(135deg, #004080, #002b5c);
+      color: white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 20px;
+    }
+    
+    .hero .content {
+      max-width: 800px;
+    }
+    
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
+    
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 25px;
+      color: white;
+      opacity: 0.9;
+    }
+    
+    .hero .cta {
+      background: #fff;
+      color: #004080;
+      padding: 12px 30px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1.1em;
+      display: inline-block;
+      transition: all 0.3s;
+      margin-top: 20px;
+    }
+    
+    .hero .cta:hover {
+      background: #ff9800;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Section Headings */
+    .section-title {
+      text-align: center;
+      color: #004080;
+      margin-bottom: 30px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .section-title:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: #ff9800;
+    }
+    
+    /* Features Section */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
+    }
+    
+    .feature-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      border-top: 4px solid #004080;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .feature-card i {
+      font-size: 2.5rem;
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    .feature-card h3 {
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    /* Tables */
+    .sling-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      font-size: 0.9rem;
+    }
+    
+    .sling-table th {
+      background: #004080;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-weight: 600;
+    }
+    
+    .sling-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #e0e0e0;
+      text-align: center;
+    }
+    
+    .sling-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .sling-table tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+    
+    .sling-table tr:hover {
+      background-color: #e3f2fd;
+    }
+    
+    /* Notes Section */
+    .note {
+      background: #fff8e1;
+      border-left: 4px solid #ff9800;
+      padding: 25px;
+      border-radius: 5px;
+      margin: 30px 0;
+    }
+    
+    .note h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .note ul {
+      padding-left: 20px;
+    }
+    
+    .note li {
+      margin-bottom: 10px;
+    }
+    
+    /* Contact Section */
+    .contact-card {
+      background: white;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .contact-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: #e3f2fd;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      color: #004080;
+      font-size: 1.2rem;
+    }
+    
+    .contact-info {
+      flex: 1;
+    }
+    
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 50px 0 20px;
+      margin-top: 50px;
+    }
+    
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+    
+    .footer-column {
+      flex: 1;
+      min-width: 250px;
+      margin-bottom: 30px;
+      padding: 0 15px;
+    }
+    
+    .footer-column h3 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: #ff9800;
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-links a {
+      color: #ddd;
+      transition: color 0.3s;
+    }
+    
+    .footer-links a:hover {
+      color: #ff9800;
+    }
+    
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #444;
+    }
+    
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      
+      .sling-table {
+        display: block;
+        overflow-x: auto;
+      }
+      
+      header .container {
+        flex-direction: column;
+      }
+      
+      nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      nav ul li {
+        margin: 5px 10px;
+      }
+      
+      .contact-item {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .contact-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+      
+      .footer-content {
+        flex-direction: column;
+      }
+    }
+    
+    /* Product Highlights */
+    .product-highlights {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 30px 0;
+    }
+    
+    .highlight-item {
+      text-align: center;
+      width: 200px;
+      padding: 15px;
+    }
+    
+    .highlight-icon {
+      font-size: 2.5rem;
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    /* Sling Type Selector */
+    .sling-type-selector {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .sling-type-btn {
+      background: #fff;
+      border: 2px solid #004080;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+      min-width: 180px;
+      text-align: center;
+    }
+    
+    .sling-type-btn.active {
+      background: #004080;
+      color: white;
+    }
+    
+    .sling-type-btn:hover {
+      background: #ff9800;
+      color: white;
+      border-color: #ff9800;
+    }
+    
+    .sling-content {
+      display: none;
+    }
+    
+    .sling-content.active {
+      display: block;
+    }
+    
+    /* Color Swatches */
+    .color-swatch {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      margin: 0 5px;
+      border: 1px solid #ddd;
+      vertical-align: middle;
+    }
+    
+    .violet { background-color: #9400D3; }
+    .green { background-color: #008000; }
+    .yellow { background-color: #FFFF00; }
+    .grey { background-color: #808080; }
+    .red { background-color: #FF0000; }
+    .brown { background-color: #A52A2A; }
+    .blue { background-color: #0000FF; }
+    .orange { background-color: #FFA500; }
+    
+    /* Material Indicators */
+    .material-indicator {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.85em;
+      font-weight: bold;
+      margin: 0 5px;
+    }
+    
+    .polyester {
+      background-color: #e3f2fd;
+      color: #004080;
+      border: 1px solid #004080;
+    }
+    
+    .highlight {
+      background-color: #e3f2fd;
+      padding: 10px 15px;
+      border-radius: 8px;
+      border-left: 3px solid #004080;
+      margin: 10px 0;
+    }
+    
+    .features-list {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 25px;
+      margin: 30px 0;
+    }
+    
+    .features-list h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #004080;
+      padding-bottom: 10px;
+    }
+    
+    .features-list ul {
+      padding-left: 20px;
+    }
+    
+    .features-list li {
+      margin-bottom: 10px;
+      padding-left: 10px;
+    }
+    
+    .features-list li:before {
+      content: "✓";
+      color: #004080;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    
+    /* Usage Grid */
+    .usage-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin: 30px 0;
+    }
+    
+    .usage-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      border-top: 4px solid #004080;
+    }
+    
+    .usage-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .usage-card h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #ff9800;
+      padding-bottom: 10px;
+    }
+    
+    /* Hitch Tabs */
+    .hitch-tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .hitch-btn {
+      background: #fff;
+      border: 2px solid #004080;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+      min-width: 180px;
+      text-align: center;
+    }
+    
+    .hitch-btn.active {
+      background: #004080;
+      color: white;
+    }
+    
+    .hitch-btn:hover {
+      background: #ff9800;
+      color: white;
+      border-color: #ff9800;
+    }
+    
+    .hitch-content {
+      display: none;
+    }
+    
+    .hitch-content.active {
+      display: block;
+    }
+    
+    /* Sling Types Section */
+    .sling-types-section {
+      background-color: #e6f0ff;
+      padding: 50px 0;
+    }
+  </style>
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HQH77MSRY6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HQH77MSRY6');
+</script>
+
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="Images/FinalLogo.png" alt="Portside India Traders Logo">
+        <div class="logo-text">
+          <h1>Portside India Traders</h1>
+          <span>Strength that Anchors Your Success</span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="Product1.html">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="content">
+      <h1 style="color: white;">Single Part Slings</h1>
+      <p>Heavy-duty lifting solutions engineered for maximum safety and reliability in industrial applications</p>
+      <a href="#contact" class="cta">Request a Quote</a>
+    </div>
+  </section>
+
+  <!-- Product Overview -->
+  <section id="overview">
+    <div class="container">
+      <h2 class="section-title">Single Part Sling Overview</h2>
+      <p>Single Part Slings are essential lifting components consisting of a single length of wire rope with fittings attached at both ends. These slings are designed for straightforward lifting applications where simplicity and reliability are paramount.</p>
+      
+      <div class="product-highlights">
+        <div class="highlight-item">
+          <div class="highlight-icon">
+            <i class="fas fa-weight-hanging"></i>
+          </div>
+          <h3>High Strength</h3>
+          <p>1770/1980 N/mm² tensile strength</p>
+        </div>
+        
+        <div class="highlight-item">
+          <div class="highlight-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Safety Factor</h3>
+          <p>5:1 safety factor</p>
+        </div>
+        
+        <div class="highlight-item">
+          <div class="highlight-icon">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <h3>Diverse Sizes</h3>
+          <p>6mm to 32mm diameters</p>
+        </div>
+        
+        <div class="highlight-item">
+          <div class="highlight-icon">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h3>Custom Lengths</h3>
+          <p>Available upon request</p>
+        </div>
+      </div>
+      
+      <div class="features">
+        <div class="feature-card">
+          <i class="fas fa-question-circle"></i>
+          <h3>What are Single Part Slings?</h3>
+          <p>Constructed from high-tensile steel wire rope, single part slings offer exceptional strength and durability for a wide range of industrial lifting operations.</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-star"></i>
+          <h3>Key Features</h3>
+          <ul style="text-align: left;">
+            <li>High strength-to-weight ratio</li>
+            <li>Excellent resistance to abrasion</li>
+            <li>Flexible design for various applications</li>
+            <li>Available in multiple configurations</li>
+          </ul>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-ruler"></i>
+          <h3>Technical Specifications</h3>
+          <ul style="text-align: left;">
+            <li>Factor of Safety: 5:1</li>
+            <li>Tensile Strength: 1770/1980 N/mm²</li>
+            <li>Construction: 6x19, 6x36</li>
+            <li>Core options: Fibre Core or Steel Core</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sling Types -->
+  <section class="sling-types-section">
+    <div class="container">
+      <h2 class="section-title">Single Part Sling Types</h2>
+      
+      <div class="features">
+        <div class="feature-card">
+          <i class="fas fa-link"></i>
+          <h3>SPL-9</h3>
+          <p><strong>Open type Spelter socket on one end and closed type on other end</strong></p>
+          <p>Primarily used in gantry ropes applied in cranes. The combination of open and closed sockets provides versatility in attachment options.</p>
+          <ul style="text-align: left; margin-top: 15px;">
+            <li>Ideal for crane operations</li>
+            <li>Excellent for applications requiring different connection types</li>
+            <li>Common in shipyards and construction sites</li>
+          </ul>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-compress-alt"></i>
+          <h3>SPL-10</h3>
+          <p><strong>Open type Thimble SL on one end and solid Thimble at the other end</strong></p>
+          <p>Designed for applications requiring different termination methods. The open type Thimble SL allows for quick connection, while the solid Thimble provides secure termination.</p>
+          <ul style="text-align: left; margin-top: 15px;">
+            <li>Perfect for rigging operations</li>
+            <li>Common in material handling applications</li>
+            <li>Used in manufacturing and assembly lines</li>
+          </ul>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-lock"></i>
+          <h3>SPL-11</h3>
+          <p><strong>Open and closed Swaged socket at both ends</strong></p>
+          <p>Features specialized sockets at both ends for secure connections. The Swaged socket design ensures maximum grip and security.</p>
+          <ul style="text-align: left; margin-top: 15px;">
+            <li>Ideal for critical lifting operations</li>
+            <li>Used in mining and heavy equipment industries</li>
+            <li>Suitable for applications requiring high security connections</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Capacity Section -->
+  <section id="capacity">
+    <div class="container">
+      <h2 class="section-title">Capacity Specifications</h2>
+      
+      <div class="hitch-tabs">
+        <div class="hitch-btn active" data-hitch="vertical">Vertical Lift</div>
+        <div class="hitch-btn" data-hitch="basket">Basket Hitch</div>
+        <div class="hitch-btn" data-hitch="choker">Choker Hitch</div>
+      </div>
+      
+      <!-- Vertical Lift Table -->
+      <div class="hitch-content active" id="vertical-content">
+        <h3 style="text-align: center; margin: 25px 0 15px;">Vertical Lift Capacities</h3>
+        
+        <table class="sling-table">
+          <thead>
+            <tr>
+              <th>Diameter (mm)</th>
+              <th>Fibre Core (Tons)</th>
+              <th>Steel Core (Tons)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>6</td><td>0.4</td><td>0.5</td></tr>
+            <tr><td>8</td><td>0.6</td><td>0.8</td></tr>
+            <tr><td>9</td><td>1.0</td><td>1.1</td></tr>
+            <tr><td>10</td><td>1.2</td><td>1.3</td></tr>
+            <tr><td>12</td><td>1.6</td><td>1.9</td></tr>
+            <tr><td>13</td><td>2.1</td><td>2.2</td></tr>
+            <tr><td>14</td><td>2.4</td><td>2.6</td></tr>
+            <tr><td>15</td><td>3.1</td><td>3.4</td></tr>
+            <tr><td>16</td><td>4.0</td><td>4.3</td></tr>
+            <tr><td>17</td><td>4.4</td><td>4.8</td></tr>
+            <tr><td>18</td><td>4.9</td><td>5.3</td></tr>
+            <tr><td>19</td><td>5.9</td><td>6.4</td></tr>
+            <tr><td>20</td><td>7.0</td><td>7.2</td></tr>
+            <tr><td>21</td><td>7.5</td><td>7.5</td></tr>
+            <tr><td>22</td><td>8.1</td><td>8.7</td></tr>
+            <tr><td>23</td><td>9.3</td><td>10.1</td></tr>
+            <tr><td>24</td><td>12.2</td><td>13.2</td></tr>
+            <tr><td>25</td><td>14.4</td><td>15.7</td></tr>
+            <tr><td>26</td><td>17.6</td><td>18.6</td></tr>
+            <tr><td>27</td><td>18.4</td><td>19.6</td></tr>
+            <tr><td>28</td><td>22.1</td><td>24.9</td></tr>
+            <tr><td>29</td><td>27.4</td><td>29.8</td></tr>
+            <tr><td>30</td><td>37.0</td><td>40.3</td></tr>
+            <tr><td>31</td><td>48.0</td><td>52.7</td></tr>
+            <tr><td>32</td><td>55.0</td><td>65.0</td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <!-- Basket Hitch Table -->
+      <div class="hitch-content" id="basket-content">
+        <h3 style="text-align: center; margin: 25px 0 15px;">Basket Hitch Capacities</h3>
+        
+        <table class="sling-table">
+          <thead>
+            <tr>
+              <th>Diameter (mm)</th>
+              <th>Fibre Core (Tons)</th>
+              <th>Steel Core (Tons)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>6</td><td>0.8</td><td>1.0</td></tr>
+            <tr><td>8</td><td>1.5</td><td>1.7</td></tr>
+            <tr><td>9</td><td>2.0</td><td>2.1</td></tr>
+            <tr><td>10</td><td>1.0</td><td>2.8</td></tr>
+            <tr><td>12</td><td>3.5</td><td>3.8</td></tr>
+            <tr><td>13</td><td>4.1</td><td>4.4</td></tr>
+            <tr><td>14</td><td>4.8</td><td>5.2</td></tr>
+            <tr><td>15</td><td>6.2</td><td>6.7</td></tr>
+            <tr><td>16</td><td>8.9</td><td>8.5</td></tr>
+            <tr><td>17</td><td>8.8</td><td>9.5</td></tr>
+            <tr><td>18</td><td>9.7</td><td>10.5</td></tr>
+            <tr><td>19</td><td>11.8</td><td>12.7</td></tr>
+            <tr><td>20</td><td>14.0</td><td>14.4</td></tr>
+            <tr><td>21</td><td>15.0</td><td>15.2</td></tr>
+            <tr><td>22</td><td>16.1</td><td>17.4</td></tr>
+            <tr><td>23</td><td>17.2</td><td>20.1</td></tr>
+            <tr><td>24</td><td>24.4</td><td>25.3</td></tr>
+            <tr><td>25</td><td>28.9</td><td>31.3</td></tr>
+            <tr><td>26</td><td>35.2</td><td>37.1</td></tr>
+            <tr><td>27</td><td>39.9</td><td>41.1</td></tr>
+            <tr><td>28</td><td>46.1</td><td>49.9</td></tr>
+            <tr><td>29</td><td>54.6</td><td>59.5</td></tr>
+            <tr><td>30</td><td>74.0</td><td>80.7</td></tr>
+            <tr><td>31</td><td>86.0</td><td>105.3</td></tr>
+            <tr><td>32</td><td>110.0</td><td>130.0</td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <!-- Choker Hitch Table -->
+      <div class="hitch-content" id="choker-content">
+        <h3 style="text-align: center; margin: 25px 0 15px;">Choker Hitch Capacities</h3>
+        
+        <table class="sling-table">
+          <thead>
+            <tr>
+              <th>Diameter (mm)</th>
+              <th>Fibre Core (Tons)</th>
+              <th>Steel Core (Tons)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>6</td><td>0.3</td><td>0.4</td></tr>
+            <tr><td>8</td><td>0.6</td><td>0.7</td></tr>
+            <tr><td>9</td><td>0.8</td><td>0.8</td></tr>
+            <tr><td>10</td><td>1.0</td><td>1.1</td></tr>
+            <tr><td>12</td><td>1.4</td><td>1.5</td></tr>
+            <tr><td>13</td><td>1.6</td><td>1.8</td></tr>
+            <tr><td>14</td><td>1.9</td><td>2.1</td></tr>
+            <tr><td>15</td><td>2.5</td><td>2.7</td></tr>
+            <tr><td>16</td><td>3.2</td><td>3.4</td></tr>
+            <tr><td>17</td><td>3.9</td><td>3.8</td></tr>
+            <tr><td>18</td><td>3.9</td><td>5.1</td></tr>
+            <tr><td>19</td><td>4.7</td><td>5.1</td></tr>
+            <tr><td>20</td><td>5.6</td><td>5.8</td></tr>
+            <tr><td>21</td><td>6.0</td><td>6.1</td></tr>
+            <tr><td>22</td><td>6.4</td><td>6.9</td></tr>
+            <tr><td>23</td><td>7.5</td><td>8.1</td></tr>
+            <tr><td>24</td><td>8.9</td><td>10.5</td></tr>
+            <tr><td>25</td><td>11.5</td><td>12.6</td></tr>
+            <tr><td>26</td><td>14.1</td><td>14.8</td></tr>
+            <tr><td>27</td><td>14.8</td><td>15.5</td></tr>
+            <tr><td>28</td><td>18.4</td><td>19.9</td></tr>
+            <tr><td>29</td><td>21.9</td><td>23.6</td></tr>
+            <tr><td>30</td><td>29.6</td><td>32.3</td></tr>
+            <tr><td>31</td><td>38.4</td><td>42.1</td></tr>
+            <tr><td>32</td><td>44.0</td><td>52.0</td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="note">
+        <h3><i class="fas fa-exclamation-triangle"></i> Important Note</h3>
+        <p>The capacity indicated in the above tables for basket hitch and choker hitch is for guidance only. The vertical column is the actual load the slings can be tested and certified. In other words, safe working load is applicable for vertical lift only.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Usage Section -->
+  <section id="usage" style="background-color: #e6f0ff;">
+    <div class="container">
+      <h2 class="section-title">Applications & Usage</h2>
+      
+      <p>Single Part Slings are versatile lifting components used across various industries. Their robust construction and flexibility make them ideal for numerous applications:</p>
+      
+      <div class="usage-grid">
+        <div class="usage-card">
+          <h3>Construction Industry</h3>
+          <p>Essential for lifting and positioning structural steel, precast concrete, and heavy building materials on construction sites. Their durability makes them perfect for demanding conditions.</p>
+        </div>
+        
+        <div class="usage-card">
+          <h3>Maritime Operations</h3>
+          <p>Used in shipyards and ports for loading/unloading cargo, shipbuilding, and maintenance operations. Corrosion-resistant variants are particularly valuable in marine environments.</p>
+        </div>
+        
+        <div class="usage-card">
+          <h3>Manufacturing Facilities</h3>
+          <p>Indispensable in plants for moving heavy machinery, positioning equipment, and assembly line operations. Their reliability ensures efficient production processes.</p>
+        </div>
+        
+        <div class="usage-card">
+          <h3>Mining Operations</h3>
+          <p>Handle heavy loads of ore, equipment, and machinery. Their strength and abrasion resistance make them suitable for rugged mining environments.</p>
+        </div>
+        
+        <div class="usage-card">
+          <h3>Energy Sector</h3>
+          <p>Power plants use these slings for maintenance and installation of turbines, generators, and other heavy equipment. Also essential in oil and gas operations.</p>
+        </div>
+        
+        <div class="usage-card">
+          <h3>Transportation & Logistics</h3>
+          <p>For loading and unloading heavy goods from trucks, trains, and ships, providing reliable lifting solutions for efficient logistics operations.</p>
+        </div>
+      </div>
+      
+      <div class="features-list">
+        <h3>Proper Usage Guidelines</h3>
+        <ul>
+          <li>Always inspect slings before use for signs of wear, kinking, or damage</li>
+          <li>Never exceed the rated working load limit</li>
+          <li>Use appropriate protection when lifting over sharp edges</li>
+          <li>Store slings properly in a clean, dry environment</li>
+          <li>Follow manufacturer recommendations for sling angles and configurations</li>
+          <li>Train all personnel in proper sling handling and inspection techniques</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-card">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Email</h3>
+            <p><a href="mailto:sales@portsideindia.com">sales@portsideindia.com</a></p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Phone</h3>
+            <p>+91 93071 04214</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Address</h3>
+            <p>I-WING GURUPREM SOCIETY KATRAP, BADALPUR, MUMBAI SUBURBS, 421503</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Portside India Traders</h3>
+          <p>Providing premium maritime lifting equipment engineered for safety and reliability since our founding.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul class="footer-links">
+            <li><a href="WebbingSlings.html">Webbing Slings</a></li>
+            <li><a href="RoundSlings2.html">Round Slings</a></li>
+            <li><a href="SinglePartSlings.html">Single Part Slings</a></li>
+            <li><a href="MultipleLegSlings.html">Multiple-Leg Slings</a></li>
+            <li><a href="GrommetSlings.html">Grommet Slings</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="Product1.html">All Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>&copy; 2025 Portside India Traders. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Smooth scrolling for navigation
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Hitch tabs functionality
+      const hitchBtns = document.querySelectorAll('.hitch-btn');
+      const hitchContents = document.querySelectorAll('.hitch-content');
+      
+      hitchBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Remove active class from all buttons and content
+          hitchBtns.forEach(b => b.classList.remove('active'));
+          hitchContents.forEach(c => c.classList.remove('active'));
+          
+          // Add active class to clicked button
+          btn.classList.add('active');
+          
+          // Show corresponding content
+          const hitchType = btn.getAttribute('data-hitch');
+          document.getElementById(`${hitchType}-content`).classList.add('active');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

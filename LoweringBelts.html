@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portside India Traders - Lowering Belts</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Global Styles */
+    body, h1, h2, h3, p, ul, li, a, section, header, footer {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    
+    a {
+      text-decoration: none;
+      color: #004080;
+    }
+    
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+    
+    section {
+      padding: 40px 0;
+    }
+    
+    /* Header & Navigation */
+    header {
+      background-color: #004080; /* Ocean Blue */
+      color: #fff;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo img {
+      height: 50px;
+      margin-right: 15px;
+      background: #fff;
+      padding: 5px;
+      border-radius: 4px;
+    }
+    
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .logo-text h1 {
+      font-size: 1.5em;
+      margin: 0;
+      color: white;
+    }
+    
+    .logo-text span {
+      font-size: 0.8em;
+      color: #ff9800;
+      margin-top: 3px;
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    
+    nav ul li {
+      margin-left: 20px;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    
+    nav ul li a:hover {
+      color: #ff9800;
+    }
+    
+    /* Hero Section - Solid Color Background */
+    .hero {
+      background: linear-gradient(135deg, #004080, #002b5c);
+      color: white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 20px;
+    }
+    
+    .hero .content {
+      max-width: 800px;
+    }
+    
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
+    
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 25px;
+      color: white;
+      opacity: 0.9;
+    }
+    
+    .hero .cta {
+      background: #fff;
+      color: #004080;
+      padding: 12px 30px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1.1em;
+      display: inline-block;
+      transition: all 0.3s;
+      margin-top: 20px;
+    }
+    
+    .hero .cta:hover {
+      background: #ff9800;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Section Headings */
+    .section-title {
+      text-align: center;
+      color: #004080;
+      margin-bottom: 30px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .section-title:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: #ff9800;
+    }
+    
+    /* Features Section */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
+    }
+    
+    .feature-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      border-top: 4px solid #004080;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .feature-card i {
+      font-size: 2.5rem;
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    .feature-card h3 {
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    /* Tables */
+    .sling-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      font-size: 0.9rem;
+    }
+    
+    .sling-table th {
+      background: #004080;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-weight: 600;
+    }
+    
+    .sling-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #e0e0e0;
+      text-align: center;
+    }
+    
+    .sling-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .sling-table tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+    
+    .sling-table tr:hover {
+      background-color: #e3f2fd;
+    }
+    
+    /* Notes Section */
+    .note {
+      background: #fff8e1;
+      border-left: 4px solid #ff9800;
+      padding: 25px;
+      border-radius: 5px;
+      margin: 30px 0;
+    }
+    
+    .note h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .note ul {
+      padding-left: 20px;
+    }
+    
+    .note li {
+      margin-bottom: 10px;
+    }
+    
+    /* Contact Section */
+    .contact-card {
+      background: white;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .contact-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: #e3f2fd;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      color: #004080;
+      font-size: 1.2rem;
+    }
+    
+    .contact-info {
+      flex: 1;
+    }
+    
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 50px 0 20px;
+      margin-top: 50px;
+    }
+    
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+    
+    .footer-column {
+      flex: 1;
+      min-width: 250px;
+      margin-bottom: 30px;
+      padding: 0 15px;
+    }
+    
+    .footer-column h3 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: #ff9800;
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-links a {
+      color: #ddd;
+      transition: color 0.3s;
+    }
+    
+    .footer-links a:hover {
+      color: #ff9800;
+    }
+    
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #444;
+    }
+    
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      
+      .sling-table {
+        display: block;
+        overflow-x: auto;
+      }
+      
+      header .container {
+        flex-direction: column;
+      }
+      
+      nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      nav ul li {
+        margin: 5px 10px;
+      }
+      
+      .contact-item {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .contact-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+      
+      .footer-content {
+        flex-direction: column;
+      }
+    }
+    
+    /* Product Highlights */
+    .product-highlights {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 30px 0;
+    }
+    
+    .highlight-item {
+      text-align: center;
+      width: 200px;
+      padding: 15px;
+    }
+    
+    .highlight-icon {
+      font-size: 2.5rem;
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    /* Sling Type Selector */
+    .sling-type-selector {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .sling-type-btn {
+      background: #fff;
+      border: 2px solid #004080;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+      min-width: 180px;
+      text-align: center;
+    }
+    
+    .sling-type-btn.active {
+      background: #004080;
+      color: white;
+    }
+    
+    .sling-type-btn:hover {
+      background: #ff9800;
+      color: white;
+      border-color: #ff9800;
+    }
+    
+    .sling-content {
+      display: none;
+    }
+    
+    .sling-content.active {
+      display: block;
+    }
+    
+    /* Material Indicators */
+    .material-indicator {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.85em;
+      font-weight: bold;
+      margin: 0 5px;
+    }
+    
+    .polyester {
+      background-color: #e3f2fd;
+      color: #004080;
+      border: 1px solid #004080;
+    }
+    
+    .highlight {
+      background-color: #e3f2fd;
+      padding: 10px 15px;
+      border-radius: 8px;
+      border-left: 3px solid #004080;
+      margin: 10px 0;
+    }
+    
+    .features-list {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 25px;
+      margin: 30px 0;
+    }
+    
+    .features-list h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #004080;
+      padding-bottom: 10px;
+    }
+    
+    .features-list ul {
+      padding-left: 20px;
+    }
+    
+    .features-list li {
+      margin-bottom: 10px;
+      padding-left: 10px;
+    }
+    
+    .features-list li:before {
+      content: "✓";
+      color: #004080;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    
+    /* Lashing System Cards */
+    .lashing-systems {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin: 40px 0;
+    }
+    
+    .lashing-card {
+      background: white;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    
+    .lashing-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .lashing-card h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #004080;
+      padding-bottom: 10px;
+    }
+    
+    .lashing-card table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    
+    .lashing-card th, 
+    .lashing-card td {
+      padding: 8px;
+      text-align: center;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .lashing-card th {
+      background-color: #f0f8ff;
+      font-weight: bold;
+    }
+  </style>
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HQH77MSRY6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HQH77MSRY6');
+</script>
+
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="Images/FinalLogo.png" alt="Portside India Traders Logo">
+        <div class="logo-text">
+          <h1>Portside India Traders</h1>
+          <span>Strength that Anchors Your Success</span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="Product1.html">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="content">
+      <h1 style="color: white;">Lowering Belts</h1>
+      <p>Heavy-duty lowering belts for safe pipe handling operations</p>
+      <a href="#contact" class="cta">Request a Quote</a>
+    </div>
+  </section>
+
+  <!-- Product Overview -->
+  <section id="overview">
+    <div class="container">
+      <h2 class="section-title">Lowering Belt Overview</h2>
+      <p>Our lowering belts are manufactured from duplex polyester webbing slings joined together with heavy-duty steel terminals, designed for high load capacity when lowering pipes. They offer high safety, low elasticity, and resistance to ultraviolet rays, ensuring long-term reliability in demanding conditions.</p>
+      
+      <div class="product-highlights">
+        <div class="highlight-item">
+          <div class="highlight-icon">
+            <i class="fas fa-weight-hanging"></i>
+          </div>
+          <h3>Heavy Capacity</h3>
+          <p>Up to 45,000 kgs SWL</p>
+        </div>
+        
+        <div class="highlight-item">
+          <div class="highlight-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Safety Features</h3>
+          <p>UV Resistant & Low Elasticity</p>
+        </div>
+        
+        <div class="highlight-item">
+          <div class="highlight-icon">
+            <i class="fas fa-sync-alt"></i>
+          </div>
+          <h3>Easy Replacement</h3>
+          <p>On-site replacement in minutes</p>
+        </div>
+        
+        <div class="highlight-item">
+          <div class="highlight-icon">
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+          <h3>Long Life</h3>
+          <p>Economical due to long working life</p>
+        </div>
+      </div>
+      
+      <div class="features-list">
+        <h3>Key Features</h3>
+        <ul>
+          <li>Manufactured from duplex polyester webbing slings</li>
+          <li>Designed for use with heavy-duty steel terminals</li>
+          <li>High load capacity for lowering pipes</li>
+          <li>High safety with low elasticity</li>
+          <li>Resistant to ultraviolet rays</li>
+          <li>Simple on-site belt replacement in minutes</li>
+          <li>Economical due to long working life</li>
+          <li>Extra heavy-duty versions available on request</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specifications Section -->
+  <section id="specs" style="background-color: #f8f9fa;">
+    <div class="container">
+      <h2 class="section-title">Technical Specifications</h2>
+      
+      <table class="sling-table">
+        <thead>
+          <tr>
+            <th>Item Code</th>
+            <th>Nominal Pipe Size (Inches)</th>
+            <th>Holes Per Strip</th>
+            <th>Width (mm)</th>
+            <th>Length (mtr)</th>
+            <th>Hooks Per Side</th>
+            <th>S.W.L. (FS 5:1 kgs)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>SPLB - 12</td>
+            <td>12</td>
+            <td>2</td>
+            <td>300</td>
+            <td>1.45</td>
+            <td>2</td>
+            <td>12000</td>
+          </tr>
+          <tr>
+            <td>SPLB - 18</td>
+            <td>18</td>
+            <td>4</td>
+            <td>450</td>
+            <td>2.10</td>
+            <td>4</td>
+            <td>20000</td>
+          </tr>
+          <tr>
+            <td>SPLB - 24</td>
+            <td>24</td>
+            <td>5</td>
+            <td>600</td>
+            <td>2.70</td>
+            <td>5</td>
+            <td>25000</td>
+          </tr>
+          <tr>
+            <td>SPLB - 30</td>
+            <td>30</td>
+            <td>6</td>
+            <td>750</td>
+            <td>3.35</td>
+            <td>6</td>
+            <td>32000</td>
+          </tr>
+          <tr>
+            <td>SPLB - 36</td>
+            <td>36</td>
+            <td>7</td>
+            <td>900</td>
+            <td>3.80</td>
+            <td>7</td>
+            <td>38000</td>
+          </tr>
+          <tr>
+            <td>SPLB - 42</td>
+            <td>42</td>
+            <td>8</td>
+            <td>1050</td>
+            <td>4.21</td>
+            <td>8</td>
+            <td>45000</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <div class="note">
+        <h3><i class="fas fa-info-circle"></i> Product Notes</h3>
+        <ul>
+          <li>Factor of safety for webbing: 1:7</li>
+          <li>Factor of safety for steel terminals: 1:4</li>
+          <li>Extra heavy-duty lowering belts available on request</li>
+          <li>Advanced terminal design for quick on-site replacement</li>
+          <li>Resistant to ultraviolet rays for outdoor applications</li>
+          <li>Economical solution due to long working life</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advantages Section -->
+  <section id="advantages">
+    <div class="container">
+      <h2 class="section-title">Key Advantages</h2>
+      
+      <div class="features">
+        <div class="feature-card">
+          <i class="fas fa-calendar-times"></i>
+          <h3>Long-lasting</h3>
+          <p>Do not weaken with age and provide long-term reliability</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-shield-virus"></i>
+          <h3>Shock Absorbent</h3>
+          <p>Inherently absorbent of shocks during operations</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-ban"></i>
+          <h3>Corrosion Free</h3>
+          <p>Polyester construction ensures resistance to corrosion</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-search"></i>
+          <h3>Easy Inspection</h3>
+          <p>Simpler, more positive inspection - if it looks all right, it is all right</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-weight"></i>
+          <h3>Lightweight</h3>
+          <p>Lighter weight means easier working and less risk of injury</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-truck-loading"></i>
+          <h3>Transport Savings</h3>
+          <p>Lower weight also means lower transport costs</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-paint-roller"></i>
+          <h3>Surface Protection</h3>
+          <p>Less risk of damage to polished, painted or sensitive surfaces</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-compress-alt"></i>
+          <h3>Cargo Control</h3>
+          <p>Superior level of cargo control through high pre-tensioning</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lashing Systems Section -->
+  <section id="lashing" style="background-color: #f8f9fa;">
+    <div class="container">
+      <h2 class="section-title">Lashing Systems</h2>
+      
+      <div class="sling-type-selector">
+        <div class="sling-type-btn active" data-type="ratchet">Ratchet Lashing</div>
+        <div class="sling-type-btn" data-type="cambuckle">Cambuckle Lashing</div>
+      </div>
+      
+      <!-- Ratchet Lashing System -->
+      <div class="sling-content active" id="ratchet-content">
+        <div class="lashing-systems">
+          <div class="lashing-card">
+            <h3>Ratchet Lashing</h3>
+            <p>With hook at both sides</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Ref</th>
+                  <th>Width (mm)</th>
+                  <th>MBS (kg)</th>
+                  <th>RAS (kg)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>KRL-25</td>
+                  <td>25</td>
+                  <td>1500/3000</td>
+                  <td>750/1500</td>
+                </tr>
+                <tr>
+                  <td>KRL-35</td>
+                  <td>35</td>
+                  <td>3000/6000</td>
+                  <td>1500/3000</td>
+                </tr>
+                <tr>
+                  <td>KRL-50</td>
+                  <td>50</td>
+                  <td>5000/10000</td>
+                  <td>2500/5000</td>
+                </tr>
+                <tr>
+                  <td>KRL-75</td>
+                  <td>75</td>
+                  <td>8000/16000</td>
+                  <td>4000/8000</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="highlight" style="margin-top: 15px; font-size: 0.9rem;">
+              MBS: Minimum Breaking Strength (Two Part / Endless)<br>
+              RAS: Rated Assembly Strength (Two Part / Endless)
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Cambuckle Lashing System -->
+      <div class="sling-content" id="cambuckle-content">
+        <div class="lashing-systems">
+          <div class="lashing-card">
+            <h3>Cambuckle Lashing</h3>
+            <p>With hook at both sides</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Ref</th>
+                  <th>Width (mm)</th>
+                  <th>MBS (kg)</th>
+                  <th>RAS (kg)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>KCB-25</td>
+                  <td>25</td>
+                  <td>250/500</td>
+                  <td>125/250</td>
+                </tr>
+                <tr>
+                  <td>KCB-35</td>
+                  <td>35</td>
+                  <td>1000/2000</td>
+                  <td>500/1000</td>
+                </tr>
+                <tr>
+                  <td>KCB-50</td>
+                  <td>35</td>
+                  <td>1500/3000</td>
+                  <td>750/1500</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="highlight" style="margin-top: 15px; font-size: 0.9rem;">
+              MBS: Minimum Breaking Strength (Two Part / Endless)<br>
+              RAS: Rated Assembly Strength (Two Part / Endless)
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="features-list">
+        <h3>Benefits of Our Lashing Systems</h3>
+        <ul>
+          <li>Modern, lightweight and thoroughly reliable method of securing all types of loads</li>
+          <li>Significant advantages over steel banding, rope or chains</li>
+          <li>Superior performance and properties compared to traditional methods</li>
+          <li>Suppleness of polyester accommodates irregularities of the load</li>
+          <li>Less risk of damage to sensitive surfaces</li>
+          <li>Superior level of cargo control through high pre-tensioning</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-card">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Email</h3>
+            <p><a href="mailto:sales@portsideindia.com">sales@portsideindia.com</a></p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Phone</h3>
+            <p>+91 93071 04214</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Address</h3>
+            <p>I-WING GURUPREM SOCIETY KATRAP, BADALPUR, MUMBAI SUBURBS, 421503</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Portside India Traders</h3>
+          <p>Providing premium maritime lifting equipment engineered for safety and reliability since our founding.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul class="footer-links">
+            <li><a href="WebbingSlings.html">Webbing Slings</a></li>
+            <li><a href="RoundSlings2.html">Round Slings</a></li>
+            <li><a href="LoweringBelts.html">Lowering &amp; Safety Belts</a></li>
+            <li><a href="SinglePartSlings.html">Single‑Part Slings</a></li>
+            <li><a href="MultipleLegSlings.html">Multiple‑Leg Slings</a></li>
+            <li><a href="GrommetSlings.html">Grommet Slings</a></li>
+            <li><a href="FlemishEyeSlings.html">Flemish‑Eye Slings</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="Product1.html">All Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>&copy; 2025 Portside India Traders. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Smooth scrolling for navigation
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Sling type selector functionality
+      const slingTypeBtns = document.querySelectorAll('.sling-type-btn');
+      const slingContents = document.querySelectorAll('.sling-content');
+      
+      slingTypeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Remove active class from all buttons and content
+          slingTypeBtns.forEach(b => b.classList.remove('active'));
+          slingContents.forEach(c => c.classList.remove('active'));
+          
+          // Add active class to clicked button
+          btn.classList.add('active');
+          
+          // Show corresponding content
+          const type = btn.getAttribute('data-type');
+          document.getElementById(`${type}-content`).classList.add('active');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

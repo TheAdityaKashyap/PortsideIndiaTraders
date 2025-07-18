@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portside India Traders - Crosby® G-450 Red U-Bolt® Clip</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Global Styles */
+    body, h1, h2, h3, p, ul, li, a, section, header, footer {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    
+    a {
+      text-decoration: none;
+      color: #004080;
+    }
+    
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+    
+    section {
+      padding: 40px 0;
+    }
+    
+    /* Header & Navigation */
+    header {
+      background-color: #004080; /* Ocean Blue */
+      color: #fff;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo img {
+      height: 50px;
+      margin-right: 15px;
+      background: #fff;
+      padding: 5px;
+      border-radius: 4px;
+    }
+    
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .logo-text h1 {
+      font-size: 1.5em;
+      margin: 0;
+      color: white;
+    }
+    
+    .logo-text span {
+      font-size: 0.8em;
+      color: #ff9800;
+      margin-top: 3px;
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    
+    nav ul li {
+      margin-left: 20px;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    
+    nav ul li a:hover {
+      color: #ff9800;
+    }
+    
+    /* Hero Section - Solid Color Background */
+    .hero {
+      background: linear-gradient(135deg, #004080, #002b5c);
+      color: white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 20px;
+    }
+    
+    .hero .content {
+      max-width: 800px;
+    }
+    
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
+    
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 25px;
+      color: white;
+      opacity: 0.9;
+    }
+    
+    .hero .cta {
+      background: #fff;
+      color: #004080;
+      padding: 12px 30px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1.1em;
+      display: inline-block;
+      transition: all 0.3s;
+      margin-top: 20px;
+    }
+    
+    .hero .cta:hover {
+      background: #ff9800;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Section Headings */
+    .section-title {
+      text-align: center;
+      color: #004080;
+      margin-bottom: 30px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .section-title:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: #ff9800;
+    }
+    
+    /* Features Section */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
+    }
+    
+    .feature-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      border-top: 4px solid #004080;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .feature-card i {
+      font-size: 2.5rem;
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    .feature-card h3 {
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    /* Tables */
+    .sling-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      font-size: 0.9rem;
+    }
+    
+    .sling-table th {
+      background: #004080;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-weight: 600;
+    }
+    
+    .sling-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #e0e0e0;
+      text-align: center;
+    }
+    
+    .sling-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .sling-table tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+    
+    .sling-table tr:hover {
+      background-color: #e3f2fd;
+    }
+    
+    /* Notes Section */
+    .note {
+      background: #fff8e1;
+      border-left: 4px solid #ff9800;
+      padding: 25px;
+      border-radius: 5px;
+      margin: 30px 0;
+    }
+    
+    .note h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .note ul {
+      padding-left: 20px;
+    }
+    
+    .note li {
+      margin-bottom: 10px;
+    }
+    
+    /* Contact Section */
+    .contact-card {
+      background: white;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .contact-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: #e3f2fd;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      color: #004080;
+      font-size: 1.2rem;
+    }
+    
+    .contact-info {
+      flex: 1;
+    }
+    
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 50px 0 20px;
+      margin-top: 50px;
+    }
+    
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+    
+    .footer-column {
+      flex: 1;
+      min-width: 250px;
+      margin-bottom: 30px;
+      padding: 0 15px;
+    }
+    
+    .footer-column h3 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: #ff9800;
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-links a {
+      color: #ddd;
+      transition: color 0.3s;
+    }
+    
+    .footer-links a:hover {
+      color: #ff9800;
+    }
+    
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #444;
+    }
+    
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      
+      .sling-table {
+        display: block;
+        overflow-x: auto;
+      }
+      
+      header .container {
+        flex-direction: column;
+      }
+      
+      nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      nav ul li {
+        margin: 5px 10px;
+      }
+      
+      .contact-item {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .contact-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+      
+      .footer-content {
+        flex-direction: column;
+      }
+    }
+    
+    /* Crosby Branding */
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+    
+    .spec-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      border-left: 4px solid #004080;
+    }
+    
+    .spec-card h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .spec-card i {
+      color: #ff9800;
+    }
+    
+    .features-list {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 25px;
+      margin: 30px 0;
+    }
+    
+    .features-list h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #004080;
+      padding-bottom: 10px;
+    }
+    
+    .features-list ul {
+      padding-left: 20px;
+    }
+    
+    .features-list li {
+      margin-bottom: 10px;
+      padding-left: 10px;
+    }
+    
+    .features-list li:before {
+      content: "✓";
+      color: #004080;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    
+    .technical-details {
+      background: #e3f2fd;
+      border-radius: 8px;
+      padding: 25px;
+      margin: 30px 0;
+    }
+    
+    .dimension-placeholder {
+      background: #f0f0f0;
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      margin: 30px 0;
+      font-style: italic;
+      color: #666;
+    }
+    
+    .safety-badge {
+      background: rgba(0, 64, 128, 0.1); /* 10% opacity */;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 30px 0;
+      text-align: center;
+    }
+    
+    .safety-badge i {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      color: #ff9800;
+    }
+    
+    .feature-icon {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    
+    .feature-icon i {
+      font-size: 1.5rem;
+      color: #004080;
+      background: #e3f2fd;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    /* Material Indicators */
+    .material-indicator {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.85em;
+      font-weight: bold;
+      margin: 0 5px;
+    }
+    
+    .alloy {
+      background-color: #fff8e1;
+      color: #ff9800;
+      border: 1px solid #ff9800;
+    }
+    
+    .highlight {
+      background-color: #e3f2fd;
+      padding: 10px 15px;
+      border-radius: 8px;
+      border-left: 3px solid #004080;
+      margin: 10px 0;
+    }
+    
+    .product-highlights {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 30px 0;
+    }
+    
+    .highlight-item {
+      text-align: center;
+      width: 200px;
+      padding: 15px;
+    }
+    
+    .highlight-icon {
+      font-size: 2.5rem;
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    .grade-badge {
+      background: #004080;
+      color: white;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 0.8em;
+      margin: 0 5px;
+    }
+    
+    .red-pin {
+      color: #e74c3c;
+      font-weight: bold;
+    }
+    
+    .certification-badge {
+      background: #27ae60;
+      color: white;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 0.8em;
+      margin: 0 5px;
+    }
+    
+    .warning-box {
+      background-color: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 0 4px 4px 0;
+    }
+    
+    .footnote {
+      font-size: 0.85em;
+      margin-top: 10px;
+      color: #666;
+    }
+    
+    .efficiency-badge {
+      display: inline-block;
+      background: #e3f2fd;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+      margin: 10px 0;
+      color: #004080;
+      border: 1px solid #004080;
+    }
+  </style>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HQH77MSRY6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-HQH77MSRY6');
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="Images/FinalLogo.png" alt="Portside India Traders Logo">
+        <div class="logo-text">
+          <h1>Portside India Traders</h1>
+          <span>Strength that Anchors Your Success</span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="Product1.html">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="content">
+      <h1 style="color: white;">Forged Wire Rope Clamps</h1>
+      <p>Premium wire rope clips for secure connections and maximum safety</p>
+      <a href="#contact" class="cta">Request a Quote</a>
+    </div>
+  </section>
+
+  <!-- Product Overview -->
+  <section id="overview">
+    <div class="container">
+      <h2 class="section-title">Product Overview</h2>
+      <p>The Crosby® G-450 Red U-Bolt® Clip is engineered for superior performance in demanding wire rope applications. These hot-dip galvanized wire rope clips provide maximum strength and corrosion resistance for critical connections.</p>
+      
+      <div class="efficiency-badge">
+        Efficiency: 80% for 3mm-22mm sizes | 90% for 24mm-90mm sizes
+      </div>
+      
+      <div class="product-highlights">
+        <div class="highlight-item">
+          <div class="highlight-icon">
+            <i class="fas fa-fingerprint"></i>
+          </div>
+          <h3>Traceability</h3>
+          <p>Product Identification Code (PIC) on each base</p>
+        </div>
+        
+        <div class="highlight-item">
+          <div class="highlight-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Certified</h3>
+          <p>Exceeds ASME B30.26 requirements</p>
+        </div>
+        
+        <div class="highlight-item">
+          <div class="highlight-icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3>Durable</h3>
+          <p>Hot-dip galvanized for corrosion resistance</p>
+        </div>
+        
+        <div class="highlight-item">
+          <div class="highlight-icon">
+            <i class="fas fa-hammer"></i>
+          </div>
+          <h3>Forged</h3>
+          <p>Forged bases for sizes 3mm-62mm and 75mm</p>
+        </div>
+      </div>
+      
+      <div class="features-list">
+        <h3>Key Features</h3>
+        <ul>
+          <li>Each base has a Product Identification Code (PIC) for material traceability</li>
+          <li>Name Crosby or "CG" and size forged into each base</li>
+          <li>80% efficiency rating for 3mm-22mm sizes, 90% for 24mm-90mm sizes</li>
+          <li>Entire clip is galvanized to resist corrosion and rust</li>
+          <li>Sizes 3mm-62mm and 75mm have forged bases</li>
+          <li>All clips individually bagged or tagged with application instructions and warnings</li>
+          <li>Clip sizes up to 38mm have rolled threads</li>
+          <li>Meets or exceeds all requirements of ASME B30.26</li>
+          <li>Look for the Red U-Bolt® for genuine Crosby Clips</li>
+        </ul>
+      </div>
+      
+      <div class="technical-details">
+        <h3>Technical Specifications</h3>
+        <ul>
+          <li><strong>Efficiency:</strong> 80% for 3mm-22mm, 90% for 24mm-90mm</li>
+          <li><strong>Material:</strong> Hot-dip galvanized steel</li>
+          <li><strong>Traceability:</strong> PIC code on each base</li>
+          <li><strong>Threads:</strong> Rolled threads on sizes up to 38mm</li>
+          <li><strong>Packaging:</strong> Individually bagged or tagged</li>
+          <li><strong>Certifications:</strong> ASME B30.26 compliant</li>
+          <li><strong>Base Construction:</strong> Forged bases for sizes 3mm-62mm and 75mm</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specifications Section -->
+<section id="specs" style="background-color: #f8f9fa;">
+  <div class="container">
+    <h2 class="section-title">Technical Specifications</h2>
+
+    <div class="highlight">
+      <h3>Product Dimensions</h3>
+      <p>The table below provides detailed specifications for all available sizes of the Crosby® G-450 Red U-Bolt® Clip. All dimensions are in millimeters unless otherwise specified.</p>
+    </div>
+
+    <table class="sling-table">
+  <thead>
+    <tr>
+      <th>Rope Size (in)</th>
+      <th>Rope Size (mm)</th>
+      <th>Stock No.</th>
+      <th>Std. Package</th>
+      <th>Weight Per 100 (kg)</th>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+      <th>D</th>
+      <th>E</th>
+      <th>F</th>
+      <th>G</th>
+      <th>H</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>1/8</td><td>3.18</td><td>1010015</td><td>100</td><td>2.72</td><td>5.60</td><td>18.3</td><td>11.2</td><td>11.9</td><td>10.4</td><td>9.65</td><td>20.6</td><td>23.9</td></tr>
+    <tr><td>3/16*</td><td>4.76</td><td>1010033</td><td>100</td><td>4.54</td><td>6.35</td><td>24.6</td><td>14.2</td><td>15.0</td><td>12.7</td><td>11.2</td><td>23.9</td><td>29.5</td></tr>
+    <tr><td>1/4</td><td>6.35</td><td>1010051</td><td>100</td><td>8.62</td><td>7.85</td><td>26.2</td><td>12.7</td><td>19.1</td><td>16.8</td><td>14.2</td><td>30.2</td><td>36.6</td></tr>
+    <tr><td>5/16</td><td>7.94</td><td>1010079</td><td>100</td><td>12.7</td><td>9.65</td><td>35.1</td><td>19.1</td><td>22.4</td><td>18.3</td><td>17.5</td><td>33.3</td><td>42.9</td></tr>
+    <tr><td>3/8</td><td>9.53</td><td>1010097</td><td>100</td><td>21.8</td><td>11.2</td><td>38.1</td><td>19.1</td><td>25.4</td><td>23.1</td><td>19.1</td><td>41.4</td><td>49.3</td></tr>
+    <tr><td>7/16 - 1/2</td><td>11.11 - 12.70</td><td>1010131</td><td>50</td><td>80</td><td>1.88</td><td>1.00</td><td>1.19</td><td>1.13</td><td>0.88</td><td>1.91</td><td>2.28</td><td></td></tr>
+    <tr><td>9/16 - 5/8</td><td>14.29 - 15.88</td><td>1010177</td><td>50</td><td>110</td><td>2.25</td><td>1.25</td><td>1.31</td><td>1.34</td><td>0.94</td><td>2.06</td><td>2.50</td><td></td></tr>
+    <tr><td>3/4</td><td>19.05</td><td>1010195</td><td>25</td><td>64</td><td>15.7</td><td>70.0</td><td>36.6</td><td>38.1</td><td>35.8</td><td>26.9</td><td>57.0</td><td>72.0</td></tr>
+    <tr><td>7/8</td><td>22.23</td><td>1010211</td><td>25</td><td>96</td><td>19.1</td><td>79.0</td><td>41.1</td><td>44.5</td><td>40.4</td><td>31.8</td><td>62.0</td><td>80.5</td></tr>
+    <tr><td>1</td><td>25.40</td><td>1010239</td><td>10</td><td>114</td><td>19.1</td><td>89.0</td><td>46.0</td><td>47.8</td><td>45.2</td><td>31.8</td><td>67.0</td><td>88.0</td></tr>
+    <tr><td>1-1/8</td><td>28.58</td><td>1010257</td><td>10</td><td>128</td><td>19.1</td><td>98.5</td><td>51.0</td><td>51.0</td><td>48.5</td><td>31.8</td><td>71.5</td><td>91.0</td></tr>
+    <tr><td>1-1/4</td><td>31.75</td><td>1010275</td><td>10</td><td>199</td><td>22.4</td><td>108</td><td>54.0</td><td>59.4</td><td>55.5</td><td>36.6</td><td>79.5</td><td>105</td></tr>
+    <tr><td>1-3/8</td><td>34.93</td><td>1010293</td><td>10</td><td>200</td><td>22.4</td><td>118</td><td>58.5</td><td>59.4</td><td>58.5</td><td>36.6</td><td>79.5</td><td>106</td></tr>
+    <tr><td>1-1/2</td><td>38.10</td><td>1010319</td><td>10</td><td>247</td><td>22.4</td><td>125</td><td>60.5</td><td>66.5</td><td>62.0</td><td>36.6</td><td>86.5</td><td>113</td></tr>
+    <tr><td>1-5/8</td><td>41.28</td><td>1010337</td><td>Bulk</td><td>319</td><td>25.4</td><td>135</td><td>66.5</td><td>70.0</td><td>67.5</td><td>41.4</td><td>92.0</td><td>121</td></tr>
+    <tr><td>1-3/4</td><td>44.45</td><td>1010355</td><td>Bulk</td><td>424</td><td>28.7</td><td>146</td><td>70.0</td><td>77.5</td><td>74.5</td><td>46.0</td><td>97.0</td><td>134</td></tr>
+    <tr><td>2</td><td>50.80</td><td>1010373</td><td>Bulk</td><td>590</td><td>31.8</td><td>164</td><td>76.0</td><td>86.0</td><td>77.0</td><td>51.0</td><td>113</td><td>149</td></tr>
+    <tr><td>2-1/4</td><td>57.15</td><td>1010391</td><td>Bulk</td><td>726</td><td>31.8</td><td>181</td><td>81.0</td><td>98.5</td><td>81.0</td><td>51.0</td><td>114</td><td>162</td></tr>
+    <tr><td>2-1/2</td><td>63.50</td><td>1010417</td><td>Bulk</td><td>862</td><td>31.8</td><td>195</td><td>87.5</td><td>105</td><td>93.5</td><td>51.0</td><td>119</td><td>168</td></tr>
+    <tr><td>2-3/4</td><td>69.85</td><td>1010435</td><td>Bulk</td><td>1043</td><td>31.8</td><td>211</td><td>90.5</td><td>111</td><td>124</td><td>51.0</td><td>127</td><td>175</td></tr>
+    <tr><td>3</td><td>76.20</td><td>1010453</td><td>Bulk</td><td>1406</td><td>38.1</td><td>233</td><td>98.5</td><td>121</td><td>119</td><td>60.5</td><td>149</td><td>194</td></tr>
+    <tr><td>3-1/2</td><td>88.90</td><td>1010426</td><td>Bulk</td><td>1814</td><td>38.1</td><td>273</td><td>114</td><td>140</td><td>152</td><td>60.5</td><td>157</td><td>213</td></tr>
+  </tbody>
+</table>
+
+
+    <div class="note">
+      <h3><i class="fas fa-exclamation-circle"></i> Product Notes & Specifications</h3>
+      <ul>
+        <li><strong>*Electro-plated U-Bolt and Nuts</strong> for sizes marked with asterisk</li>
+        <li><strong>** 70mm and 89mm base</strong> made of cast steel</li>
+        <li>All clips are individually bagged or tagged with proper application instructions and warning information</li>
+        <li>Meets or exceeds all requirements of ASME B30.26 including identification, ductility, design factor, proof load and temperature requirements</li>
+        <li>These wire rope clips meet other critical performance requirements, including fatigue life, impact properties, and material traceability not addressed by ASME B30.26</li>
+        <li>Look for the Red U-Bolt®, your assurance of genuine Crosby Clips</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Safety Features -->
+  <section id="safety">
+    <div class="container">
+      <h2 class="section-title">Safety & Performance Features</h2>
+      <div class="features">
+        <div class="feature-card">
+          <i class="fas fa-industry"></i>
+          <h3>Material Traceability</h3>
+          <p>Product Identification Code (PIC) on each base for full traceability</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-bolt"></i>
+          <h3>High Efficiency</h3>
+          <p>80-90% efficiency rating based on wire rope breaking strength</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Corrosion Resistance</h3>
+          <p>Hot-dip galvanized for protection against rust and corrosion</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-certificate"></i>
+          <h3>Certifications</h3>
+          <p>Exceeds ASME B30.26 requirements</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-card">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Email</h3>
+            <p><a href="mailto:sales@portsideindia.com">sales@portsideindia.com</a></p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Phone</h3>
+            <p>+91 93071 04214</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Address</h3>
+            <p>I-WING GURUPREM SOCIETY KATRAP, BADALPUR, MUMBAI SUBURBS, 421503</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Portside India Traders</h3>
+          <p>Providing premium maritime lifting equipment engineered for safety and reliability since our founding.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul class="footer-links">
+            <li><a href="DShackles_AnchorBowShackles.html">D‑Shackles &amp; Anchor Bow Shackles</a></li>
+            <li><a href="G450_RedUBoltClip.html">Forged Wire Rope Clamps</a></li>
+            <li><a href="Turnbuckles_StrainingScrews.html">Turnbuckles / Straining Screws</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="Product1.html">All Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Certifications</h3>
+          <ul class="footer-links">
+            <li><a href="#">ASME B30.26 Certified</a></li>
+            <li><a href="#">Federal Specs Compliance</a></li>
+            <li><a href="#">ASTM Compliant</a></li>
+            <li><a href="#">ISO Quality Standards</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>&copy; 2025 Portside India Traders. All Rights Reserved. Crosby® and Red U-Bolt® are registered trademarks of The Crosby Group LLC.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Smooth scrolling for navigation
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

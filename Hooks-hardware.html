@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portside India Traders - Crosby Hooks & Swivels</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Global Styles */
+    body, h1, h2, h3, p, ul, li, a, section, header, footer {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    
+    a {
+      text-decoration: none;
+      color: #004080;
+    }
+    
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+    
+    section {
+      padding: 40px 0;
+    }
+    
+    /* Header & Navigation */
+    header {
+      background-color: #004080; /* Ocean Blue */
+      color: #fff;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo img {
+      height: 50px;
+      margin-right: 15px;
+    }
+    
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .logo-text h1 {
+      font-size: 1.5em;
+      margin: 0;
+      color: white;
+    }
+    
+    .logo-text span {
+      font-size: 0.8em;
+      color: #ff9800;
+      margin-top: 3px;
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    
+    nav ul li {
+      margin-left: 20px;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    
+    nav ul li a:hover {
+      color: #ff9800;
+    }
+    
+    /* Hero Section - Solid Color Background */
+    .hero {
+      background: linear-gradient(135deg, #004080, #002b5c);
+      color: white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 20px;
+    }
+    
+    .hero .content {
+      max-width: 800px;
+    }
+    
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
+    
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 25px;
+      color: white;
+      opacity: 0.9;
+    }
+    
+    .hero .cta {
+      background: #fff;
+      color: #004080;
+      padding: 12px 30px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1.1em;
+      display: inline-block;
+      transition: all 0.3s;
+      margin-top: 20px;
+    }
+    
+    .hero .cta:hover {
+      background: #ff9800;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Section Headings */
+    .section-title {
+      text-align: center;
+      color: #004080;
+      margin-bottom: 30px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .section-title:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: #ff9800;
+    }
+    
+    /* Features Section */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
+    }
+    
+    .feature-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      border-top: 4px solid #004080;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .feature-card i {
+      font-size: 2.5rem;
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    .feature-card h3 {
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    /* Tabs */
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 30px 0;
+      justify-content: center;
+    }
+    
+    .tab-btn {
+      background: #e0e0e0;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+    
+    .tab-btn.active, .tab-btn:hover {
+      background: #004080;
+      color: white;
+    }
+    
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+    
+    .tab-content.active {
+      display: block;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Tables */
+    .sling-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      font-size: 0.9rem;
+    }
+    
+    .sling-table th {
+      background: #004080;
+      color: white;
+      padding: 15px;
+      text-align: left;
+      font-weight: 600;
+    }
+    
+    .sling-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .sling-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .sling-table tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+    
+    .sling-table tr:hover {
+      background-color: #e3f2fd;
+    }
+    
+    .crosby-red {
+      color: #e53935;
+      font-weight: bold;
+    }
+    
+    /* Notes Section */
+    .note {
+      background: #fff8e1;
+      border-left: 4px solid #ff9800;
+      padding: 25px;
+      border-radius: 5px;
+      margin: 30px 0;
+    }
+    
+    .note h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .note ul {
+      padding-left: 20px;
+    }
+    
+    .note li {
+      margin-bottom: 10px;
+    }
+    
+    /* Contact Section */
+    .contact-card {
+      background: white;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .contact-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: #e3f2fd;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      color: #004080;
+      font-size: 1.2rem;
+    }
+    
+    .contact-info {
+      flex: 1;
+    }
+    
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 50px 0 20px;
+      margin-top: 50px;
+    }
+    
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+    
+    .footer-column {
+      flex: 1;
+      min-width: 250px;
+      margin-bottom: 30px;
+      padding: 0 15px;
+    }
+    
+    .footer-column h3 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: #ff9800;
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-links a {
+      color: #ddd;
+      transition: color 0.3s;
+    }
+    
+    .footer-links a:hover {
+      color: #ff9800;
+    }
+    
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #444;
+    }
+    
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      
+      .sling-table {
+        display: block;
+        overflow-x: auto;
+      }
+      
+      header .container {
+        flex-direction: column;
+      }
+      
+      nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      nav ul li {
+        margin: 5px 10px;
+      }
+      
+      .contact-item {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .contact-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+      
+      .footer-content {
+        flex-direction: column;
+      }
+    }
+    
+    /* Crosby Branding */
+    .crosby-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    
+    .crosby-logo img {
+      max-width: 200px;
+    }
+    
+    .red-pin {
+      color: #e53935;
+      font-weight: bold;
+      font-style: italic;
+    }
+    
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+    
+    .spec-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      border-left: 4px solid #004080;
+    }
+    
+    .spec-card h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .spec-card i {
+      color: #ff9800;
+    }
+    
+    .product-image {
+      text-align: center;
+      margin: 30px 0;
+    }
+    
+    .product-image img {
+      max-width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .dimension-img {
+      max-width: 100%;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .features-list {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 25px;
+      margin: 30px 0;
+    }
+    
+    .features-list h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #004080;
+      padding-bottom: 10px;
+    }
+    
+    .features-list ul {
+      padding-left: 20px;
+    }
+    
+    .features-list li {
+      margin-bottom: 10px;
+      padding-left: 10px;
+    }
+    
+    .features-list li:before {
+      content: "✓";
+      color: #004080;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    
+    .technical-details {
+      background: #e3f2fd;
+      border-radius: 8px;
+      padding: 25px;
+      margin: 30px 0;
+    }
+  </style>
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HQH77MSRY6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HQH77MSRY6');
+</script>
+
+
+
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="Images/FinalLogo.png" alt="Portside India Traders Logo">
+        <div class="logo-text">
+          <h1>Portside India Traders</h1>
+          <span>Strength that Anchors Your Success</span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="Product1.html">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="content">
+      <h1 style="color: white;">Crosby® Brand Hooks & Swivels</h1>
+      <p>Premium forged lifting hooks engineered for maximum safety and durability</p>
+      <a href="#contact" class="cta">Request a Quote</a>
+    </div>
+  </section>
+
+  <!-- Product Overview -->
+  <section id="overview">
+    <div class="container">
+      <h2 class="section-title">Hooks & Swivels Overview</h2>
+      <p>Our Crosby® hooks and swivels are forged from high-strength alloy steel, quenched and tempered for superior performance. Designed with safety as the top priority, these hooks feature self-locking latches, fatigue ratings, and meet OSHA regulations for personnel lifting applications.</p>
+      
+      <div class="product-image">
+        <img src="https://images.unsplash.com/photo-1602738320121-51d9b7a4b0f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Crosby Hook">
+      </div>
+      
+      <div class="features-list">
+        <h3>SHUR-LOC® Hook Features</h3>
+        <ul>
+          <li>Forged alloy steel, Quenched & Tempered</li>
+          <li>Recessed trigger design protects from damage</li>
+          <li>Easy to operate with enlarged thumb access</li>
+          <li>Positive lock latch self-locks when loaded</li>
+          <li>OSHA compliant for personnel lifting</li>
+          <li>Fatigue rated to 20,000 cycles at 1.5x WLL</li>
+          <li>Individually proof tested at 2.5x WLL</li>
+        </ul>
+      </div>
+      
+      <div class="specs-grid">
+        <div class="spec-card">
+          <h3><i class="fas fa-certificate"></i> Grade 100 Performance</h3>
+          <p>Rated for both wire rope and Grade 80/100 chain with permanent WLL markings.</p>
+        </div>
+        
+        <div class="spec-card">
+          <h3><i class="fas fa-sync-alt"></i> Swivel Design</h3>
+          <p>S-13326 features anti-friction bearing design for free rotation under load.</p>
+        </div>
+        
+        <div class="spec-card">
+          <h3><i class="fas fa-hammer"></i> Fatigue Rated</h3>
+          <p>Rated at 1.5 times the Working Load Limit at 20,000 cycles for extended durability.</p>
+        </div>
+        
+        <div class="spec-card">
+          <h3><i class="fas fa-shield-alt"></i> Safety Certified</h3>
+          <p>Meets OSHA Rule 1926.1431(g)(1)(i)(A) and 1926.1501(g)(4)(iv)(B) for personnel lifting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specifications Section -->
+  <section id="specs" style="background-color: #f8f9fa;">
+    <div class="container">
+      <h2 class="section-title">Technical Specifications</h2>
+      <p>All Crosby hooks feature forged alloy steel construction with quenched and tempered treatment. Available in multiple configurations with various load capacities.</p>
+      
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="s1326">S-1326 Swivel Hooks</button>
+        <button class="tab-btn" data-tab="s13326">S-13326 Swivel Hooks w/Bearing</button>
+        <button class="tab-btn" data-tab="s1316">S-1316 Eye Hook</button>
+        <button class="tab-btn" data-tab="s1318a">S-1318A Shank Hook</button>
+        <button class="tab-btn" data-tab="l320">L-320 Eye Hooks</button>
+      </div>
+      
+      <div id="s1326" class="tab-content active">
+        <h3>S-1326 SHUR-LOC® Swivel Hooks</h3>
+        <p>Positioning device not intended to rotate under load. Rated for wire rope and Grade 80/100 chain.</p>
+        
+        <img src="https://images.unsplash.com/photo-1592924728355-92d1d3f8d7e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Hook Dimensions" class="dimension-img">
+        
+        <table class="sling-table">
+          <thead>
+            <tr>
+              <th>Chain Size (in)</th>
+              <th>Frame Code</th>
+              <th>Grade 100 WLL (lb)</th>
+              <th>WLL (lb)</th>
+              <th>Stock No.</th>
+              <th>Weight (lb)</th>
+              <th>A (in)</th>
+              <th>B (in)</th>
+              <th>C (in)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>-</td>
+              <td>D</td>
+              <td>3200</td>
+              <td>2560</td>
+              <td>1004304</td>
+              <td>1.26</td>
+              <td>1.50</td>
+              <td>1.32</td>
+              <td>6.13</td>
+            </tr>
+            <tr>
+              <td>1/4 - 5/16</td>
+              <td>G</td>
+              <td>5700</td>
+              <td>4560</td>
+              <td>1004313</td>
+              <td>2.62</td>
+              <td>1.75</td>
+              <td>1.59</td>
+              <td>7.60</td>
+            </tr>
+            <tr>
+              <td>3/8</td>
+              <td>H</td>
+              <td>8800</td>
+              <td>7040</td>
+              <td>1004322</td>
+              <td>4.70</td>
+              <td>2.00</td>
+              <td>1.73</td>
+              <td>8.83</td>
+            </tr>
+            <tr>
+              <td>1/2</td>
+              <td>I</td>
+              <td>15000</td>
+              <td>12000</td>
+              <td>1004331</td>
+              <td>8.64</td>
+              <td>2.50</td>
+              <td>2.38</td>
+              <td>11.20</td>
+            </tr>
+            <tr>
+              <td>5/8</td>
+              <td>-</td>
+              <td>25000</td>
+              <td>18000</td>
+              <td>1004340</td>
+              <td>17.00</td>
+              <td>2.75</td>
+              <td>2.20</td>
+              <td>12.90</td>
+            </tr>
+            <tr>
+              <td>3/4</td>
+              <td>-</td>
+              <td>35300</td>
+              <td>23400</td>
+              <td>1004349</td>
+              <td>24.00</td>
+              <td>2.83</td>
+              <td>2.52</td>
+              <td>14.10</td>
+            </tr>
+            <tr>
+              <td>7/8</td>
+              <td>-</td>
+              <td>42700</td>
+              <td>34160</td>
+              <td>1004358</td>
+              <td>29.00</td>
+              <td>3.44</td>
+              <td>3.19</td>
+              <td>16.40</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div id="s13326" class="tab-content">
+        <h3>S-13326 SHUR-LOC® Swivel Hooks with Bearing</h3>
+        <p>Utilizes anti-friction bearing design which allows hook to rotate freely under load.</p>
+        
+        <table class="sling-table">
+          <thead>
+            <tr>
+              <th>Chain Size (in)</th>
+              <th>Frame Code</th>
+              <th>Grade 100 WLL (lb)</th>
+              <th>WLL (lb)</th>
+              <th>Stock No.</th>
+              <th>Weight (lb)</th>
+              <th>A (in)</th>
+              <th>B (in)</th>
+              <th>C (in)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>-</td>
+              <td>D</td>
+              <td>3200</td>
+              <td>2560</td>
+              <td>1004404</td>
+              <td>1.50</td>
+              <td>1.50</td>
+              <td>1.14</td>
+              <td>6.17</td>
+            </tr>
+            <tr>
+              <td>1/4 - 5/16</td>
+              <td>G</td>
+              <td>5700</td>
+              <td>4560</td>
+              <td>1004413</td>
+              <td>3.10</td>
+              <td>1.75</td>
+              <td>1.52</td>
+              <td>7.54</td>
+            </tr>
+            <tr>
+              <td>3/8</td>
+              <td>H</td>
+              <td>8800</td>
+              <td>7040</td>
+              <td>1004422</td>
+              <td>5.26</td>
+              <td>2.00</td>
+              <td>1.61</td>
+              <td>8.88</td>
+            </tr>
+            <tr>
+              <td>1/2</td>
+              <td>I</td>
+              <td>15000</td>
+              <td>12000</td>
+              <td>1004431</td>
+              <td>11.22</td>
+              <td>2.50</td>
+              <td>2.03</td>
+              <td>11.11</td>
+            </tr>
+            <tr>
+              <td>5/8</td>
+              <td>-</td>
+              <td>22600</td>
+              <td>18000</td>
+              <td>1004440</td>
+              <td>17.32</td>
+              <td>2.75</td>
+              <td>2.25</td>
+              <td>12.90</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div id="s1316" class="tab-content">
+        <h3>S-1316 SHUR-LOC® Eye Hook with Positive Locking Latch</h3>
+        <p>Meets performance requirements of EN1677-3. Suitable for Grade 100 and Grade 80 chain.</p>
+        
+        <table class="sling-table">
+          <thead>
+            <tr>
+              <th>Chain Size (in)</th>
+              <th>Frame Code</th>
+              <th>Grade 100 WLL (lb)</th>
+              <th>WLL (lb)</th>
+              <th>Stock No.</th>
+              <th>Weight (lb)</th>
+              <th>A (in)</th>
+              <th>C (in)</th>
+              <th>D (in)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>-</td>
+              <td>D</td>
+              <td>3200</td>
+              <td>-</td>
+              <td>1022896</td>
+              <td>0.85</td>
+              <td>0.78</td>
+              <td>3.95</td>
+              <td>0.79</td>
+            </tr>
+            <tr>
+              <td>1/4-5/16</td>
+              <td>G</td>
+              <td>5700</td>
+              <td>4560</td>
+              <td>1022914</td>
+              <td>1.80</td>
+              <td>1.08</td>
+              <td>5.31</td>
+              <td>1.10</td>
+            </tr>
+            <tr>
+              <td>3/8</td>
+              <td>H</td>
+              <td>8800</td>
+              <td>7040</td>
+              <td>1022923</td>
+              <td>3.40</td>
+              <td>1.30</td>
+              <td>6.57</td>
+              <td>1.17</td>
+            </tr>
+            <tr>
+              <td>1/2</td>
+              <td>I</td>
+              <td>15000</td>
+              <td>12000</td>
+              <td>1022932</td>
+              <td>6.00</td>
+              <td>1.65</td>
+              <td>8.23</td>
+              <td>1.67</td>
+            </tr>
+            <tr>
+              <td>5/8</td>
+              <td>J</td>
+              <td>22600</td>
+              <td>18000</td>
+              <td>1022941</td>
+              <td>15.1</td>
+              <td>2.20</td>
+              <td>10.08</td>
+              <td>2.04</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div id="s1318a" class="tab-content">
+        <h3>S-1318A SHUR-LOC® Shank Hook</h3>
+        <p>Designed for applications requiring a straight shank configuration.</p>
+        
+        <table class="sling-table">
+          <thead>
+            <tr>
+              <th>Chain Size (in)</th>
+              <th>Frame Code</th>
+              <th>Grade 100 WLL (lb)</th>
+              <th>Stock No.</th>
+              <th>A (in)</th>
+              <th>B (in)</th>
+              <th>C (in)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>-</td>
+              <td>D</td>
+              <td>3200</td>
+              <td>1098200</td>
+              <td>0.79</td>
+              <td>2.16</td>
+              <td>3.31</td>
+            </tr>
+            <tr>
+              <td>1/4-5/16</td>
+              <td>G</td>
+              <td>5700</td>
+              <td>1098209</td>
+              <td>1.00</td>
+              <td>2.40</td>
+              <td>4.16</td>
+            </tr>
+            <tr>
+              <td>3/8</td>
+              <td>H</td>
+              <td>8800</td>
+              <td>1098218</td>
+              <td>1.14</td>
+              <td>2.95</td>
+              <td>5.14</td>
+            </tr>
+            <tr>
+              <td>1/2</td>
+              <td>I</td>
+              <td>15000</td>
+              <td>1098227</td>
+              <td>1.34</td>
+              <td>3.35</td>
+              <td>6.31</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div id="l320" class="tab-content">
+        <h3>L-320 / L-320N Eye Hooks</h3>
+        <p>Available in carbon steel and alloy steel. Fatigue rated to 20,000 cycles at 1.5 times WLL.</p>
+        
+        <table class="sling-table">
+          <thead>
+            <tr>
+              <th>WLL (t)</th>
+              <th>Hook ID</th>
+              <th>Carbon Stock No.</th>
+              <th>Alloy Stock No.</th>
+              <th>Weight (lb)</th>
+              <th>Replacement Latch Kit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>0.75</td>
+              <td>1D</td>
+              <td>1022205</td>
+              <td>1022208</td>
+              <td>0.61</td>
+              <td>1096325</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>1F</td>
+              <td>1022216</td>
+              <td>1022219</td>
+              <td>0.89</td>
+              <td>1096374</td>
+            </tr>
+            <tr>
+              <td>1.5</td>
+              <td>1G</td>
+              <td>1022227</td>
+              <td>1022230</td>
+              <td>1.44</td>
+              <td>1096421</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>1H</td>
+              <td>1022238</td>
+              <td>1022241</td>
+              <td>2.07</td>
+              <td>1096468</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>1I</td>
+              <td>1022246</td>
+              <td>1022249</td>
+              <td>4.30</td>
+              <td>1096515</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>1J</td>
+              <td>1022260</td>
+              <td>1022282</td>
+              <td>8.30</td>
+              <td>1096562</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="note">
+        <h3><i class="fas fa-exclamation-circle"></i> Important Notes</h3>
+        <ul>
+          <li>All hooks are forged from alloy steel, quenched and tempered for maximum strength</li>
+          <li>Individually proof tested at 2.5 times the chain Working Load Limit with certification</li>
+          <li>Fatigue rated to 20,000 cycles at 1.5 times the Working Load Limit</li>
+          <li>S-1326 is a positioning device and is not intended to rotate under load</li>
+          <li>S-13326 utilizes anti-friction bearing design for free rotation under load</li>
+          <li>SHUR-LOC® hooks meet OSHA regulations for personnel lifting when properly installed</li>
+          <li>Trigger repair kits available (S-4316) for SHUR-LOC® hooks</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-card">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Email</h3>
+            <p><a href="mailto:sales@portsideindia.com">sales@portsideindia.com</a></p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Phone</h3>
+            <p>+91 93071 04214</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Address</h3>
+            <p>I-WING GURUPREM SOCIETY KATRAP, BADALPUR, MUMBAI SUBURBS, 421503</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Portside India Traders</h3>
+          <p>Providing premium maritime lifting equipment engineered for safety and reliability since our founding.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul class="footer-links">
+            
+            <li><a href="Shackles.html">Shackles</a></li>
+            <li><a href="Hooks-hardware.html">Hooks & Swivels</a></li>
+            <li><a href="Masterlinkes.html">Master Links</a></li>
+            <li><a href="MetricSwivelAndAlloyChain.html">Metric Swivel & Alloy Chain</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="Product1.html">All Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Certifications</h3>
+          <ul class="footer-links">
+            <li><a href="#">ASME B30.26 Certified</a></li>
+            <li><a href="#">DNV Offshore Certified</a></li>
+            <li><a href="#">OSHA Compliant</a></li>
+            <li><a href="#">ISO Quality Standards</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>&copy; 2025 Portside India Traders. All Rights Reserved. Crosby® is a registered trademark of The Crosby Group LLC.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Tab functionality
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Remove active class from all buttons and content
+          tabBtns.forEach(b => b.classList.remove('active'));
+          document.querySelectorAll('.tab-content').forEach(content => {
+            content.classList.remove('active');
+          });
+          
+          // Add active class to clicked button
+          btn.classList.add('active');
+          
+          // Show corresponding content
+          const tabId = btn.getAttribute('data-tab');
+          document.getElementById(tabId).classList.add('active');
+        });
+      });
+      
+      // Smooth scrolling for navigation
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

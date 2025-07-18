@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portside India Traders - Advanced Products Slider</title>
+  
+  <!-- Swiper CSS from CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  
+  <style>
+    /* Reset & Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      overflow-x: hidden;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 2rem 0;
+    }
+    h1 {
+      text-align: center;
+      color: #004080;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+    }
+    
+    /* Swiper Styles */
+    .swiper {
+      width: 100%;
+      padding-bottom: 60px;
+    }
+    .swiper-slide {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      width: 300px; /* Base width for centered effect */
+      position: relative;
+      overflow: hidden;
+    }
+    /* Parallax Text inside Slide */
+    .swiper-slide h2 {
+      color: #004080;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      border-bottom: 2px solid #004080;
+      padding-bottom: 0.5rem;
+    }
+    .product-list {
+      list-style: none;
+      padding-left: 1rem;
+    }
+    .product-list li {
+      padding: 0.4rem 0;
+      border-bottom: 1px solid #eee;
+    }
+    .product-list li:last-child {
+      border-bottom: none;
+    }
+    
+    /* Custom Navigation & Pagination Styling */
+    .swiper-button-next, .swiper-button-prev {
+      color: #004080;
+      transition: color 0.3s;
+    }
+    .swiper-button-next:hover, .swiper-button-prev:hover {
+      color: #002a60;
+    }
+    .swiper-pagination-bullet {
+      background: #ccc;
+      opacity: 1;
+      transition: background 0.3s;
+    }
+    .swiper-pagination-bullet-active {
+      background: #004080;
+    }
+    
+    /* Back to Home Button Styles */
+    .back-home-container {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .back-home-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #004080;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .back-home-btn:hover {
+      background-color: #002a60;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 600px) {
+      .container { width: 95%; }
+      h1 { font-size: 2rem; }
+      .swiper-slide { width: 260px; }
+    }
+  </style>
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HQH77MSRY6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HQH77MSRY6');
+</script>
+
+</head>
+<body>
+  <div class="container">
+    <h1>Our Products</h1>
+    
+    <!-- Swiper Slider -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+      
+        <!-- Slide 1: Slings & Belts -->
+        <div class="swiper-slide">
+          <div data-swiper-parallax="-100">
+            <h2>Slings &amp; Belts</h2>
+          </div>
+          <ul class="product-list" data-swiper-parallax="-200">
+           <li><a href="WebbingSlings.html">Webbing Slings</a></li>
+            <li><a href="WebbingSlings.html">Simplex (KSF)</a></li>
+            <li><a href="WebbingSlings.html">Duplex (KDF)</a></li>
+            <li><a href="WebbingSlings.html">Triplex (KTF)</a></li>
+            <li><a href="WebbingSlings.html">Quarter‑plex (KQF)</a></li>
+            <li><a href="RoundSlings2.html">Round Slings</a></li>
+            <li><a href="LoweringBelts.html">Lowering &amp; Safety Belts</a></li>
+            <li><a href="SinglePartSlings.html">Single‑Part Slings</a></li>
+            <li><a href="MultipleLegSlings.html">Multiple‑Leg Slings</a></li>
+            <li><a href="GrommetSlings.html">Grommet Slings</a></li>
+            <li><a href="FlemishEyeSlings.html">Flemish‑Eye Slings</a></li>
+          </ul>
+        </div>
+        
+        <!-- Slide 2: Wire Rope & Fittings -->
+        <div class="swiper-slide">
+          <div data-swiper-parallax="-100">
+            <h2>Wire Rope &amp; Fittings</h2>
+          </div>
+          <ul class="product-list" data-swiper-parallax="-200">
+            
+            <li><a href="WireLockKits.html">Wire Lock Kits</a></li>
+           
+            <li><a href="VitaLife.html">Vitalife Kits</a></li>
+            <li><a href="CrossbyClipsAndSockets.html">WireRope Clips &amp; Sockets</a></li>
+            
+            <li><a href="CrossbyOpenAndClosedSpelterSockets.html">Open/Closed Spelter Sockets</a></li>
+            <li><a href="CrossbyOpenAndClosedSwageSockets.html">Open/Closed Swage Sockets</a></li>
+            <li><a href="Thimbles.html">Thimbles</a></a></li>
+          </ul>
+        </div>
+        
+        <!-- Slide 3: Crosby® Brand Hardware -->
+        <div class="swiper-slide">
+          <div data-swiper-parallax="-100">
+            <h2>Crosby® Brand Hardware</h2>
+          </div>
+          <ul class="product-list" data-swiper-parallax="-200">
+            <li><a href="Shackles.html">Shackles</a></li>
+            <li><a href="Hooks-hardware.html">Hooks</a></li>
+            <li><a href="Masterlinkes.html">Master Links</a></li>
+            <li><a href="MetricSwivelAndAlloyChain.html">Metric Swivel &amp; Alloy Chain</a></li>
+          </ul>
+        </div>
+        
+        <!-- Slide 4: Lifting Hooks & Connectors -->
+        <div class="swiper-slide">
+          <div data-swiper-parallax="-100">
+            <h2>Lifting Hooks &amp; Connectors</h2>
+          </div>
+          <ul class="product-list" data-swiper-parallax="-200">
+            <li><a href="ForgedMasterLinks.html">Forged Master Link</a></li>
+            <li><a href="MasterLinkAssembly.html">Master Link Assembly</a></li>
+            <li><a href="ConnectingLinks.html">Connecting Link (Hammer Lock)</a></li>
+            <li><a href="WebSlingConnectors.html">Web Sling Connector</a></li>
+            <li><a href="ClevisChainSlingHook.html">Clevis Chain Sling Hook</a></li>
+            <li><a href="ClevisSelfLockingHook.html">Clevis Self‑Locking Hook</a></li>
+            <li><a href="EyeSelfLockingHook.html">Eye Self‑Locking Hook</a></li>
+            <li><a href="SwivelSelfLockingHook.html">Swivel Self‑Locking Hook</a></li>
+            <li><a href="EyeHoistHook.html">Eye Hoist Hook</a></li>
+            <li><a href="EyeFoundryHook.html">Eye Foundry Hook</a></li>
+            <li><a href="EyeGrabHook.html">Eye Grab Hook</a></li>
+            <li><a href="ClevisGrabHooks.html">Clevis Grab Hook</a></li>
+          </ul>
+        </div>
+        
+        <!-- Slide 5: General Lifting Accessories -->
+        <div class="swiper-slide">
+          <div data-swiper-parallax="-100">
+            <h2>General Lifting Accessories</h2>
+          </div>
+          <ul class="product-list" data-swiper-parallax="-200">
+            <li><a href="DShackles_AnchorBowShackles.html">D‑Shackles &amp; Anchor Bow Shackles</a></li>
+            <li><a href="WireRopeClamps.html">Forged Wire Rope Clamps</a></li>
+            <li><a href="Turnbuckles_StrainingScrews.html">Turnbuckles / Straining Screws</a></li>
+          </ul>
+        </div>
+        
+        <!-- Slide 6: Hoists, Trolleys & Winches -->
+        <div class="swiper-slide">
+          <div data-swiper-parallax="-100">
+            <h2>Hoists, Trolleys &amp; Winches</h2>
+          </div>
+          <ul class="product-list" data-swiper-parallax="-200">
+            <li>Chain Pulley Blocks</li>
+            <li>Ratchet‑Level Hoists</li>
+            <li>Chain Pulley Hoists</li>
+            <li>Baby Chain Pulley Hoists</li>
+            <li>Heavy‑Duty Wire Rope Hoists</li>
+            <li>Geared Trolleys</li>
+            <li>Push/Pull Trolleys</li>
+            <li>Snatch Blocks with Shackles</li>
+            <li>Manual Winches</li>
+            <li>Electric Winches</li>
+          </ul>
+        </div>
+        
+        <!-- Slide 7: Plate & Beam Lifting Clamps -->
+        <div class="swiper-slide">
+          <div data-swiper-parallax="-100">
+            <h2>Plate &amp; Beam Lifting Clamps</h2>
+          </div>
+          <ul class="product-list" data-swiper-parallax="-200">
+            <li>I‑Beam, Pipe &amp; Horizontal‑Plate Clamps</li>
+            <li>Vertical‑Plate Clamps</li>
+            <li>Pulling &amp; Lifting Machines</li>
+          </ul>
+        </div>
+        
+        <!-- Slide 8: Anchoring & Mooring -->
+        <div class="swiper-slide">
+          <div data-swiper-parallax="-100">
+            <h2>Anchoring &amp; Mooring</h2>
+          </div>
+          <ul class="product-list" data-swiper-parallax="-200">
+            <li>Stockless Anchors</li>
+            <li>Stud‑Link Anchor Chains</li>
+            <li>Lashing Chains &amp; Load Binders</li>
+            <li>Grafil Mooring Ropes</li>
+            <li>Grafil Industrial Ropes</li>
+          </ul>
+        </div>
+        
+        <!-- Slide 9: Load Monitoring -->
+        <div class="swiper-slide">
+          <div data-swiper-parallax="-100">
+            <h2>Load Monitoring</h2>
+          </div>
+          <ul class="product-list" data-swiper-parallax="-200">
+            <li>Load Cells</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Swiper Navigation Buttons -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <!-- Swiper Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+    
+    <!-- Back to Home Button -->
+    <div class="back-home-container">
+      <a href="index.html" class="back-home-btn">← Back to Home</a>
+    </div>
+  </div>
+  
+  <!-- Swiper JS from CDN -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  
+  <script>
+    // Initialize Swiper with advanced settings and parallax
+    const swiper = new Swiper('.mySwiper', {
+      effect: 'coverflow', // 'coverflow' effect with depth
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 30,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      keyboard: {
+        enabled: true,
+      },
+      mousewheel: {
+        invert: false,
+      },
+      // Breakpoints for responsive
+      breakpoints: {
+        600: {
+          slidesPerView: 'auto',
+        },
+        900: {
+          slidesPerView: 3,
+        },
+        1200: {
+          slidesPerView: 3,
+        }
+      },
+      // Enable parallax
+      parallax: true,
+    });
+  </script>
+</body>
+</html>

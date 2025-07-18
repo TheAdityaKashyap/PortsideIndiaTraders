@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portside India Traders - Crosby Master Links</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    :root {
+      --primary: #004080;
+      --secondary: #ff9800;
+      --accent: #e53935;
+      --light: #f8f9fa;
+      --dark: #333;
+      --text: #333;
+      --text-light: #666;
+      --border: #e0e0e0;
+      --shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    body {
+      background-color: #fff;
+      color: var(--text);
+      line-height: 1.6;
+    }
+    
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+    
+    section {
+      padding: 60px 0;
+    }
+    
+    /* Header Styles */
+    header {
+      background-color: var(--primary);
+      color: white;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .logo-text h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: white;
+      letter-spacing: 0.5px;
+    }
+    
+    .logo-text span {
+      font-size: 0.9rem;
+      color: var(--secondary);
+      margin-top: 3px;
+      font-weight: 500;
+    }
+    
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+    
+    nav ul li {
+      margin-left: 25px;
+    }
+    
+    nav ul li a {
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 1.05rem;
+    }
+    
+    nav ul li a:hover {
+      color: var(--secondary);
+    }
+    
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #002b5c, #004080);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .hero h1 {
+      font-size: 3.2rem;
+      margin-bottom: 20px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+    
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      opacity: 0.9;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background: white;
+      color: var(--primary);
+      padding: 15px 40px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .cta-button:hover {
+      background: var(--secondary);
+      transform: translateY(-3px);
+      box-shadow: 0 7px 20px rgba(0, 0, 0, 0.25);
+    }
+    
+    /* Section Title */
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+      position: relative;
+    }
+    
+    .section-title h2 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+    
+    .section-title p {
+      font-size: 1.2rem;
+      color: var(--text-light);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .section-title:after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--secondary);
+    }
+    
+    /* Features Section */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin: 50px 0;
+    }
+    
+    .feature-card {
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+      border-top: 4px solid var(--primary);
+      text-align: center;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .feature-icon {
+      width: 70px;
+      height: 70px;
+      background: rgba(0, 64, 128, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      color: var(--primary);
+      font-size: 1.8rem;
+    }
+    
+    .feature-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: var(--primary);
+    }
+    
+    .feature-card p {
+      color: var(--text-light);
+    }
+    
+    /* Tabs */
+    .tabs-container {
+      margin: 40px 0;
+    }
+    
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 30px;
+      justify-content: center;
+    }
+    
+    .tab-btn {
+      background: #e0e0e0;
+      border: none;
+      padding: 14px 30px;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+      color: var(--text);
+    }
+    
+    .tab-btn.active, .tab-btn:hover {
+      background: var(--primary);
+      color: white;
+    }
+    
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+    
+    .tab-content.active {
+      display: block;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Tables */
+    .product-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 30px 0;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    
+    .product-table th {
+      background: var(--primary);
+      color: white;
+      padding: 16px 20px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+    
+    .product-table td {
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .product-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .product-table tr:nth-child(even) {
+      background-color: #fafafa;
+    }
+    
+    .product-table tr:hover {
+      background-color: #f0f7ff;
+    }
+    
+    /* Notes Section */
+    .notes {
+      background: #fff8e1;
+      border-left: 4px solid var(--secondary);
+      padding: 30px;
+      border-radius: 8px;
+      margin: 40px 0;
+    }
+    
+    .notes h3 {
+      color: var(--primary);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.4rem;
+    }
+    
+    .notes ul {
+      padding-left: 20px;
+    }
+    
+    .notes li {
+      margin-bottom: 12px;
+      position: relative;
+      padding-left: 25px;
+    }
+    
+    .notes li:before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent);
+      font-size: 1.2rem;
+    }
+    
+    .highlight {
+      color: var(--accent);
+      font-weight: 600;
+    }
+    
+    /* Contact Section */
+    .contact-section {
+      background: linear-gradient(rgba(0, 64, 128, 0.95), rgba(0, 43, 92, 0.95)), #004080;
+      color: white;
+      padding: 80px 0;
+    }
+    
+    .contact-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+    
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    
+    .contact-details h3 {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+    
+    .contact-details p, 
+    .contact-details a {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    
+    .contact-details a:hover {
+      color: var(--secondary);
+    }
+    
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 60px 0 20px;
+    }
+    
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    
+    .footer-column h3 {
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+      color: var(--secondary);
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+    
+    .footer-links a {
+      color: #ddd;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    
+    .footer-links a:hover {
+      color: var(--secondary);
+      padding-left: 5px;
+    }
+    
+    .copyright {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid #444;
+      color: #aaa;
+      font-size: 0.95rem;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+      
+      .section-title h2 {
+        font-size: 2.2rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+      }
+      
+      nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      nav ul li {
+        margin: 8px 15px;
+      }
+      
+      .hero {
+        padding: 80px 20px;
+      }
+      
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+      
+      .hero p {
+        font-size: 1.1rem;
+      }
+      
+      .section-title h2 {
+        font-size: 2rem;
+      }
+      
+      .tab-btn {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+      }
+      
+      .product-table {
+        font-size: 0.9rem;
+      }
+      
+      .product-table th,
+      .product-table td {
+        padding: 12px 15px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .section-title h2 {
+        font-size: 1.8rem;
+      }
+      
+      .tab-btn {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+      }
+      
+      .product-table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  </style>
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HQH77MSRY6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HQH77MSRY6');
+</script>
+
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <div class="logo-text">
+          <h1>Portside India Traders</h1>
+          <span>Strength that Anchors Your Success</span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="Product1.html">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Crosby® Master Links</h1>
+        <p>Premium forged alloy master links engineered for maximum safety and durability in demanding lifting applications</p>
+        <a href="#contact" class="cta-button">Request a Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Overview -->
+  <section id="overview">
+    <div class="container">
+      <div class="section-title">
+        <h2>Master Links Overview</h2>
+        <p>Engineered for superior performance in the most demanding lifting applications</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Maximum Safety</h3>
+          <p>Individually proof tested with certification to ensure reliability in critical lifting operations</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3>Alloy Steel Construction</h3>
+          <p>Forged from high-strength alloy steel, quenched and tempered for superior durability</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <h3>Full Traceability</h3>
+          <p>Product Identification Code (PIC) for complete material traceability and quality assurance</p>
+        </div>
+      </div>
+      
+      <div class="notes">
+        <h3><i class="fas fa-exclamation-circle"></i> Key Product Features</h3>
+        <ul>
+          <li>Forged alloy steel - Quenched & Tempered for maximum strength</li>
+          <li>Individually Proof Tested with certification for each unit</li>
+          <li>Product Identification Code (PIC) for material traceability</li>
+          <li>Fatigue rated to 20,000 cycles at 1.5 times the Working Load Limit</li>
+          <li>Meets or exceeds all requirements of ASME B30.26</li>
+          <li>DNV certified for offshore container applications</li>
+          <li>Available with QUIC-CHECK® deformation indicators</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specifications Section -->
+  <section id="specs" style="background-color: var(--light);">
+    <div class="container">
+      <div class="section-title">
+        <h2>Technical Specifications</h2>
+        <p>Comprehensive technical data for Crosby Master Links</p>
+      </div>
+      
+      <div class="tabs-container">
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="a342">A-342 Alloy Master Links</button>
+          <button class="tab-btn" data-tab="a347">A-347 Welded Master Links</button>
+        </div>
+        
+        <div id="a342" class="tab-content active">
+          <h3>A-342 Alloy Master Links</h3>
+          <p>Designed for chain sling applications with Grade 80 and Grade 100 chain</p>
+          
+          <table class="product-table">
+            <thead>
+              <tr>
+                <th>Size (in)</th>
+                <th>Stock No.</th>
+                <th>Weight (lb)</th>
+                <th>WLL (lb)</th>
+                <th>Proof Load (lb)</th>
+                <th>Grade 100 Chain</th>
+                <th>Grade 80 Chain</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1/2W</td>
+                <td>1014266</td>
+                <td>1.3</td>
+                <td>7400</td>
+                <td>17,200</td>
+                <td>6mm, 9/32, 5/16</td>
+                <td>6mm, 9/32</td>
+              </tr>
+              <tr>
+                <td>5/8</td>
+                <td>1014280</td>
+                <td>1.5</td>
+                <td>9000</td>
+                <td>18,000</td>
+                <td>5/16, 3/8</td>
+                <td>9/32, 3/8</td>
+              </tr>
+              <tr>
+                <td>3/4W</td>
+                <td>1014265</td>
+                <td>2.0</td>
+                <td>12300</td>
+                <td>28,400</td>
+                <td>5/16, 3/8</td>
+                <td>3/8</td>
+              </tr>
+              <tr>
+                <td>7/8W</td>
+                <td>3522213</td>
+                <td>3.3</td>
+                <td>15200</td>
+                <td>38,000</td>
+                <td>3/8, 1/2</td>
+                <td>3/8</td>
+              </tr>
+              <tr>
+                <td>1W</td>
+                <td>3522214</td>
+                <td>6.1</td>
+                <td>26000</td>
+                <td>65,000</td>
+                <td>1/2, 5/8</td>
+                <td>1/2</td>
+              </tr>
+              <tr>
+                <td>1-1/4W</td>
+                <td>3522215</td>
+                <td>12.0</td>
+                <td>39100</td>
+                <td>97,750</td>
+                <td>5/8, 3/4</td>
+                <td>5/8</td>
+              </tr>
+              <tr>
+                <td>1-1/2W</td>
+                <td>3522216</td>
+                <td>18.6</td>
+                <td>61100</td>
+                <td>152,750</td>
+                <td>7/8, 1</td>
+                <td>3/4, 7/8</td>
+              </tr>
+              <tr>
+                <td>1-3/4</td>
+                <td>3522217</td>
+                <td>25.2</td>
+                <td>84900</td>
+                <td>212,250</td>
+                <td>1</td>
+                <td>7/8</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>3522218</td>
+                <td>37.0</td>
+                <td>102600</td>
+                <td>256,500</td>
+                <td>1-1/4</td>
+                <td>1</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <div class="notes">
+            <h3><i class="fas fa-info-circle"></i> A-342 Specifications</h3>
+            <ul>
+              <li><span class="highlight">5:1 Design Factor</span> based on single leg sling or resultant load on multiple legs with angle ≤ 120°</li>
+              <li>Proof Tested with special fixtures sized to prevent localized point loading</li>
+              <li>Selected sizes with "W" designation have enlarged inside dimensions</li>
+              <li>7/8" to 2" master links are type approved to DNV-ST-E271-2.7-1 Offshore Containers</li>
+              <li>Incorporates patented QUIC-CHECK® deformation indicators</li>
+              <li>Fatigue rated to 20,000 cycles at 1.5 times the Working Load Limit</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div id="a347" class="tab-content">
+          <h3>A-347 Welded Master Link Assembly</h3>
+          <p>Grade 80 alloy master links with engineered flat for use with S-1325A coupler link</p>
+          
+          <table class="product-table">
+            <thead>
+              <tr>
+                <th>Stock No.</th>
+                <th>Weight (lb)</th>
+                <th>Chain Size (in)</th>
+                <th>WLL (lb)</th>
+                <th>Proof Load (lb)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1257755</td>
+                <td>2.4</td>
+                <td>6mm</td>
+                <td>7000</td>
+                <td>17,632</td>
+              </tr>
+              <tr>
+                <td>1257762</td>
+                <td>3.5</td>
+                <td>6mm, 9/32</td>
+                <td>9,000</td>
+                <td>22,701</td>
+              </tr>
+              <tr>
+                <td>1257832</td>
+                <td>3.9</td>
+                <td>9/32</td>
+                <td>9,200</td>
+                <td>23,362</td>
+              </tr>
+              <tr>
+                <td>1258058</td>
+                <td>7.3</td>
+                <td>5/16</td>
+                <td>15,400</td>
+                <td>38,570</td>
+              </tr>
+              <tr>
+                <td>1258067</td>
+                <td>8.9</td>
+                <td>5/16</td>
+                <td>15,400</td>
+                <td>38,570</td>
+              </tr>
+              <tr>
+                <td>1258049</td>
+                <td>8.4</td>
+                <td>3/8</td>
+                <td>18,700</td>
+                <td>46,725</td>
+              </tr>
+              <tr>
+                <td>1258076</td>
+                <td>10.1</td>
+                <td>3/8</td>
+                <td>19,600</td>
+                <td>49,149</td>
+              </tr>
+              <tr>
+                <td>1258102</td>
+                <td>11.4</td>
+                <td>3/8</td>
+                <td>19,600</td>
+                <td>49,149</td>
+              </tr>
+              <tr>
+                <td>1258142</td>
+                <td>15.6</td>
+                <td>1/2</td>
+                <td>31,900</td>
+                <td>80,005</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <div class="notes">
+            <h3><i class="fas fa-info-circle"></i> A-347 Specifications</h3>
+            <ul>
+              <li><span class="highlight">5:1 Design Factor</span> for lifting applications</li>
+              <li>Proof Tested with 70% inside width special fixtures per EN1677</li>
+              <li>Each main link marked with Product Identification Code (PIC)</li>
+              <li>Type approved to DNV Certification Notes 2.7-1 - Offshore Containers</li>
+              <li>Engineered Flat for use with S-1325A coupler link</li>
+              <li>Available only in EMEA region</li>
+              <li>Fatigue rated to 20,000 cycles at 1.5 times the Working Load Limit</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-title">
+        <h2 style="color: white;">Contact Us</h2>
+        <p style="color: rgba(255, 255, 255, 0.8);">Get in touch for quotes and product information</p>
+      </div>
+      
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Email</h3>
+              <a href="mailto:sales@portsideindia.com">sales@portsideindia.com</a>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Phone</h3>
+              <p>+91 93071 04214</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Address</h3>
+              <p>I-WING GURUPREM SOCIETY KATRAP, BADALPUR, MUMBAI SUBURBS, 421503</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <div class="notes" style="background: rgba(255, 255, 255, 0.1); border-left-color: var(--secondary);">
+            <h3 style="color: var(--secondary);"><i class="fas fa-comments"></i> Inquiry Form</h3>
+            <p style="color: rgba(255, 255, 255, 0.9);">For product inquiries and quotes, please contact us directly via email or phone. Our team will respond promptly to your request with detailed product information and pricing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Portside India Traders</h3>
+          <p>Providing premium maritime lifting equipment engineered for safety and reliability since our founding.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul class="footer-links">
+            
+            <li><a href="Shackles.html">Shackles</a></li>
+            <li><a href="Hooks-hardware.html">Hooks & Swivels</a></li>
+            <li><a href="Masterlinkes.html">Master Links</a></li>
+            <li><a href="MetricSwivelAndAlloyChain.html">Metric Swivel & Alloy Chain</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="Product1.html">All Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Certifications</h3>
+          <ul class="footer-links">
+            <li><a href="#">ASME B30.26 Certified</a></li>
+            <li><a href="#">DNV Offshore Certified</a></li>
+            <li><a href="#">OSHA Compliant</a></li>
+            <li><a href="#">ISO Quality Standards</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>&copy; 2025 Portside India Traders. All Rights Reserved. Crosby® is a registered trademark of The Crosby Group LLC.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Tab functionality
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Remove active class from all buttons and content
+          tabBtns.forEach(b => b.classList.remove('active'));
+          document.querySelectorAll('.tab-content').forEach(content => {
+            content.classList.remove('active');
+          });
+          
+          // Add active class to clicked button
+          btn.classList.add('active');
+          
+          // Show corresponding content
+          const tabId = btn.getAttribute('data-tab');
+          document.getElementById(tabId).classList.add('active');
+        });
+      });
+      
+      // Smooth scrolling for navigation
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
