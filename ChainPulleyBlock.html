@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portside India Traders - Chain Pulley Block</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Global Styles */
+    body, h1, h2, h3, p, ul, li, a, section, header, footer {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    
+    a {
+      text-decoration: none;
+      color: #004080;
+    }
+    
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+    
+    section {
+      padding: 40px 0;
+    }
+    
+    /* Header & Navigation */
+    header {
+      background-color: #004080; /* Ocean Blue */
+      color: #fff;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo img {
+      height: 50px;
+      margin-right: 15px;
+      background: #fff;
+      padding: 5px;
+      border-radius: 4px;
+    }
+    
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .logo-text h1 {
+      font-size: 1.5em;
+      margin: 0;
+      color: white;
+    }
+    
+    .logo-text span {
+      font-size: 0.8em;
+      color: #ff9800;
+      margin-top: 3px;
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    
+    nav ul li {
+      margin-left: 20px;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    
+    nav ul li a:hover {
+      color: #ff9800;
+    }
+    
+    /* Hero Section - Solid Color Background */
+    .hero {
+      background: linear-gradient(135deg, #004080, #002b5c);
+      color: white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 20px;
+    }
+    
+    .hero .content {
+      max-width: 800px;
+    }
+    
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
+    
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 25px;
+      color: white;
+      opacity: 0.9;
+    }
+    
+    .hero .cta {
+      background: #fff;
+      color: #004080;
+      padding: 12px 30px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1.1em;
+      display: inline-block;
+      transition: all 0.3s;
+      margin-top: 20px;
+    }
+    
+    .hero .cta:hover {
+      background: #ff9800;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Section Headings */
+    .section-title {
+      text-align: center;
+      color: #004080;
+      margin-bottom: 30px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .section-title:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: #ff9800;
+    }
+    
+    /* Features Section */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
+    }
+    
+    .feature-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      border-top: 4px solid #004080;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .feature-card i {
+      font-size: 2.5rem;
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    .feature-card h3 {
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    /* Tables */
+    .sling-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      font-size: 0.9rem;
+    }
+    
+    .sling-table th {
+      background: #004080;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-weight: 600;
+    }
+    
+    .sling-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #e0e0e0;
+      text-align: center;
+    }
+    
+    .sling-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .sling-table tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+    
+    .sling-table tr:hover {
+      background-color: #e3f2fd;
+    }
+    
+    /* Notes Section */
+    .note {
+      background: #fff8e1;
+      border-left: 4px solid #ff9800;
+      padding: 25px;
+      border-radius: 5px;
+      margin: 30px 0;
+    }
+    
+    .note h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .note ul {
+      padding-left: 20px;
+    }
+    
+    .note li {
+      margin-bottom: 10px;
+    }
+    
+    /* Contact Section */
+    .contact-card {
+      background: white;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .contact-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: #e3f2fd;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      color: #004080;
+      font-size: 1.2rem;
+    }
+    
+    .contact-info {
+      flex: 1;
+    }
+    
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 50px 0 20px;
+      margin-top: 50px;
+    }
+    
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+    
+    .footer-column {
+      flex: 1;
+      min-width: 250px;
+      margin-bottom: 30px;
+      padding: 0 15px;
+    }
+    
+    .footer-column h3 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: #ff9800;
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-links a {
+      color: #ddd;
+      transition: color 0.3s;
+    }
+    
+    .footer-links a:hover {
+      color: #ff9800;
+    }
+    
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #444;
+    }
+    
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      
+      .sling-table {
+        display: block;
+        overflow-x: auto;
+      }
+      
+      header .container {
+        flex-direction: column;
+      }
+      
+      nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      nav ul li {
+        margin: 5px 10px;
+      }
+      
+      .contact-item {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .contact-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+      
+      .footer-content {
+        flex-direction: column;
+      }
+    }
+    
+    /* Product Highlights */
+    .product-highlights {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 30px 0;
+    }
+    
+    .highlight-item {
+      text-align: center;
+      width: 200px;
+      padding: 15px;
+    }
+    
+    .highlight-icon {
+      font-size: 2.5rem;
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    .features-list {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 25px;
+      margin: 30px 0;
+    }
+    
+    .features-list h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #004080;
+      padding-bottom: 10px;
+    }
+    
+    .features-list ul {
+      padding-left: 20px;
+    }
+    
+    .features-list li {
+      margin-bottom: 10px;
+      padding-left: 10px;
+    }
+    
+    .features-list li:before {
+      content: "✓";
+      color: #004080;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    
+    .technical-details {
+      background: #e3f2fd;
+      border-radius: 8px;
+      padding: 25px;
+      margin: 30px 0;
+    }
+    
+    .dimension-placeholder {
+      background: #f0f0f0;
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      margin: 30px 0;
+      font-style: italic;
+      color: #666;
+    }
+    
+    .safety-badge {
+      background: rgba(0, 64, 128, 0.1); /* 10% opacity */;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 30px 0;
+      text-align: center;
+    }
+    
+    .safety-badge i {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      color: #ff9800;
+    }
+    
+    .feature-icon {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    
+    .feature-icon i {
+      font-size: 1.5rem;
+      color: #004080;
+      background: #e3f2fd;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .highlight {
+      background-color: #e3f2fd;
+      padding: 10px 15px;
+      border-radius: 8px;
+      border-left: 3px solid #004080;
+      margin: 10px 0;
+    }
+    
+    .shackle-type-selector {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .shackle-type-btn {
+      background: #fff;
+      border: 2px solid #004080;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+      min-width: 180px;
+      text-align: center;
+    }
+    
+    .shackle-type-btn.active {
+      background: #004080;
+      color: white;
+    }
+    
+    .shackle-type-btn:hover {
+      background: #ff9800;
+      color: white;
+      border-color: #ff9800;
+    }
+    
+    .shackle-content {
+      display: none;
+    }
+    
+    .shackle-content.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="Images/FinalLogo.png" alt="Portside India Traders Logo">
+        <div class="logo-text">
+          <h1>Portside India Traders</h1>
+          <span>Strength that Anchors Your Success</span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="Product1.html">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="content">
+      <h1 style="color: white;">Chain Pulley Block</h1>
+      <p>Premium chain hoists for maximum lifting efficiency and safety</p>
+      <a href="#contact" class="cta">Request a Quote</a>
+    </div>
+  </section>
+
+  <!-- Product Overview -->
+  <section id="overview">
+    <div class="container">
+      <h2 class="section-title">Product Overview</h2>
+      <p>Our chain pulley blocks are engineered for superior performance in demanding lifting applications. Designed with premium materials and innovative features, these hoists deliver reliable performance and enhanced safety.</p>
+      
+      <div class="product-highlights">
+        <div class="highlight-item">
+          <div class="highlight-icon">
+            <i class="fas fa-anchor"></i>
+          </div>
+          <h3>Alloy Steel Hooks</h3>
+          <p>High-strength, anti-ading alloy steel</p>
+        </div>
+        
+        <div class="highlight-item">
+          <div class="highlight-icon">
+            <i class="fas fa-lock"></i>
+          </div>
+          <h3>Safety Latch</h3>
+          <p>360° rotating hooks with secure latch</p>
+        </div>
+        
+        <div class="highlight-item">
+          <div class="highlight-icon">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <h3>Closed Design</h3>
+          <p>Protects internal components</p>
+        </div>
+        
+        <div class="highlight-item">
+          <div class="highlight-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Superior Safety</h3>
+          <p>Overload protection features</p>
+        </div>
+      </div>
+      
+      <div class="features-list">
+        <h3>Key Features</h3>
+        <ul>
+          <li>Suspension and load hooks made of anti-ading alloy steel, high strength, deformation occurs as first event of overload without sudden fracture</li>
+          <li>Hook with safety latch securely can rotate freely 360 degrees</li>
+          <li>Ergonomic handle design engineering so that the hoist is easy to operate</li>
+          <li>Closed design protects the internal components from contamination</li>
+          <li>All parts of the load disc brakes made from high quality steel and anti-corrosion materials</li>
+          <li>Steel reinforcement is designed so that the shell strength better long life</li>
+          <li>Stably overload USF or more can be optional, superior safety performance</li>
+          <li>Gakharsted filling chain can guarantee against rust and corrosion features a long time</li>
+          <li>Insurance pieces snap-on design makes filling safer</li>
+          <li>All gear members made from 20cmmT material for better strength and toughness</li>
+          <li>Finshing lifting the chain sprocket to run more smoothly with higher strength</li>
+          <li>Lock ring design line with European standards</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specifications Section -->
+  <section id="specs" style="background-color: #f8f9fa;">
+    <div class="container">
+      <h2 class="section-title">Technical Specifications</h2>
+      
+      <table class="sling-table">
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>HSH</th>
+            <th>DF-025</th>
+            <th>DF-050</th>
+            <th>DF-10</th>
+            <th>DF-20</th>
+            <th>DF-30</th>
+            <th>DF-50</th>
+            <th>DF-100</th>
+            <th>DF-200</th>
+            <th>DF-300</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Safe Working Load (kg)</td>
+            <td>250</td>
+            <td>500</td>
+            <td>1000</td>
+            <td>2000</td>
+            <td>3000</td>
+            <td>5000</td>
+            <td>10000</td>
+            <td>20000</td>
+            <td>30000</td>
+          </tr>
+          <tr>
+            <td>Standardhub (m)</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>Number of parts (m)</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>8</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>Force at hand chain (N)</td>
+            <td>220</td>
+            <td>240</td>
+            <td>315</td>
+            <td>340</td>
+            <td>370</td>
+            <td>370</td>
+            <td>380</td>
+            <td>370</td>
+            <td>390</td>
+          </tr>
+          <tr>
+            <td>Chain size (mm)</td>
+            <td>4x12</td>
+            <td>5x15</td>
+            <td>6x18</td>
+            <td>8x24</td>
+            <td>10x30</td>
+            <td>10x30</td>
+            <td>10x30</td>
+            <td>10x30</td>
+            <td>10x30</td>
+          </tr>
+          <tr>
+            <td>Running Test Load (kg)</td>
+            <td>375</td>
+            <td>1000</td>
+            <td>1500</td>
+            <td>3000</td>
+            <td>4500</td>
+            <td>7500</td>
+            <td>15000</td>
+            <td>30000</td>
+            <td>45000</td>
+          </tr>
+          <tr>
+            <td>Weight (kg)</td>
+            <td>4.5</td>
+            <td>5.7</td>
+            <td>11</td>
+            <td>17</td>
+            <td>26</td>
+            <td>40</td>
+            <td>73</td>
+            <td>186</td>
+            <td>260</td>
+          </tr>
+          <tr>
+            <td>Packing Measurements (cm)</td>
+            <td>31.5x16x12</td>
+            <td>27.5x14.5x15.5</td>
+            <td>28x17x18.5</td>
+            <td>31x17.5x22</td>
+            <td>39x19x26</td>
+            <td>44x24x26</td>
+            <td>58x46.5x24.5</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Gewicht mit standardhub (kg)</td>
+            <td>0.341</td>
+            <td>0.451</td>
+            <td>0.77</td>
+            <td>1.36</td>
+            <td>2.2</td>
+            <td>4.4</td>
+            <td>6.6</td>
+            <td>17.6</td>
+            <td>26.4</td>
+          </tr>
+          <tr>
+            <td>Extra weigh per meter of extra lift (kg)</td>
+            <td>0.9</td>
+            <td>0.9</td>
+            <td>0.9</td>
+            <td>0.9</td>
+            <td>0.9</td>
+            <td>0.9</td>
+            <td>0.9</td>
+            <td>1.8</td>
+            <td>1.8</td>
+          </tr>
+          <tr>
+            <td>Dimensions a (mm)</td>
+            <td>102</td>
+            <td>122</td>
+            <td>152</td>
+            <td>176</td>
+            <td>216</td>
+            <td>216</td>
+            <td>244</td>
+            <td>429</td>
+            <td>519</td>
+          </tr>
+          <tr>
+            <td>Dimensions b (mm)</td>
+            <td>28</td>
+            <td>34</td>
+            <td>40</td>
+            <td>52</td>
+            <td>62</td>
+            <td>65</td>
+            <td>70</td>
+            <td>125</td>
+            <td>150</td>
+          </tr>
+          <tr>
+            <td>Dimensions c (mm)</td>
+            <td>98</td>
+            <td>118</td>
+            <td>152</td>
+            <td>170</td>
+            <td>204</td>
+            <td>204</td>
+            <td>204</td>
+            <td>376</td>
+            <td>370</td>
+          </tr>
+          <tr>
+            <td>Dimensions d (mm)</td>
+            <td>22</td>
+            <td>23</td>
+            <td>29</td>
+            <td>33</td>
+            <td>41</td>
+            <td>45</td>
+            <td>55</td>
+            <td>75</td>
+            <td>85</td>
+          </tr>
+          <tr>
+            <td>Dimensions e (mm)</td>
+            <td>114</td>
+            <td>119</td>
+            <td>145</td>
+            <td>157</td>
+            <td>167</td>
+            <td>167</td>
+            <td>167</td>
+            <td>222</td>
+            <td>218</td>
+          </tr>
+          <tr>
+            <td>Dimensions f (mm)</td>
+            <td>64</td>
+            <td>65</td>
+            <td>79</td>
+            <td>81</td>
+            <td>83</td>
+            <td>83</td>
+            <td>83</td>
+            <td>109</td>
+            <td>108</td>
+          </tr>
+          <tr>
+            <td>Hmin (mm)</td>
+            <td>261</td>
+            <td>311</td>
+            <td>361</td>
+            <td>443</td>
+            <td>431</td>
+            <td>660</td>
+            <td>705</td>
+            <td>1100</td>
+            <td>1139</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="note">
+        <h3><i class="fas fa-exclamation-circle"></i> Product Notes</h3>
+        <p>Due to continuous updating of our products. The data is subject to changes without notice.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Safety Features -->
+  <section id="safety">
+    <div class="container">
+      <h2 class="section-title">Safety Features</h2>
+      <div class="features">
+        <div class="feature-card">
+          <i class="fas fa-bolt"></i>
+          <h3>Overload Protection</h3>
+          <p>Deformation occurs as first event of overload without sudden fracture</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Secure Hooks</h3>
+          <p>360° rotating hooks with safety latch for secure lifting</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-cogs"></i>
+          <h3>Protected Components</h3>
+          <p>Closed design protects internal components from contamination</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-lock"></i>
+          <h3>Safety Design</h3>
+          <p>Insurance pieces snap-on design makes filling safer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-card">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Email</h3>
+            <p><a href="mailto:sales@portsideindia.com">sales@portsideindia.com</a></p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Phone</h3>
+            <p>+91 93071 04214</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Address</h3>
+            <p>I-WING GURUPREM SOCIETY KATRAP, BADALPUR, MUMBAI SUBURBS, 421503</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Portside India Traders</h3>
+          <p>Providing premium maritime lifting equipment engineered for safety and reliability since our founding.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul class="footer-links">
+            <li><a href="ChainPulleyBlock.html">Chain Pulley Blocks</a></li>
+            <li><a href="#">Ratchet‑Level Hoists</a></li>
+            <li><a href="#">Chain Pulley Hoists</a></li>
+            <li><a href="#">Baby Chain Pulley Hoists</a></li>
+            <li><a href="#">Heavy‑Duty Wire Rope Hoists</a></li>
+            <li><a href="#">Geared Trolleys</a></li>
+            <li><a href="#">Push/Pull Trolleys</a></li>
+            <li><a href="#">Snatch Blocks with Shackles</a></li>
+            <li><a href="#">Manual Winches</a></li>
+            <li><a href="#">Electric Winches</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="Product1.html">All Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        
+      
+      <div class="copyright">
+        <p>&copy; 2025 Portside India Traders. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Smooth scrolling for navigation
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
