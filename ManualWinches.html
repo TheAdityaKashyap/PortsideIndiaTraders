@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portside India Traders - Manual Winches</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body, h1, h2, h3, p, ul, li, a, section, header, footer {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    a { text-decoration: none; color: #004080; }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 20px 0; }
+    section { padding: 40px 0; }
+    header {
+      background-color: #004080;
+      color: #fff;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    header .container { display: flex; justify-content: space-between; align-items: center; }
+    .logo { display: flex; align-items: center; }
+    .logo img {
+      height: 50px;
+      margin-right: 15px;
+      background: #fff;
+      padding: 5px;
+      border-radius: 4px;
+    }
+    .logo-text { display: flex; flex-direction: column; }
+    .logo-text h1 { font-size: 1.5em; margin: 0; color: white; }
+    .logo-text span { font-size: 0.8em; color: #ff9800; margin-top: 3px; }
+    nav ul { list-style: none; display: flex; }
+    nav ul li { margin-left: 20px; }
+    nav ul li a { color: #fff; font-weight: bold; transition: color 0.3s; }
+    nav ul li a:hover { color: #ff9800; }
+    .hero {
+      background: linear-gradient(135deg, #004080, #002b5c);
+      color: white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 20px;
+    }
+    .hero .content { max-width: 800px; }
+    .hero h1 { font-size: 2.8rem; margin-bottom: 15px; }
+    .hero p { font-size: 1.2em; margin-bottom: 25px; color: white; opacity: 0.9; }
+    .hero .cta {
+      background: #fff;
+      color: #004080;
+      padding: 12px 30px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1.1em;
+      display: inline-block;
+      transition: all 0.3s;
+      margin-top: 20px;
+    }
+    .hero .cta:hover {
+      background: #ff9800;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    .section-title {
+      text-align: center;
+      color: #004080;
+      margin-bottom: 30px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    .section-title:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: #ff9800;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
+    }
+    .feature-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      border-top: 4px solid #004080;
+    }
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+    .feature-card i {
+      font-size: 2.5rem;
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    .feature-card h3 { color: #004080; margin-bottom: 15px; }
+    .sling-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      font-size: 0.9rem;
+    }
+    .sling-table th {
+      background: #004080;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-weight: 600;
+    }
+    .sling-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #e0e0e0;
+      text-align: center;
+    }
+    .sling-table tr:last-child td { border-bottom: none; }
+    .sling-table tr:nth-child(even) { background-color: #f8f9fa; }
+    .sling-table tr:hover { background-color: #e3f2fd; }
+    .note {
+      background: #fff8e1;
+      border-left: 4px solid #ff9800;
+      padding: 25px;
+      border-radius: 5px;
+      margin: 30px 0;
+    }
+    .note h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .note ul { padding-left: 20px; }
+    .note li { margin-bottom: 10px; }
+    .contact-card {
+      background: white;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    .contact-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: #e3f2fd;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      color: #004080;
+      font-size: 1.2rem;
+    }
+    .contact-info { flex: 1; }
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 50px 0 20px;
+      margin-top: 50px;
+    }
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+    .footer-column {
+      flex: 1;
+      min-width: 250px;
+      margin-bottom: 30px;
+      padding: 0 15px;
+    }
+    .footer-column h3 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: #ff9800;
+    }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 10px; }
+    .footer-links a { color: #ddd; transition: color 0.3s; }
+    .footer-links a:hover { color: #ff9800; }
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #444;
+    }
+    @media screen and (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      .sling-table { display: block; overflow-x: auto; }
+      header .container { flex-direction: column; }
+      nav ul { margin-top: 15px; flex-wrap: wrap; justify-content: center; }
+      nav ul li { margin: 5px 10px; }
+      .contact-item { flex-direction: column; text-align: center; }
+      .contact-icon { margin-right: 0; margin-bottom: 15px; }
+      .footer-content { flex-direction: column; }
+    }
+    .product-tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .product-tab {
+      background: #fff;
+      border: 2px solid #004080;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+      min-width: 180px;
+      text-align: center;
+    }
+    .product-tab.active {
+      background: #004080;
+      color: white;
+    }
+    .product-tab:hover {
+      background: #ff9800;
+      color: white;
+      border-color: #ff9800;
+    }
+    .product-content { display: none; }
+    .product-content.active { display: block; }
+  </style>
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HQH77MSRY6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HQH77MSRY6');
+</script>
+
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="Images/FinalLogo.png" alt="Portside India Traders Logo">
+        <div class="logo-text">
+          <h1>Portside India Traders</h1>
+          <span>Strength that Anchors Your Success</span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="Product1.html">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="content">
+      <h1 style="color: white;">Manual Winches</h1>
+      <p>Robust hand-operated winches for demanding lifting applications</p>
+      <a href="#contact" class="cta">Request a Quote</a>
+    </div>
+  </section>
+
+  <!-- Product Tabs -->
+  <section id="products">
+    <div class="container">
+      <h2 class="section-title">Our Manual Winch Models</h2>
+      <div class="product-tabs">
+        <div class="product-tab active" data-target="double">Double Purchase Crab Winch</div>
+        <div class="product-tab" data-target="triple">Triple Purchase Crab Winch</div>
+      </div>
+
+      <!-- Double Purchase Crab Winch Content -->
+      <div class="product-content active" id="double-content">
+        <div class="features-list">
+          <h3>Key Features</h3>
+          <ul>
+            <li>Hand operated crab winch with square type side plate</li>
+            <li>Covers big pinion and reinforced by side angle</li>
+            <li>Fabricated seamless pipe drum for durability</li>
+            <li>Brake with shoe, ratchet, pawl and handles</li>
+            <li>Robust construction for long service life</li>
+            <li>Precision-engineered components for smooth operation</li>
+            <li>Designed for industrial, marine, and construction applications</li>
+            <li>Easy maintenance and operation</li>
+          </ul>
+        </div>
+        <h3 class="section-title">Technical Specifications</h3>
+        <div style="overflow-x:auto;">
+          <table class="sling-table">
+            <thead>
+              <tr>
+                <th>To Lift Direct From Barrel</th>
+                <th>Drum Dia</th>
+                <th>Drum Length</th>
+                <th>Thickness of Side Plate</th>
+                <th>Main Shaft Dia</th>
+                <th>No. of Driving Shaft</th>
+                <th>Dia of Driving Shaft</th>
+                <th>Dia of Tie Rod</th>
+                <th>No. of Tie Rod</th>
+                <th>Height</th>
+                <th>Width</th>
+                <th>Purchase</th>
+                <th>Dia Main Pinion</th>
+                <th>Flange Dia</th>
+                <th>Weight of Winch (kg)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>1 Ton</td><td>5 1/2"</td><td>16"</td><td>6mm</td><td>32mm</td><td>2</td><td>1 1/8"</td><td>16mm</td><td>4</td><td>25"</td><td>21"</td><td>Double</td><td>17 1/4"</td><td>9"</td><td>150</td></tr>
+              <tr><td>1.5 Ton</td><td>5 1/2"</td><td>18 1/2"</td><td>6mm</td><td>32mm</td><td>2</td><td>1 1/4"</td><td>16mm</td><td>4</td><td>29"</td><td>23"</td><td>Double</td><td>21 1/4"</td><td>9"</td><td>175</td></tr>
+              <tr><td>2 Ton</td><td>6 5/8"</td><td>22"</td><td>8mm</td><td>40mm</td><td>2</td><td>1 3/8"</td><td>20mm</td><td>4</td><td>35"</td><td>27"</td><td>Double</td><td>26 1/4"</td><td>11"</td><td>250</td></tr>
+              <tr><td>3 Ton</td><td>6 5/8"</td><td>24"</td><td>8mm</td><td>45mm</td><td>2</td><td>1 1/2"</td><td>22mm</td><td>4</td><td>39"</td><td>30"</td><td>Double</td><td>30"</td><td>11"</td><td>280</td></tr>
+              <tr><td>5 Ton</td><td>8 5/8"</td><td>30"</td><td>10mm</td><td>50mm</td><td>2</td><td>1 3/4"</td><td>25mm</td><td>4</td><td>48"</td><td>34"</td><td>Double</td><td>35 5/8"</td><td>13"</td><td>425</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note">
+          <h3><i class="fas fa-exclamation-circle"></i> Note</h3>
+          <p>Specifications are indicative and subject to change. Contact us for detailed dimensional drawings.</p>
+        </div>
+      </div>
+
+      <!-- Triple Purchase Crab Winch Content -->
+      <div class="product-content" id="triple-content">
+        <div class="features-list">
+          <h3>Triple Purchase Crab Winch</h3>
+          <ul>
+            <li>Heavy-duty solution for demanding applications</li>
+            <li>Hand operated with reinforced construction</li>
+            <li>Fabricated seamless pipe drum for durability</li>
+            <li>Brake with shoe, ratchet, pawl and handles</li>
+            <li>Precision-engineered for smooth operation</li>
+            <li>Easy maintenance and operation</li>
+          </ul>
+        </div>
+        <h3 class="section-title">Technical Specifications</h3>
+        <div style="overflow-x:auto;">
+          <table class="sling-table">
+            <thead>
+              <tr>
+                <th>To Lift Direct From Barrel</th>
+                <th>Drum Dia</th>
+                <th>Drum Length</th>
+                <th>Thickness of Side Plate</th>
+                <th>Main Shaft Dia</th>
+                <th>No. of Driving Shaft</th>
+                <th>Dia of Driving Shaft</th>
+                <th>Dia of Tie Rod</th>
+                <th>No. of Tie Rod</th>
+                <th>Height</th>
+                <th>Width</th>
+                <th>Purchase</th>
+                <th>Dia Main Pinion</th>
+                <th>Flange Dia</th>
+                <th>Weight of Winch (kg)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>7.5 Ton</td><td>8 5/8"</td><td>30"</td><td>10mm</td><td>50mm</td><td>3</td><td>1 3/4"</td><td>25mm</td><td>4</td><td>48"</td><td>34"</td><td>Triple</td><td>35 5/8"</td><td>13"</td><td>650</td></tr>
+              <tr><td>10 Ton</td><td>8 5/8"</td><td>34"</td><td>11mm</td><td>65mm</td><td>3</td><td>1.875"</td><td>32mm</td><td>4</td><td>48"</td><td>35"</td><td>Triple</td><td>34"</td><td>16"</td><td>750</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note">
+          <h3><i class="fas fa-info-circle"></i> Note</h3>
+          <p>Specifications are indicative and subject to change. Contact us for detailed dimensional drawings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Safety Features -->
+  <section id="safety" style="background-color: #f8f9fa;">
+    <div class="container">
+      <h2 class="section-title">Safety & Reliability</h2>
+      <div class="features">
+        <div class="feature-card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Robust Braking System</h3>
+          <p>Brake with shoe, ratchet and pawl for secure operation</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-cogs"></i>
+          <h3>Precision Engineering</h3>
+          <p>Fabricated seamless pipe drum for smooth operation</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-hard-hat"></i>
+          <h3>Reinforced Construction</h3>
+          <p>Square type side plate reinforced by side angle</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-certificate"></i>
+          <h3>Quality Materials</h3>
+          <p>High-strength components for long service life</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-card">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Email</h3>
+            <p><a href="mailto:sales@portsideindia.com">sales@portsideindia.com</a></p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Phone</h3>
+            <p>+91 93071 04214</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Address</h3>
+            <p>I-WING GURUPREM SOCIETY KATRAP, BADALPUR, MUMBAI SUBURBS, 421503</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Portside India Traders</h3>
+          <p>Providing premium lifting equipment engineered for safety and reliability since our founding.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul class="footer-links">
+            <li><a href="ChainPulleyBlock.html">Chain Pulley Blocks</a></li>
+            <li><a href="RatchetLeverHoist_PullPushTrolley_GearedTrolley.html#ratchet-content">Ratchet Lever Hoist</a></li>
+            <li><a href="RatchetLeverHoist_PullPushTrolley_GearedTrolley.html#pull-push-content">Pull Push Trolley</a></li>
+            <li><a href="RatchetLeverHoist_PullPushTrolley_GearedTrolley.html#geared-content">Geared Trolley</a></li>
+            <li><a href="BabyChainPulleyHoist.html">Baby Chain Pulley Hoists</a></li>
+            <li><a href="HeavyDutyWireropeHoist.html">Heavy‑Duty Wire Rope Hoists</a></li>
+            <li><a href="SnatchBlockWithShackle.html">Snatch Blocks with Shackles</a></li>
+            <li><a href="ManualWinches.html">Manual Winches</a></li>
+            <li><a href="ElectricWinches.html">Electric Winches</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#products">All Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Portside India Traders. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Product tab switching
+      const tabs = document.querySelectorAll('.product-tab');
+      const contents = document.querySelectorAll('.product-content');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+          const targetId = this.getAttribute('data-target') + '-content';
+          tabs.forEach(t => t.classList.remove('active'));
+          contents.forEach(c => c.classList.remove('active'));
+          this.classList.add('active');
+          document.getElementById(targetId).classList.add('active');
+        });
+      });
+
+      // Smooth scrolling for navigation
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

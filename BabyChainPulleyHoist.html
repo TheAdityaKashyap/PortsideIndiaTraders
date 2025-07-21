@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portside India Traders - Baby Chain Pulley Hoist</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* --- Copy all CSS from RatchetLeverHoist_PullPushTrolley_GearedTrolley.html here --- */
+    body, h1, h2, h3, p, ul, li, a, section, header, footer {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    a { text-decoration: none; color: #004080; }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 20px 0; }
+    section { padding: 40px 0; }
+    header {
+      background-color: #004080;
+      color: #fff;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    header .container { display: flex; justify-content: space-between; align-items: center; }
+    .logo { display: flex; align-items: center; }
+    .logo img {
+      height: 50px;
+      margin-right: 15px;
+      background: #fff;
+      padding: 5px;
+      border-radius: 4px;
+    }
+    .logo-text { display: flex; flex-direction: column; }
+    .logo-text h1 { font-size: 1.5em; margin: 0; color: white; }
+    .logo-text span { font-size: 0.8em; color: #ff9800; margin-top: 3px; }
+    nav ul { list-style: none; display: flex; }
+    nav ul li { margin-left: 20px; }
+    nav ul li a { color: #fff; font-weight: bold; transition: color 0.3s; }
+    nav ul li a:hover { color: #ff9800; }
+    .hero {
+      background: linear-gradient(135deg, #004080, #002b5c);
+      color: white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 20px;
+    }
+    .hero .content { max-width: 800px; }
+    .hero h1 { font-size: 2.8rem; margin-bottom: 15px; }
+    .hero p { font-size: 1.2em; margin-bottom: 25px; color: white; opacity: 0.9; }
+    .hero .cta {
+      background: #fff;
+      color: #004080;
+      padding: 12px 30px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1.1em;
+      display: inline-block;
+      transition: all 0.3s;
+      margin-top: 20px;
+    }
+    .hero .cta:hover {
+      background: #ff9800;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    .section-title {
+      text-align: center;
+      color: #004080;
+      margin-bottom: 30px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    .section-title:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: #ff9800;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
+    }
+    .feature-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      border-top: 4px solid #004080;
+    }
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+    .feature-card i {
+      font-size: 2.5rem;
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    .feature-card h3 { color: #004080; margin-bottom: 15px; }
+    .sling-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      font-size: 0.9rem;
+    }
+    .sling-table th {
+      background: #004080;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-weight: 600;
+    }
+    .sling-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #e0e0e0;
+      text-align: center;
+    }
+    .sling-table tr:last-child td { border-bottom: none; }
+    .sling-table tr:nth-child(even) { background-color: #f8f9fa; }
+    .sling-table tr:hover { background-color: #e3f2fd; }
+    .note {
+      background: #fff8e1;
+      border-left: 4px solid #ff9800;
+      padding: 25px;
+      border-radius: 5px;
+      margin: 30px 0;
+    }
+    .note h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .note ul { padding-left: 20px; }
+    .note li { margin-bottom: 10px; }
+    .contact-card {
+      background: white;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    .contact-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: #e3f2fd;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      color: #004080;
+      font-size: 1.2rem;
+    }
+    .contact-info { flex: 1; }
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 50px 0 20px;
+      margin-top: 50px;
+    }
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+    .footer-column {
+      flex: 1;
+      min-width: 250px;
+      margin-bottom: 30px;
+      padding: 0 15px;
+    }
+    .footer-column h3 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: #ff9800;
+    }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 10px; }
+    .footer-links a { color: #ddd; transition: color 0.3s; }
+    .footer-links a:hover { color: #ff9800; }
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #444;
+    }
+    @media screen and (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      .sling-table { display: block; overflow-x: auto; }
+      header .container { flex-direction: column; }
+      nav ul { margin-top: 15px; flex-wrap: wrap; justify-content: center; }
+      nav ul li { margin: 5px 10px; }
+      .contact-item { flex-direction: column; text-align: center; }
+      .contact-icon { margin-right: 0; margin-bottom: 15px; }
+      .footer-content { flex-direction: column; }
+    }
+    .product-tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .product-tab {
+      background: #fff;
+      border: 2px solid #004080;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+      min-width: 180px;
+      text-align: center;
+    }
+    .product-tab.active {
+      background: #004080;
+      color: white;
+    }
+    .product-tab:hover {
+      background: #ff9800;
+      color: white;
+      border-color: #ff9800;
+    }
+    .product-content { display: none; }
+    .product-content.active { display: block; }
+  </style>
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HQH77MSRY6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HQH77MSRY6');
+</script>
+
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="Images/FinalLogo.png" alt="Portside India Traders Logo">
+        <div class="logo-text">
+          <h1>Portside India Traders</h1>
+          <span>Strength that Anchors Your Success</span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="Product1.html">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="content">
+      <h1 style="color: white;">Baby Chain Pulley Hoist</h1>
+      <p>Premium lifting solutions with German-engineered precision</p>
+      <a href="#contact" class="cta">Request a Quote</a>
+    </div>
+  </section>
+
+  <!-- Product Tabs -->
+  <section id="products">
+    <div class="container">
+      <h2 class="section-title">Our Baby Chain Pulley Hoist Models</h2>
+      <div class="product-tabs">
+        <div class="product-tab active" data-target="standard">Standard Model</div>
+        <div class="product-tab" data-target="hook">With Hook Suspension</div>
+      </div>
+
+      <!-- Standard Model Content -->
+      <div class="product-content active" id="standard-content">
+        <div class="features-list">
+          <h3>Key Features</h3>
+          <ul>
+            <li>Manufactured in ISO 9001:2000 Certified Company</li>
+            <li>Assured quality & interchangeability of parts</li>
+            <li>Equipped with Grade 80 Load Chain for long chain life & higher safety factor</li>
+            <li>Rugged German design with over 30 years of proven reliability</li>
+            <li>Precision machined case-hardened alloy steel gears for longer life and noiseless operation</li>
+            <li>Lightweight simple mounting design for ease of installation</li>
+            <li>Built-in electrical control panel - ready to use</li>
+            <li>Precision machined & hardened load chain wheel for longer life and smooth operation</li>
+          </ul>
+        </div>
+        <h3 class="section-title">Technical Specifications</h3>
+        <div style="overflow-x:auto;">
+          <table class="sling-table">
+            <thead>
+              <tr>
+                <th rowspan="2">Specification</th>
+                <th colspan="3">Capacity</th>
+              </tr>
+              <tr>
+                <th>500 KG</th>
+                <th>1000 KG</th>
+                <th>2000 KG</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Chain Falls (no)</td>
+                <td>2</td>
+                <td>2</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>Hoisting Speed (m/min)</td>
+                <td>4.8</td>
+                <td>4.8</td>
+                <td>2.4</td>
+              </tr>
+              <tr>
+                <td>Hoist Motor (H.P.)</td>
+                <td>1.5</td>
+                <td>1.5</td>
+                <td>1.5</td>
+              </tr>
+              <tr>
+                <td>Height of Max Lift (std 3m)</td>
+                <td>9.6</td>
+                <td>9.6</td>
+                <td>4.8</td>
+              </tr>
+              <tr>
+                <td>Length of control cable</td>
+                <td colspan="3">At your choice</td>
+              </tr>
+              <tr>
+                <td>Approx. Wt. With Chains For 3m Lift (kg)</td>
+                <td>63</td>
+                <td>63</td>
+                <td>65</td>
+              </tr>
+              <tr>
+                <td>Approx. Wt. Per Meter Additional Lift (kg)</td>
+                <td>2.6</td>
+                <td>2.6</td>
+                <td>5.2</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note">
+          <h3><i class="fas fa-exclamation-circle"></i> Note</h3>
+          <p>Higher lifts offered on request</p>
+        </div>
+      </div>
+
+      <!-- With Hook Suspension Content -->
+      <div class="product-content" id="hook-content">
+        <div class="features-list">
+          <h3>With Hook Suspension (Fig 1)</h3>
+          <ul>
+            <li>Traveling Motor (m/min): 10</li>
+            <li>Traveling Speed (H.P.): 0.25</li>
+            <li>Min. Runaway Bend (radius of curvature - mm): 1500</li>
+            <li>Approx. weight with chains for 3 m lift (kg): 87 (500/1000KG), 96 (2000KG)</li>
+            <li>Approx. weight per metre additional lift (kg): 2.6 (500/1000KG), 5.2 (2000KG)</li>
+          </ul>
+        </div>
+        <h3 class="section-title">Technical Specifications</h3>
+        <div style="overflow-x:auto;">
+          <table class="sling-table">
+            <thead>
+              <tr>
+                <th rowspan="2">Specification</th>
+                <th colspan="3">Capacity</th>
+              </tr>
+              <tr>
+                <th>500 KG</th>
+                <th>1000 KG</th>
+                <th>2000 KG</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Traveling Motor (m/min)</td>
+                <td>10</td>
+                <td>10</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td>Traveling Speed (H.P.)</td>
+                <td>0.25</td>
+                <td>0.25</td>
+                <td>0.25</td>
+              </tr>
+              <tr>
+                <td>Min. Runaway Bend (radius of curvature - mm)</td>
+                <td>1500</td>
+                <td>1500</td>
+                <td>1500</td>
+              </tr>
+              <tr>
+                <td>Approx. weight with chains for 3 m lift (kg)</td>
+                <td>87</td>
+                <td>87</td>
+                <td>96</td>
+              </tr>
+              <tr>
+                <td>Approx. weight per metre additional lift (kg)</td>
+                <td>2.6</td>
+                <td>2.6</td>
+                <td>5.2</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note">
+          <h3><i class="fas fa-info-circle"></i> Important Notes</h3>
+          <ul>
+            <li>To calculate clearance under beam, subtract beam flange thickness from J</li>
+            <li>Data tolerance: +/- 10%</li>
+            <li>All dimensions in millimeters</li>
+          </ul>
+        </div>
+        <div class="dimension-label">Dimensions Diagram Reference</div>
+        <div class="dimension-diagram" style="text-align: center; padding: 20px; background: #f9f9f9; border-radius: 8px;">
+          <div style="font-weight: bold; margin-bottom: 10px;">Dimensions Reference</div>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; text-align: left;">
+            <div><strong>A for C Max:</strong> 493mm (500KG), 493mm (1000KG), 500mm (2000KG)</div>
+            <div><strong>A for C Min:</strong> 370mm (500KG), 370mm (1000KG), 395mm (2000KG)</div>
+            <div><strong>B:</strong> 840mm (500KG), 840mm (1000KG), 965mm (2000KG)</div>
+            <div><strong>C Max:</strong> 305mm (all capacities)</div>
+            <div><strong>C Min:</strong> 58mm (500KG), 58mm (1000KG), 90mm (2000KG)</div>
+            <div><strong>D Min:</strong> 150mm (500KG), 150mm (1000KG), 200mm (2000KG)</div>
+            <div><strong>E:</strong> 525mm (all capacities)</div>
+            <div><strong>F:</strong> 285mm (all capacities)</div>
+            <div><strong>G:</strong> 31mm (500KG), 31mm (1000KG), 37mm (2000KG)</div>
+            <div><strong>H Min:</strong> 23mm (500KG), 23mm (1000KG), 14mm (2000KG)</div>
+            <div><strong>J Max:</strong> 28mm (all capacities)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Safety Features -->
+  <section id="safety" style="background-color: #f8f9fa;">
+    <div class="container">
+      <h2 class="section-title">Safety & Reliability</h2>
+      <div class="features">
+        <div class="feature-card">
+          <i class="fas fa-bolt"></i>
+          <h3>Overload Protection</h3>
+          <p>Engineered to withstand test loads beyond rated capacity</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Robust Construction</h3>
+          <p>High-strength materials ensure durability and reliability</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-cogs"></i>
+          <h3>Precision Engineering</h3>
+          <p>Precisely manufactured components for smooth operation</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-certificate"></i>
+          <h3>Quality Assurance</h3>
+          <p>Rigorous testing to meet industry standards</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-card">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Email</h3>
+            <p><a href="mailto:sales@portsideindia.com">sales@portsideindia.com</a></p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Phone</h3>
+            <p>+91 93071 04214</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Address</h3>
+            <p>I-WING GURUPREM SOCIETY KATRAP, BADALPUR, MUMBAI SUBURBS, 421503</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Portside India Traders</h3>
+          <p>Providing premium lifting equipment engineered for safety and reliability since our founding.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul class="footer-links">
+            <li><a href="ChainPulleyBlock.html">Chain Pulley Blocks</a></li>
+            <li><a href="#" class="footer-product-link" data-product="ratchet">Ratchet Lever Hoist</a></li>
+            <li><a href="#" class="footer-product-link" data-product="pull-push">Pull Push Trolley</a></li>
+            <li><a href="#" class="footer-product-link" data-product="geared">Geared Trolley</a></li>
+            <!-- <li><a href="#">Chain Pulley Hoists</a></li> -->
+            <li><a href="BabyChainPulleyHoist.html">Baby Chain Pulley Hoists</a></li>
+            <li><a href="HeavyDutyWireropeHoist.html">Heavy‑Duty Wire Rope Hoists</a></li>
+            <li><a href="SnatchBlockWithShackle.html">Snatch Blocks with Shackles</a></li>
+            <li><a href="ManualWinches.html">Manual Winches</a></li>
+            <li><a href="ElectricWinches.html">Electric Winches</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#products">All Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Portside India Traders. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Product tab switching
+      const tabs = document.querySelectorAll('.product-tab');
+      const contents = document.querySelectorAll('.product-content');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+          const targetId = this.getAttribute('data-target') + '-content';
+          tabs.forEach(t => t.classList.remove('active'));
+          contents.forEach(c => c.classList.remove('active'));
+          this.classList.add('active');
+          document.getElementById(targetId).classList.add('active');
+        });
+      });
+
+      // Footer product links: select tab and scroll to section
+      document.querySelectorAll('.footer-product-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const product = this.getAttribute('data-product');
+          const tab = document.querySelector(`.product-tab[data-target="${product}"]`);
+          const content = document.getElementById(product + '-content');
+          if (tab && content) {
+            tabs.forEach(t => t.classList.remove('active'));
+            contents.forEach(c => c.classList.remove('active'));
+            tab.classList.add('active');
+            content.classList.add('active');
+            const productsSection = document.getElementById('products');
+            if (productsSection) {
+              window.scrollTo({
+                top: productsSection.offsetTop - 80,
+                behavior: 'smooth'
+              });
+            }
+          }
+        });
+      });
+
+      // Smooth scrolling for navigation
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
