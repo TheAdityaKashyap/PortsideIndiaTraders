@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portside India Traders - Lifting Solutions</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Global Styles */
+    body, h1, h2, h3, p, ul, li, a, section, header, footer {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    
+    a {
+      text-decoration: none;
+      color: #004080;
+    }
+    
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+    
+    section {
+      padding: 40px 0;
+    }
+    
+    /* Header & Navigation */
+    header {
+      background-color: #004080; /* Ocean Blue */
+      color: #fff;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo img {
+      height: 50px;
+      margin-right: 15px;
+      background: #fff;
+      padding: 5px;
+      border-radius: 4px;
+    }
+    
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .logo-text h1 {
+      font-size: 1.5em;
+      margin: 0;
+      color: white;
+    }
+    
+    .logo-text span {
+      font-size: 0.8em;
+      color: #ff9800;
+      margin-top: 3px;
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    
+    nav ul li {
+      margin-left: 20px;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    
+    nav ul li a:hover {
+      color: #ff9800;
+    }
+    
+    /* Hero Section - Solid Color Background */
+    .hero {
+      background: linear-gradient(135deg, #004080, #002b5c);
+      color: white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 20px;
+    }
+    
+    .hero .content {
+      max-width: 800px;
+    }
+    
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
+    
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 25px;
+      color: white;
+      opacity: 0.9;
+    }
+    
+    .hero .cta {
+      background: #fff;
+      color: #004080;
+      padding: 12px 30px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1.1em;
+      display: inline-block;
+      transition: all 0.3s;
+      margin-top: 20px;
+    }
+    
+    .hero .cta:hover {
+      background: #ff9800;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Section Headings */
+    .section-title {
+      text-align: center;
+      color: #004080;
+      margin-bottom: 30px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .section-title:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: #ff9800;
+    }
+    
+    /* Features Section */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
+    }
+    
+    .feature-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      border-top: 4px solid #004080;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .feature-card i {
+      font-size: 2.5rem;
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    .feature-card h3 {
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    /* Tables */
+    .sling-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      font-size: 0.9rem;
+    }
+    
+    .sling-table th {
+      background: #004080;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-weight: 600;
+    }
+    
+    .sling-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #e0e0e0;
+      text-align: center;
+    }
+    
+    .sling-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .sling-table tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+    
+    .sling-table tr:hover {
+      background-color: #e3f2fd;
+    }
+    
+    /* Notes Section */
+    .note {
+      background: #fff8e1;
+      border-left: 4px solid #ff9800;
+      padding: 25px;
+      border-radius: 5px;
+      margin: 30px 0;
+    }
+    
+    .note h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .note ul {
+      padding-left: 20px;
+    }
+    
+    .note li {
+      margin-bottom: 10px;
+    }
+    
+    /* Contact Section */
+    .contact-card {
+      background: white;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .contact-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: #e3f2fd;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      color: #004080;
+      font-size: 1.2rem;
+    }
+    
+    .contact-info {
+      flex: 1;
+    }
+    
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 50px 0 20px;
+      margin-top: 50px;
+    }
+    
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+    
+    .footer-column {
+      flex: 1;
+      min-width: 250px;
+      margin-bottom: 30px;
+      padding: 0 15px;
+    }
+    
+    .footer-column h3 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: #ff9800;
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-links a {
+      color: #ddd;
+      transition: color 0.3s;
+    }
+    
+    .footer-links a:hover {
+      color: #ff9800;
+    }
+    
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #444;
+    }
+    
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      
+      .sling-table {
+        display: block;
+        overflow-x: auto;
+      }
+      
+      header .container {
+        flex-direction: column;
+      }
+      
+      nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      nav ul li {
+        margin: 5px 10px;
+      }
+      
+      .contact-item {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .contact-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+      
+      .footer-content {
+        flex-direction: column;
+      }
+    }
+    
+    /* Product Highlights */
+    .product-highlights {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 30px 0;
+    }
+    
+    .highlight-item {
+      text-align: center;
+      width: 200px;
+      padding: 15px;
+    }
+    
+    .highlight-icon {
+      font-size: 2.5rem;
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    .features-list {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 25px;
+      margin: 30px 0;
+    }
+    
+    .features-list h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #004080;
+      padding-bottom: 10px;
+    }
+    
+    .features-list ul {
+      padding-left: 20px;
+    }
+    
+    .features-list li {
+      margin-bottom: 10px;
+      padding-left: 10px;
+    }
+    
+    .features-list li:before {
+      content: "✓";
+      color: #004080;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    
+    .technical-details {
+      background: #e3f2fd;
+      border-radius: 8px;
+      padding: 25px;
+      margin: 30px 0;
+    }
+    
+    .dimension-placeholder {
+      background: #f0f0f0;
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      margin: 30px 0;
+      font-style: italic;
+      color: #666;
+    }
+    
+    .safety-badge {
+      background: rgba(0, 64, 128, 0.1); /* 10% opacity */;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 30px 0;
+      text-align: center;
+    }
+    
+    .safety-badge i {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      color: #ff9800;
+    }
+    
+    .feature-icon {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    
+    .feature-icon i {
+      font-size: 1.5rem;
+      color: #004080;
+      background: #e3f2fd;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .highlight {
+      background-color: #e3f2fd;
+      padding: 10px 15px;
+      border-radius: 8px;
+      border-left: 3px solid #004080;
+      margin: 10px 0;
+    }
+    
+    .shackle-type-selector {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .shackle-type-btn {
+      background: #fff;
+      border: 2px solid #004080;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+      min-width: 180px;
+      text-align: center;
+    }
+    
+    .shackle-type-btn.active {
+      background: #004080;
+      color: white;
+    }
+    
+    .shackle-type-btn:hover {
+      background: #ff9800;
+      color: white;
+      border-color: #ff9800;
+    }
+    
+    .shackle-content {
+      display: none;
+    }
+    
+    .shackle-content.active {
+      display: block;
+    }
+    
+    .product-tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .product-tab {
+      background: #fff;
+      border: 2px solid #004080;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+      min-width: 180px;
+      text-align: center;
+    }
+    
+    .product-tab.active {
+      background: #004080;
+      color: white;
+    }
+    
+    .product-tab:hover {
+      background: #ff9800;
+      color: white;
+      border-color: #ff9800;
+    }
+    
+    .product-content {
+      display: none;
+    }
+    
+    .product-content.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="Images/FinalLogo.png" alt="Portside India Traders Logo">
+        <div class="logo-text">
+          <h1>Portside India Traders</h1>
+          <span>Strength that Anchors Your Success</span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="Product1.html">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="content">
+      <h1 style="color: white;">Premium Lifting Solutions</h1>
+      <p>Industrial-grade hoists and trolleys for maximum efficiency and safety</p>
+      <a href="#contact" class="cta">Request a Quote</a>
+    </div>
+  </section>
+
+  <!-- Product Tabs -->
+  <section id="products">
+    <div class="container">
+      <h2 class="section-title">Our Lifting Products</h2>
+      
+      <div class="product-tabs">
+        <div class="product-tab active" data-target="ratchet">Ratchet Lever Hoist</div>
+        <div class="product-tab" data-target="pull-push">Pull Push Trolley</div>
+        <div class="product-tab" data-target="geared">Geared Trolley</div>
+      </div>
+      
+      <!-- Ratchet Lever Hoist Content -->
+      <div class="product-content active" id="ratchet-content">
+        <div class="features-list">
+          <h3>Ratchet Lever Hoist Features</h3>
+          <ul>
+            <li>High-strength alloy steel construction</li>
+            <li>Safety latch equipped hooks</li>
+            <li>Ergonomic handle design for easy operation</li>
+            <li>Closed design protects internal components</li>
+            <li>Overload protection for superior safety</li>
+          </ul>
+        </div>
+        
+        <h3 class="section-title">Ratchet Lever Hoist Specifications</h3>
+        
+        <table class="sling-table">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>0.75t</th>
+              <th>1.0t</th>
+              <th>1.5t</th>
+              <th>2.0t</th>
+              <th>3.0t</th>
+              <th>6.0t</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Capacity (t)</td>
+              <td>0.75</td>
+              <td>1</td>
+              <td>1.5</td>
+              <td>2</td>
+              <td>3</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>Standard lifting height (M)</td>
+              <td>1.5</td>
+              <td>1.5</td>
+              <td>1.5</td>
+              <td>1.5</td>
+              <td>1.5</td>
+              <td>1.5</td>
+            </tr>
+            <tr>
+              <td>Test Load (t)</td>
+              <td>1</td>
+              <td>1.25</td>
+              <td>1.875</td>
+              <td>2.5</td>
+              <td>3.75</td>
+              <td>7.5</td>
+            </tr>
+            <tr>
+              <td>H min</td>
+              <td>325</td>
+              <td>325</td>
+              <td>380</td>
+              <td>380</td>
+              <td>480</td>
+              <td>480</td>
+            </tr>
+            <tr>
+              <td>Effort Required (N)</td>
+              <td>140</td>
+              <td>148</td>
+              <td>210</td>
+              <td>220</td>
+              <td>330</td>
+              <td>340</td>
+            </tr>
+            <tr>
+              <td>Diameter Load chain (mm)</td>
+              <td>6</td>
+              <td>6</td>
+              <td>8</td>
+              <td>8</td>
+              <td>10</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Net weight (kg)</td>
+              <td>7</td>
+              <td>7.5</td>
+              <td>11</td>
+              <td>11</td>
+              <td>18.5</td>
+              <td>29</td>
+            </tr>
+            <tr>
+              <td>Dimensions A (mm)</td>
+              <td>148</td>
+              <td>148</td>
+              <td>171</td>
+              <td>171</td>
+              <td>190</td>
+              <td>190</td>
+            </tr>
+            <tr>
+              <td>Dimensions B (mm)</td>
+              <td>87</td>
+              <td>87</td>
+              <td>98</td>
+              <td>98</td>
+              <td>105</td>
+              <td>105</td>
+            </tr>
+            <tr>
+              <td>Dimensions C (mm)</td>
+              <td>140</td>
+              <td>140</td>
+              <td>165</td>
+              <td>165</td>
+              <td>220</td>
+              <td>250</td>
+            </tr>
+            <tr>
+              <td>Dimensions D (mm)</td>
+              <td>35</td>
+              <td>35</td>
+              <td>40</td>
+              <td>40</td>
+              <td>50</td>
+              <td>60</td>
+            </tr>
+            <tr>
+              <td>Dimensions H (mm)</td>
+              <td>310</td>
+              <td>310</td>
+              <td>420</td>
+              <td>420</td>
+              <td>550</td>
+              <td>680</td>
+            </tr>
+            <tr>
+              <td>Dimensions L (mm)</td>
+              <td>250</td>
+              <td>250</td>
+              <td>405</td>
+              <td>405</td>
+              <td>405</td>
+              <td>405</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <div class="note">
+          <h3><i class="fas fa-exclamation-circle"></i> Product Notes</h3>
+          <p>In addition to the list, we can accept orders for lifting heights within 12 meters.</p>
+        </div>
+      </div>
+      
+      <!-- Pull Push Trolley Content -->
+      <div class="product-content" id="pull-push-content">
+        <div class="features-list">
+          <h3>Pull Push Trolley Features</h3>
+          <ul>
+            <li>Hand chain power operation</li>
+            <li>Double shafts design with high-strength soldering sleeve for minimal deformation</li>
+            <li>Bend-ear type side plate for safe running</li>
+            <li>Circular arc-shaped wheel sides for use on I & H beams and other orbits</li>
+            <li>Adjustable bushing and washer to accommodate different orbit widths</li>
+            <li>Deep groove ball bearing wheels for smooth operation</li>
+          </ul>
+        </div>
+        
+        <div class="features">
+          <div class="feature-card">
+            <i class="fas fa-cogs"></i>
+            <h3>Robust Construction</h3>
+            <p>High-strength materials ensure durability and long service life</p>
+          </div>
+          
+          <div class="feature-card">
+            <i class="fas fa-sliders-h"></i>
+            <h3>Adjustable Design</h3>
+            <p>Easily adapts to different beam widths for versatile application</p>
+          </div>
+          
+          <div class="feature-card">
+            <i class="fas fa-wrench"></i>
+            <h3>Easy Operation</h3>
+            <p>Smooth hand chain operation requires minimal effort</p>
+          </div>
+          
+          <div class="feature-card">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Safety Features</h3>
+            <p>Bend-ear side plates prevent derailment for secure operation</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Geared Trolley Content -->
+      <div class="product-content" id="geared-content">
+        <div class="features-list">
+          <h3>Geared Trolley Features</h3>
+          <ul>
+            <li>Precision-engineered for smooth operation</li>
+            <li>Robust construction for heavy-duty applications</li>
+            <li>Compatible with standard I-beams</li>
+            <li>Multiple capacity options for various needs</li>
+            <li>Designed for safety and reliability</li>
+          </ul>
+        </div>
+        
+        <h3 class="section-title">Geared Trolley Specifications</h3>
+        
+        <table class="sling-table">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>0.5MK</th>
+              <th>1MK</th>
+              <th>2MK</th>
+              <th>3MK</th>
+              <th>5DK</th>
+              <th>10MK</th>
+              <th>20MK</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Rated capacity (ton)</td>
+              <td>0.5</td>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+              <td>5</td>
+              <td>10</td>
+              <td>20</td>
+            </tr>
+            <tr>
+              <td>Test load (KN)</td>
+              <td>7.35</td>
+              <td>14.71</td>
+              <td>29.42</td>
+              <td>44.13</td>
+              <td>61.29</td>
+              <td>122.58</td>
+              <td>245.17</td>
+            </tr>
+            <tr>
+              <td>Min radius of curve (m)</td>
+              <td>0.8</td>
+              <td>1.0</td>
+              <td>1.1</td>
+              <td>1.3</td>
+              <td>1.4</td>
+              <td>3.5</td>
+              <td>4.0</td>
+            </tr>
+            <tr>
+              <td>Dimensions A - a (mm)</td>
+              <td>236</td>
+              <td>303</td>
+              <td>317</td>
+              <td>333</td>
+              <td>355</td>
+              <td>378</td>
+              <td>449</td>
+            </tr>
+            <tr>
+              <td>Dimensions A - b (mm)</td>
+              <td>286</td>
+              <td>405</td>
+              <td>419</td>
+              <td>435</td>
+              <td>457</td>
+              <td>480</td>
+              <td>551</td>
+            </tr>
+            <tr>
+              <td>Dimensions C - a (mm)</td>
+              <td>270</td>
+              <td>334</td>
+              <td>343</td>
+              <td>357</td>
+              <td>373</td>
+              <td>423</td>
+              <td>498</td>
+            </tr>
+            <tr>
+              <td>Dimensions C - b (mm)</td>
+              <td>322</td>
+              <td>436</td>
+              <td>445</td>
+              <td>459</td>
+              <td>475</td>
+              <td>525</td>
+              <td>600</td>
+            </tr>
+            <tr>
+              <td>Dimensions E - b (mm)</td>
+              <td>194</td>
+              <td>236</td>
+              <td>268</td>
+              <td>322</td>
+              <td>362</td>
+              <td>442</td>
+              <td>555</td>
+            </tr>
+            <tr>
+              <td>Dimensions F - c (mm)</td>
+              <td>176</td>
+              <td>196</td>
+              <td>225</td>
+              <td>266</td>
+              <td>301</td>
+              <td>396</td>
+              <td>498</td>
+            </tr>
+            <tr>
+              <td>Dimensions G - d (mm)</td>
+              <td>75</td>
+              <td>96</td>
+              <td>109</td>
+              <td>124</td>
+              <td>142</td>
+              <td>190</td>
+              <td>233</td>
+            </tr>
+            <tr>
+              <td>Dimensions H - e (mm)</td>
+              <td>30</td>
+              <td>38</td>
+              <td>38</td>
+              <td>40</td>
+              <td>42</td>
+              <td>45</td>
+              <td>58</td>
+            </tr>
+            <tr>
+              <td>Dimensions J - g (mm)</td>
+              <td>28</td>
+              <td>32</td>
+              <td>42</td>
+              <td>52</td>
+              <td>52</td>
+              <td>72</td>
+              <td>95</td>
+            </tr>
+            <tr>
+              <td>Dimensions K - i (mm)</td>
+              <td>32</td>
+              <td>40</td>
+              <td>52</td>
+              <td>63</td>
+              <td>74</td>
+              <td>110</td>
+              <td>135</td>
+            </tr>
+            <tr>
+              <td>Dimensions J - j (mm)</td>
+              <td>55</td>
+              <td>58</td>
+              <td>80</td>
+              <td>100</td>
+              <td>110</td>
+              <td>134</td>
+              <td>175</td>
+            </tr>
+            <tr>
+              <td>Dimensions M - k (mm)</td>
+              <td>79</td>
+              <td>95</td>
+              <td>108</td>
+              <td>131</td>
+              <td>144</td>
+              <td>176</td>
+              <td>226</td>
+            </tr>
+            <tr>
+              <td>I-beam width range M - a (mm)</td>
+              <td>50-152</td>
+              <td>64-203</td>
+              <td>88-203</td>
+              <td>100-203</td>
+              <td>114-203</td>
+              <td>124-203</td>
+              <td>136-203</td>
+            </tr>
+            <tr>
+              <td>I-beam width range J - b (mm)</td>
+              <td>50-203</td>
+              <td>64-305</td>
+              <td>88-305</td>
+              <td>100-305</td>
+              <td>114-305</td>
+              <td>124-305</td>
+              <td>136-305</td>
+            </tr>
+            <tr>
+              <td>Plan weight - a (kg)</td>
+              <td>6.5</td>
+              <td>11.5</td>
+              <td>18</td>
+              <td>30</td>
+              <td>44</td>
+              <td>82</td>
+              <td>159</td>
+            </tr>
+            <tr>
+              <td>Plan weight - b (kg)</td>
+              <td>7.5</td>
+              <td>13</td>
+              <td>20</td>
+              <td>34</td>
+              <td>50</td>
+              <td>89</td>
+              <td>167</td>
+            </tr>
+            <tr>
+              <td>Geared weight - a (kg)</td>
+              <td>10</td>
+              <td>14.5</td>
+              <td>22</td>
+              <td>34</td>
+              <td>47</td>
+              <td>88</td>
+              <td>165</td>
+            </tr>
+            <tr>
+              <td>Geared weight - b (kg)</td>
+              <td>11</td>
+              <td>16</td>
+              <td>24</td>
+              <td>38</td>
+              <td>53</td>
+              <td>94</td>
+              <td>167</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Safety Features -->
+  <section id="safety" style="background-color: #f8f9fa;">
+    <div class="container">
+      <h2 class="section-title">Safety & Reliability</h2>
+      <div class="features">
+        <div class="feature-card">
+          <i class="fas fa-bolt"></i>
+          <h3>Overload Protection</h3>
+          <p>Engineered to withstand test loads beyond rated capacity</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Robust Construction</h3>
+          <p>High-strength materials ensure durability and reliability</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-cogs"></i>
+          <h3>Precision Engineering</h3>
+          <p>Precisely manufactured components for smooth operation</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-certificate"></i>
+          <h3>Quality Assurance</h3>
+          <p>Rigorous testing to meet industry standards</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-card">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Email</h3>
+            <p><a href="mailto:sales@portsideindia.com">sales@portsideindia.com</a></p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Phone</h3>
+            <p>+91 93071 04214</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Address</h3>
+            <p>I-WING GURUPREM SOCIETY KATRAP, BADALPUR, MUMBAI SUBURBS, 421503</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Portside India Traders</h3>
+          <p>Providing premium lifting equipment engineered for safety and reliability since our founding.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul class="footer-links">
+            <li><a href="ChainPulleyBlock.html">Chain Pulley Blocks</a></li>
+            <li><a href="#" class="footer-product-link" data-product="ratchet">Ratchet Lever Hoist</a></li>
+            <li><a href="#" class="footer-product-link" data-product="pull-push">Pull Push Trolley</a></li>
+            <li><a href="#" class="footer-product-link" data-product="geared">Geared Trolley</a></li>
+            <li><a href="#">Chain Pulley Hoists</a></li>
+            <li><a href="#">Baby Chain Pulley Hoists</a></li>
+            <li><a href="#">Heavy‑Duty Wire Rope Hoists</a></li>
+            <li><a href="#">Snatch Blocks with Shackles</a></li>
+            <li><a href="#">Manual Winches</a></li>
+            <li><a href="#">Electric Winches</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#products">All Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>&copy; 2025 Portside India Traders. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Product tab switching
+      const tabs = document.querySelectorAll('.product-tab');
+      const contents = document.querySelectorAll('.product-content');
+      
+      tabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+          const targetId = this.getAttribute('data-target') + '-content';
+          
+          // Remove active class from all tabs and contents
+          tabs.forEach(t => t.classList.remove('active'));
+          contents.forEach(c => c.classList.remove('active'));
+          
+          // Add active class to clicked tab and target content
+          this.classList.add('active');
+          document.getElementById(targetId).classList.add('active');
+        });
+      });
+
+      // Footer product links: select tab and scroll to section
+      document.querySelectorAll('.footer-product-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const product = this.getAttribute('data-product');
+          const tab = document.querySelector(`.product-tab[data-target="${product}"]`);
+          const content = document.getElementById(product + '-content');
+          if (tab && content) {
+            // Remove active class from all tabs and contents
+            tabs.forEach(t => t.classList.remove('active'));
+            contents.forEach(c => c.classList.remove('active'));
+            // Activate the selected tab and content
+            tab.classList.add('active');
+            content.classList.add('active');
+            // Scroll to products section
+            const productsSection = document.getElementById('products');
+            if (productsSection) {
+              window.scrollTo({
+                top: productsSection.offsetTop - 80,
+                behavior: 'smooth'
+              });
+            }
+          }
+        });
+      });
+      
+      // Smooth scrolling for navigation
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
