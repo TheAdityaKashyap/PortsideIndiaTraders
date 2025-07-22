@@ -6,11 +6,14 @@
   <title>Garfil Industrial Ropes | Portside India Traders</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    * {
+    /* Global Styles */
+    body, h1, h2, h3, p, ul, li, a, section, header, footer {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
     }
     
     :root {
@@ -23,17 +26,14 @@
       --sky: #e3f2fd;
     }
     
-    body {
-      background-color: #f5f7fa;
-      color: #333;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-    
     a {
       text-decoration: none;
       color: var(--primary);
-      transition: all 0.3s ease;
+      transition: all 0.3s;
+    }
+    
+    a:hover {
+      color: var(--secondary);
     }
     
     .container {
@@ -47,7 +47,31 @@
       padding: 60px 0;
     }
     
-    /* Header Styles */
+    .section-title {
+      text-align: center;
+      color: var(--primary);
+      margin-bottom: 40px;
+      position: relative;
+      padding-bottom: 20px;
+    }
+    
+    .section-title:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--secondary);
+      border-radius: 2px;
+    }
+    
+    .bg-light {
+      background-color: var(--light);
+    }
+    
+    /* Header & Navigation */
     header {
       background-color: var(--primary);
       color: #fff;
@@ -87,7 +111,6 @@
       font-size: 1.5rem;
       margin: 0;
       color: white;
-      font-weight: 700;
     }
     
     .logo-text span {
@@ -128,18 +151,6 @@
       overflow: hidden;
     }
     
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 Q50,10 100,0 L100,100 Q50,90 0,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
-      background-size: cover;
-      background-position: center;
-    }
-    
     .hero .content {
       max-width: 800px;
       position: relative;
@@ -147,13 +158,13 @@
     }
     
     .hero h1 {
-      font-size: 3.2rem;
+      font-size: 3rem;
       margin-bottom: 20px;
       text-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
     
     .hero p {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       margin-bottom: 30px;
       color: rgba(255, 255, 255, 0.9);
       max-width: 700px;
@@ -180,42 +191,22 @@
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
     }
     
-    /* Section Title */
-    .section-title {
-      text-align: center;
-      color: var(--primary);
-      margin-bottom: 40px;
-      position: relative;
-      padding-bottom: 20px;
-    }
-    
-    .section-title:after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100px;
-      height: 4px;
-      background: var(--secondary);
-      border-radius: 2px;
-    }
-    
     /* Feature Grid */
     .features-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
       margin: 40px 0;
     }
     
     .feature-card {
       background: white;
-      border-radius: 12px;
+      border-radius: 8px;
       padding: 30px;
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
       text-align: center;
       transition: transform 0.3s ease;
+      border-top: 4px solid var(--primary);
     }
     
     .feature-card:hover {
@@ -224,8 +215,8 @@
     }
     
     .feature-icon {
-      width: 80px;
-      height: 80px;
+      width: 70px;
+      height: 70px;
       background: var(--sky);
       border-radius: 50%;
       display: flex;
@@ -233,12 +224,12 @@
       justify-content: center;
       margin: 0 auto 25px;
       color: var(--primary);
-      font-size: 2.2rem;
+      font-size: 2rem;
     }
     
     .feature-card h3 {
       color: var(--primary);
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       margin-bottom: 15px;
     }
     
@@ -246,6 +237,66 @@
       color: #555;
       font-size: 1rem;
       line-height: 1.7;
+    }
+    
+    /* Application Grid */
+    .applications-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    
+    .application-card {
+      background: white;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+      border-top: 4px solid var(--primary);
+    }
+    
+    .application-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .application-card h3 {
+      color: var(--primary);
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+    }
+    
+    .application-card ul {
+      list-style: none;
+      text-align: left;
+      padding: 0 20px;
+    }
+    
+    .application-card li {
+      padding: 10px 0;
+      border-bottom: 1px dashed #eee;
+      display: flex;
+      align-items: center;
+    }
+    
+    .application-card li:last-child {
+      border-bottom: none;
+    }
+    
+    .application-card i {
+      color: var(--secondary);
+      margin-right: 10px;
+      min-width: 20px;
+    }
+    
+    .capital-title {
+      text-align: center;
+      color: var(--primary);
+      margin-bottom: 30px;
+      font-size: 2rem;
     }
     
     /* Product Tabs */
@@ -261,7 +312,7 @@
       background: #fff;
       border: 2px solid var(--primary);
       padding: 14px 30px;
-      border-radius: 50px;
+      border-radius: 5px;
       font-weight: bold;
       cursor: pointer;
       transition: all 0.3s;
@@ -299,7 +350,7 @@
     }
     
     /* Product Cards */
-    .product-card {
+    .product-info {
       background: white;
       border-radius: 12px;
       padding: 30px;
@@ -308,7 +359,7 @@
       transition: transform 0.3s ease;
     }
     
-    .product-card:hover {
+    .product-info:hover {
       transform: translateY(-10px);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
     }
@@ -344,14 +395,7 @@
       color: #555;
       font-size: 1.1rem;
       line-height: 1.8;
-    }
-    
-    .feature-item {
-      background: rgba(0, 64, 128, 0.05);
-      border-left: 4px solid var(--secondary);
-      padding: 15px;
-      border-radius: 0 8px 8px 0;
-      margin-bottom: 15px;
+      text-align: center;
     }
     
     /* Tables */
@@ -363,6 +407,7 @@
       border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+      font-size: 0.95rem;
     }
     
     .specs-table th {
@@ -541,7 +586,7 @@
     /* Responsive */
     @media screen and (max-width: 992px) {
       .hero h1 {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
       }
       
       .product-tab {
@@ -571,7 +616,7 @@
       }
       
       .hero h1 {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
       }
       
       .hero p {
@@ -606,132 +651,15 @@
         padding: 10px 5px;
       }
     }
-    
-    /* Visual Enhancements */
-    .product-image {
-      max-width: 100%;
-      border-radius: 10px;
-      margin: 25px 0;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    
-    .product-feature {
-      display: flex;
-      align-items: center;
-      margin-bottom: 15px;
-    }
-    
-    .product-feature i {
-      color: var(--secondary);
-      margin-right: 10px;
-      font-size: 1.2rem;
-    }
-    
-    .highlight {
-      background: linear-gradient(120deg, rgba(255,152,0,0.2), rgba(255,152,0,0));
-      padding: 20px;
-      border-radius: 8px;
-      margin: 25px 0;
-      border-left: 4px solid var(--secondary);
-    }
-    
-    .capital-section {
-      background: #f8f9fa;
-      padding: 50px 0;
-      text-align: center;
-    }
-    
-    .capital-title {
-      font-size: 2.2rem;
-      color: var(--primary);
-      margin-bottom: 30px;
-      font-weight: 700;
-    }
-    
-    .applications-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
-      margin-top: 30px;
-    }
-    
-    .application-card {
-      background: white;
-      border-radius: 10px;
-      padding: 25px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      transition: transform 0.3s;
-    }
-    
-    .application-card:hover {
-      transform: translateY(-5px);
-    }
-    
-    .application-card h3 {
-      color: var(--primary);
-      margin-bottom: 15px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      justify-content: center;
-    }
-    
-    .application-card ul {
-      list-style: none;
-      text-align: left;
-      padding: 0 20px;
-    }
-    
-    .application-card li {
-      padding: 8px 0;
-      border-bottom: 1px dashed #eee;
-      display: flex;
-      align-items: center;
-    }
-    
-    .application-card li:last-child {
-      border-bottom: none;
-    }
-    
-    .application-card i {
-      color: var(--secondary);
-      margin-right: 10px;
-      min-width: 20px;
-    }
-    
-    .rope-banner {
-      background: linear-gradient(rgba(0, 64, 128, 0.85), rgba(0, 43, 92, 0.85)), 
-                  url('https://images.unsplash.com/photo-1581093458791-8a4d5c1a3b1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
-      background-size: cover;
-      background-position: center;
-      color: white;
-      text-align: center;
-      padding: 80px 20px;
-      margin: 60px 0;
-    }
-    
-    .rope-banner h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-    
-    .rope-banner p {
-      font-size: 1.2rem;
-      max-width: 800px;
-      margin: 0 auto 30px;
-    }
   </style>
-
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HQH77MSRY6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-HQH77MSRY6');
-</script>
-
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HQH77MSRY6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HQH77MSRY6');
+  </script>
 </head>
 <body>
   <!-- Header -->
@@ -746,7 +674,7 @@
       </div>
       <nav>
         <ul>
-          <li><a href="#home">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="Product1.html">Products</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -758,7 +686,7 @@
   <!-- Hero Section -->
   <section class="hero" id="home">
     <div class="content">
-      <h1>Garfil Industrial Ropes</h1>
+      <h1 style="color: white;">Garfil Industrial Ropes</h1>
       <p>Premium synthetic ropes engineered for strength, durability, and reliability in demanding applications</p>
       <a href="#contact" class="cta">Request Specifications</a>
     </div>
@@ -797,17 +725,8 @@
     </div>
   </section>
 
-  <!-- Banner -->
-  <!-- <div class="rope-banner">
-    <div class="container">
-      <h2>Engineering Strength, Delivering Trust</h2>
-      <p>Garfil Industrial Ropes - Taking the load off you with premium synthetic rope solutions</p>
-      <a href="#contact" class="cta">Contact Us Today</a>
-    </div>
-  </div> -->
-
-  <!-- Capital Section -->
-  <section class="capital-section">
+  <!-- Applications Section -->
+  <section class="bg-light">
     <div class="container">
       <h2 class="capital-title">CAPITAL™ 3-Strand Industrial Ropes</h2>
       
@@ -846,13 +765,13 @@
   </section>
 
   <!-- Product Attributes -->
-  <section style="background-color: #f8f9fa;">
+  <section>
     <div class="container">
       <h2 class="section-title">Product Attributes</h2>
       
       <div class="features-grid">
         <div class="feature-card">
-          <div class="feature-icon" style="background: rgba(0, 64, 128, 0.1);">
+          <div class="feature-icon">
             <i class="fas fa-water"></i>
           </div>
           <h3>Polypropylene Ropes</h3>
@@ -865,7 +784,7 @@
         </div>
         
         <div class="feature-card">
-          <div class="feature-icon" style="background: rgba(0, 64, 128, 0.1);">
+          <div class="feature-icon">
             <i class="fas fa-bolt"></i>
           </div>
           <h3>Nylon Ropes</h3>
@@ -891,8 +810,8 @@
     </div>
   </section>
 
-  <!-- Product Tabs -->
-  <section id="products">
+  <!-- Product Specifications -->
+  <section class="bg-light" id="products">
     <div class="container">
       <h2 class="section-title">Product Specifications</h2>
       <div class="product-tabs">
@@ -902,7 +821,7 @@
 
       <!-- Polypropylene Content -->
       <div class="product-content active" id="polypropylene-content">
-        <div class="product-card">
+        <div class="product-info">
           <div class="product-header">
             <div class="product-icon">
               <i class="fas fa-water"></i>
@@ -910,9 +829,7 @@
             <h2 class="product-title">Polypropylene Parapro Ropes</h2>
           </div>
           
-          <div class="product-description">
-            <p>Our premium polypropylene ropes are engineered for superior strength and durability in various industrial applications. Designed to withstand heavy loads and harsh conditions, these ropes provide reliable performance across multiple industries.</p>
-          </div>
+          <p class="product-description">Our premium polypropylene ropes are engineered for superior strength and durability in various industrial applications. Designed to withstand heavy loads and harsh conditions, these ropes provide reliable performance across multiple industries.</p>
           
           <div style="overflow-x:auto;">
             <table class="specs-table">
@@ -925,120 +842,25 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>4</td>
-                  <td>214</td>
-                  <td>135.00</td>
-                  <td>1.63</td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td>602</td>
-                  <td>60.00</td>
-                  <td>3.67</td>
-                </tr>
-                <tr>
-                  <td>8</td>
-                  <td>1060</td>
-                  <td>33.30</td>
-                  <td>6.60</td>
-                </tr>
-                <tr>
-                  <td>10</td>
-                  <td>1560</td>
-                  <td>22.00</td>
-                  <td>10.00</td>
-                </tr>
-                <tr>
-                  <td>12</td>
-                  <td>2210</td>
-                  <td>15.20</td>
-                  <td>14.50</td>
-                </tr>
-                <tr>
-                  <td>14</td>
-                  <td>3050</td>
-                  <td>11.00</td>
-                  <td>20.00</td>
-                </tr>
-                <tr>
-                  <td>16</td>
-                  <td>3770</td>
-                  <td>8.60</td>
-                  <td>25.50</td>
-                </tr>
-                <tr>
-                  <td>18</td>
-                  <td>4810</td>
-                  <td>6.80</td>
-                  <td>32.50</td>
-                </tr>
-                <tr>
-                  <td>20</td>
-                  <td>5800</td>
-                  <td>5.50</td>
-                  <td>40.00</td>
-                </tr>
-                <tr>
-                  <td>22</td>
-                  <td>6960</td>
-                  <td>4.50</td>
-                  <td>48.50</td>
-                </tr>
-                <tr>
-                  <td>24</td>
-                  <td>8130</td>
-                  <td>3.90</td>
-                  <td>57.00</td>
-                </tr>
-                <tr>
-                  <td>26</td>
-                  <td>9410</td>
-                  <td>3.20</td>
-                  <td>67.60</td>
-                </tr>
-                <tr>
-                  <td>28</td>
-                  <td>10700</td>
-                  <td>2.80</td>
-                  <td>78.00</td>
-                </tr>
-                <tr>
-                  <td>30</td>
-                  <td>12220</td>
-                  <td>2.50</td>
-                  <td>89.00</td>
-                </tr>
-                <tr>
-                  <td>32</td>
-                  <td>13500</td>
-                  <td>2.20</td>
-                  <td>101.00</td>
-                </tr>
-                <tr>
-                  <td>36</td>
-                  <td>16930</td>
-                  <td>1.70</td>
-                  <td>129.00</td>
-                </tr>
-                <tr>
-                  <td>40</td>
-                  <td>20510</td>
-                  <td>1.40</td>
-                  <td>158.00</td>
-                </tr>
-                <tr>
-                  <td>44</td>
-                  <td>24640</td>
-                  <td>1.13</td>
-                  <td>194.00</td>
-                </tr>
-                <tr>
-                  <td>48</td>
-                  <td>28610</td>
-                  <td>0.96</td>
-                  <td>229.00</td>
-                </tr>
+                <tr><td>4</td><td>214</td><td>135.00</td><td>1.63</td></tr>
+                <tr><td>6</td><td>602</td><td>60.00</td><td>3.67</td></tr>
+                <tr><td>8</td><td>1060</td><td>33.30</td><td>6.60</td></tr>
+                <tr><td>10</td><td>1560</td><td>22.00</td><td>10.00</td></tr>
+                <tr><td>12</td><td>2210</td><td>15.20</td><td>14.50</td></tr>
+                <tr><td>14</td><td>3050</td><td>11.00</td><td>20.00</td></tr>
+                <tr><td>16</td><td>3770</td><td>8.60</td><td>25.50</td></tr>
+                <tr><td>18</td><td>4810</td><td>6.80</td><td>32.50</td></tr>
+                <tr><td>20</td><td>5800</td><td>5.50</td><td>40.00</td></tr>
+                <tr><td>22</td><td>6960</td><td>4.50</td><td>48.50</td></tr>
+                <tr><td>24</td><td>8130</td><td>3.90</td><td>57.00</td></tr>
+                <tr><td>26</td><td>9410</td><td>3.20</td><td>67.60</td></tr>
+                <tr><td>28</td><td>10700</td><td>2.80</td><td>78.00</td></tr>
+                <tr><td>30</td><td>12220</td><td>2.50</td><td>89.00</td></tr>
+                <tr><td>32</td><td>13500</td><td>2.20</td><td>101.00</td></tr>
+                <tr><td>36</td><td>16930</td><td>1.70</td><td>129.00</td></tr>
+                <tr><td>40</td><td>20510</td><td>1.40</td><td>158.00</td></tr>
+                <tr><td>44</td><td>24640</td><td>1.13</td><td>194.00</td></tr>
+                <tr><td>48</td><td>28610</td><td>0.96</td><td>229.00</td></tr>
               </tbody>
             </table>
           </div>
@@ -1060,7 +882,7 @@
 
       <!-- Nylon Content -->
       <div class="product-content" id="nylon-content">
-        <div class="product-card">
+        <div class="product-info">
           <div class="product-header">
             <div class="product-icon">
               <i class="fas fa-bolt"></i>
@@ -1068,9 +890,7 @@
             <h2 class="product-title">Nylon Multi-filament Ropes</h2>
           </div>
           
-          <div class="product-description">
-            <p>Our premium nylon ropes offer exceptional breaking strength and high elongation properties, making them ideal for applications requiring shock absorption and durability under demanding conditions.</p>
-          </div>
+          <p class="product-description">Our premium nylon ropes offer exceptional breaking strength and high elongation properties, making them ideal for applications requiring shock absorption and durability under demanding conditions.</p>
           
           <div style="overflow-x:auto;">
             <table class="specs-table">
@@ -1083,120 +903,25 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>4</td>
-                  <td>320</td>
-                  <td>95.24</td>
-                  <td>2.30</td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td>750</td>
-                  <td>44.40</td>
-                  <td>4.95</td>
-                </tr>
-                <tr>
-                  <td>8</td>
-                  <td>1345</td>
-                  <td>25.00</td>
-                  <td>8.80</td>
-                </tr>
-                <tr>
-                  <td>10</td>
-                  <td>2088</td>
-                  <td>16.20</td>
-                  <td>13.60</td>
-                </tr>
-                <tr>
-                  <td>12</td>
-                  <td>2995</td>
-                  <td>11.20</td>
-                  <td>19.60</td>
-                </tr>
-                <tr>
-                  <td>14</td>
-                  <td>4095</td>
-                  <td>8.20</td>
-                  <td>26.80</td>
-                </tr>
-                <tr>
-                  <td>16</td>
-                  <td>5300</td>
-                  <td>6.30</td>
-                  <td>35.00</td>
-                </tr>
-                <tr>
-                  <td>18</td>
-                  <td>6695</td>
-                  <td>5.00</td>
-                  <td>44.00</td>
-                </tr>
-                <tr>
-                  <td>20</td>
-                  <td>8300</td>
-                  <td>4.10</td>
-                  <td>54.00</td>
-                </tr>
-                <tr>
-                  <td>22</td>
-                  <td>10000</td>
-                  <td>3.30</td>
-                  <td>66.00</td>
-                </tr>
-                <tr>
-                  <td>24</td>
-                  <td>12000</td>
-                  <td>2.80</td>
-                  <td>78.00</td>
-                </tr>
-                <tr>
-                  <td>26</td>
-                  <td>13950</td>
-                  <td>2.40</td>
-                  <td>92.40</td>
-                </tr>
-                <tr>
-                  <td>28</td>
-                  <td>15800</td>
-                  <td>2.10</td>
-                  <td>107.00</td>
-                </tr>
-                <tr>
-                  <td>30</td>
-                  <td>17755</td>
-                  <td>1.80</td>
-                  <td>122.10</td>
-                </tr>
-                <tr>
-                  <td>32</td>
-                  <td>20000</td>
-                  <td>1.60</td>
-                  <td>139.00</td>
-                </tr>
-                <tr>
-                  <td>36</td>
-                  <td>24900</td>
-                  <td>1.25</td>
-                  <td>176.00</td>
-                </tr>
-                <tr>
-                  <td>40</td>
-                  <td>30000</td>
-                  <td>1.00</td>
-                  <td>218.00</td>
-                </tr>
-                <tr>
-                  <td>44</td>
-                  <td>35800</td>
-                  <td>0.80</td>
-                  <td>264.00</td>
-                </tr>
-                <tr>
-                  <td>48</td>
-                  <td>42000</td>
-                  <td>0.70</td>
-                  <td>312.00</td>
-                </tr>
+                <tr><td>4</td><td>320</td><td>95.24</td><td>2.30</td></tr>
+                <tr><td>6</td><td>750</td><td>44.40</td><td>4.95</td></tr>
+                <tr><td>8</td><td>1345</td><td>25.00</td><td>8.80</td></tr>
+                <tr><td>10</td><td>2088</td><td>16.20</td><td>13.60</td></tr>
+                <tr><td>12</td><td>2995</td><td>11.20</td><td>19.60</td></tr>
+                <tr><td>14</td><td>4095</td><td>8.20</td><td>26.80</td></tr>
+                <tr><td>16</td><td>5300</td><td>6.30</td><td>35.00</td></tr>
+                <tr><td>18</td><td>6695</td><td>5.00</td><td>44.00</td></tr>
+                <tr><td>20</td><td>8300</td><td>4.10</td><td>54.00</td></tr>
+                <tr><td>22</td><td>10000</td><td>3.30</td><td>66.00</td></tr>
+                <tr><td>24</td><td>12000</td><td>2.80</td><td>78.00</td></tr>
+                <tr><td>26</td><td>13950</td><td>2.40</td><td>92.40</td></tr>
+                <tr><td>28</td><td>15800</td><td>2.10</td><td>107.00</td></tr>
+                <tr><td>30</td><td>17755</td><td>1.80</td><td>122.10</td></tr>
+                <tr><td>32</td><td>20000</td><td>1.60</td><td>139.00</td></tr>
+                <tr><td>36</td><td>24900</td><td>1.25</td><td>176.00</td></tr>
+                <tr><td>40</td><td>30000</td><td>1.00</td><td>218.00</td></tr>
+                <tr><td>44</td><td>35800</td><td>0.80</td><td>264.00</td></tr>
+                <tr><td>48</td><td>42000</td><td>0.70</td><td>312.00</td></tr>
               </tbody>
             </table>
           </div>
@@ -1219,7 +944,7 @@
   </section>
 
   <!-- Benefits Section -->
-  <section style="background-color: #f8f9fa;">
+  <section>
     <div class="container">
       <h2 class="section-title">Why Choose Garfil Ropes</h2>
       <div class="features-grid">
@@ -1256,7 +981,7 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact">
+  <section id="contact" class="bg-light">
     <div class="container">
       <h2 class="section-title">Contact Us</h2>
       <div class="contact-card">
@@ -1269,6 +994,7 @@
             <p><a href="mailto:sales@portsideindia.com">sales@portsideindia.com</a></p>
           </div>
         </div>
+        
         <div class="contact-item">
           <div class="contact-icon">
             <i class="fas fa-phone"></i>
@@ -1278,6 +1004,7 @@
             <p>+91 93071 04214</p>
           </div>
         </div>
+        
         <div class="contact-item">
           <div class="contact-icon">
             <i class="fas fa-map-marker-alt"></i>
@@ -1297,8 +1024,9 @@
       <div class="footer-content">
         <div class="footer-column">
           <h3>Portside India Traders</h3>
-          <!-- <p>Providing premium marine and industrial equipment engineered for safety and reliability since our founding.</p> -->
+          <p>Providing premium marine and industrial equipment engineered for safety and reliability since our founding.</p>
         </div>
+        
         <div class="footer-column">
           <h3>Products</h3>
           <ul class="footer-links">
@@ -1309,16 +1037,18 @@
             <li><a href="GarfilIndustrialRopes.html">Grafil Industrial Ropes</a></li>
           </ul>
         </div>
+        
         <div class="footer-column">
           <h3>Quick Links</h3>
           <ul class="footer-links">
-            <li><a href="#home"></i> Home</a></li>
+            <li><a href="index.html"></i> Home</a></li>
             <li><a href="#about"></i> About Us</a></li>
             <li><a href="Product1.html"></i> Products</a></li>
             <li><a href="#contact"></i> Contact</a></li>
           </ul>
         </div>
       </div>
+      
       <div class="copyright">
         <p>&copy; 2025 Portside India Traders. All Rights Reserved.</p>
       </div>
