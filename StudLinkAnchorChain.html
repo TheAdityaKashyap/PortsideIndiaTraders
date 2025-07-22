@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portside India Traders - Stud Link Anchor Chains</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body, h1, h2, h3, p, ul, li, a, section, header, footer {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    a { text-decoration: none; color: #004080; }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 20px 0; }
+    section { padding: 40px 0; }
+    header {
+      background-color: #004080;
+      color: #fff;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    header .container { display: flex; justify-content: space-between; align-items: center; }
+    .logo { display: flex; align-items: center; }
+    .logo img {
+      height: 50px;
+      margin-right: 15px;
+      background: #fff;
+      padding: 5px;
+      border-radius: 4px;
+    }
+    .logo-text { display: flex; flex-direction: column; }
+    .logo-text h1 { font-size: 1.5em; margin: 0; color: white; }
+    .logo-text span { font-size: 0.8em; color: #ff9800; margin-top: 3px; }
+    nav ul { list-style: none; display: flex; }
+    nav ul li { margin-left: 20px; }
+    nav ul li a { color: #fff; font-weight: bold; transition: color 0.3s; }
+    nav ul li a:hover { color: #ff9800; }
+    .hero {
+      background: linear-gradient(135deg, #004080, #002b5c);
+      color: white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 20px;
+    }
+    .hero .content { max-width: 800px; }
+    .hero h1 { font-size: 2.8rem; margin-bottom: 15px; }
+    .hero p { font-size: 1.2em; margin-bottom: 25px; color: white; opacity: 0.9; }
+    .hero .cta {
+      background: #fff;
+      color: #004080;
+      padding: 12px 30px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1.1em;
+      display: inline-block;
+      transition: all 0.3s;
+      margin-top: 20px;
+    }
+    .hero .cta:hover {
+      background: #ff9800;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    .section-title {
+      text-align: center;
+      color: #004080;
+      margin-bottom: 30px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    .section-title:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: #ff9800;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
+    }
+    .feature-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      border-top: 4px solid #004080;
+    }
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+    .feature-card i {
+      font-size: 2.5rem;
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    .feature-card h3 { color: #004080; margin-bottom: 15px; }
+    .sling-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      font-size: 0.9rem;
+    }
+    .sling-table th {
+      background: #004080;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-weight: 600;
+    }
+    .sling-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #e0e0e0;
+      text-align: center;
+    }
+    .sling-table tr:last-child td { border-bottom: none; }
+    .sling-table tr:nth-child(even) { background-color: #f8f9fa; }
+    .sling-table tr:hover { background-color: #e3f2fd; }
+    .note {
+      background: #fff8e1;
+      border-left: 4px solid #ff9800;
+      padding: 25px;
+      border-radius: 5px;
+      margin: 30px 0;
+    }
+    .note h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .note ul { padding-left: 20px; }
+    .note li { margin-bottom: 10px; }
+    .contact-card {
+      background: white;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    .contact-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: #e3f2fd;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      color: #004080;
+      font-size: 1.2rem;
+    }
+    .contact-info { flex: 1; }
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 50px 0 20px;
+      margin-top: 50px;
+    }
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+    .footer-column {
+      flex: 1;
+      min-width: 250px;
+      margin-bottom: 30px;
+      padding: 0 15px;
+    }
+    .footer-column h3 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: #ff9800;
+    }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 10px; }
+    .footer-links a { color: #ddd; transition: color 0.3s; }
+    .footer-links a:hover { color: #ff9800; }
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #444;
+    }
+    @media screen and (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      .sling-table { display: block; overflow-x: auto; }
+      header .container { flex-direction: column; }
+      nav ul { margin-top: 15px; flex-wrap: wrap; justify-content: center; }
+      nav ul li { margin: 5px 10px; }
+      .contact-item { flex-direction: column; text-align: center; }
+      .contact-icon { margin-right: 0; margin-bottom: 15px; }
+      .footer-content { flex-direction: column; }
+    }
+    .product-tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .product-tab {
+      background: #fff;
+      border: 2px solid #004080;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+      min-width: 180px;
+      text-align: center;
+    }
+    .product-tab.active {
+      background: #004080;
+      color: white;
+    }
+    .product-tab:hover {
+      background: #ff9800;
+      color: white;
+      border-color: #ff9800;
+    }
+    .product-content { display: none; }
+    .product-content.active { display: block; }
+    .chain-info {
+      max-width: 800px;
+      margin: 0 auto 30px;
+      background: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .chain-description {
+      margin-bottom: 25px;
+    }
+    .chain-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+    .chain-component {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    }
+    .chain-component img {
+      max-width: 100px;
+      margin-bottom: 15px;
+    }
+    .chain-formula {
+      background: #e3f2fd;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      text-align: center;
+      font-family: monospace;
+      font-size: 1.1rem;
+    }
+  </style>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HQH77MSRY6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HQH77MSRY6');
+</script>
+
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="container">
+      <div class="logo">
+        <img src="Images/FinalLogo.png" alt="Portside India Traders Logo">
+        <div class="logo-text">
+          
+          <h1>Portside India Traders</h1>
+          <span>Strength that Anchors Your Success</span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="Product1.html">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="content">
+      <h1 style="color: white;">Stud Link Anchor Chains</h1>
+      <p>Premium quality marine chains certified for safety and reliability</p>
+      <a href="#contact" class="cta">Request Specifications</a>
+    </div>
+  </section>
+
+  <!-- Product Section -->
+  <section id="products">
+    <div class="container">
+      <h2 class="section-title">Stud Link Anchor Chains</h2>
+      
+      <div class="chain-info">
+        <div class="chain-description">
+          <p>We are the exclusive selling agent in India for Jiangsu Asian Star Anchor Chain Co. Ltd., providing premium quality stud link anchor chains that meet international standards for marine applications.</p>
+        </div>
+      </div>
+      
+      <h3 class="section-title">Technical Specifications</h3>
+      <div style="overflow-x:auto;">
+        <table class="sling-table">
+          <thead>
+            <tr>
+              <th rowspan="2">No. of links per 27.5m (90 ft)</th>
+              <th rowspan="2">Chain Diameter (mm)</th>
+              <th colspan="2">Grade 2</th>
+              <th colspan="2">Grade 3</th>
+              <th rowspan="2">Approx. mass (kg/27.5m)</th>
+              <th rowspan="2">No. of links per 27.5m (90 ft)</th>
+              <th rowspan="2">Chain Diameter (mm)</th>
+              <th colspan="2">Grade 2</th>
+              <th colspan="2">Grade 3</th>
+              <th rowspan="2">Approx. mass (kg/27.5m)</th>
+            </tr>
+            <tr>
+              <th>Proof load (KN)</th>
+              <th>Breaking load (KN)</th>
+              <th>Proof load (KN)</th>
+              <th>Breaking load (KN)</th>
+              <th>Proof load (KN)</th>
+              <th>Breaking load (KN)</th>
+              <th>Proof load (KN)</th>
+              <th>Breaking load (KN)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>491</td><td>14</td><td>82</td><td>116</td><td>116</td><td>165</td><td>130</td><td>107</td><td>64</td><td>1560</td><td>2190</td><td>2130</td><td>3130</td><td>2529</td></tr>
+            <tr><td>429</td><td>16</td><td>107</td><td>150</td><td>150</td><td>216</td><td>170</td><td>105</td><td>66</td><td>1660</td><td>2310</td><td>2310</td><td>3300</td><td>2689</td></tr>
+            <tr><td>391</td><td>17.5</td><td>127</td><td>179</td><td>179</td><td>256</td><td>189</td><td>99</td><td>68</td><td>1750</td><td>2450</td><td>2450</td><td>3500</td><td>2858</td></tr>
+            <tr><td>357</td><td>19</td><td>150</td><td>211</td><td>211</td><td>301</td><td>226</td><td>97</td><td>70</td><td>1840</td><td>2580</td><td>2580</td><td>3690</td><td>3025</td></tr>
+            <tr><td>329</td><td>20.5</td><td>175</td><td>244</td><td>244</td><td>349</td><td>263</td><td>93</td><td>73</td><td>1990</td><td>2790</td><td>2790</td><td>3990</td><td>3341</td></tr>
+            <tr><td>305</td><td>22</td><td>200</td><td>280</td><td>280</td><td>401</td><td>303</td><td>89</td><td>76</td><td>2150</td><td>3010</td><td>3010</td><td>4300</td><td>3566</td></tr>
+            <tr><td>285</td><td>24</td><td>237</td><td>332</td><td>332</td><td>476</td><td>370</td><td>87</td><td>78</td><td>2260</td><td>3160</td><td>3160</td><td>4500</td><td>3756</td></tr>
+            <tr><td>259</td><td>26</td><td>278</td><td>389</td><td>389</td><td>556</td><td>439</td><td>85</td><td>81</td><td>2410</td><td>3380</td><td>3380</td><td>4820</td><td>4050</td></tr>
+            <tr><td>245</td><td>28</td><td>321</td><td>449</td><td>449</td><td>642</td><td>496</td><td>81</td><td>84</td><td>2580</td><td>3610</td><td>3610</td><td>5160</td><td>4355</td></tr>
+            <tr><td>225</td><td>30</td><td>368</td><td>514</td><td>514</td><td>735</td><td>564</td><td>79</td><td>87</td><td>2750</td><td>3850</td><td>3850</td><td>5500</td><td>4672</td></tr>
+            <tr><td>213</td><td>32</td><td>417</td><td>583</td><td>583</td><td>833</td><td>635</td><td>77</td><td>90</td><td>2920</td><td>4090</td><td>4090</td><td>5840</td><td>5000</td></tr>
+            <tr><td>195</td><td>34</td><td>468</td><td>655</td><td>655</td><td>937</td><td>724</td><td>73</td><td>92</td><td>3040</td><td>4260</td><td>4260</td><td>6080</td><td>5224</td></tr>
+            <tr><td>187</td><td>36</td><td>523</td><td>732</td><td>732</td><td>1050</td><td>812</td><td>71</td><td>95</td><td>3230</td><td>4510</td><td>4510</td><td>6440</td><td>5571</td></tr>
+            <tr><td>179</td><td>38</td><td>581</td><td>812</td><td>812</td><td>1160</td><td>905</td><td>71</td><td>97</td><td>3340</td><td>4680</td><td>4680</td><td>6690</td><td>5809</td></tr>
+            <tr><td>171</td><td>40</td><td>640</td><td>896</td><td>896</td><td>1280</td><td>1032</td><td>69</td><td>100</td><td>3530</td><td>4940</td><td>4940</td><td>7060</td><td>6174</td></tr>
+            <tr><td>165</td><td>42</td><td>703</td><td>981</td><td>981</td><td>1400</td><td>1075</td><td>67</td><td>102</td><td>3660</td><td>5120</td><td>5120</td><td>7320</td><td>6423</td></tr>
+            <tr><td>153</td><td>44</td><td>769</td><td>1080</td><td>1080</td><td>1540</td><td>1197</td><td>65</td><td>105</td><td>3850</td><td>5390</td><td>5390</td><td>7700</td><td>6806</td></tr>
+            <tr><td>147</td><td>46</td><td>837</td><td>1170</td><td>1170</td><td>1680</td><td>1310</td><td>63</td><td>107</td><td>3980</td><td>5570</td><td>5570</td><td>7960</td><td>7067</td></tr>
+            <tr><td>143</td><td>48</td><td>908</td><td>1270</td><td>1270</td><td>1810</td><td>1438</td><td>61</td><td>111</td><td>4250</td><td>5940</td><td>5940</td><td>8480</td><td>7606</td></tr>
+            <tr><td>137</td><td>50</td><td>981</td><td>1370</td><td>1370</td><td>1960</td><td>1536</td><td>59</td><td>114</td><td>4440</td><td>6230</td><td>6230</td><td>8890</td><td>8023</td></tr>
+            <tr><td>129</td><td>52</td><td>1060</td><td>1480</td><td>1480</td><td>2110</td><td>1669</td><td>57</td><td>117</td><td>4650</td><td>6510</td><td>6510</td><td>9300</td><td>8450</td></tr>
+            <tr><td>125</td><td>54</td><td>1140</td><td>1590</td><td>1590</td><td>2270</td><td>1780</td><td>57</td><td>120</td><td>4850</td><td>6810</td><td>6810</td><td>9720</td><td>8889</td></tr>
+            <tr><td>123</td><td>56</td><td>1220</td><td>1710</td><td>1710</td><td>2430</td><td>1936</td><td>57</td><td>122</td><td>5000</td><td>7000</td><td>7000</td><td>9990</td><td>9187</td></tr>
+            <tr><td>119</td><td>58</td><td>1290</td><td>1810</td><td>1810</td><td>2600</td><td>2086</td><td>55</td><td>124</td><td>5140</td><td>7200</td><td>7200</td><td>10280</td><td>9492</td></tr>
+            <tr><td>113</td><td>60</td><td>1380</td><td>1940</td><td>1940</td><td>2770</td><td>2249</td><td>55</td><td>127</td><td>5350</td><td>7490</td><td>7490</td><td>10710</td><td>9957</td></tr>
+            <tr><td>111</td><td>62</td><td>1470</td><td>2060</td><td>2060</td><td>2940</td><td>2373</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="note">
+        <h3><i class="fas fa-info-circle"></i> Calculation Formula</h3>
+        <p>Test load = C × D × (44 - 0.08D)</p>
+        <p>Where D is the nominal chain diameter in millimeters</p>
+      </div>
+      
+      <h3 class="section-title">Chain Components</h3>
+      <div class="chain-grid">
+        <div class="chain-component">
+          <div style="height:100px; background:#e3f2fd; display:flex; align-items:center; justify-content:center; margin-bottom:15px; border-radius:4px;">
+            <i class="fas fa-link" style="font-size:2.5rem; color:#004080;"></i>
+          </div>
+          <h3>Stud Link</h3>
+          <p>Core component of anchor chains</p>
+        </div>
+        <div class="chain-component">
+          <div style="height:100px; background:#e3f2fd; display:flex; align-items:center; justify-content:center; margin-bottom:15px; border-radius:4px;">
+            <i class="fas fa-shield-alt" style="font-size:2.5rem; color:#004080;"></i>
+          </div>
+          <h3>Kenter Shackle</h3>
+          <p>For joining chain sections</p>
+        </div>
+        <div class="chain-component">
+          <div style="height:100px; background:#e3f2fd; display:flex; align-items:center; justify-content:center; margin-bottom:15px; border-radius:4px;">
+            <i class="fas fa-anchor" style="font-size:2.5rem; color:#004080;"></i>
+          </div>
+          <h3>D-Type Shackle</h3>
+          <p>Connects chain to anchor</p>
+        </div>
+        <div class="chain-component">
+          <div style="height:100px; background:#e3f2fd; display:flex; align-items:center; justify-content:center; margin-bottom:15px; border-radius:4px;">
+            <i class="fas fa-sync-alt" style="font-size:2.5rem; color:#004080;"></i>
+          </div>
+          <h3>Swivel Adaptor</h3>
+          <p>Prevents chain twisting</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" style="background-color: #f8f9fa;">
+    <div class="container">
+      <h2 class="section-title">Why Choose Our Anchor Chains</h2>
+      <div class="features">
+        <div class="feature-card">
+          <i class="fas fa-certificate"></i>
+          <h3>Grade 2 & 3 Certified</h3>
+          <p>Meets international quality and safety standards</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-weight-hanging"></i>
+          <h3>Tested Strength</h3>
+          <p>Rigorously tested for proof and breaking loads</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-water"></i>
+          <h3>Corrosion Resistant</h3>
+          <p>Specially treated for marine environments</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-ship"></i>
+          <h3>Marine Grade</h3>
+          <p>Designed for commercial and naval vessels</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-card">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Email</h3>
+            <p><a href="mailto:sales@portsideindia.com">sales@portsideindia.com</a></p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Phone</h3>
+            <p>+91 93071 04214</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Address</h3>
+            <p>I-WING GURUPREM SOCIETY KATRAP, BADALPUR, MUMBAI SUBURBS, 421503</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Portside India Traders</h3>
+          <p>Providing premium marine equipment engineered for safety and reliability since our founding.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul class="footer-links">
+            <ul class="footer-links">
+            <li><a href="Anchors.html">Anchors</a></li>
+            <li><a href="StudLinkAnchorChain.html">Stud‑Link Anchor Chains</a></li>
+            <li><a href="LashingChainsAndLoadBinders.html">Lashing Chains &amp; Load Binders</a></li>
+            <li><a href="GarfilMooringRopes.html">Grafil Mooring Ropes</a></li>
+            <li><a href="GarfilIndustrialRopes.html">Grafil Industrial Ropes</a></li>
+          </ul>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#products">All Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Portside India Traders. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Smooth scrolling for navigation
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

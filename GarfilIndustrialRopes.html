@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Garfil Industrial Ropes | Portside India Traders</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    :root {
+      --primary: #004080;
+      --secondary: #ff9800;
+      --light: #f8f9fa;
+      --dark: #333;
+      --gray: #e0e0e0;
+      --navy: #002b5c;
+      --sky: #e3f2fd;
+    }
+    
+    body {
+      background-color: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    a {
+      text-decoration: none;
+      color: var(--primary);
+      transition: all 0.3s ease;
+    }
+    
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+    
+    section {
+      padding: 60px 0;
+    }
+    
+    /* Header Styles */
+    header {
+      background-color: var(--primary);
+      color: #fff;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo img {
+      height: 50px;
+      margin-right: 15px;
+      background: #fff;
+      padding: 5px;
+      border-radius: 4px;
+    }
+    
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .logo-text h1 {
+      font-size: 1.5rem;
+      margin: 0;
+      color: white;
+      font-weight: 700;
+    }
+    
+    .logo-text span {
+      font-size: 0.8rem;
+      color: var(--secondary);
+      margin-top: 3px;
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    
+    nav ul li {
+      margin-left: 25px;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    
+    nav ul li a:hover {
+      color: var(--secondary);
+    }
+    
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--primary), var(--navy));
+      color: white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 Q50,10 100,0 L100,100 Q50,90 0,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .hero .content {
+      max-width: 800px;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .hero h1 {
+      font-size: 3.2rem;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .hero .cta {
+      background: #fff;
+      color: var(--primary);
+      padding: 14px 35px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      display: inline-block;
+      transition: all 0.3s;
+      margin-top: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    
+    .hero .cta:hover {
+      background: var(--secondary);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    }
+    
+    /* Section Title */
+    .section-title {
+      text-align: center;
+      color: var(--primary);
+      margin-bottom: 40px;
+      position: relative;
+      padding-bottom: 20px;
+    }
+    
+    .section-title:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 4px;
+      background: var(--secondary);
+      border-radius: 2px;
+    }
+    
+    /* Feature Grid */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin: 40px 0;
+    }
+    
+    .feature-card {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    }
+    
+    .feature-icon {
+      width: 80px;
+      height: 80px;
+      background: var(--sky);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 25px;
+      color: var(--primary);
+      font-size: 2.2rem;
+    }
+    
+    .feature-card h3 {
+      color: var(--primary);
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+    }
+    
+    .feature-card p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+    
+    /* Product Tabs */
+    .product-tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    
+    .product-tab {
+      background: #fff;
+      border: 2px solid var(--primary);
+      padding: 14px 30px;
+      border-radius: 50px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+      min-width: 220px;
+      text-align: center;
+      font-size: 1.1rem;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    }
+    
+    .product-tab.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+    
+    .product-tab:hover {
+      background: var(--secondary);
+      color: white;
+      border-color: var(--secondary);
+      transform: translateY(-3px);
+    }
+    
+    .product-content {
+      display: none;
+    }
+    
+    .product-content.active {
+      display: block;
+      animation: fadeIn 0.5s ease;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Product Cards */
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      margin-bottom: 40px;
+      transition: transform 0.3s ease;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    }
+    
+    .product-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 25px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid var(--gray);
+    }
+    
+    .product-icon {
+      width: 70px;
+      height: 70px;
+      background: var(--sky);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      color: var(--primary);
+      font-size: 1.8rem;
+    }
+    
+    .product-title {
+      color: var(--primary);
+      font-size: 1.8rem;
+    }
+    
+    .product-description {
+      margin-bottom: 25px;
+      color: #555;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    
+    .feature-item {
+      background: rgba(0, 64, 128, 0.05);
+      border-left: 4px solid var(--secondary);
+      padding: 15px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 15px;
+    }
+    
+    /* Tables */
+    .specs-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 25px 0;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .specs-table th {
+      background: var(--primary);
+      color: white;
+      padding: 18px 15px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    
+    .specs-table td {
+      padding: 15px;
+      border-bottom: 1px solid var(--gray);
+      text-align: center;
+    }
+    
+    .specs-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .specs-table tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+    
+    .specs-table tr:hover {
+      background-color: #e3f2fd;
+    }
+    
+    /* Note Section */
+    .note {
+      background: #fff8e1;
+      border-left: 4px solid var(--secondary);
+      padding: 25px;
+      border-radius: 8px;
+      margin: 30px 0;
+    }
+    
+    .note h3 {
+      color: var(--primary);
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.3rem;
+    }
+    
+    .note p {
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 10px;
+    }
+    
+    .note ul {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+    
+    .note li {
+      margin-bottom: 8px;
+    }
+    
+    /* Contact Section */
+    .contact-card {
+      background: white;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 25px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid var(--gray);
+    }
+    
+    .contact-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    
+    .contact-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--sky);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 25px;
+      color: var(--primary);
+      font-size: 1.5rem;
+    }
+    
+    .contact-info h3 {
+      color: var(--primary);
+      margin-bottom: 8px;
+      font-size: 1.3rem;
+    }
+    
+    .contact-info p {
+      color: #555;
+      font-size: 1.1rem;
+    }
+    
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: #fff;
+      padding: 60px 0 20px;
+      margin-top: 50px;
+    }
+    
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+    
+    .footer-column {
+      padding: 0 15px;
+    }
+    
+    .footer-column h3 {
+      font-size: 1.4rem;
+      margin-bottom: 25px;
+      color: var(--secondary);
+      position: relative;
+      padding-bottom: 10px;
+    }
+    
+    .footer-column h3::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: var(--secondary);
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+    
+    .footer-links a {
+      color: #ddd;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .footer-links a:hover {
+      color: var(--secondary);
+      transform: translateX(5px);
+    }
+    
+    .copyright {
+      text-align: center;
+      padding-top: 25px;
+      border-top: 1px solid #444;
+      color: #aaa;
+      font-size: 0.95rem;
+    }
+    
+    /* Responsive */
+    @media screen and (max-width: 992px) {
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+      
+      .product-tab {
+        min-width: 200px;
+        padding: 12px 20px;
+      }
+    }
+    
+    @media screen and (max-width: 768px) {
+      header .container {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      nav ul {
+        margin-top: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      nav ul li {
+        margin: 8px 15px;
+      }
+      
+      .hero {
+        padding: 80px 20px;
+      }
+      
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+      
+      .hero p {
+        font-size: 1.1rem;
+      }
+      
+      .product-tabs {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .product-tab {
+        width: 100%;
+        max-width: 300px;
+      }
+      
+      .contact-item {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .contact-icon {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+      
+      .specs-table {
+        font-size: 0.85rem;
+      }
+      
+      .specs-table th, .specs-table td {
+        padding: 10px 5px;
+      }
+    }
+    
+    /* Visual Enhancements */
+    .product-image {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 25px 0;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .product-feature {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    
+    .product-feature i {
+      color: var(--secondary);
+      margin-right: 10px;
+      font-size: 1.2rem;
+    }
+    
+    .highlight {
+      background: linear-gradient(120deg, rgba(255,152,0,0.2), rgba(255,152,0,0));
+      padding: 20px;
+      border-radius: 8px;
+      margin: 25px 0;
+      border-left: 4px solid var(--secondary);
+    }
+    
+    .capital-section {
+      background: #f8f9fa;
+      padding: 50px 0;
+      text-align: center;
+    }
+    
+    .capital-title {
+      font-size: 2.2rem;
+      color: var(--primary);
+      margin-bottom: 30px;
+      font-weight: 700;
+    }
+    
+    .applications-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    
+    .application-card {
+      background: white;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+    
+    .application-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .application-card h3 {
+      color: var(--primary);
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+    }
+    
+    .application-card ul {
+      list-style: none;
+      text-align: left;
+      padding: 0 20px;
+    }
+    
+    .application-card li {
+      padding: 8px 0;
+      border-bottom: 1px dashed #eee;
+      display: flex;
+      align-items: center;
+    }
+    
+    .application-card li:last-child {
+      border-bottom: none;
+    }
+    
+    .application-card i {
+      color: var(--secondary);
+      margin-right: 10px;
+      min-width: 20px;
+    }
+    
+    .rope-banner {
+      background: linear-gradient(rgba(0, 64, 128, 0.85), rgba(0, 43, 92, 0.85)), 
+                  url('https://images.unsplash.com/photo-1581093458791-8a4d5c1a3b1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      margin: 60px 0;
+    }
+    
+    .rope-banner h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    
+    .rope-banner p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto 30px;
+    }
+  </style>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HQH77MSRY6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HQH77MSRY6');
+</script>
+
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="Images/FinalLogo.png" alt="Portside India Traders Logo">
+        <div class="logo-text">
+          <h1>Portside India Traders</h1>
+          <span>Strength that Anchors Your Success</span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="content">
+      <h1>Garfil Industrial Ropes</h1>
+      <p>Premium synthetic ropes engineered for strength, durability, and reliability in demanding applications</p>
+      <a href="#contact" class="cta">Request Specifications</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Garfil Ropes</h2>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-globe"></i>
+          </div>
+          <h3>The Company</h3>
+          <p>A world leader in the manufacture of Synthetic Ropes, Twines and Nets. ISO 9001-2000 certified company exporting to more than 55 countries with an extensive distribution network.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-industry"></i>
+          </div>
+          <h3>The Process</h3>
+          <p>Uses the most modern "Parapro" process with serrated tape extruded from virgin granules, twisted in state-of-the-art rope making machines for superior quality.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-list"></i>
+          </div>
+          <h3>Product Range</h3>
+          <p>Diameter range from 4mm to 48mm with standard coil length of 220 meters. Special 4-twist ropes for diameters 18mm and above.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banner -->
+  <!-- <div class="rope-banner">
+    <div class="container">
+      <h2>Engineering Strength, Delivering Trust</h2>
+      <p>Garfil Industrial Ropes - Taking the load off you with premium synthetic rope solutions</p>
+      <a href="#contact" class="cta">Contact Us Today</a>
+    </div>
+  </div> -->
+
+  <!-- Capital Section -->
+  <section class="capital-section">
+    <div class="container">
+      <h2 class="capital-title">CAPITAL™ 3-Strand Industrial Ropes</h2>
+      
+      <div class="applications-grid">
+        <div class="application-card">
+          <h3><i class="fas fa-shield-alt"></i> Defense & Tactical</h3>
+          <ul>
+            <li><i class="fas fa-check"></i> Rappelling, Stithering, & Jackstay ropes</li>
+            <li><i class="fas fa-check"></i> Arrestor Barriers & Helldeck nets</li>
+            <li><i class="fas fa-check"></i> Tentage & Reinforcement ropes</li>
+            <li><i class="fas fa-check"></i> Ropeways & Rope Bridges</li>
+          </ul>
+        </div>
+        
+        <div class="application-card">
+          <h3><i class="fas fa-truck-loading"></i> Material Handling</h3>
+          <ul>
+            <li><i class="fas fa-check"></i> Tower Erection & Cable Pulling</li>
+            <li><i class="fas fa-check"></i> Slings for Metal tube handling</li>
+            <li><i class="fas fa-check"></i> Pantoon Bridges</li>
+            <li><i class="fas fa-check"></i> Sugarcane Trolley Pulling</li>
+          </ul>
+        </div>
+        
+        <div class="application-card">
+          <h3><i class="fas fa-hard-hat"></i> Safety Solutions</h3>
+          <ul>
+            <li><i class="fas fa-check"></i> Safety Nets & Jumping Ropes</li>
+            <li><i class="fas fa-check"></i> Helipad Nets & Gangway Nets</li>
+            <li><i class="fas fa-check"></i> Escape rope ladders</li>
+            <li><i class="fas fa-check"></i> Scramble Nets & Bulk Cargo Nets</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Attributes -->
+  <section style="background-color: #f8f9fa;">
+    <div class="container">
+      <h2 class="section-title">Product Attributes</h2>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon" style="background: rgba(0, 64, 128, 0.1);">
+            <i class="fas fa-water"></i>
+          </div>
+          <h3>Polypropylene Ropes</h3>
+          <ul style="text-align: left; margin-top: 15px; list-style: none; padding: 0;">
+            <li><i class="fas fa-check-circle" style="color: #28a745;"></i> High breaking strength & shock absorption capacity</li>
+            <li><i class="fas fa-check-circle" style="color: #28a745;"></i> Good abrasion resistance</li>
+            <li><i class="fas fa-check-circle" style="color: #28a745;"></i> Easy knotting possible</li>
+            <li><i class="fas fa-check-circle" style="color: #28a745;"></i> Inert to chemicals</li>
+          </ul>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon" style="background: rgba(0, 64, 128, 0.1);">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3>Nylon Ropes</h3>
+          <ul style="text-align: left; margin-top: 15px; list-style: none; padding: 0;">
+            <li><i class="fas fa-check-circle" style="color: #28a745;"></i> Excellent breaking strength & high elongation</li>
+            <li><i class="fas fa-check-circle" style="color: #28a745;"></i> Good shock absorption</li>
+            <li><i class="fas fa-check-circle" style="color: #28a745;"></i> Strong & Durable</li>
+            <li><i class="fas fa-check-circle" style="color: #28a745;"></i> Impact load resilience</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="note" style="max-width: 800px; margin: 40px auto 0;">
+        <h3><i class="fas fa-certificate"></i> Quality Assurance</h3>
+        <p>Every coil carries a test certificate for:</p>
+        <ul>
+          <li>Material composition</li>
+          <li>Breaking strength</li>
+          <li>Safe working load</li>
+        </ul>
+        <p style="margin-top: 15px;">Safe working load is 1/6<sup>th</sup> of the breaking strength</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Tabs -->
+  <section id="products">
+    <div class="container">
+      <h2 class="section-title">Product Specifications</h2>
+      <div class="product-tabs">
+        <div class="product-tab active" data-target="polypropylene">Polypropylene Ropes</div>
+        <div class="product-tab" data-target="nylon">Nylon Ropes</div>
+      </div>
+
+      <!-- Polypropylene Content -->
+      <div class="product-content active" id="polypropylene-content">
+        <div class="product-card">
+          <div class="product-header">
+            <div class="product-icon">
+              <i class="fas fa-water"></i>
+            </div>
+            <h2 class="product-title">Polypropylene Parapro Ropes</h2>
+          </div>
+          
+          <div class="product-description">
+            <p>Our premium polypropylene ropes are engineered for superior strength and durability in various industrial applications. Designed to withstand heavy loads and harsh conditions, these ropes provide reliable performance across multiple industries.</p>
+          </div>
+          
+          <div style="overflow-x:auto;">
+            <table class="specs-table">
+              <thead>
+                <tr>
+                  <th>Diameter (mm)</th>
+                  <th>Breaking Strength (kgf)</th>
+                  <th>Runnage (m/kg)</th>
+                  <th>Weight per 220m Coil (kg)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>4</td>
+                  <td>214</td>
+                  <td>135.00</td>
+                  <td>1.63</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>602</td>
+                  <td>60.00</td>
+                  <td>3.67</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>1060</td>
+                  <td>33.30</td>
+                  <td>6.60</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>1560</td>
+                  <td>22.00</td>
+                  <td>10.00</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>2210</td>
+                  <td>15.20</td>
+                  <td>14.50</td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td>3050</td>
+                  <td>11.00</td>
+                  <td>20.00</td>
+                </tr>
+                <tr>
+                  <td>16</td>
+                  <td>3770</td>
+                  <td>8.60</td>
+                  <td>25.50</td>
+                </tr>
+                <tr>
+                  <td>18</td>
+                  <td>4810</td>
+                  <td>6.80</td>
+                  <td>32.50</td>
+                </tr>
+                <tr>
+                  <td>20</td>
+                  <td>5800</td>
+                  <td>5.50</td>
+                  <td>40.00</td>
+                </tr>
+                <tr>
+                  <td>22</td>
+                  <td>6960</td>
+                  <td>4.50</td>
+                  <td>48.50</td>
+                </tr>
+                <tr>
+                  <td>24</td>
+                  <td>8130</td>
+                  <td>3.90</td>
+                  <td>57.00</td>
+                </tr>
+                <tr>
+                  <td>26</td>
+                  <td>9410</td>
+                  <td>3.20</td>
+                  <td>67.60</td>
+                </tr>
+                <tr>
+                  <td>28</td>
+                  <td>10700</td>
+                  <td>2.80</td>
+                  <td>78.00</td>
+                </tr>
+                <tr>
+                  <td>30</td>
+                  <td>12220</td>
+                  <td>2.50</td>
+                  <td>89.00</td>
+                </tr>
+                <tr>
+                  <td>32</td>
+                  <td>13500</td>
+                  <td>2.20</td>
+                  <td>101.00</td>
+                </tr>
+                <tr>
+                  <td>36</td>
+                  <td>16930</td>
+                  <td>1.70</td>
+                  <td>129.00</td>
+                </tr>
+                <tr>
+                  <td>40</td>
+                  <td>20510</td>
+                  <td>1.40</td>
+                  <td>158.00</td>
+                </tr>
+                <tr>
+                  <td>44</td>
+                  <td>24640</td>
+                  <td>1.13</td>
+                  <td>194.00</td>
+                </tr>
+                <tr>
+                  <td>48</td>
+                  <td>28610</td>
+                  <td>0.96</td>
+                  <td>229.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <div class="note">
+            <h3><i class="fas fa-info-circle"></i> Important Notes</h3>
+            <ul>
+              <li>Weight tolerance as per IS standards</li>
+              <li>All values listed are as per results confirmed in accordance to test procedures IS 7071</li>
+              <li>All specifications pertain to regular laid ropes and are applicable to new ropes</li>
+              <li>The products indicated in this brochure do not constitute the whole range of Garfil products</li>
+              <li>Please contact us if other sizes and characteristics are required</li>
+              <li>Garfil reserves the right to review its product specifications</li>
+              <li>Safe working load is 1/6<sup>th</sup> of the breaking strength</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nylon Content -->
+      <div class="product-content" id="nylon-content">
+        <div class="product-card">
+          <div class="product-header">
+            <div class="product-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h2 class="product-title">Nylon Multi-filament Ropes</h2>
+          </div>
+          
+          <div class="product-description">
+            <p>Our premium nylon ropes offer exceptional breaking strength and high elongation properties, making them ideal for applications requiring shock absorption and durability under demanding conditions.</p>
+          </div>
+          
+          <div style="overflow-x:auto;">
+            <table class="specs-table">
+              <thead>
+                <tr>
+                  <th>Diameter (mm)</th>
+                  <th>Breaking Strength (kgf)</th>
+                  <th>Runnage (m/kg)</th>
+                  <th>Weight per 220m Coil (kg)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>4</td>
+                  <td>320</td>
+                  <td>95.24</td>
+                  <td>2.30</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>750</td>
+                  <td>44.40</td>
+                  <td>4.95</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>1345</td>
+                  <td>25.00</td>
+                  <td>8.80</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>2088</td>
+                  <td>16.20</td>
+                  <td>13.60</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>2995</td>
+                  <td>11.20</td>
+                  <td>19.60</td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td>4095</td>
+                  <td>8.20</td>
+                  <td>26.80</td>
+                </tr>
+                <tr>
+                  <td>16</td>
+                  <td>5300</td>
+                  <td>6.30</td>
+                  <td>35.00</td>
+                </tr>
+                <tr>
+                  <td>18</td>
+                  <td>6695</td>
+                  <td>5.00</td>
+                  <td>44.00</td>
+                </tr>
+                <tr>
+                  <td>20</td>
+                  <td>8300</td>
+                  <td>4.10</td>
+                  <td>54.00</td>
+                </tr>
+                <tr>
+                  <td>22</td>
+                  <td>10000</td>
+                  <td>3.30</td>
+                  <td>66.00</td>
+                </tr>
+                <tr>
+                  <td>24</td>
+                  <td>12000</td>
+                  <td>2.80</td>
+                  <td>78.00</td>
+                </tr>
+                <tr>
+                  <td>26</td>
+                  <td>13950</td>
+                  <td>2.40</td>
+                  <td>92.40</td>
+                </tr>
+                <tr>
+                  <td>28</td>
+                  <td>15800</td>
+                  <td>2.10</td>
+                  <td>107.00</td>
+                </tr>
+                <tr>
+                  <td>30</td>
+                  <td>17755</td>
+                  <td>1.80</td>
+                  <td>122.10</td>
+                </tr>
+                <tr>
+                  <td>32</td>
+                  <td>20000</td>
+                  <td>1.60</td>
+                  <td>139.00</td>
+                </tr>
+                <tr>
+                  <td>36</td>
+                  <td>24900</td>
+                  <td>1.25</td>
+                  <td>176.00</td>
+                </tr>
+                <tr>
+                  <td>40</td>
+                  <td>30000</td>
+                  <td>1.00</td>
+                  <td>218.00</td>
+                </tr>
+                <tr>
+                  <td>44</td>
+                  <td>35800</td>
+                  <td>0.80</td>
+                  <td>264.00</td>
+                </tr>
+                <tr>
+                  <td>48</td>
+                  <td>42000</td>
+                  <td>0.70</td>
+                  <td>312.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <div class="note">
+            <h3><i class="fas fa-info-circle"></i> Important Notes</h3>
+            <ul>
+              <li>Weight tolerance as per IS standards</li>
+              <li>All values listed are as per results confirmed in accordance to test procedures IS 7071</li>
+              <li>All specifications pertain to regular laid ropes and are applicable to new ropes</li>
+              <li>The products indicated in this brochure do not constitute the whole range of Garfil products</li>
+              <li>Please contact us if other sizes and characteristics are required</li>
+              <li>Garfil reserves the right to review its product specifications</li>
+              <li>Safe working load is 1/6<sup>th</sup> of the breaking strength</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section style="background-color: #f8f9fa;">
+    <div class="container">
+      <h2 class="section-title">Why Choose Garfil Ropes</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-globe"></i>
+          </div>
+          <h3>Global Leadership</h3>
+          <p>World leader in synthetic ropes, exporting to over 55 countries with an extensive distribution network</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <h3>Quality Certified</h3>
+          <p>ISO 9001-2000 certified manufacturing with rigorous quality control processes</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <h3>Advanced Technology</h3>
+          <p>Modern "Parapro" process and state-of-the-art manufacturing equipment</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-clipboard-check"></i>
+          </div>
+          <h3>Tested & Certified</h3>
+          <p>Every coil comes with test certificate for material, breaking strength & safe working load</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-card">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Email</h3>
+            <p><a href="mailto:sales@portsideindia.com">sales@portsideindia.com</a></p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Phone</h3>
+            <p>+91 93071 04214</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Address</h3>
+            <p>I-WING GURUPREM SOCIETY KATRAP, BADALPUR, MUMBAI SUBURBS, 421503</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Portside India Traders</h3>
+          <!-- <p>Providing premium marine and industrial equipment engineered for safety and reliability since our founding.</p> -->
+        </div>
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul class="footer-links">
+            <li><a href="Anchors.html">Anchors</a></li>
+            <li><a href="StudLinkAnchorChain.html">Stud‑Link Anchor Chains</a></li>
+            <li><a href="LashingChainsAndLoadBinders.html">Lashing Chains &amp; Load Binders</a></li>
+            <li><a href="GarfilMooringRopes.html">Grafil Mooring Ropes</a></li>
+            <li><a href="GarfilIndustrialRopes.html">Grafil Industrial Ropes</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#home"></i> Home</a></li>
+            <li><a href="#about"></i> About Us</a></li>
+            <li><a href="#products"></i> Products</a></li>
+            <li><a href="#contact"></i> Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Portside India Traders. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Product tab switching
+      const tabs = document.querySelectorAll('.product-tab');
+      const contents = document.querySelectorAll('.product-content');
+      
+      tabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+          const targetId = this.getAttribute('data-target') + '-content';
+          
+          // Remove active class from all tabs and contents
+          tabs.forEach(t => t.classList.remove('active'));
+          contents.forEach(c => c.classList.remove('active'));
+          
+          // Add active class to current tab and content
+          this.classList.add('active');
+          document.getElementById(targetId).classList.add('active');
+        });
+      });
+
+      // Smooth scrolling for navigation
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
