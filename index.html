@@ -245,6 +245,8 @@
 
     gtag('config', 'G-HQH77MSRY6');
   </script>
+
+  
 </head>
 <body>
 
@@ -366,6 +368,61 @@
       <p>&copy; 2025 Portside India Traders. All Rights Reserved.</p>
     </div>
   </footer>
+
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const chatWidget = document.getElementById('chat-widget');
+  const chatToggle = document.getElementById('chat-toggle');
+  const closeChat = document.getElementById('close-chat');
+  
+  chatToggle.addEventListener('click', () => {
+    chatWidget.style.display = 'block';
+    chatToggle.style.display = 'none';
+  });
+  
+  closeChat.addEventListener('click', () => {
+    chatWidget.style.display = 'none';
+    chatToggle.style.display = 'block';
+  });
+  
+  document.getElementById('send-btn').addEventListener('click', sendMessage);
+  document.getElementById('user-input').addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') sendMessage();
+  });
+  
+  function sendMessage() {
+    const input = document.getElementById('user-input');
+    const message = input.value.trim();
+    if (!message) return;
+    
+    const chatMessages = document.getElementById('chat-messages');
+    chatMessages.innerHTML += `<div><strong>You:</strong> ${message}</div>`;
+    input.value = '';
+    
+    fetch('http://localhost:5000/ask', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({question: message})
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.answers) {
+        let responseHTML = "<div style='margin-top:10px'><strong>Assistant:</strong><ul>";
+        data.answers.forEach(ans => {
+          responseHTML += `<li>${ans.sentence} <br><small><a href="${ans.source}" target="_blank">Source</a></small></li>`;
+        });
+        responseHTML += "</ul></div>";
+        chatMessages.innerHTML += responseHTML;
+      } else if (data.answer) {
+        // fallback for older backend
+        chatMessages.innerHTML += `<div><strong>Assistant:</strong> ${data.answer}</div>`;
+      }
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    });
+  }
+});
+</script>
+
 
 </body>
 </html>
