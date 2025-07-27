@@ -5,20 +5,19 @@ import torch
 import re
 
 app = Flask(__name__)
-
+ 
 # Load website content
 with open('website_content.json') as f:
     content = json.load(f)
 
-# Initialize model once
+# Initialize model
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
-# Precompute page embeddings
+# Precompute embeddings
 pages = [item['text'] for item in content]
 page_embeddings = model.encode(pages, convert_to_tensor=True)
 
 def split_sentences(text):
-    """Split text into sentences."""
     sentences = re.split(r'(?<=[.!?]) +', text)
     return [s.strip() for s in sentences if s.strip()]
 
@@ -28,44 +27,28 @@ def ask():
     if not question:
         return jsonify({"error": "No question provided"}), 400
 
-    query_embedding = model.encode(question, convert_to_tensor=True)
-
-    # ---- Step 1: Find top 3 most relevant pages ----
-    page_scores = util.pytorch_cos_sim(query_embedding, page_embeddings)[0]
+    query_emb = model.encode(question, convert_to_tensor=True)
+    page_scores = util.pytorch_cos_sim(query_emb, page_embeddings)[0]
     top_page_indices = torch.topk(page_scores, k=3).indices.tolist()
 
-    all_candidate_sentences = []
-    all_sentence_sources = []
-
-    # ---- Step 2: For each top page, get its best sentences ----
+    all_candidates = []
     for idx in top_page_indices:
-        page_text = content[idx]['text']
-        page_url = content[idx]['url']
-        sentences = split_sentences(page_text)
+        sentences = split_sentences(content[idx]['text'])
         if not sentences:
             continue
-        sent_embeddings = model.encode(sentences, convert_to_tensor=True)
-        sent_scores = util.pytorch_cos_sim(query_embedding, sent_embeddings)[0]
-        top_sent_scores, top_sent_indices = torch.topk(sent_scores, k=min(3, len(sentences)))
+        sent_emb = model.encode(sentences, convert_to_tensor=True)
+        sent_scores = util.pytorch_cos_sim(query_emb, sent_emb)[0]
+        top_scores, top_idx = torch.topk(sent_scores, k=min(3, len(sentences)))
+        for s_i, s_score in zip(top_idx.tolist(), top_scores.tolist()):
+            all_candidates.append({
+                "sentence": sentences[s_i],
+                "score": float(s_score),
+                "source": content[idx]['url']
+            })
 
-        for s_idx, s_score in zip(top_sent_indices.tolist(), top_sent_scores.tolist()):
-            all_candidate_sentences.append((sentences[s_idx], s_score))
-            all_sentence_sources.append(page_url)
-
-    # ---- Step 3: Rank all candidate sentences globally ----
-    all_candidate_sentences_with_source = list(zip(all_candidate_sentences, all_sentence_sources))
-    all_candidate_sentences_with_source.sort(key=lambda x: x[0][1], reverse=True)
-
-    # ---- Step 4: Take top 3 best sentences overall ----
-    top_answers = []
-    for (sentence, score), source in all_candidate_sentences_with_source[:3]:
-        top_answers.append({
-            "sentence": sentence,
-            "score": float(score),
-            "source": source
-        })
-
-    return jsonify({"answers": top_answers})
+    # sort globally
+    all_candidates.sort(key=lambda x: x['score'], reverse=True)
+    return jsonify({"answers": all_candidates[:3]})
 
 if __name__ == "__main__":
-    app.run(port=5000)
+    app.run(host="0.0.0.0", port=5000)
