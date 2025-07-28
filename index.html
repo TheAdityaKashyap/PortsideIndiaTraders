@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portside India Traders | Maritime Lifting Equipment Experts</title>
+    <title>Portside India Traders | India's Leading Maritime Lifting Equipment Experts</title>
 
     <meta name="description" content="Portside India Traders is India's leading supplier of premium maritime and industrial lifting equipment, including high-strength slings, shackles, hooks, wire ropes, and mooring solutions. Trusted for quality, safety, and expert service across India. Get a quote today!" />
     <meta name="keywords" content="Portside India Traders, maritime lifting equipment, industrial rigging, lifting slings, Crosby shackles, crane hooks, mooring chains, wire rope, India, heavy lifting solutions, material handling India, marine equipment supplier" />
@@ -11,16 +11,17 @@
     <meta name="author" content="Portside India Traders" />
     <link rel="canonical" href="https://aadhaminati.github.io/PortsideIndiaTraders/index.html" />
 
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aadhaminati.github.io/PortsideIndiaTraders/index.html" />
     <meta property="og:title" content="Portside India Traders | India's Leading Maritime Lifting Equipment Supplier" />
     <meta property="og:description" content="Discover high-quality maritime and industrial lifting equipment from Portside India Traders. Specializing in slings, shackles, hooks, and wire ropes for safe and efficient operations across India." />
-    <meta property="og:url" content="https://aadhaminati.github.io/PortsideIndiaTraders/index.html" />
-    <meta property="og:type" content="website" />
     <meta property="og:image" content="https://placehold.co/1200x630/004080/FFFFFF?text=Portside+India+Traders+OG" />
     <meta property="og:image:alt" content="Portside India Traders logo and maritime lifting equipment." />
     <meta property="og:site_name" content="Portside India Traders" />
     <meta property="og:locale" content="en_IN" />
 
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://aadhaminati.github.io/PortsideIndiaTraders/index.html" />
     <meta name="twitter:title" content="Portside India Traders | Maritime & Industrial Lifting Experts" />
     <meta name="twitter:description" content="Your trusted partner for certified maritime and industrial lifting gear in India. Explore our range of slings, shackles, hooks, and more." />
     <meta name="twitter:image" content="https://placehold.co/1024x512/004080/FFFFFF?text=Portside+India+Traders+Twitter" />
@@ -28,6 +29,16 @@
     <meta name="twitter:site" content="@PortsideIndia" />
 
     <style>
+        /* CSS Variables for easy theme changes */
+        :root {
+            --primary-blue: #004080; /* Ocean Blue */
+            --light-gray: #eee;
+            --medium-gray: #ddd;
+            --dark-gray: #333;
+            --white: #fff;
+            --text-color: #333;
+        }
+
         /* Basic Reset */
         body, h1, h2, h3, p, ul, li, a, section, header, footer {
             margin: 0;
@@ -37,30 +48,35 @@
 
         /* Global Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: var(--text-color);
             -webkit-text-size-adjust: 100%; /* Prevent text zoom on orientation change */
         }
 
         a {
             text-decoration: none;
+            color: var(--primary-blue); /* Default link color */
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
 
         /* Container */
         .container {
             width: 90%;
             max-width: 1200px; /* Limit max width for larger screens */
-            margin: auto;
+            margin: 0 auto; /* Center container */
             padding: 20px 0;
         }
 
         /* Header & Navigation */
         header {
-            background-color: #004080; /* Ocean Blue */
-            color: #fff;
-            padding: 15px 0; /* Slightly reduce padding */
-            position: relative; /* For hamburger menu positioning */
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 15px 0;
+            position: relative;
         }
         header .container {
             display: flex;
@@ -72,42 +88,48 @@
             align-items: center;
         }
         .logo img {
-            max-height: 50px; /* Slightly smaller logo for mobile */
+            max-height: 50px;
             margin-right: 10px;
+            vertical-align: middle; /* Align image vertically with text */
         }
         .logo h1 {
-            font-size: 1.4em; /* Adjust font size for mobile */
+            font-size: 1.4em;
             margin: 0;
-        }
-        nav {
-            position: relative;
         }
         nav ul {
             list-style: none;
             display: flex;
-            gap: 20px; /* Use gap for spacing instead of margin-left */
+            gap: 20px;
         }
         nav ul li a {
-            color: #fff;
+            color: var(--white);
             font-weight: bold;
-            padding: 5px 0; /* Add padding for larger tap area */
-            display: block; /* Make the whole area tappable */
+            padding: 10px 15px; /* Increase padding for better tap/click area */
+            display: block;
+            transition: background-color 0.3s ease;
+            border-radius: 4px;
+        }
+        nav ul li a:hover,
+        nav ul li a:focus { /* Add focus state for accessibility */
+            background-color: rgba(255, 255, 255, 0.2);
+            text-decoration: none;
         }
 
         /* Hamburger Menu for Mobile */
         .menu-toggle {
-            display: none; /* Hidden by default on desktop */
+            display: none;
             flex-direction: column;
             justify-content: space-around;
             width: 30px;
             height: 25px;
             cursor: pointer;
-            z-index: 100; /* Ensure it's above other content */
+            z-index: 100;
+            padding: 5px; /* Add padding for easier tapping */
         }
         .menu-toggle .bar {
             width: 100%;
             height: 3px;
-            background-color: #fff;
+            background-color: var(--white);
             border-radius: 1px;
             transition: all 0.3s ease-in-out;
         }
@@ -130,35 +152,37 @@
                 display: flex;
             }
             nav ul {
-                display: none; /* Hide regular menu on mobile */
+                display: none;
                 flex-direction: column;
                 position: absolute;
-                top: 100%; /* Position below the header */
+                top: 100%;
                 left: 0;
                 width: 100%;
-                background-color: #004080;
+                background-color: var(--primary-blue);
                 text-align: center;
                 box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-                z-index: 99; /* Below toggle, above content */
+                z-index: 99;
                 padding: 10px 0;
+                border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle separator */
             }
             nav ul.open {
-                display: flex; /* Show when open */
+                display: flex;
             }
             nav ul li {
-                margin: 10px 0;
+                margin: 5px 0; /* Reduce vertical margin */
             }
             nav ul li a {
-                padding: 15px 20px; /* Larger tap area for mobile menu items */
+                padding: 12px 20px; /* Adjust padding for mobile menu items */
                 width: 100%;
+                box-sizing: border-box; /* Include padding in width */
             }
         }
 
         /* Hero Section */
         .hero {
-            background: url('Images/hero-image.jpg') no-repeat center center/cover; /* Replace with your hero image */
-            height: 350px; /* Slightly reduce height for mobile */
-            color: #fff;
+            background: url('Images/hero-image.jpg') no-repeat center center/cover;
+            height: 400px; /* Slightly increased height for visual impact */
+            color: var(--white);
             text-align: center;
             display: flex;
             align-items: center;
@@ -166,118 +190,179 @@
             flex-direction: column;
             position: relative;
         }
-        .hero::after {
+        .hero::before { /* Use ::before for overlay to prevent text selection issues with ::after */
             content: "";
             position: absolute;
             top: 0;
             left: 0;
             height: 100%;
             width: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.55); /* Slightly darker overlay */
+            z-index: 0; /* Ensure overlay is behind content */
         }
         .hero .content {
             position: relative;
             z-index: 1;
-            padding: 0 15px; /* Add some horizontal padding */
+            padding: 0 20px; /* More horizontal padding */
         }
         .hero h1 {
-            font-size: 2.2em; /* Adjust font size for mobile */
-            margin-bottom: 10px;
+            font-size: 2.8em; /* Larger font size for desktop */
+            margin-bottom: 15px; /* More space below heading */
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3); /* Subtle text shadow */
         }
         .hero p {
-            font-size: 1em; /* Adjust font size for mobile */
+            font-size: 1.2em; /* Larger font size for desktop */
+            max-width: 700px; /* Limit paragraph width */
+            margin: 0 auto; /* Center paragraph */
         }
         .hero .cta {
-            background: #fff;
-            color: #004080;
-            padding: 12px 25px; /* Larger padding for tap area */
+            background: var(--white);
+            color: var(--primary-blue);
+            padding: 15px 30px; /* Larger padding for CTA */
             border-radius: 5px;
-            margin-top: 25px;
+            margin-top: 30px; /* More space above CTA */
             font-weight: bold;
-            display: inline-block; /* Ensure padding works */
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .hero .cta:hover,
+        .hero .cta:focus {
+            background-color: var(--light-gray);
+            transform: translateY(-2px);
+            text-decoration: none;
+        }
+
+        /* Responsive Hero Text */
+        @media (max-width: 768px) {
+            .hero {
+                height: 300px; /* Adjust height for smaller screens */
+            }
+            .hero h1 {
+                font-size: 2em;
+            }
+            .hero p {
+                font-size: 1em;
+            }
+            .hero .cta {
+                padding: 12px 25px;
+            }
         }
 
         /* Sections */
         section {
-            padding: 30px 0; /* Adjust padding for sections */
-            border-bottom: 1px solid #eee;
+            padding: 40px 0; /* Consistent padding for sections */
+            border-bottom: 1px solid var(--light-gray);
         }
         section:last-of-type {
             border-bottom: none;
         }
         h2 {
-            font-size: 2em;
+            font-size: 2.4em; /* Larger section headings */
             text-align: center;
-            margin-bottom: 25px;
-            color: #004080;
+            margin-bottom: 35px; /* More space below heading */
+            color: var(--primary-blue);
+            position: relative;
+            padding-bottom: 10px;
         }
+        h2::after { /* Underline effect for headings */
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-blue);
+            border-radius: 2px;
+        }
+
         /* Adjust h2 for smaller screens */
         @media (max-width: 600px) {
             h2 {
-                font-size: 1.8em;
-                margin-bottom: 20px;
+                font-size: 2em;
+                margin-bottom: 25px;
             }
         }
 
+        /* About Section */
+        #about p {
+            font-size: 1.1em;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
         /* Products Grid */
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Allow smaller min-width for cards */
-            gap: 15px; /* Reduce gap slightly */
-            margin-top: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Slightly larger min-width for cards */
+            gap: 25px; /* More gap between cards */
+            margin-top: 25px;
         }
         .product-card {
-            border: 1px solid #ddd;
-            padding: 15px; /* Reduce padding slightly */
+            border: 1px solid var(--medium-gray);
+            padding: 20px; /* Increase padding */
             text-align: center;
-            background: #fff;
-            border-radius: 5px;
-            transition: transform 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Add subtle shadow */
+            background: var(--white);
+            border-radius: 8px; /* Slightly more rounded corners */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* More prominent shadow */
+            display: flex; /* Flexbox for content alignment */
+            flex-direction: column;
+            justify-content: space-between; /* Push content to ends if needed */
         }
         .product-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px); /* More pronounced lift effect */
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15); /* Darker shadow on hover */
         }
         .product-card h3 {
-            margin-bottom: 8px; /* Adjust margin */
-            color: #004080;
-            font-size: 1.1em; /* Adjust font size */
+            margin-bottom: 10px;
+            color: var(--primary-blue);
+            font-size: 1.3em; /* Larger product title */
         }
         .product-card p {
-            font-size: 0.9em; /* Adjust font size */
+            font-size: 0.95em; /* Slightly larger product description */
+            color: #555; /* Slightly muted text color */
         }
 
         /* Contact Section */
         #contact .contact-container {
             display: flex;
-            flex-direction: column; /* Stack contact info vertically */
-            align-items: center; /* Center items */
-            font-size: 1em;
-            padding: 15px; /* Adjust padding */
-            text-align: center; /* Ensure text is centered */
+            flex-direction: column;
+            align-items: center;
+            font-size: 1.1em;
+            padding: 20px;
+            text-align: center;
         }
         #contact p {
-            margin-bottom: 10px; /* Space between contact lines */
-            word-wrap: break-word; /* Ensure long words break */
-            font-size: 1em; /* Consistent font size */
+            margin-bottom: 12px;
+            word-wrap: break-word;
+            font-size: 1em;
+            line-height: 1.8; /* Improve readability */
         }
         #contact p:last-child {
             margin-bottom: 0;
         }
         #contact a {
-            color: #004080;
+            color: var(--primary-blue);
             font-weight: bold;
+            transition: color 0.3s ease;
         }
-
+        #contact a:hover {
+            color: #0056b3; /* Darker blue on hover */
+            text-decoration: underline;
+        }
 
         /* Footer */
         footer {
-            background: #333;
-            color: #fff;
+            background: var(--dark-gray);
+            color: var(--white);
             text-align: center;
-            padding: 15px 0; /* Adjust padding */
-            font-size: 0.9em; /* Adjust font size */
+            padding: 20px 0;
+            font-size: 0.95em;
+        }
+        footer p {
+            margin: 0; /* Remove default paragraph margin */
         }
     </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HQH77MSRY6"></script>
@@ -285,7 +370,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-HQH77MSRY6');
     </script>
 </head>
@@ -293,19 +377,19 @@
 
     <header>
         <div class="container">
-            <div class="logo">
+            <a href="#home" class="logo" aria-label="Portside India Traders Home">
                 <img src="Images/FinalLogo.png" alt="Portside India Traders Logo" />
                 <h1>Portside India Traders</h1>
-            </div>
-            <div class="menu-toggle" id="mobile-menu">
+            </a>
+            <button class="menu-toggle" id="mobile-menu" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
-            <nav>
+            </button>
+            <nav aria-label="Main navigation">
                 <ul id="main-nav">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="#about">About Us</a></li>
                     <li><a href="Product1.html">Products</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -313,90 +397,93 @@
         </div>
     </header>
 
-    <section class="hero" id="home">
-        <div class="container content">
-            <h1>Strength that Anchors Your Success</h1>
-            <p>High-quality maritime lifting equipment engineered for durability and excellence.</p>
-            <a href="#contact" class="cta">Get a Quote</a>
-        </div>
-    </section>
+    <main>
+        <section class="hero" id="home">
+            <div class="container content">
+                <h1>Strength That Anchors Your Success</h1>
+                <p>High-quality maritime and industrial lifting equipment engineered for durability and excellence.</p>
+                <a href="#contact" class="cta">Get a Quote Today</a>
+            </div>
+        </section>
 
-    <section id="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>
-                Founded on innovation and a passion for quality, Portside India Traders offers state-of-the-art lifting and heavy-duty maritime equipment. We blend traditional craftsmanship with modern engineering to develop products that stand up to the challenges of today's industrial and maritime environments.
-            </p>
-        </div>
-    </section>
+        <section id="about">
+            <div class="container">
+                <h2>About Portside India Traders</h2>
+                <p>
+                    Founded on innovation and a passion for quality, **Portside India Traders** offers state-of-the-art lifting and heavy-duty maritime equipment. We blend traditional craftsmanship with modern engineering to develop products that stand up to the most demanding challenges of today's industrial and maritime environments. Our commitment is to provide reliable, safe, and efficient solutions tailored to your needs.
+                </p>
+            </div>
+        </section>
 
-    <section id="products">
-        <div class="container">
-            <h2>Our Products</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <a href="Product1.html" style="color: inherit; text-decoration: none;">
-                        <h3>Slings & Belts</h3>
-                        <p>High-performance webbing and round slings built for strength, flexibility, and safety.</p>
-                    </a>
-                </div>
-                <div class="product-card">
-                    <a href="Product1.html" style="color: inherit; text-decoration: none;">
-                        <h3>Wire Rope & Fittings</h3>
-                        <p>Precision-engineered wire ropes and essential fittings for industrial lifting solutions.</p>
-                    </a>
-                </div>
-                <div class="product-card">
-                    <a href="Product1.html" style="color: inherit; text-decoration: none;">
-                        <h3>Clips & Sockets</h3>
-                        <p>Reliable wire rope clips, wedge sockets, spelter and swage sockets for secure terminations.</p>
-                    </a>
-                </div>
-                <div class="product-card">
-                    <a href="Product1.html" style="color: inherit; text-decoration: none;">
-                        <h3>Crosby – Shackles, Hooks, Master Links, Metric Swivel & Alloy Chain</h3>
-                        <p>Genuine Crosby® lifting components engineered for superior performance and safety.</p>
-                    </a>
-                </div>
-                <div class="product-card">
-                    <a href="Product1.html" style="color: inherit; text-decoration: none;">
-                        <h3>Lifting Hooks & Connectors</h3>
-                        <p>Heavy-duty hooks and connecting links including self-locking, clevis, and grab types.</p>
-                    </a>
-                </div>
-                <div class="product-card">
-                    <a href="Product1.html" style="color: inherit; text-decoration: none;">
-                        <h3>General Lifting Accessories</h3>
-                        <p>Shackles, clamps, turnbuckles, and other must-have accessories for rigging operations.</p>
-                    </a>
-                </div>
-                <div class="product-card">
-                    <a href="Product1.html" style="color: inherit; text-decoration: none;">
-                        <h3>Hoists, Trolleys & Winches</h3>
-                        <p>Manual and electric hoists, geared trolleys, and winches for seamless material handling.</p>
-                    </a>
-                </div>
-                <div class="product-card">
-                    <a href="Product1.html" style="color: inherit; text-decoration: none;">
-                        <h3>Plate & Beam Lifting Clamps</h3>
-                        <p>Durable clamps designed for vertical, horizontal, I-beam, and pipe lifting applications.</p>
-                    </a>
-                </div>
-                <div class="product-card">
-                    <a href="Product1.html" style="color: inherit; text-decoration: none;">
-                        <h3>Anchoring & Mooring</h3>
-                        <p>Marine-grade anchors, anchor chains, lashing chains, and mooring ropes.</p>
-                    </a>
+        <section id="products">
+            <div class="container">
+                <h2>Our Comprehensive Product Range</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <a href="Product1.html" style="color: inherit; text-decoration: none;">
+                            <h3>Slings & Belts</h3>
+                            <p>High-performance webbing and round slings built for exceptional strength, flexibility, and safety in all lifting operations.</p>
+                        </a>
+                    </div>
+                    <div class="product-card">
+                        <a href="Product1.html" style="color: inherit; text-decoration: none;">
+                            <h3>Wire Rope & Fittings</h3>
+                            <p>Precision-engineered wire ropes and essential fittings for robust and reliable industrial lifting solutions.</p>
+                        </a>
+                    </div>
+                    <div class="product-card">
+                        <a href="Product1.html" style="color: inherit; text-decoration: none;">
+                            <h3>Clips & Sockets</h3>
+                            <p>Reliable wire rope clips, wedge sockets, spelter, and swage sockets ensuring secure and long-lasting terminations.</p>
+                        </a>
+                    </div>
+                    <div class="product-card">
+                        <a href="Product1.html" style="color: inherit; text-decoration: none;">
+                            <h3>Crosby® Lifting Components</h3>
+                            <p>Genuine Crosby® shackles, hooks, master links, metric swivels, and alloy chains for superior performance and safety standards.</p>
+                        </a>
+                    </div>
+                    <div class="product-card">
+                        <a href="Product1.html" style="color: inherit; text-decoration: none;">
+                            <h3>Lifting Hooks & Connectors</h3>
+                            <p>Heavy-duty hooks and connecting links, including self-locking, clevis, and grab types, designed for diverse lifting needs.</p>
+                        </a>
+                    </div>
+                    <div class="product-card">
+                        <a href="Product1.html" style="color: inherit; text-decoration: none;">
+                            <h3>General Lifting Accessories</h3>
+                            <p>Essential rigging accessories such as shackles, clamps, and turnbuckles for comprehensive and efficient lifting operations.</p>
+                        </a>
+                    </div>
+                    <div class="product-card">
+                        <a href="Product1.html" style="color: inherit; text-decoration: none;">
+                            <h3>Hoists, Trolleys & Winches</h3>
+                            <p>Both manual and electric hoists, geared trolleys, and robust winches for seamless and controlled material handling.</p>
+                        </a>
+                    </div>
+                    <div class="product-card">
+                        <a href="Product1.html" style="color: inherit; text-decoration: none;">
+                            <h3>Plate & Beam Lifting Clamps</h3>
+                            <p>Durable clamps specifically designed for secure vertical, horizontal, I-beam, and pipe lifting applications.</p>
+                        </a>
+                    </div>
+                    <div class="product-card">
+                        <a href="Product1.html" style="color: inherit; text-decoration: none;">
+                            <h3>Anchoring & Mooring Solutions</h3>
+                            <p>High-grade marine anchors, sturdy anchor chains, lashing chains, and durable mooring ropes for secure marine operations.</p>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <section id="contact">
         <div class="container contact-container">
-            <h2>Contact Us</h2>
+            <h2>Connect With Us</h2>
+            <p>For inquiries, quotes, or support, feel free to reach out:</p>
             <p>Email: <a href="mailto:sales@portsideindia.com">sales@portsideindia.com</a></p>
-            <p>Phone: <a href="https://wa.me/919307104214" target="_blank">+91 93071 04214</a></p>
+            <p>Phone/WhatsApp: <a href="https://wa.me/919307104214" target="_blank" rel="noopener noreferrer">+91 93071 04214</a></p>
             <p>Address: I-WING GURUPREM SOCIETY KATRAP, BADALPUR, MUMBAI SUBURBS, 421503</p>
         </div>
     </section>
@@ -413,8 +500,13 @@
             const nav = document.getElementById('main-nav');
 
             menuToggle.addEventListener('click', function() {
+                // Toggle 'open' class on both the menu button and the navigation
                 nav.classList.toggle('open');
                 menuToggle.classList.toggle('open');
+
+                // Update aria-expanded attribute for accessibility
+                const isExpanded = menuToggle.classList.contains('open');
+                menuToggle.setAttribute('aria-expanded', isExpanded);
             });
 
             // Close the menu when a nav link is clicked (for smoother experience)
@@ -423,7 +515,27 @@
                     if (nav.classList.contains('open')) {
                         nav.classList.remove('open');
                         menuToggle.classList.remove('open');
+                        menuToggle.setAttribute('aria-expanded', false); // Update aria-expanded
                     }
+                });
+            });
+
+            // Optional: Close menu if clicked outside
+            document.addEventListener('click', function(event) {
+                if (!nav.contains(event.target) && !menuToggle.contains(event.target) && nav.classList.contains('open')) {
+                    nav.classList.remove('open');
+                    menuToggle.classList.remove('open');
+                    menuToggle.setAttribute('aria-expanded', false);
+                }
+            });
+
+            // Add smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
                 });
             });
         });
