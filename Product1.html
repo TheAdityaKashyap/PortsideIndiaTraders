@@ -6,8 +6,7 @@
   <meta name="description" content="Browse product categories from Portside India Traders, including slings, wire ropes, Crosby hardware, and lifting accessories." />
   <title>Portside India Traders - Product Categories</title>
 
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
   <style>
     :root {
@@ -19,7 +18,11 @@
       --border-light: #eee;
       --border-radius: 10px;
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background: var(--background-color);
@@ -52,7 +55,6 @@
       position: relative;
       overflow: hidden;
       transition: transform 0.4s ease, box-shadow 0.4s ease;
-      flex-shrink: 0;
     }
     .swiper-slide-active {
       transform: scale(1.05);
@@ -66,30 +68,43 @@
       border-bottom: 2px solid var(--primary-color);
       padding-bottom: 0.5rem;
     }
-    .product-list { list-style: none; padding-left: 0; }
+    .product-list {
+      list-style: none;
+    }
     .product-list li {
       padding: 0.5rem 0;
       border-bottom: 1px solid var(--border-light);
     }
-    .product-list li:last-child { border-bottom: none; }
+    .product-list li:last-child {
+      border-bottom: none;
+    }
     .product-list a {
       text-decoration: none;
       color: var(--text-color);
       transition: color 0.3s;
     }
-    .product-list a:hover { color: var(--primary-color); }
+    .product-list a:hover {
+      color: var(--primary-color);
+    }
     .swiper-button-next, .swiper-button-prev {
       color: var(--primary-color);
       transition: color 0.3s;
     }
-    .swiper-button-next:hover, .swiper-button-prev:hover { color: var(--primary-color-dark); }
+    .swiper-button-next:hover, .swiper-button-prev:hover {
+      color: var(--primary-color-dark);
+    }
     .swiper-pagination-bullet {
       background: #ccc;
       opacity: 1;
       transition: background 0.3s;
     }
-    .swiper-pagination-bullet-active { background: var(--primary-color); }
-    .back-home-container { text-align: center; margin: 2rem 0; }
+    .swiper-pagination-bullet-active {
+      background: var(--primary-color);
+    }
+    .back-home-container {
+      text-align: center;
+      margin: 2rem 0;
+    }
     .back-home-btn {
       display: inline-block;
       padding: 12px 24px;
@@ -120,57 +135,43 @@
 
   <div class="container">
     <h1>Our Products</h1>
-
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
 
         <div class="swiper-slide">
           <h2>Slings &amp; Belts</h2>
           <ul class="product-list">
-            <li><a href="WebbingSlings.html">Webbing Slings</a></li>
-            <li><a href="WebbingSlings.html">Simplex (KSF)</a></li>
-            <li><a href="WebbingSlings.html">Duplex (KDF)</a></li>
-            <li><a href="WebbingSlings.html">Triplex (KTF)</a></li>
-            <li><a href="WebbingSlings.html">Quarter-plex (KQF)</a></li>
-            <li><a href="RoundSlings2.html">Round Slings</a></li>
-            <li><a href="LoweringBelts.html">Lowering &amp; Safety Belts</a></li>
-            <li><a href="SinglePartSlings.html">Single-Part Slings</a></li>
-            <li><a href="MultipleLegSlings.html">Multiple-Leg Slings</a></li>
-            <li><a href="GrommetSlings.html">Grommet Slings</a></li>
-            <li><a href="FlemishEyeSlings.html">Flemish-Eye Slings</a></li>
+            <li><a href="#">Webbing Slings</a></li>
+            <li><a href="#">Simplex (KSF)</a></li>
+            <li><a href="#">Duplex (KDF)</a></li>
+            <li><a href="#">Triplex (KTF)</a></li>
           </ul>
         </div>
 
         <div class="swiper-slide">
           <h2>Wire Rope &amp; Fittings</h2>
           <ul class="product-list">
-            <li><a href="WireLockKits.html">Wire Lock Kits</a></li>
-            <li><a href="VitaLife.html">Vitalife Kits</a></li>
-            <li><a href="CrossbyClipsAndSockets.html">Wire Rope Clips &amp; Sockets</a></li>
-            <li><a href="CrossbyOpenAndClosedSpelterSockets.html">Open/Closed Spelter Sockets</a></li>
-            <li><a href="CrossbyOpenAndClosedSwageSockets.html">Open/Closed Swage Sockets</a></li>
-            <li><a href="Thimbles.html">Thimbles</a></li>
+            <li><a href="#">Wire Lock Kits</a></li>
+            <li><a href="#">Vitalife Kits</a></li>
+            <li><a href="#">Thimbles</a></li>
           </ul>
         </div>
 
         <div class="swiper-slide">
-          <h2>Crosby® Brand Hardware</h2>
+          <h2>Crosby® Hardware</h2>
           <ul class="product-list">
-            <li><a href="Shackles.html">Shackles</a></li>
-            <li><a href="Hooks-hardware.html">Hooks</a></li>
-            <li><a href="MasterLinks.html">Master Links</a></li>
-            <li><a href="MetricSwivelAndAlloyChain.html">Metric Swivel &amp; Alloy Chain</a></li>
+            <li><a href="#">Shackles</a></li>
+            <li><a href="#">Hooks</a></li>
+            <li><a href="#">Master Links</a></li>
           </ul>
         </div>
 
         <div class="swiper-slide">
           <h2>Anchoring &amp; Mooring</h2>
           <ul class="product-list">
-            <li><a href="Anchors.html">Anchors</a></li>
-            <li><a href="StudLinkAnchorChain.html">Stud-Link Anchor Chains</a></li>
-            <li><a href="LashingChainsAndLoadBinders.html">Lashing Chains &amp; Load Binders</a></li>
-            <li><a href="GarfilMooringRopes.html">Garfil Mooring Ropes</a></li>
-            <li><a href="GarfilIndustrialRopes.html">Garfil Industrial Ropes</a></li>
+            <li><a href="#">Anchors</a></li>
+            <li><a href="#">Anchor Chains</a></li>
+            <li><a href="#">Mooring Ropes</a></li>
           </ul>
         </div>
 
@@ -185,8 +186,7 @@
     </div>
   </div>
 
-  <!-- Swiper JS -->
-  <script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
     const swiper = new Swiper('.mySwiper', {
       effect: 'coverflow',
@@ -198,16 +198,16 @@
       loop: true,
       speed: 600,
       autoplay: {
-        delay: 3500,
-        disableOnInteraction: true,
-        pauseOnMouseEnter: true,
+        delay: 4000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: false
       },
       coverflowEffect: {
         rotate: 30,
         stretch: 0,
         depth: 100,
         modifier: 1,
-        slideShadows: true,
+        slideShadows: true
       },
       pagination: { el: '.swiper-pagination', clickable: true },
       navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
@@ -217,6 +217,27 @@
         0: { slidesPerView: 1, spaceBetween: 15 },
         480: { slidesPerView: 2, spaceBetween: 15 },
         768: { slidesPerView: 3, spaceBetween: 20 }
+      }
+    });
+
+    // Pause after user interaction and resume after 10s
+    let resumeTimeout;
+    swiper.on('touchStart', () => {
+      swiper.autoplay.stop();
+      clearTimeout(resumeTimeout);
+      resumeTimeout = setTimeout(() => swiper.autoplay.start(), 10000);
+    });
+
+    // Pause on hover for desktop
+    const swiperEl = document.querySelector('.mySwiper');
+    swiperEl.addEventListener('mouseenter', () => {
+      if (window.innerWidth > 768) {
+        swiper.autoplay.stop();
+      }
+    });
+    swiperEl.addEventListener('mouseleave', () => {
+      if (window.innerWidth > 768) {
+        swiper.autoplay.start();
       }
     });
   </script>
