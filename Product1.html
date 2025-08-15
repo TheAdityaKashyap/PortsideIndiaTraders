@@ -6,60 +6,80 @@
   <meta name="description" content="Browse product categories from Portside India Traders, including slings, wire ropes, Crosby hardware, and lifting accessories." />
   <title>Portside India Traders - Product Categories</title>
 
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- Updated Swiper CSS to v11 -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@11/swiper-bundle.min.css" />
 
   <style>
+    /* Root variables for consistent theming */
     :root {
-      --primary-color: #004080;
-      --primary-color-dark: #002a60;
-      --text-color: #333;
-      --background-color: #f4f4f4;
-      --card-background: #fff;
-      --border-light: #eee;
-      --border-radius: 10px;
+      --primary-color: #004080; /* Dark blue for primary elements */
+      --primary-color-dark: #002a60; /* Even darker blue for hover states */
+      --text-color: #333; /* Dark gray for general text */
+      --background-color: #f4f4f4; /* Light gray background */
+      --card-background: #fff; /* White background for cards */
+      --border-light: #eee; /* Light gray for borders */
+      --border-radius: 10px; /* Rounded corners for elements */
     }
+
+    /* Universal box-sizing for all elements */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
+    /* Body styling: font, background, text color, and preventing horizontal scroll */
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background: var(--background-color);
       color: var(--text-color);
-      overflow-x: hidden;
+      overflow-x: hidden; /* Prevents horizontal scrollbar */
     }
+
+    /* Container for main content, centered with max-width */
     .container {
       width: 90%;
       max-width: 1200px;
-      margin: 2rem auto;
-      padding: 2rem 0;
+      margin: 2rem auto; /* Top/bottom margin, auto for horizontal centering */
+      padding: 2rem 0; /* Vertical padding */
     }
+
+    /* Main heading styling */
     h1 {
       text-align: center;
       color: var(--primary-color);
       margin-bottom: 2.5rem;
       font-size: 2.5rem;
     }
+
+    /* Swiper container styling */
     .swiper {
       width: 100%;
       padding-top: 20px;
-      padding-bottom: 60px;
+      padding-bottom: 60px; /* Space for pagination */
     }
+
+    /* Individual Swiper slide styling */
     .swiper-slide {
       background: var(--card-background);
       border-radius: var(--border-radius);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Subtle shadow */
       padding: 1.5rem;
-      width: 310px;
+      /* Adjust width for slides to fit 3 in view effectively, consider responsiveness */
+      width: 310px; /* Keeping your fixed width, but be mindful for smaller screens */
       position: relative;
       overflow: hidden;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth transition for scale and shadow */
+      flex-shrink: 0; /* Prevents slides from shrinking below their defined width */
     }
+
+    /* Styling for the currently active Swiper slide */
     .swiper-slide-active {
-      transform: scale(1.05);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      transform: scale(1.05); /* Slightly larger when active */
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15); /* More prominent shadow when active */
     }
+
+    /* Heading within each product slide */
     .swiper-slide h2 {
       color: var(--primary-color);
       font-size: 1.5rem;
@@ -68,43 +88,66 @@
       border-bottom: 2px solid var(--primary-color);
       padding-bottom: 0.5rem;
     }
+
+    /* List of products within each slide */
     .product-list {
-      list-style: none;
+      list-style: none; /* Remove default list bullets */
+      padding-left: 0;
     }
+
+    /* Individual list item styling */
     .product-list li {
       padding: 0.5rem 0;
-      border-bottom: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light); /* Separator line */
     }
+
+    /* Remove border for the last list item */
     .product-list li:last-child {
       border-bottom: none;
     }
+
+    /* Styling for links within product list */
     .product-list a {
-      text-decoration: none;
+      text-decoration: none; /* Remove underline */
       color: var(--text-color);
-      transition: color 0.3s;
+      transition: color 0.3s; /* Smooth color change on hover */
     }
+
+    /* Hover effect for product list links */
     .product-list a:hover {
       color: var(--primary-color);
     }
+
+    /* Styling for Swiper navigation buttons (Next/Prev) */
     .swiper-button-next, .swiper-button-prev {
       color: var(--primary-color);
       transition: color 0.3s;
     }
+
+    /* Hover effect for Swiper navigation buttons */
     .swiper-button-next:hover, .swiper-button-prev:hover {
       color: var(--primary-color-dark);
     }
+
+    /* Styling for Swiper pagination bullets */
     .swiper-pagination-bullet {
       background: #ccc;
       opacity: 1;
       transition: background 0.3s;
     }
+
+    /* Styling for the active pagination bullet */
     .swiper-pagination-bullet-active {
       background: var(--primary-color);
     }
+
+    /* Container for the "Back to Home" button */
     .back-home-container {
       text-align: center;
       margin: 2rem 0;
     }
+
+    /* Styling for the "Back to Home" button */
     .back-home-btn {
       display: inline-block;
       padding: 12px 24px;
@@ -116,132 +159,166 @@
       border-radius: 5px;
       transition: background-color 0.3s ease, transform 0.2s ease;
     }
+
+    /* Hover effect for the "Back to Home" button */
     .back-home-btn:hover {
       background-color: var(--primary-color-dark);
-      transform: translateY(-2px);
+      transform: translateY(-2px); /* Subtle lift effect */
     }
+
+    /* Media queries for responsiveness */
     @media (max-width: 768px) {
       h1 { font-size: 2rem; }
-      .swiper-slide { width: 280px; }
+      .swiper-slide { width: 280px; } /* Adjust slide width for tablets */
     }
+
     @media (max-width: 480px) {
       .container { width: 95%; }
-      .swiper-slide { width: 260px; }
-      .swiper-button-next, .swiper-button-prev { display: none; }
+      .swiper-slide { width: 260px; } /* Adjust slide width for mobile */
+      .swiper-button-next, .swiper-button-prev { display: none; } /* Hide navigation buttons on small screens */
     }
   </style>
+
+  <!-- Google Analytics script -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HQH77MSRY6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HQH77MSRY6');
+  </script>
 </head>
 <body>
 
   <div class="container">
     <h1>Our Products</h1>
+
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
 
+        <!-- Swiper Slide 1: Slings & Belts -->
         <div class="swiper-slide">
-          <h2>Slings &amp; Belts</h2>
-          <ul class="product-list">
-            <li><a href="#">Webbing Slings</a></li>
-            <li><a href="#">Simplex (KSF)</a></li>
-            <li><a href="#">Duplex (KDF)</a></li>
-            <li><a href="#">Triplex (KTF)</a></li>
+          <h2 data-swiper-parallax="-100">Slings &amp; Belts</h2>
+          <ul class="product-list" data-swiper-parallax="-200">
+            <li><a href="WebbingSlings.html">Webbing Slings</a></li>
+            <li><a href="WebbingSlings.html">Simplex (KSF)</a></li>
+            <li><a href="WebbingSlings.html">Duplex (KDF)</a></li>
+            <li><a href="WebbingSlings.html">Triplex (KTF)</a></li>
+            <li><a href="WebbingSlings.html">Quarter-plex (KQF)</a></li>
+            <li><a href="RoundSlings2.html">Round Slings</a></li>
+            <li><a href="LoweringBelts.html">Lowering &amp; Safety Belts</a></li>
+            <li><a href="SinglePartSlings.html">Single-Part Slings</a></li>
+            <li><a href="MultipleLegSlings.html">Multiple-Leg Slings</a></li>
+            <li><a href="GrommetSlings.html">Grommet Slings</a></li>
+            <li><a href="FlemishEyeSlings.html">Flemish-Eye Slings</a></li>
           </ul>
         </div>
 
+        <!-- Swiper Slide 2: Wire Rope & Fittings -->
         <div class="swiper-slide">
-          <h2>Wire Rope &amp; Fittings</h2>
-          <ul class="product-list">
-            <li><a href="#">Wire Lock Kits</a></li>
-            <li><a href="#">Vitalife Kits</a></li>
-            <li><a href="#">Thimbles</a></li>
+          <h2 data-swiper-parallax="-100">Wire Rope &amp; Fittings</h2>
+          <ul class="product-list" data-swiper-parallax="-200">
+            <li><a href="WireLockKits.html">Wire Lock Kits</a></li>
+            <li><a href="VitaLife.html">Vitalife Kits</a></li>
+            <li><a href="CrossbyClipsAndSockets.html">Wire Rope Clips &amp; Sockets</a></li>
+            <li><a href="CrossbyOpenAndClosedSpelterSockets.html">Open/Closed Spelter Sockets</a></li>
+            <li><a href="CrossbyOpenAndClosedSwageSockets.html">Open/Closed Swage Sockets</a></li>
+            <li><a href="Thimbles.html">Thimbles</a></li>
           </ul>
         </div>
 
+        <!-- Swiper Slide 3: Crosby® Brand Hardware -->
         <div class="swiper-slide">
-          <h2>Crosby® Hardware</h2>
-          <ul class="product-list">
-            <li><a href="#">Shackles</a></li>
-            <li><a href="#">Hooks</a></li>
-            <li><a href="#">Master Links</a></li>
+          <h2 data-swiper-parallax="-100">Crosby® Brand Hardware</h2>
+          <ul class="product-list" data-swiper-parallax="-200">
+            <li><a href="Shackles.html">Shackles</a></li>
+            <li><a href="Hooks-hardware.html">Hooks</a></li>
+            <li><a href="MasterLinks.html">Master Links</a></li>
+            <li><a href="MetricSwivelAndAlloyChain.html">Metric Swivel &amp; Alloy Chain</a></li>
           </ul>
         </div>
 
+        <!-- Swiper Slide 4: Anchoring & Mooring -->
         <div class="swiper-slide">
-          <h2>Anchoring &amp; Mooring</h2>
-          <ul class="product-list">
-            <li><a href="#">Anchors</a></li>
-            <li><a href="#">Anchor Chains</a></li>
-            <li><a href="#">Mooring Ropes</a></li>
+          <h2 data-swiper-parallax="-100">Anchoring &amp; Mooring</h2>
+          <ul class="product-list" data-swiper-parallax="-200">
+            <li><a href="Anchors.html">Anchors</a></li>
+            <li><a href="StudLinkAnchorChain.html">Stud-Link Anchor Chains</a></li>
+            <li><a href="LashingChainsAndLoadBinders.html">Lashing Chains &amp; Load Binders</a></li>
+            <li><a href="GarfilMooringRopes.html">Garfil Mooring Ropes</a></li>
+            <li><a href="GarfilIndustrialRopes.html">Garfil Industrial Ropes</a></li>
           </ul>
         </div>
 
-      </div>
+      </div> <!-- closes swiper-wrapper -->
+
+      <!-- Swiper navigation buttons -->
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
+      <!-- Swiper pagination bullets -->
       <div class="swiper-pagination"></div>
-    </div>
+    </div> <!-- closes swiper -->
 
+    <!-- Back to Home button -->
     <div class="back-home-container">
       <a href="index.html" class="back-home-btn">← Back to Home</a>
     </div>
   </div>
 
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- Swiper JS library -->
+  <script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
+
   <script>
-  
+    // Initialize Swiper
     const swiper = new Swiper('.mySwiper', {
-      effect: 'coverflow',
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: 3,
-      spaceBetween: 20,
+      effect: 'coverflow', // Coverflow visual effect
+      grabCursor: true,    // Change cursor to grab hand
+      centeredSlides: true, // Center the active slide
+      
+      // Set to display 3 slides at a time. This is the main change.
+      slidesPerView: 3, 
+
+      // This is crucial for effects like coverflow to render correctly,
+      // especially when interacting with the slides.
       watchSlidesProgress: true,
-      loop: true,
-      loopedSlides: 4, // fix for small slide count
-      loopAdditionalSlides: 2, // prevents blank spaces
-      speed: 600,
-        autoplay: {
-                  delay: 4000,
-                  disableOnInteraction: false,
-                  pauseOnMouseEnter: false
-           },
-          coverflowEffect: {
-             rotate: 30,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true
-  },
-        pagination: { el: '.swiper-pagination', clickable: true },
-        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-        keyboard: { enabled: true },
-        mousewheel: { enabled: true, releaseOnEdges: true },
-        breakpoints: {
-          0: { slidesPerView: 1, spaceBetween: 15 },
-          480: { slidesPerView: 2, spaceBetween: 15 },
-          768: { slidesPerView: 3, spaceBetween: 20 }
-  }
-});
 
+      loop: true, // Enable continuous loop mode 🔄
 
-    // Pause after user interaction and resume after 10s
-    let resumeTimeout;
-    swiper.on('touchStart', () => {
-      swiper.autoplay.stop();
-      clearTimeout(resumeTimeout);
-      resumeTimeout = setTimeout(() => swiper.autoplay.start(), 10000);
-    });
-
-    // Pause on hover for desktop
-    const swiperEl = document.querySelector('.mySwiper');
-    swiperEl.addEventListener('mouseenter', () => {
-      if (window.innerWidth > 768) {
-        swiper.autoplay.stop();
-      }
-    });
-    swiperEl.addEventListener('mouseleave', () => {
-      if (window.innerWidth > 768) {
-        swiper.autoplay.start();
+      autoplay: {
+        delay: 3500, // 3.5 seconds delay between slides
+        disableOnInteraction: true, // Autoplay stops when user interacts
+        pauseOnMouseEnter: true,    // Autoplay pauses when mouse hovers over swiper
+      },
+      coverflowEffect: {
+        rotate: 30,       // Slide rotation degree
+        stretch: 0,       // Space between slides in px
+        depth: 100,       // Depth of the slides
+        modifier: 1,      // Effect modifier (e.g., 2 makes the effect more pronounced)
+        slideShadows: true, // Enable shadow on slides
+      },
+      pagination: {
+        el: '.swiper-pagination', // Pagination container
+        clickable: true,          // Pagination bullets are clickable
+      },
+      navigation: {
+        nextEl: '.swiper-button-next', // Next button selector
+        prevEl: '.swiper-button-prev', // Previous button selector
+      },
+      keyboard: {
+        enabled: true, // Enable keyboard navigation
+      },
+      mousewheel: {
+        enabled: true, // Enable mousewheel navigation
+        releaseOnEdges: true, // Release mousewheel control if at the end/start of the carousel
+      },
+      // Responsive breakpoints for 'slidesPerView' 
+      breakpoints: {
+        768: {
+          slidesPerView: 2, // 2 slides on tablets
+        },
+        480: {
+          slidesPerView: 1, // 1 slide on mobile
+        }
       }
     });
   </script>
