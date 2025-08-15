@@ -6,10 +6,10 @@
   <meta name="description" content="Browse product categories from Portside India Traders, including slings, wire ropes, Crosby hardware, and lifting accessories." />
   <title>Portside India Traders - Product Categories</title>
 
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- Updated Swiper CSS to v11 -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@11/swiper-bundle.min.css" />
 
   <style>
-    /* --- NEW: CSS Custom Properties for easy theme management --- */
     :root {
       --primary-color: #004080;
       --primary-color-dark: #002a60;
@@ -19,8 +19,6 @@
       --border-light: #eee;
       --border-radius: 10px;
     }
-
-    /* Reset & Global Styles */
     * {
       margin: 0;
       padding: 0;
@@ -44,11 +42,9 @@
       margin-bottom: 2.5rem;
       font-size: 2.5rem;
     }
-
-    /* Swiper Styles */
     .swiper {
       width: 100%;
-      padding-top: 20px; /* Add space for active slide to pop up */
+      padding-top: 20px;
       padding-bottom: 60px;
     }
     .swiper-slide {
@@ -56,15 +52,14 @@
       border-radius: var(--border-radius);
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       padding: 1.5rem;
-      width: 310px; /* Base width */
+      width: 310px;
       position: relative;
       overflow: hidden;
-      /* --- NEW: Added transition for smoother scaling/hover effects --- */
       transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
     .swiper-slide-active {
-        transform: scale(1.05);
-        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      transform: scale(1.05);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
     }
     .swiper-slide h2 {
       color: var(--primary-color);
@@ -76,10 +71,10 @@
     }
     .product-list {
       list-style: none;
-      padding-left: 0; /* Removed unnecessary padding */
+      padding-left: 0;
     }
     .product-list li {
-      padding: 0.5rem 0; /* Increased padding slightly for better spacing */
+      padding: 0.5rem 0;
       border-bottom: 1px solid var(--border-light);
     }
     .product-list li:last-child {
@@ -93,8 +88,6 @@
     .product-list a:hover {
       color: var(--primary-color);
     }
-
-    /* Custom Navigation & Pagination Styling */
     .swiper-button-next, .swiper-button-prev {
       color: var(--primary-color);
       transition: color 0.3s;
@@ -110,8 +103,6 @@
     .swiper-pagination-bullet-active {
       background: var(--primary-color);
     }
-
-    /* Back to Home Button Styles */
     .back-home-container {
       text-align: center;
       margin: 2rem 0;
@@ -131,22 +122,18 @@
       background-color: var(--primary-color-dark);
       transform: translateY(-2px);
     }
-
-    /* Responsive Adjustments */
     @media (max-width: 768px) {
       h1 { font-size: 2rem; }
-      .swiper-slide { width: 280px; } /* Slightly adjust width for smaller screens */
+      .swiper-slide { width: 280px; }
     }
     @media (max-width: 480px) {
       .container { width: 95%; }
       .swiper-slide { width: 260px; }
-      .swiper-button-next, .swiper-button-prev {
-        /* Hides arrows on very small screens where swiping is more natural */
-        display: none;
-      }
+      .swiper-button-next, .swiper-button-prev { display: none; }
     }
   </style>
 
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-HQH77MSRY6"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -154,7 +141,6 @@
     gtag('js', new Date());
     gtag('config', 'G-HQH77MSRY6');
   </script>
-
 </head>
 <body>
 
@@ -171,13 +157,13 @@
             <li><a href="WebbingSlings.html">Simplex (KSF)</a></li>
             <li><a href="WebbingSlings.html">Duplex (KDF)</a></li>
             <li><a href="WebbingSlings.html">Triplex (KTF)</a></li>
-            <li><a href="WebbingSlings.html">Quarter‑plex (KQF)</a></li>
+            <li><a href="WebbingSlings.html">Quarter-plex (KQF)</a></li>
             <li><a href="RoundSlings2.html">Round Slings</a></li>
             <li><a href="LoweringBelts.html">Lowering &amp; Safety Belts</a></li>
-            <li><a href="SinglePartSlings.html">Single‑Part Slings</a></li>
-            <li><a href="MultipleLegSlings.html">Multiple‑Leg Slings</a></li>
+            <li><a href="SinglePartSlings.html">Single-Part Slings</a></li>
+            <li><a href="MultipleLegSlings.html">Multiple-Leg Slings</a></li>
             <li><a href="GrommetSlings.html">Grommet Slings</a></li>
-            <li><a href="FlemishEyeSlings.html">Flemish‑Eye Slings</a></li>
+            <li><a href="FlemishEyeSlings.html">Flemish-Eye Slings</a></li>
           </ul>
         </div>
 
@@ -204,41 +190,43 @@
         </div>
 
         <div class="swiper-slide">
-            <h2 data-swiper-parallax="-100">Anchoring &amp; Mooring</h2>
-            <ul class="product-list" data-swiper-parallax="-200">
-              <li><a href="Anchors.html">Anchors</a></li>
-              <li><a href="StudLinkAnchorChain.html">Stud‑Link Anchor Chains</a></li>
-              <li><a href="LashingChainsAndLoadBinders.html">Lashing Chains &amp; Load Binders</a></li>
-              <li><a href="GarfilMooringRopes.html">Garfil Mooring Ropes</a></li>
-              <li><a href="GarfilIndustrialRopes.html">Garfil Industrial Ropes</a></li>
-            </ul>
-        </div>
+          <h2 data-swiper-parallax="-100">Anchoring &amp; Mooring</h2>
+          <ul class="product-list" data-swiper-parallax="-200">
+            <li><a href="Anchors.html">Anchors</a></li>
+            <li><a href="StudLinkAnchorChain.html">Stud-Link Anchor Chains</a></li>
+            <li><a href="LashingChainsAndLoadBinders.html">Lashing Chains &amp; Load Binders</a></li>
+            <li><a href="GarfilMooringRopes.html">Garfil Mooring Ropes</a></li>
+            <li><a href="GarfilIndustrialRopes.html">Garfil Industrial Ropes</a></li>
+          </ul>
         </div>
 
+      </div> <!-- closes swiper-wrapper -->
+
+      <!-- Navigation & Pagination INSIDE swiper -->
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
       <div class="swiper-pagination"></div>
-    </div>
+    </div> <!-- closes swiper -->
 
     <div class="back-home-container">
       <a href="index.html" class="back-home-btn">← Back to Home</a>
     </div>
   </div>
 
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- Updated Swiper JS to v11 -->
+  <script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
 
   <script>
-    // Initialize Swiper with improved settings
     const swiper = new Swiper('.mySwiper', {
       effect: 'coverflow',
       grabCursor: true,
       centeredSlides: true,
-      slidesPerView: 'auto', // Best for coverflow effect
+      slidesPerView: 'auto',
       loop: true,
       autoplay: {
         delay: 3500,
-        disableOnInteraction: true, // Stops after user interaction
-        pauseOnMouseEnter: true,    // Pauses on hover (great for accessibility)
+        disableOnInteraction: true,
+        pauseOnMouseEnter: true,
       },
       coverflowEffect: {
         rotate: 30,
@@ -259,10 +247,9 @@
         enabled: true,
       },
       parallax: true,
-      // --- NEW: Added Mousewheel Control ---
       mousewheel: {
         enabled: true,
-        releaseOnEdges: true, // Optional: Releases control if at the beginning/end of slides
+        releaseOnEdges: true,
       },
     });
   </script>
