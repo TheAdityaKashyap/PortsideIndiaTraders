@@ -65,7 +65,8 @@
       border-radius: var(--border-radius);
       box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Subtle shadow */
       padding: 1.5rem;
-      width: 310px; /* Fixed width for each slide */
+      /* Adjust width for slides to fit 3 in view effectively, consider responsiveness */
+      width: 310px; /* Keeping your fixed width, but be mindful for smaller screens */
       position: relative;
       overflow: hidden;
       transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth transition for scale and shadow */
@@ -273,7 +274,9 @@
       effect: 'coverflow', // Coverflow visual effect
       grabCursor: true,    // Change cursor to grab hand
       centeredSlides: true, // Center the active slide
-      slidesPerView: 'auto', // Determine number of slides visible based on slide width
+      
+      // Set to display 3 slides at a time. This is the main change.
+      slidesPerView: 3, 
 
       // This is crucial for effects like coverflow to render correctly,
       // especially when interacting with the slides.
@@ -308,6 +311,15 @@
         enabled: true, // Enable mousewheel navigation
         releaseOnEdges: true, // Release mousewheel control if at the end/start of the carousel
       },
+      // Responsive breakpoints for 'slidesPerView' 
+      breakpoints: {
+        768: {
+          slidesPerView: 2, // 2 slides on tablets
+        },
+        480: {
+          slidesPerView: 1, // 1 slide on mobile
+        }
+      }
     });
   </script>
 </body>
