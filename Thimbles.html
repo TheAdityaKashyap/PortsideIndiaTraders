@@ -236,7 +236,7 @@
       to { opacity: 1; transform: translateY(0); }
     }
     
-    /* Tables */
+    /* Tables - Updated to match the image */
     .spec-table {
       width: 100%;
       border-collapse: collapse;
@@ -250,14 +250,16 @@
     .spec-table th {
       background: #004080;
       color: white;
-      padding: 15px;
-      text-align: left;
+      padding: 12px 15px;
+      text-align: center;
       font-weight: 600;
+      font-size: 0.9rem;
     }
     
     .spec-table td {
-      padding: 12px 15px;
+      padding: 10px 12px;
       border-bottom: 1px solid #e0e0e0;
+      text-align: center;
     }
     
     .spec-table tr:last-child td {
@@ -270,6 +272,20 @@
     
     .spec-table tr:hover {
       background-color: #e3f2fd;
+    }
+    
+    .table-title {
+      text-align: center;
+      color: #004080;
+      margin: 30px 0 10px;
+      font-size: 1.4rem;
+    }
+    
+    .table-subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 25px;
+      font-style: italic;
     }
     
     /* Notes Section */
@@ -703,22 +719,38 @@
       </div>
       
       <div id="standard" class="tab-content active">
+        <h3 class="table-title">Portside India Traders</h3>
+        <p class="table-subtitle">Strength Test Actions | No.1 Models</p>
+        
         <div class="specs-container">
           <div class="table-wrapper">
             <table class="spec-table">
               <thead>
                 <tr>
-                  <th>Rope Dia. (in)</th>
-                  <th>Stock No.</th>
-                  <th>Weight per 100 (lb)</th>
-                  <th>A (in)</th>
-                  <th>B (in)</th>
-                  <th>C (in)</th>
-                  <th>D (in)</th>
-                  <th>E (in)</th>
-                  <th>F (in)</th>
-                  <th>G (in)</th>
-                  <th>H (in)</th>
+                  <th>Range</th>
+                  <th>Stock</th>
+                  <th>Weight</th>
+                  <th>A</th>
+                  <th>B</th>
+                  <th>C</th>
+                  <th>D</th>
+                  <th>E</th>
+                  <th>F</th>
+                  <th>G</th>
+                  <th>H</th>
+                </tr>
+                <tr>
+                  <th>Dia.</th>
+                  <th>No.</th>
+                  <th>per 100 (lb)</th>
+                  <th>(in)</th>
+                  <th>(in)</th>
+                  <th>(in)</th>
+                  <th>(in)</th>
+                  <th>(in)</th>
+                  <th>(in)</th>
+                  <th>(in)</th>
+                  <th>(in)</th>
                 </tr>
               </thead>
               <tbody>
@@ -827,12 +859,14 @@
       </div>
 
       <div id="shackle" class="tab-content">
+        <h3 class="table-title">Shackle-Loc Thimbles</h3>
+        
         <div class="specs-container">
           <div class="table-wrapper">
             <table class="spec-table">
               <thead>
                 <tr>
-                  <th>Rope Dia. (in)</th>
+                  <th>Rope Dia.</th>
                   <th>Stock No.</th>
                   <th>Weight per 100 (lb)</th>
                   <th>A (in)</th>
