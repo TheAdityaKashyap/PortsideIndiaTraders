@@ -331,10 +331,6 @@
       font-size: 1.2rem;
     }
     
-    .contact-info {
-      flex: 1;
-    }
-    
     /* Footer */
     footer {
       background: #333;
@@ -487,6 +483,76 @@
       color: #004080;
       margin-bottom: 15px;
     }
+    
+    /* NEW STYLES: Image and Download Button Improvements */
+    .specs-container {
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    
+    .table-wrapper {
+      flex: 2 1 600px;
+      overflow-x: auto;
+    }
+    
+    .image-download-container {
+      flex: 1 1 250px;
+      min-width: 200px;
+      text-align: center;
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .product-image {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .product-image:hover {
+      transform: scale(1.03);
+    }
+    
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #004080;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+    
+    .download-btn:hover {
+      background: #ff9800;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    }
+    
+    .image-caption {
+      margin-top: 10px;
+      font-style: italic;
+      color: #666;
+      font-size: 0.9rem;
+    }
   </style>
 
   <!-- Google tag (gtag.js) -->
@@ -607,298 +673,310 @@
       </div>
       
       <div id="open" class="tab-content active">
-        <table class="spec-table">
-          <thead>
-            <tr>
-              <th>S-501 Stock No.</th>
-              <th>Rope Size (mm)</th>
-              <th>Weight (kg)</th>
-              <th>A (mm)</th>
-              <th>B (mm)</th>
-              <th>C (mm)</th>
-              <th>D (mm)</th>
-              <th>E (mm)</th>
-              <th>F (mm)</th>
-              <th>H (mm)</th>
-              <th>L (mm)</th>
-              <th>M (mm)</th>
-              <th>N (mm)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1039021</td>
-              <td>6</td>
-              <td>0.24</td>
-              <td>122</td>
-              <td>12.7</td>
-              <td>35.1</td>
-              <td>17.5</td>
-              <td>8.65</td>
-              <td>54.0</td>
-              <td>17.5</td>
-              <td>102</td>
-              <td>9.65</td>
-              <td>38.1</td>
-            </tr>
-            <tr>
-              <td>1039049</td>
-              <td>8</td>
-              <td>0.51</td>
-              <td>159</td>
-              <td>19.6</td>
-              <td>41.1</td>
-              <td>20.6</td>
-              <td>8.65</td>
-              <td>81.0</td>
-              <td>20.6</td>
-              <td>135</td>
-              <td>11.9</td>
-              <td>44.5</td>
-            </tr>
-            <tr>
-              <td>1039067</td>
-              <td>9-10</td>
-              <td>0.59</td>
-              <td>159</td>
-              <td>19.6</td>
-              <td>41.1</td>
-              <td>20.6</td>
-              <td>10.4</td>
-              <td>81.0</td>
-              <td>20.6</td>
-              <td>135</td>
-              <td>11.9</td>
-              <td>44.5</td>
-            </tr>
-            <tr>
-              <td>1039085</td>
-              <td>11-12</td>
-              <td>0.94</td>
-              <td>198</td>
-              <td>24.9</td>
-              <td>51.0</td>
-              <td>25.4</td>
-              <td>12.2</td>
-              <td>108</td>
-              <td>25.4</td>
-              <td>170</td>
-              <td>14.2</td>
-              <td>51.0</td>
-            </tr>
-            <tr>
-              <td>1039101</td>
-              <td>13</td>
-              <td>0.94</td>
-              <td>198</td>
-              <td>24.9</td>
-              <td>51.0</td>
-              <td>25.4</td>
-              <td>14.0</td>
-              <td>108</td>
-              <td>25.4</td>
-              <td>170</td>
-              <td>14.2</td>
-              <td>51.0</td>
-            </tr>
-            <tr>
-              <td>1039129</td>
-              <td>14</td>
-              <td>2.12</td>
-              <td>241</td>
-              <td>31.8</td>
-              <td>60.5</td>
-              <td>30.2</td>
-              <td>15.5</td>
-              <td>135</td>
-              <td>31.8</td>
-              <td>207</td>
-              <td>17.3</td>
-              <td>57.0</td>
-            </tr>
-            <tr>
-              <td>1039147</td>
-              <td>16</td>
-              <td>2.05</td>
-              <td>241</td>
-              <td>31.8</td>
-              <td>60.5</td>
-              <td>30.2</td>
-              <td>17.0</td>
-              <td>135</td>
-              <td>31.8</td>
-              <td>207</td>
-              <td>17.3</td>
-              <td>57.0</td>
-            </tr>
-            <tr>
-              <td>1039165</td>
-              <td>18-20</td>
-              <td>3.62</td>
-              <td>294</td>
-              <td>39.4</td>
-              <td>70.0</td>
-              <td>35.1</td>
-              <td>20.3</td>
-              <td>162</td>
-              <td>38.1</td>
-              <td>254</td>
-              <td>19.8</td>
-              <td>70.0</td>
-            </tr>
-          </tbody>
-        </table>
-        <div style="flex: 1 1 200px; min-width: 180px; text-align: center;">
-            <img src="Crosby501OpenSwageSockets.PNG" alt="Crosby 501 Open Swage Socket" style="max-width: 100%; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.07);">
-            <a href="Crosby501OpenSwageSockets.pdf" download class="download-btn" style="margin-top: 10px;">Download PDF</a>
+        <div class="specs-container">
+          <div class="table-wrapper">
+            <table class="spec-table">
+              <thead>
+                <tr>
+                  <th>S-501 Stock No.</th>
+                  <th>Rope Size (mm)</th>
+                  <th>Weight (kg)</th>
+                  <th>A (mm)</th>
+                  <th>B (mm)</th>
+                  <th>C (mm)</th>
+                  <th>D (mm)</th>
+                  <th>E (mm)</th>
+                  <th>F (mm)</th>
+                  <th>H (mm)</th>
+                  <th>L (mm)</th>
+                  <th>M (mm)</th>
+                  <th>N (mm)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1039021</td>
+                  <td>6</td>
+                  <td>0.24</td>
+                  <td>122</td>
+                  <td>12.7</td>
+                  <td>35.1</td>
+                  <td>17.5</td>
+                  <td>8.65</td>
+                  <td>54.0</td>
+                  <td>17.5</td>
+                  <td>102</td>
+                  <td>9.65</td>
+                  <td>38.1</td>
+                </tr>
+                <tr>
+                  <td>1039049</td>
+                  <td>8</td>
+                  <td>0.51</td>
+                  <td>159</td>
+                  <td>19.6</td>
+                  <td>41.1</td>
+                  <td>20.6</td>
+                  <td>8.65</td>
+                  <td>81.0</td>
+                  <td>20.6</td>
+                  <td>135</td>
+                  <td>11.9</td>
+                  <td>44.5</td>
+                </tr>
+                <tr>
+                  <td>1039067</td>
+                  <td>9-10</td>
+                  <td>0.59</td>
+                  <td>159</td>
+                  <td>19.6</td>
+                  <td>41.1</td>
+                  <td>20.6</td>
+                  <td>10.4</td>
+                  <td>81.0</td>
+                  <td>20.6</td>
+                  <td>135</td>
+                  <td>11.9</td>
+                  <td>44.5</td>
+                </tr>
+                <tr>
+                  <td>1039085</td>
+                  <td>11-12</td>
+                  <td>0.94</td>
+                  <td>198</td>
+                  <td>24.9</td>
+                  <td>51.0</td>
+                  <td>25.4</td>
+                  <td>12.2</td>
+                  <td>108</td>
+                  <td>25.4</td>
+                  <td>170</td>
+                  <td>14.2</td>
+                  <td>51.0</td>
+                </tr>
+                <tr>
+                  <td>1039101</td>
+                  <td>13</td>
+                  <td>0.94</td>
+                  <td>198</td>
+                  <td>24.9</td>
+                  <td>51.0</td>
+                  <td>25.4</td>
+                  <td>14.0</td>
+                  <td>108</td>
+                  <td>25.4</td>
+                  <td>170</td>
+                  <td>14.2</td>
+                  <td>51.0</td>
+                </tr>
+                <tr>
+                  <td>1039129</td>
+                  <td>14</td>
+                  <td>2.12</td>
+                  <td>241</td>
+                  <td>31.8</td>
+                  <td>60.5</td>
+                  <td>30.2</td>
+                  <td>15.5</td>
+                  <td>135</td>
+                  <td>31.8</td>
+                  <td>207</td>
+                  <td>17.3</td>
+                  <td>57.0</td>
+                </tr>
+                <tr>
+                  <td>1039147</td>
+                  <td>16</td>
+                  <td>2.05</td>
+                  <td>241</td>
+                  <td>31.8</td>
+                  <td>60.5</td>
+                  <td>30.2</td>
+                  <td>17.0</td>
+                  <td>135</td>
+                  <td>31.8</td>
+                  <td>207</td>
+                  <td>17.3</td>
+                  <td>57.0</td>
+                </tr>
+                <tr>
+                  <td>1039165</td>
+                  <td>18-20</td>
+                  <td>3.62</td>
+                  <td>294</td>
+                  <td>39.4</td>
+                  <td>70.0</td>
+                  <td>35.1</td>
+                  <td>20.3</td>
+                  <td>162</td>
+                  <td>38.1</td>
+                  <td>254</td>
+                  <td>19.8</td>
+                  <td>70.0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="image-download-container">
+            <img src="Crosby501OpenSwageSockets.PNG" alt="Crosby 501 Open Swage Socket" class="product-image">
+            <p class="image-caption">Open Swage Socket (S-501)</p>
+            <a href="Crosby501OpenSwageSockets.pdf" download class="download-btn">
+              <i class="fas fa-download"></i> Download PDF
+            </a>
           </div>
         </div>
       </div>
-      
+
       <div id="closed" class="tab-content">
-        <table class="spec-table">
-          <thead>
-            <tr>
-              <th>S-502 Stock No.</th>
-              <th>Rope Size (mm)</th>
-              <th>Weight (kg)</th>
-              <th>A (mm)</th>
-              <th>B (mm)</th>
-              <th>C (mm)</th>
-              <th>D (mm)</th>
-              <th>E (mm)</th>
-              <th>F (mm)</th>
-              <th>H (mm)</th>
-              <th>L (mm)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1039325</td>
-              <td>6</td>
-              <td>0.15</td>
-              <td>109</td>
-              <td>12.7</td>
-              <td>35.1</td>
-              <td>19.1</td>
-              <td>6.85</td>
-              <td>54.0</td>
-              <td>12.7</td>
-              <td>89.0</td>
-            </tr>
-            <tr>
-              <td>1039343</td>
-              <td>8</td>
-              <td>0.34</td>
-              <td>138</td>
-              <td>19.6</td>
-              <td>41.1</td>
-              <td>22.4</td>
-              <td>8.65</td>
-              <td>81.0</td>
-              <td>17.0</td>
-              <td>114</td>
-            </tr>
-            <tr>
-              <td>1039361</td>
-              <td>9-10</td>
-              <td>0.33</td>
-              <td>138</td>
-              <td>19.6</td>
-              <td>41.1</td>
-              <td>22.4</td>
-              <td>10.4</td>
-              <td>81.0</td>
-              <td>17.0</td>
-              <td>114</td>
-            </tr>
-            <tr>
-              <td>1039389</td>
-              <td>11-12</td>
-              <td>0.64</td>
-              <td>176</td>
-              <td>24.9</td>
-              <td>51.0</td>
-              <td>26.9</td>
-              <td>12.2</td>
-              <td>108</td>
-              <td>21.8</td>
-              <td>146</td>
-            </tr>
-            <tr>
-              <td>1039405</td>
-              <td>13</td>
-              <td>0.64</td>
-              <td>176</td>
-              <td>24.9</td>
-              <td>51.0</td>
-              <td>26.9</td>
-              <td>14.0</td>
-              <td>108</td>
-              <td>21.8</td>
-              <td>146</td>
-            </tr>
-            <tr>
-              <td>1039423</td>
-              <td>14</td>
-              <td>1.32</td>
-              <td>220</td>
-              <td>31.8</td>
-              <td>60.5</td>
-              <td>31.8</td>
-              <td>15.5</td>
-              <td>135</td>
-              <td>28.7</td>
-              <td>184</td>
-            </tr>
-            <tr>
-              <td>1039441</td>
-              <td>16</td>
-              <td>1.29</td>
-              <td>220</td>
-              <td>31.8</td>
-              <td>60.5</td>
-              <td>31.8</td>
-              <td>17.0</td>
-              <td>135</td>
-              <td>28.7</td>
-              <td>184</td>
-            </tr>
-            <tr>
-              <td>1039469</td>
-              <td>18-20</td>
-              <td>2.27</td>
-              <td>261</td>
-              <td>39.4</td>
-              <td>73.0</td>
-              <td>36.6</td>
-              <td>20.3</td>
-              <td>162</td>
-              <td>33.3</td>
-              <td>219</td>
-            </tr>
-            <tr>
-              <td>1039487</td>
-              <td>22</td>
-              <td>3.08</td>
-              <td>303</td>
-              <td>43.2</td>
-              <td>79.0</td>
-              <td>42.9</td>
-              <td>23.9</td>
-              <td>189</td>
-              <td>38.1</td>
-              <td>257</td>
-            </tr>
-          </tbody>
-        </table>
-        <div style="flex: 1 1 200px; min-width: 180px; text-align: center;">
-            <img src="Crosby502ClosedSwageSockets.PNG" alt="Closed Swage Socket" style="max-width: 100%; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.07);">
-            <a href="Crosby502ClosedSwageSockets.pdf" download class="download-btn" style="margin-top: 10px;">Download PDF</a>
+        <div class="specs-container">
+          <div class="table-wrapper">
+            <table class="spec-table">
+              <thead>
+                <tr>
+                  <th>S-502 Stock No.</th>
+                  <th>Rope Size (mm)</th>
+                  <th>Weight (kg)</th>
+                  <th>A (mm)</th>
+                  <th>B (mm)</th>
+                  <th>C (mm)</th>
+                  <th>D (mm)</th>
+                  <th>E (mm)</th>
+                  <th>F (mm)</th>
+                  <th>H (mm)</th>
+                  <th>L (mm)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1039325</td>
+                  <td>6</td>
+                  <td>0.15</td>
+                  <td>109</td>
+                  <td>12.7</td>
+                  <td>35.1</td>
+                  <td>19.1</td>
+                  <td>6.85</td>
+                  <td>54.0</td>
+                  <td>12.7</td>
+                  <td>89.0</td>
+                </tr>
+                <tr>
+                  <td>1039343</td>
+                  <td>8</td>
+                  <td>0.34</td>
+                  <td>138</td>
+                  <td>19.6</td>
+                  <td>41.1</td>
+                  <td>22.4</td>
+                  <td>8.65</td>
+                  <td>81.0</td>
+                  <td>17.0</td>
+                  <td>114</td>
+                </tr>
+                <tr>
+                  <td>1039361</td>
+                  <td>9-10</td>
+                  <td>0.33</td>
+                  <td>138</td>
+                  <td>19.6</td>
+                  <td>41.1</td>
+                  <td>22.4</td>
+                  <td>10.4</td>
+                  <td>81.0</td>
+                  <td>17.0</td>
+                  <td>114</td>
+                </tr>
+                <tr>
+                  <td>1039389</td>
+                  <td>11-12</td>
+                  <td>0.64</td>
+                  <td>176</td>
+                  <td>24.9</td>
+                  <td>51.0</td>
+                  <td>26.9</td>
+                  <td>12.2</td>
+                  <td>108</td>
+                  <td>21.8</td>
+                  <td>146</td>
+                </tr>
+                <tr>
+                  <td>1039405</td>
+                  <td>13</td>
+                  <td>0.64</td>
+                  <td>176</td>
+                  <td>24.9</td>
+                  <td>51.0</td>
+                  <td>26.9</td>
+                  <td>14.0</td>
+                  <td>108</td>
+                  <td>21.8</td>
+                  <td>146</td>
+                </tr>
+                <tr>
+                  <td>1039423</td>
+                  <td>14</td>
+                  <td>1.32</td>
+                  <td>220</td>
+                  <td>31.8</td>
+                  <td>60.5</td>
+                  <td>31.8</td>
+                  <td>15.5</td>
+                  <td>135</td>
+                  <td>28.7</td>
+                  <td>184</td>
+                </tr>
+                <tr>
+                  <td>1039441</td>
+                  <td>16</td>
+                  <td>1.29</td>
+                  <td>220</td>
+                  <td>31.8</td>
+                  <td>60.5</td>
+                  <td>31.8</td>
+                  <td>17.0</td>
+                  <td>135</td>
+                  <td>28.7</td>
+                  <td>184</td>
+                </tr>
+                <tr>
+                  <td>1039469</td>
+                  <td>18-20</td>
+                  <td>2.27</td>
+                  <td>261</td>
+                  <td>39.4</td>
+                  <td>73.0</td>
+                  <td>36.6</td>
+                  <td>20.3</td>
+                  <td>162</td>
+                  <td>33.3</td>
+                  <td>219</td>
+                </tr>
+                <tr>
+                  <td>1039487</td>
+                  <td>22</td>
+                  <td>3.08</td>
+                  <td>303</td>
+                  <td>43.2</td>
+                  <td>79.0</td>
+                  <td>42.9</td>
+                  <td>23.9</td>
+                  <td>189</td>
+                  <td>38.1</td>
+                  <td>257</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="image-download-container">
+            <img src="Crosby502ClosedSwageSockets.PNG" alt="Closed Swage Socket" class="product-image">
+            <p class="image-caption">Closed Swage Socket (S-502)</p>
+            <a href="Crosby502ClosedSwageSockets.pdf" download class="download-btn">
+              <i class="fas fa-download"></i> Download PDF
+            </a>
           </div>
         </div>
       </div>
-      
+
       <div class="note">
         <h3><i class="fas fa-exclamation-circle"></i> Important Notes</h3>
         <ul>
