@@ -1,1110 +1,1200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portside India Traders - Extra Heavy Wire Rope Thimbles</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* CSS Variables for easy color management */
-        :root {
-            --primary-color: #004080;
-            --accent-color: #ff9800;
-            --secondary-color: #333;
-            --light-bg: #f8f9fa;
-            --white-text: #fff;
-            --shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            --transition: all 0.3s ease;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portside India Traders - Extra Heavy Wire Rope Thimbles</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    body, h1, h2, h3, p, ul, li, a, section, header, footer {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    
+    a {
+      text-decoration: none;
+      color: #004080;
+    }
+    
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+    
+    section {
+      padding: 40px 0;
+    }
+    
+    /* Header & Navigation */
+    header {
+      background-color: #004080; /* Ocean Blue */
+      color: #fff;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo img {
+      height: 50px;
+      margin-right: 15px;
+    }
+    
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .logo-text h1 {
+      font-size: 1.5em;
+      margin: 0;
+      color: white;
+    }
+    
+    .logo-text span {
+      font-size: 0.8em;
+      color: #ff9800;
+      margin-top: 3px;
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    
+    nav ul li {
+      margin-left: 20px;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    
+    nav ul li a:hover {
+      color: #ff9800;
+    }
+    
+    /* Hero Section - Solid Color Background */
+    .hero {
+      background: linear-gradient(135deg, #004080, #002b5c);
+      color: white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 20px;
+    }
+    
+    .hero .content {
+      max-width: 800px;
+    }
+    
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
+    
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 25px;
+      color: white;
+      opacity: 0.9;
+    }
+    
+    .hero .cta {
+      background: #fff;
+      color: #004080;
+      padding: 12px 30px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1.1em;
+      display: inline-block;
+      transition: all 0.3s;
+      margin-top: 20px;
+    }
+    
+    .hero .cta:hover {
+      background: #ff9800;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Section Headings */
+    .section-title {
+      text-align: center;
+      color: #004080;
+      margin-bottom: 30px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .section-title:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: #ff9800;
+    }
+    
+    /* Features Section */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
+    }
+    
+    .feature-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      border-top: 4px solid #004080;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .feature-card i {
+      font-size: 2.5rem;
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    .feature-card h3 {
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    /* Tabs */
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 30px 0;
+      justify-content: center;
+    }
+    
+    .tab-btn {
+      background: #e0e0e0;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+    
+    .tab-btn.active, .tab-btn:hover {
+      background: #004080;
+      color: white;
+    }
+    
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+    
+    .tab-content.active {
+      display: block;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Tables */
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .spec-table th {
+      background: #004080;
+      color: white;
+      padding: 15px;
+      text-align: left;
+      font-weight: 600;
+    }
+    
+    .spec-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .spec-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .spec-table tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+    
+    .spec-table tr:hover {
+      background-color: #e3f2fd;
+    }
+    
+    /* Notes Section */
+    .note {
+      background: #fff8e1;
+      border-left: 4px solid #ff9800;
+      padding: 25px;
+      border-radius: 5px;
+      margin: 30px 0;
+    }
+    
+    .note h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .note ul {
+      padding-left: 20px;
+    }
+    
+    .note li {
+      margin-bottom: 10px;
+    }
+    
+    /* Contact Section */
+    .contact-card {
+      background: white;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .contact-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: #e3f2fd;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      color: #004080;
+      font-size: 1.2rem;
+    }
+    
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 50px 0 20px;
+      margin-top: 50px;
+    }
+    
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+    
+    .footer-column {
+      flex: 1;
+      min-width: 250px;
+      margin-bottom: 30px;
+      padding: 0 15px;
+    }
+    
+    .footer-column h3 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: #ff9800;
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-links a {
+      color: #ddd;
+      transition: color 0.3s;
+    }
+    
+    .footer-links a:hover {
+      color: #ff9800;
+    }
+    
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #444;
+    }
+    
+    /* Product Highlight */
+    .product-highlight {
+      background: #e3f2fd;
+      border-radius: 8px;
+      padding: 30px;
+      margin: 40px 0;
+      text-align: center;
+      border-left: 4px solid #004080;
+    }
+    
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    
+    .highlight-card {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    }
+    
+    .highlight-card i {
+      font-size: 2.5rem;
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      
+      .spec-table {
+        display: block;
+        overflow-x: auto;
+      }
+      
+      header .container {
+        flex-direction: column;
+      }
+      
+      nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      nav ul li {
+        margin: 5px 10px;
+      }
+      
+      .contact-item {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .contact-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+      
+      .footer-content {
+        flex-direction: column;
+      }
+    }
+    
+    /* Application Section */
+    .applications {
+      background-color: #f8f9fa;
+      padding: 40px 0;
+    }
+    
+    .app-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    
+    .app-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+    
+    .app-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .app-icon {
+      font-size: 2.5rem;
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    /* NEW STYLES: Image and Download Button Improvements */
+    .specs-container {
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    
+    .table-wrapper {
+      flex: 2 1 600px;
+      overflow-x: auto;
+    }
+    
+    .image-download-container {
+      flex: 1 1 250px;
+      min-width: 200px;
+      text-align: center;
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .product-image {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .product-image:hover {
+      transform: scale(1.03);
+    }
+    
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #004080;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+    
+    .download-btn:hover {
+      background: #ff9800;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    }
+    
+    .image-caption {
+      margin-top: 10px;
+      font-style: italic;
+      color: #666;
+      font-size: 0.9rem;
+    }
+    
+    /* Specifications Grid */
+    .spec-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+    
+    .spec-card {
+      background: white;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      border-top: 4px solid #004080;
+    }
+    
+    .spec-card h3 {
+      color: #004080;
+      margin-top: 0;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e0e0e0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  </style>
 
-        /* Global Styles */
-        body, h1, h2, h3, p, ul, li, a, section, header, footer {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--secondary-color);
-        }
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HQH77MSRY6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-        body {
-            background-color: var(--light-bg);
-        }
-        
-        a {
-            text-decoration: none;
-            color: var(--primary-color);
-        }
+  gtag('config', 'G-HQH77MSRY6');
+</script>
 
-        ul {
-            list-style: none;
-        }
-        
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px 0;
-        }
-        
-        section {
-            padding: 60px 0; /* Increased padding for better spacing */
-        }
-        
-        /* Header & Navigation */
-        header {
-            background-color: var(--primary-color);
-            color: var(--white-text);
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-        }
-        
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo img {
-            height: 50px;
-            margin-right: 15px;
-        }
-        
-        .logo-text {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .logo-text h1 {
-            font-size: 1.5em;
-            margin: 0;
-            color: var(--white-text);
-        }
-        
-        .logo-text span {
-            font-size: 0.8em;
-            color: var(--accent-color);
-            margin-top: 3px;
-        }
-        
-        nav ul {
-            display: flex;
-        }
-        
-        nav ul li {
-            margin-left: 20px;
-        }
-        
-        nav ul li a {
-            color: var(--white-text);
-            font-weight: 600;
-            transition: var(--transition);
-        }
-        
-        nav ul li a:hover {
-            color: var(--accent-color);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--primary-color), #002b5c);
-            color: var(--white-text);
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 100px 20px;
-        }
-        
-        .hero .content {
-            max-width: 800px;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 15px;
-            color: var(--white-text);
-        }
-        
-        .hero p {
-            font-size: 1.2em;
-            margin-bottom: 25px;
-            color: var(--white-text);
-            opacity: 0.9;
-        }
-        
-        .hero .cta {
-            background: var(--white-text);
-            color: var(--primary-color);
-            padding: 14px 32px;
-            border-radius: 5px;
-            font-weight: 700;
-            font-size: 1.1em;
-            display: inline-block;
-            transition: var(--transition);
-            margin-top: 20px;
-        }
-        
-        .hero .cta:hover {
-            background: var(--accent-color);
-            color: var(--white-text);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        /* Section Headings */
-        .section-title {
-            text-align: center;
-            color: var(--primary-color);
-            margin-bottom: 50px;
-            position: relative;
-        }
-        
-        .section-title h2 {
-            font-size: 2.5rem;
-            font-weight: 600;
-        }
-
-        .section-title:after {
-            content: "";
-            position: absolute;
-            bottom: -15px; /* Adjusted for better spacing */
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--accent-color);
-        }
-        
-        /* Features Section */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px; /* Increased gap */
-            margin-top: 40px;
-        }
-        
-        .feature-card {
-            background: var(--white-text);
-            border-radius: 8px;
-            padding: 30px; /* Increased padding */
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            text-align: center;
-            border-top: 4px solid var(--primary-color);
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-        }
-        
-        .feature-card i {
-            font-size: 3rem; /* Increased icon size */
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-        
-        .feature-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        .feature-card p {
-            font-size: 0.95rem;
-        }
-        
-        /* Tabs */
-        .tabs {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px; /* Increased gap */
-            margin: 30px 0;
-            justify-content: center;
-        }
-        
-        .tab-btn {
-            background: #e0e0e0;
-            border: none;
-            padding: 12px 28px;
-            border-radius: 30px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            font-size: 1rem;
-        }
-        
-        .tab-btn.active, .tab-btn:hover {
-            background: var(--primary-color);
-            color: var(--white-text);
-        }
-        
-        .tab-content {
-            display: none;
-            animation: fadeIn 0.5s ease;
-        }
-        
-        .tab-content.active {
-            display: block;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        /* Tables */
-        .product-table, .application-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            background: var(--white-text);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-        }
-        
-        .product-table th, .application-table th {
-            background: var(--primary-color);
-            color: var(--white-text);
-            padding: 15px;
-            text-align: left;
-            font-weight: 600;
-        }
-        
-        .product-table td, .application-table td {
-            padding: 12px 15px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        .product-table tr:last-child td, .application-table tr:last-child td {
-            border-bottom: none;
-        }
-        
-        .product-table tr:nth-child(even), .application-table tr:nth-child(even) {
-            background-color: #f8f9fa;
-        }
-        
-        .product-table tr:hover, .application-table tr:hover {
-            background-color: #e3f2fd;
-        }
-        
-        /* Note Section */
-        .note {
-            background: #fff8e1;
-            border-left: 4px solid var(--accent-color);
-            padding: 25px;
-            border-radius: 5px;
-            margin: 40px 0;
-        }
-        
-        .note h3 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 600;
-        }
-        
-        .note ul {
-            padding-left: 20px;
-        }
-        
-        .note li {
-            margin-bottom: 10px;
-        }
-        
-        /* Contact Section */
-        .contact-card {
-            background: var(--white-text);
-            border-radius: 8px;
-            padding: 30px;
-            box-shadow: var(--shadow);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 25px; /* Increased margin */
-            padding-bottom: 25px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .contact-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-        
-        .contact-icon {
-            width: 60px; /* Increased size */
-            height: 60px; /* Increased size */
-            background: #e3f2fd;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 25px; /* Increased margin */
-            color: var(--primary-color);
-            font-size: 1.5rem; /* Increased icon size */
-        }
-        
-        .contact-info {
-            flex: 1;
-        }
-        
-        .spec-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-        }
-        
-        .spec-card {
-            background: var(--white-text);
-            border-radius: 8px;
-            padding: 25px;
-            box-shadow: var(--shadow);
-            border-top: 4px solid var(--primary-color);
-        }
-        
-        .spec-card h3 {
-            color: var(--primary-color);
-            margin-top: 0;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--secondary-color);
-            color: var(--white-text);
-            padding: 50px 0 20px;
-            margin-top: 50px;
-        }
-        
-        .footer-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-bottom: 30px;
-        }
-        
-        .footer-column {
-            flex: 1;
-            min-width: 250px;
-            margin-bottom: 30px;
-            padding: 0 15px;
-        }
-        
-        .footer-column h3 {
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            color: var(--accent-color);
-        }
-        
-        .footer-links {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-links a {
-            color: #ddd;
-            transition: var(--transition);
-        }
-        
-        .footer-links a:hover {
-            color: var(--accent-color);
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #444;
-            color: #ccc;
-        }
-        
-        /* Responsive Design */
-        @media screen and (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .product-table, .application-table {
-                display: block;
-                overflow-x: auto;
-            }
-            
-            header .container {
-                flex-direction: column;
-            }
-            
-            nav ul {
-                margin-top: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            nav ul li {
-                margin: 5px 10px;
-            }
-            
-            .contact-item {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .contact-icon {
-                margin-right: 0;
-                margin-bottom: 15px;
-            }
-            
-            .footer-content {
-                flex-direction: column;
-            }
-        }
-        
-        /* Product Image and Download button */
-        .product-media {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin: 40px 0;
-        }
-        
-        .image-card {
-            text-align: center;
-            padding: 20px;
-            background: var(--white-text);
-            border-radius: 12px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-
-        .image-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
-        
-        .image-card img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-        }
-        
-        .image-card .download-btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background: var(--primary-color);
-            color: var(--white-text);
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 500;
-            font-size: 14px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-            transition: background 0.3s ease;
-        }
-
-        .image-card .download-btn:hover {
-            background: var(--accent-color);
-        }
-    </style>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HQH77MSRY6"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-HQH77MSRY6');
-    </script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="Images/FinalLogo.png" alt="Portside India Traders Logo">
-                <div class="logo-text">
-                    <h1>Portside India Traders</h1>
-                    <span>Strength that Anchors Your Success</span>
-                </div>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="Product1.html">Products</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="Images/FinalLogo.png" alt="Portside India Traders Logo">
+        <div class="logo-text">
+          <h1>Portside India Traders</h1>
+          <span>Strength that Anchors Your Success</span>
         </div>
-    </header>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="Product1.html">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <section class="hero" id="home">
-        <div class="content">
-            <h1>Extra Heavy Wire Rope Thimbles</h1>
-            <p>Premium protection for wire rope eyes, engineered for maximum strength and durability.</p>
-            <a href="#contact" class="cta">Request Product Info</a>
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="content">
+      <h1 style="color: white;">Extra Heavy Wire Rope Thimbles</h1>
+      <p>Premium protection for wire rope eyes, engineered for maximum strength and durability.</p>
+      <a href="#contact" class="cta">Request Product Info</a>
+    </div>
+  </section>
+
+  <!-- Product Overview -->
+  <section id="overview">
+    <div class="container">
+      <h2 class="section-title">Thimbles Overview</h2>
+      <p>Our Extra Heavy Wire Rope Thimbles are precision-engineered from high-grade forged steel, offering superior protection and reliability for wire rope eyes. Designed with safety as the top priority, these thimbles undergo rigorous testing to exceed industry standards and ensure maximum performance.</p>
+      
+      <div class="features">
+        <div class="feature-card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Maximum Protection</h3>
+          <p>Protects wire rope eyes from crushing, abrasion, and deformation.</p>
         </div>
-    </section>
-
-    <section id="benefits">
-        <div class="container">
-            <div class="section-title">
-                <h2>Key Benefits</h2>
-            </div>
-            <div class="features">
-                <div class="feature-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Maximum Protection</h3>
-                    <p>Protects wire rope eyes from crushing, abrasion, and deformation.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-weight-hanging"></i>
-                    <h3>Heavy-Duty Construction</h3>
-                    <p>Manufactured from high-grade steel to withstand extreme loads.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-ruler-combined"></i>
-                    <h3>Precise Dimensions</h3>
-                    <p>Engineered to exact specifications for a perfect fit.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-anchor"></i>
-                    <h3>Corrosion Resistance</h3>
-                    <p>Special coatings protect against saltwater corrosion.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-clock"></i>
-                    <h3>Extended Service Life</h3>
-                    <p>Significantly increases the lifespan of your wire ropes.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-certificate"></i>
-                    <h3>Quality Certified</h3>
-                    <p>Manufactured to international quality standards.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-cogs"></i>
-                    <h3>Easy Installation</h3>
-                    <p>Designed for quick and simple installation.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-globe"></i>
-                    <h3>Global Standards</h3>
-                    <p>Compliant with maritime and industrial regulations.</p>
-                </div>
-            </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-weight-hanging"></i>
+          <h3>Heavy-Duty Construction</h3>
+          <p>Manufactured from high-grade steel to withstand extreme loads.</p>
         </div>
-    </section>
-
-    <section id="product-line" style="background-color: var(--light-bg);">
-        <div class="container">
-            <div class="section-title">
-                <h2>Product Line Overview</h2>
-            </div>
-            
-            <div class="tabs">
-                <button class="tab-btn active" data-tab="standard">Standard Thimbles</button>
-                <button class="tab-btn" data-tab="shackle">Shackle-Loc Thimbles</button>
-            </div>
-            
-            <div id="standard" class="tab-content active">
-                <table class="product-table">
-                    <thead>
-                        <tr>
-                            <th>Rope Dia. (in)</th>
-                            <th>Stock No.</th>
-                            <th>Weight per 100 (lb)</th>
-                            <th>A (in)</th>
-                            <th>B (in)</th>
-                            <th>C (in)</th>
-                            <th>D (in)</th>
-                            <th>E (in)</th>
-                            <th>F (in)</th>
-                            <th>G (in)</th>
-                            <th>H (in)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1/4</td>
-                            <td>1037639</td>
-                            <td>7</td>
-                            <td>2.19</td>
-                            <td>1.62</td>
-                            <td>1.50</td>
-                            <td>0.88</td>
-                            <td>0.41</td>
-                            <td>0.28</td>
-                            <td>0.06</td>
-                            <td>0.25</td>
-                        </tr>
-                        <tr>
-                            <td>5/16</td>
-                            <td>1037657</td>
-                            <td>14</td>
-                            <td>2.50</td>
-                            <td>1.68</td>
-                            <td>1.81</td>
-                            <td>1.06</td>
-                            <td>0.50</td>
-                            <td>0.34</td>
-                            <td>0.08</td>
-                            <td>0.30</td>
-                        </tr>
-                        <tr>
-                            <td>3/8</td>
-                            <td>1037675</td>
-                            <td>23</td>
-                            <td>2.88</td>
-                            <td>2.12</td>
-                            <td>2.12</td>
-                            <td>1.12</td>
-                            <td>0.63</td>
-                            <td>0.41</td>
-                            <td>0.11</td>
-                            <td>0.39</td>
-                        </tr>
-                        <tr>
-                            <td>7/16</td>
-                            <td>1037683</td>
-                            <td>37</td>
-                            <td>3.25</td>
-                            <td>2.38</td>
-                            <td>2.38</td>
-                            <td>1.25</td>
-                            <td>0.72</td>
-                            <td>0.47</td>
-                            <td>0.12</td>
-                            <td>0.45</td>
-                        </tr>
-                        <tr>
-                            <td>1/2 - 9/16</td>
-                            <td>1037719</td>
-                            <td>50</td>
-                            <td>3.62</td>
-                            <td>2.75</td>
-                            <td>2.75</td>
-                            <td>1.50</td>
-                            <td>0.89</td>
-                            <td>0.59</td>
-                            <td>0.15</td>
-                            <td>0.48</td>
-                        </tr>
-                        <tr>
-                            <td>5/8</td>
-                            <td>1037755</td>
-                            <td>82</td>
-                            <td>4.25</td>
-                            <td>3.25</td>
-                            <td>3.12</td>
-                            <td>1.75</td>
-                            <td>1.00</td>
-                            <td>0.66</td>
-                            <td>0.16</td>
-                            <td>0.53</td>
-                        </tr>
-                        <tr>
-                            <td>3/4</td>
-                            <td>1037773</td>
-                            <td>157</td>
-                            <td>5.00</td>
-                            <td>3.75</td>
-                            <td>3.81</td>
-                            <td>2.00</td>
-                            <td>1.22</td>
-                            <td>0.79</td>
-                            <td>0.22</td>
-                            <td>0.69</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="product-media">
-                    <div class="image-card">
-                        <img src="CrosbyG414WireRopeThimbles.PNG" alt="Crosby G414 Wire Rope Thimbles" />
-                        <a href="CrosbyG414WireRopeThimbles and Shackle-Loc.pdf" download class="download-btn">
-                            📄 Download PDF
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="shackle" class="tab-content">
-                <table class="product-table">
-                    <thead>
-                        <tr>
-                            <th>Rope Dia. (in)</th>
-                            <th>Stock No.</th>
-                            <th>Weight per 100 (lb)</th>
-                            <th>A (in)</th>
-                            <th>B (in)</th>
-                            <th>C (in)</th>
-                            <th>D (in)</th>
-                            <th>E (in)</th>
-                            <th>F (in)</th>
-                            <th>G (in)</th>
-                            <th>H (in)</th>
-                            <th>J (in)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>3/8</td>
-                            <td>1036800</td>
-                            <td>24</td>
-                            <td>2.18</td>
-                            <td>2.12</td>
-                            <td>2.12</td>
-                            <td>1.12</td>
-                            <td>0.63</td>
-                            <td>0.41</td>
-                            <td>0.11</td>
-                            <td>0.39</td>
-                            <td>0.81</td>
-                        </tr>
-                        <tr>
-                            <td>1/2 - 9/16</td>
-                            <td>1036808</td>
-                            <td>55</td>
-                            <td>3.62</td>
-                            <td>2.75</td>
-                            <td>2.75</td>
-                            <td>1.50</td>
-                            <td>0.89</td>
-                            <td>0.59</td>
-                            <td>0.15</td>
-                            <td>0.48</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>5/8</td>
-                            <td>1036817</td>
-                            <td>82</td>
-                            <td>4.25</td>
-                            <td>3.25</td>
-                            <td>3.12</td>
-                            <td>1.75</td>
-                            <td>1.00</td>
-                            <td>0.66</td>
-                            <td>0.16</td>
-                            <td>0.53</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>3/4</td>
-                            <td>1036826</td>
-                            <td>161</td>
-                            <td>5.00</td>
-                            <td>3.75</td>
-                            <td>3.81</td>
-                            <td>2.00</td>
-                            <td>1.22</td>
-                            <td>0.78</td>
-                            <td>0.22</td>
-                            <td>0.69</td>
-                            <td>0.50</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="product-media">
-                    <div class="image-card">
-                        <img src="CrosbyShackle-LocWireRopeThimbles.PNG" alt="Crosby Shackle-Loc Wire Rope Thimbles" />
-                        <a href="CrosbyShackle-LocWireRopeThimbles.pdf" download class="download-btn">
-                            📄 Download PDF
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="note">
-                <h3><i class="fas fa-exclamation-triangle"></i> Important Note</h3>
-                <p>All thimbles are forged from high-grade steel for maximum strength. Inspect thimbles regularly for signs of wear, deformation, or corrosion.</p>
-            </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-ruler-combined"></i>
+          <h3>Precise Dimensions</h3>
+          <p>Engineered to exact specifications for a perfect fit.</p>
         </div>
-    </section>
-
-    <section id="dimensions">
-        <div class="container">
-            <div class="section-title">
-                <h2>Dimension Guide</h2>
-            </div>
-            <div class="spec-grid">
-                <div class="spec-card">
-                    <h3><i class="fas fa-ruler"></i> Dimension Definitions</h3>
-                    <ul>
-                        <li><strong>A</strong> - Overall Length</li>
-                        <li><strong>B</strong> - Inside Width</li>
-                        <li><strong>C</strong> - Rope Groove Width</li>
-                        <li><strong>D</strong> - Throat Opening</li>
-                        <li><strong>E</strong> - Pin Hole Diameter</li>
-                        <li><strong>F</strong> - Groove Depth</li>
-                        <li><strong>G</strong> - Groove Radius</li>
-                        <li><strong>H</strong> - Thickness</li>
-                        <li><strong>J</strong> - Shackle Compatibility (SL series)</li>
-                    </ul>
-                </div>
-                
-                <div class="spec-card">
-                    <h3><i class="fas fa-info-circle"></i> Selection Tips</h3>
-                    <ul>
-                        <li>Match thimble size to wire rope diameter.</li>
-                        <li>For heavy loads, consider one size larger.</li>
-                        <li>Shackle-Loc models provide direct connection.</li>
-                        <li>Inspect for proper seating during installation.</li>
-                        <li>Replace when groove depth reduces by 10%.</li>
-                    </ul>
-                </div>
-            </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-anchor"></i>
+          <h3>Corrosion Resistance</h3>
+          <p>Special coatings protect against saltwater corrosion.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="applications" style="background-color: var(--light-bg);">
-        <div class="container">
-            <div class="section-title">
-                <h2>Industry Applications</h2>
-            </div>
-            
-            <div class="features">
-                <div class="feature-card">
-                    <i class="fas fa-ship"></i>
-                    <h3>Marine & Offshore</h3>
-                    <p>Mooring systems, ship rigging, and offshore installations.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <i class="fas fa-crane"></i>
-                    <h3>Construction</h3>
-                    <p>Crane operations, suspension bridges, and cable systems.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <i class="fas fa-industry"></i>
-                    <h3>Industrial</h3>
-                    <p>Material handling, conveyor systems, and heavy machinery.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <i class="fas fa-mountain"></i>
-                    <h3>Mining</h3>
-                    <p>Hoisting systems, draglines, and equipment lifting.</p>
-                </div>
-            </div>
+  <!-- Product Highlights -->
+  <section style="background-color: #f8f9fa;">
+    <div class="container">
+      <div class="product-highlight">
+        <h2><i class="fas fa-certificate"></i> Quality Assurance</h2>
+        <p>All thimbles undergo rigorous testing and quality control to ensure maximum safety and performance</p>
+        
+        <div class="highlight-grid">
+          <div class="highlight-card">
+            <i class="fas fa-hammer"></i>
+            <h3>Forged Construction</h3>
+            <p>Manufactured from high-grade forged steel for superior strength</p>
+          </div>
+          
+          <div class="highlight-card">
+            <i class="fas fa-clock"></i>
+            <h3>Extended Service Life</h3>
+            <p>Significantly increases the lifespan of your wire ropes</p>
+          </div>
+          
+          <div class="highlight-card">
+            <i class="fas fa-globe"></i>
+            <h3>Global Standards</h3>
+            <p>Compliant with maritime and industrial regulations</p>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="specs">
-        <div class="container">
-            <div class="section-title">
-                <h2>Technical Specifications</h2>
-            </div>
-            
-            <div class="spec-grid">
-                <div class="spec-card">
-                    <h3><i class="fas fa-cog"></i> Material Specifications</h3>
-                    <ul>
-                        <li><strong>Material:</strong> High-carbon steel</li>
-                        <li><strong>Finish:</strong> Electro-galvanized</li>
-                        <li><strong>Tensile Strength:</strong> 1000-1200 MPa</li>
-                        <li><strong>Corrosion Resistance:</strong> Salt spray 500+ hours</li>
-                        <li><strong>Temperature Range:</strong> -40°C to 120°C</li>
-                    </ul>
-                </div>
-                
-                <div class="spec-card">
-                    <h3><i class="fas fa-certificate"></i> Compliance & Standards</h3>
-                    <ul>
-                        <li>ASME B30.26 Rigging Hardware</li>
-                        <li>EN 13411-4:2011 Terminations</li>
-                        <li>DNVGL-OS-E304 Offshore Standard</li>
-                        <li>ISO 9001:2015 Quality Management</li>
-                        <li>OSHA 1926.251 Rigging Equipment</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <h3 style="text-align: center; margin: 40px 0 20px; color: var(--primary-color);">Load Capacity Guide</h3>
-            
-            <table class="application-table">
-                <thead>
-                    <tr>
-                        <th>Rope Dia. (in)</th>
-                        <th>WLL (tons)</th>
-                        <th>Breaking Strength (tons)</th>
-                        <th>Thimble Type</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1/4</td>
-                        <td>0.5</td>
-                        <td>2.0</td>
-                        <td>Standard</td>
-                    </tr>
-                    <tr>
-                        <td>3/8</td>
-                        <td>1.2</td>
-                        <td>4.8</td>
-                        <td>Standard</td>
-                    </tr>
-                    <tr>
-                        <td>1/2</td>
-                        <td>2.0</td>
-                        <td>8.0</td>
-                        <td>Standard</td>
-                    </tr>
-                    <tr>
-                        <td>5/8</td>
-                        <td>3.2</td>
-                        <td>12.8</td>
-                        <td>Shackle-Loc</td>
-                    </tr>
-                    <tr>
-                        <td>3/4</td>
-                        <td>4.5</td>
-                        <td>18.0</td>
-                        <td>Shackle-Loc</td>
-                    </tr>
-                </tbody>
+  <!-- Specifications Section -->
+  <section id="specs">
+    <div class="container">
+      <h2 class="section-title">Technical Specifications</h2>
+      <p>Our Crosby G414 Standard Thimbles and Shackle-Loc Thimbles are designed for maximum strength and reliability.</p>
+      
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="standard">Standard Thimbles</button>
+        <button class="tab-btn" data-tab="shackle">Shackle-Loc Thimbles</button>
+      </div>
+      
+      <div id="standard" class="tab-content active">
+        <div class="specs-container">
+          <div class="table-wrapper">
+            <table class="spec-table">
+              <thead>
+                <tr>
+                  <th>Rope Dia. (in)</th>
+                  <th>Stock No.</th>
+                  <th>Weight per 100 (lb)</th>
+                  <th>A (in)</th>
+                  <th>B (in)</th>
+                  <th>C (in)</th>
+                  <th>D (in)</th>
+                  <th>E (in)</th>
+                  <th>F (in)</th>
+                  <th>G (in)</th>
+                  <th>H (in)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1/4</td>
+                  <td>1037639</td>
+                  <td>7</td>
+                  <td>2.19</td>
+                  <td>1.62</td>
+                  <td>1.50</td>
+                  <td>0.88</td>
+                  <td>0.41</td>
+                  <td>0.28</td>
+                  <td>0.06</td>
+                  <td>0.25</td>
+                </tr>
+                <tr>
+                  <td>5/16</td>
+                  <td>1037657</td>
+                  <td>14</td>
+                  <td>2.50</td>
+                  <td>1.68</td>
+                  <td>1.81</td>
+                  <td>1.06</td>
+                  <td>0.50</td>
+                  <td>0.34</td>
+                  <td>0.08</td>
+                  <td>0.30</td>
+                </tr>
+                <tr>
+                  <td>3/8</td>
+                  <td>1037675</td>
+                  <td>23</td>
+                  <td>2.88</td>
+                  <td>2.12</td>
+                  <td>2.12</td>
+                  <td>1.12</td>
+                  <td>0.63</td>
+                  <td>0.41</td>
+                  <td>0.11</td>
+                  <td>0.39</td>
+                </tr>
+                <tr>
+                  <td>7/16</td>
+                  <td>1037683</td>
+                  <td>37</td>
+                  <td>3.25</td>
+                  <td>2.38</td>
+                  <td>2.38</td>
+                  <td>1.25</td>
+                  <td>0.72</td>
+                  <td>0.47</td>
+                  <td>0.12</td>
+                  <td>0.45</td>
+                </tr>
+                <tr>
+                  <td>1/2 - 9/16</td>
+                  <td>1037719</td>
+                  <td>50</td>
+                  <td>3.62</td>
+                  <td>2.75</td>
+                  <td>2.75</td>
+                  <td>1.50</td>
+                  <td>0.89</td>
+                  <td>0.59</td>
+                  <td>0.15</td>
+                  <td>0.48</td>
+                </tr>
+                <tr>
+                  <td>5/8</td>
+                  <td>1037755</td>
+                  <td>82</td>
+                  <td>4.25</td>
+                  <td>3.25</td>
+                  <td>3.12</td>
+                  <td>1.75</td>
+                  <td>1.00</td>
+                  <td>0.66</td>
+                  <td>0.16</td>
+                  <td>0.53</td>
+                </tr>
+                <tr>
+                  <td>3/4</td>
+                  <td>1037773</td>
+                  <td>157</td>
+                  <td>5.00</td>
+                  <td>3.75</td>
+                  <td>3.81</td>
+                  <td>2.00</td>
+                  <td>1.22</td>
+                  <td>0.79</td>
+                  <td>0.22</td>
+                  <td>0.69</td>
+                </tr>
+              </tbody>
             </table>
+          </div>
+          <div class="image-download-container">
+            <img src="CrosbyG414WireRopeThimbles.PNG" alt="Crosby G414 Wire Rope Thimbles" class="product-image">
+            <p class="image-caption">Standard Wire Rope Thimbles</p>
+            <a href="CrosbyG414WireRopeThimbles and Shackle-Loc.pdf" download class="download-btn">
+              <i class="fas fa-download"></i> Download PDF
+            </a>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <section id="contact" style="background-color: var(--light-bg);">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contact Us</h2>
-            </div>
-            <div class="contact-card">
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div class="contact-info">
-                        <h3>Email</h3>
-                        <p><a href="mailto:sales@portsideindia.com">sales@portsideindia.com</a></p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <div class="contact-info">
-                        <h3>Phone</h3>
-                        <p>Phone: <a href="https://wa.me/919307104214" target="_blank">+91 93071 04214</a></p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <div class="contact-info">
-                        <h3>Address</h3>
-                        <p>I-WING GURUPREM SOCIETY KATRAP, BADALPUR, MUMBAI SUBURBS, 421503</p>
-                    </div>
-                </div>
-            </div>
+      <div id="shackle" class="tab-content">
+        <div class="specs-container">
+          <div class="table-wrapper">
+            <table class="spec-table">
+              <thead>
+                <tr>
+                  <th>Rope Dia. (in)</th>
+                  <th>Stock No.</th>
+                  <th>Weight per 100 (lb)</th>
+                  <th>A (in)</th>
+                  <th>B (in)</th>
+                  <th>C (in)</th>
+                  <th>D (in)</th>
+                  <th>E (in)</th>
+                  <th>F (in)</th>
+                  <th>G (in)</th>
+                  <th>H (in)</th>
+                  <th>J (in)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>3/8</td>
+                  <td>1036800</td>
+                  <td>24</td>
+                  <td>2.18</td>
+                  <td>2.12</td>
+                  <td>2.12</td>
+                  <td>1.12</td>
+                  <td>0.63</td>
+                  <td>0.41</td>
+                  <td>0.11</td>
+                  <td>0.39</td>
+                  <td>0.81</td>
+                </tr>
+                <tr>
+                  <td>1/2 - 9/16</td>
+                  <td>1036808</td>
+                  <td>55</td>
+                  <td>3.62</td>
+                  <td>2.75</td>
+                  <td>2.75</td>
+                  <td>1.50</td>
+                  <td>0.89</td>
+                  <td>0.59</td>
+                  <td>0.15</td>
+                  <td>0.48</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>5/8</td>
+                  <td>1036817</td>
+                  <td>82</td>
+                  <td>4.25</td>
+                  <td>3.25</td>
+                  <td>3.12</td>
+                  <td>1.75</td>
+                  <td>1.00</td>
+                  <td>0.66</td>
+                  <td>0.16</td>
+                  <td>0.53</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>3/4</td>
+                  <td>1036826</td>
+                  <td>161</td>
+                  <td>5.00</td>
+                  <td>3.75</td>
+                  <td>3.81</td>
+                  <td>2.00</td>
+                  <td>1.22</td>
+                  <td>0.78</td>
+                  <td>0.22</td>
+                  <td>0.69</td>
+                  <td>0.50</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="image-download-container">
+            <img src="CrosbyShackle-LocWireRopeThimbles.PNG" alt="Crosby Shackle-Loc Wire Rope Thimbles" class="product-image">
+            <p class="image-caption">Shackle-Loc Wire Rope Thimbles</p>
+            <a href="CrosbyShackle-LocWireRopeThimbles.pdf" download class="download-btn">
+              <i class="fas fa-download"></i> Download PDF
+            </a>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>Portside India Traders</h3>
-                    <p>Providing premium maritime lifting equipment engineered for safety and reliability since our founding.</p>
-                </div>
-                <div class="footer-column">
-                    <h3>Wire Rope Products</h3>
-                    <ul class="footer-links">
-                        <li><a href="WireLockKits.html">Wire Lock Kits</a></li>
-                        <li><a href="VitaLife.html">Vitalife Kits</a></li>
-                        <li><a href="CrossbyClipsAndSockets.html">Wire Rope Clips &amp; Sockets</a></li>
-                        <li><a href="CrossbyOpenAndClosedSpelterSockets.html">Open/Closed Spelter Sockets</a></li>
-                        <li><a href="CrossbyOpenAndClosedSwageSockets.html">Open/Closed Swage Sockets</a></li>
-                        <li><a href="Thimbles.html">Thimbles</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="Product1.html">All Products</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Certifications</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">EN13411-4:2002 Certified</a></li>
-                        <li><a href="#">ASMEB30.9 Compliant</a></li>
-                        <li><a href="#">OSHA Approved</a></li>
-                        <li><a href="#">ISO Quality Standards</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Portside India Traders. All Rights Reserved.</p>
-            </div>
+      <div class="note">
+        <h3><i class="fas fa-exclamation-circle"></i> Important Notes</h3>
+        <ul>
+          <li>All thimbles are forged from high-grade steel for maximum strength</li>
+          <li>Inspect thimbles regularly for signs of wear, deformation, or corrosion</li>
+          <li>Match thimble size to wire rope diameter for optimal performance</li>
+          <li>For heavy loads, consider one size larger thimble</li>
+          <li>Replace when groove depth reduces by 10%</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dimension Guide -->
+  <section style="background-color: #f8f9fa;">
+    <div class="container">
+      <h2 class="section-title">Dimension Guide</h2>
+      <div class="spec-grid">
+        <div class="spec-card">
+          <h3><i class="fas fa-ruler"></i> Dimension Definitions</h3>
+          <ul>
+            <li><strong>A</strong> - Overall Length</li>
+            <li><strong>B</strong> - Inside Width</li>
+            <li><strong>C</strong> - Rope Groove Width</li>
+            <li><strong>D</strong> - Throat Opening</li>
+            <li><strong>E</strong> - Pin Hole Diameter</li>
+            <li><strong>F</strong> - Groove Depth</li>
+            <li><strong>G</strong> - Groove Radius</li>
+            <li><strong>H</strong> - Thickness</li>
+            <li><strong>J</strong> - Shackle Compatibility (SL series)</li>
+          </ul>
         </div>
-    </footer>
+        
+        <div class="spec-card">
+          <h3><i class="fas fa-info-circle"></i> Selection Tips</h3>
+          <ul>
+            <li>Match thimble size to wire rope diameter</li>
+            <li>For heavy loads, consider one size larger</li>
+            <li>Shackle-Loc models provide direct connection</li>
+            <li>Inspect for proper seating during installation</li>
+            <li>Replace when groove depth reduces by 10%</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Tab functionality
-            const tabBtns = document.querySelectorAll('.tab-btn');
-            
-            tabBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    tabBtns.forEach(b => b.classList.remove('active'));
-                    document.querySelectorAll('.tab-content').forEach(content => {
-                        content.classList.remove('active');
-                    });
-                    
-                    btn.classList.add('active');
-                    
-                    const tabId = btn.getAttribute('data-tab');
-                    document.getElementById(tabId).classList.add('active');
-                });
-            });
-            
-            // Smooth scrolling for navigation
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        window.scrollTo({
-                            top: target.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
+  <!-- Technical Specifications -->
+  <section id="tech-specs">
+    <div class="container">
+      <h2 class="section-title">Technical Specifications</h2>
+      
+      <div class="spec-grid">
+        <div class="spec-card">
+          <h3><i class="fas fa-cog"></i> Material Specifications</h3>
+          <ul>
+            <li><strong>Material:</strong> High-carbon steel</li>
+            <li><strong>Finish:</strong> Electro-galvanized</li>
+            <li><strong>Tensile Strength:</strong> 1000-1200 MPa</li>
+            <li><strong>Corrosion Resistance:</strong> Salt spray 500+ hours</li>
+            <li><strong>Temperature Range:</strong> -40°C to 120°C</li>
+          </ul>
+        </div>
+        
+        <div class="spec-card">
+          <h3><i class="fas fa-certificate"></i> Compliance & Standards</h3>
+          <ul>
+            <li>ASME B30.26 Rigging Hardware</li>
+            <li>EN 13411-4:2011 Terminations</li>
+            <li>DNVGL-OS-E304 Offshore Standard</li>
+            <li>ISO 9001:2015 Quality Management</li>
+            <li>OSHA 1926.251 Rigging Equipment</li>
+          </ul>
+        </div>
+      </div>
+      
+      <h3 style="text-align: center; margin: 40px 0 20px; color: #004080;">Load Capacity Guide</h3>
+      
+      <table class="spec-table">
+        <thead>
+          <tr>
+            <th>Rope Dia. (in)</th>
+            <th>WLL (tons)</th>
+            <th>Breaking Strength (tons)</th>
+            <th>Thimble Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1/4</td>
+            <td>0.5</td>
+            <td>2.0</td>
+            <td>Standard</td>
+          </tr>
+          <tr>
+            <td>3/8</td>
+            <td>1.2</td>
+            <td>4.8</td>
+            <td>Standard</td>
+          </tr>
+          <tr>
+            <td>1/2</td>
+            <td>2.0</td>
+            <td>8.0</td>
+            <td>Standard</td>
+          </tr>
+          <tr>
+            <td>5/8</td>
+            <td>3.2</td>
+            <td>12.8</td>
+            <td>Shackle-Loc</td>
+          </tr>
+          <tr>
+            <td>3/4</td>
+            <td>4.5</td>
+            <td>18.0</td>
+            <td>Shackle-Loc</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Applications Section -->
+  <section class="applications">
+    <div class="container">
+      <h2 class="section-title">Industry Applications</h2>
+      <p>Thimbles are essential components in various industries requiring wire rope protection and reinforcement</p>
+      
+      <div class="app-grid">
+        <div class="app-card">
+          <i class="fas fa-ship app-icon"></i>
+          <h3>Marine & Offshore</h3>
+          <p>Mooring systems, ship rigging, and offshore platform installations</p>
+        </div>
+        
+        <div class="app-card">
+          <i class="fas fa-crane app-icon"></i>
+          <h3>Construction</h3>
+          <p>Crane operations, suspension bridges, and structural cable systems</p>
+        </div>
+        
+        <div class="app-card">
+          <i class="fas fa-industry app-icon"></i>
+          <h3>Industrial</h3>
+          <p>Material handling, conveyor systems, and heavy machinery</p>
+        </div>
+        
+        <div class="app-card">
+          <i class="fas fa-mountain app-icon"></i>
+          <h3>Mining</h3>
+          <p>Hoisting systems, draglines, and equipment lifting operations</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-card">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Email</h3>
+            <p><a href="mailto:sales@portsideindia.com">sales@portsideindia.com</a></p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Phone</h3>
+            <p>Phone: <a href="https://wa.me/919307104214" target="_blank">+91 93071 04214</a></p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Address</h3>
+            <p>I-WING GURUPREM SOCIETY KATRAP, BADALPUR, MUMBAI SUBURBS, 421503</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Portside India Traders</h3>
+          <p>Providing premium maritime lifting equipment engineered for safety and reliability since our founding.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Wire Rope Products</h3>
+          <ul class="footer-links">
+            <li><a href="WireLockKits.html">Wire Lock Kits</a></li>
+            <li><a href="VitaLife.html">Vitalife Kits</a></li>
+            <li><a href="CrossbyClipsAndSockets.html">Wire Rope Clips &amp; Sockets</a></li>
+            <li><a href="CrossbyOpenAndClosedSpelterSockets.html">Open/Closed Spelter Sockets</a></li>
+            <li><a href="CrossbyOpenAndClosedSwageSockets.html">Open/Closed Swage Sockets</a></li>
+            <li><a href="Thimbles.html">Thimbles</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="Product1.html">All Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Certifications</h3>
+          <ul class="footer-links">
+            <li><a href="#">EN13411-4:2002 Certified</a></li>
+            <li><a href="#">ASMEB30.9 Compliant</a></li>
+            <li><a href="#">OSHA Approved</a></li>
+            <li><a href="#">ISO Quality Standards</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>&copy; 2025 Portside India Traders. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Tab functionality
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Remove active class from all buttons and content
+          tabBtns.forEach(b => b.classList.remove('active'));
+          document.querySelectorAll('.tab-content').forEach(content => {
+            content.classList.remove('active');
+          });
+          
+          // Add active class to clicked button
+          btn.classList.add('active');
+          
+          // Show corresponding content
+          const tabId = btn.getAttribute('data-tab');
+          document.getElementById(tabId).classList.add('active');
         });
-    </script>
+      });
+      
+      // Smooth scrolling for navigation
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
