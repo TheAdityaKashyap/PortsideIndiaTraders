@@ -205,8 +205,21 @@
     
     .tab-content.active {
       display: block;
+    width: 100%;
+    overflow: hidden;
     }
-    
+    .table-wrap-container{
+      overflow-x: auto;
+    }
+    .table-flex-container{
+      display:flex;
+      gap: 15px;
+    }
+    .product-image{
+      width: 400px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -216,13 +229,43 @@
     .sling-table {
       width: 100%;
       border-collapse: collapse;
-      margin: 20px 0;
       background: #fff;
       border-radius: 8px;
       overflow: hidden;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     }
-    
+    a.download-btn{
+      display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #004080;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 10px;
+    }
+    .image-download-container{
+          display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    p.image-caption {
+    color: #666;
+    margin-top: 10px;
+    font-style: italic;
+    color: #666;
+    font-size: 0.9rem;
+    text-align: center;
+}
+    .table-container{
+    margin-top: 30px;
+    }
     .sling-table th {
       background: #004080;
       color: white;
@@ -571,6 +614,9 @@
       <div id="anchor-screw" class="tab-content active">
         <h3>G-209/S-209 Screw Pin Anchor Shackles</h3>
         <!-- G-209 / S-209 Screw Pin Anchor Shackles Table -->
+         <div class="table-container">
+          <div class="table-flex-container">
+         <div class="table-wrap-container">
 <table class="sling-table">
   <thead>
     <tr>
@@ -614,6 +660,16 @@
     <tr><td>2-1/2</td><td>55</td><td>1018678</td><td>1018687</td><td>38.9</td><td>105</td><td>69.9</td><td>267</td><td>69.1</td><td>184</td><td>148</td><td>324</td><td>455</td><td>35.1</td><td>335</td><td>79.5</td><td>6.35</td><td>6.35</td></tr>
   </tbody>
 </table>
+</div>
+<div class="image-download-container">
+            <img src="ScrewPinAnchorShacklesG-209.png" alt="Screw Pin Anchor Shackle" class="product-image">
+            <p class="image-caption">Screw Pin Anchor Shackle (G-209)</p>
+            <a href="ScrewPinAnchorShacklesG-209.pdf" download="" class="download-btn">
+              <i class="fas fa-download"></i> Download PDF
+            </a>
+          </div>
+          </div>
+          </div> 
       </div>
       
       <div id="chain-screw" class="tab-content">
