@@ -232,16 +232,23 @@
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
+    /* Table Container - Improved for responsiveness */
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    }
     
     /* Tables */
     .sling-table {
       width: 100%;
+      min-width: 700px; /* Minimum width to maintain readability */
       border-collapse: collapse;
-      margin: 20px 0;
       background: #fff;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
       font-size: 0.9rem;
     }
     
@@ -251,6 +258,8 @@
       padding: 15px;
       text-align: left;
       font-weight: 600;
+      position: sticky;
+      top: 0;
     }
     
     .sling-table td {
@@ -398,11 +407,6 @@
         font-size: 2.2rem;
       }
       
-      .sling-table {
-        display: block;
-        overflow-x: auto;
-      }
-      
       header .container {
         flex-direction: column;
       }
@@ -429,6 +433,23 @@
       
       .footer-content {
         flex-direction: column;
+      }
+      
+      /* Table improvements for mobile */
+      .table-container {
+        border-radius: 0;
+        box-shadow: none;
+        margin: 10px -15px;
+        width: calc(100% + 30px);
+      }
+      
+      .sling-table {
+        font-size: 0.8rem;
+      }
+      
+      .sling-table th,
+      .sling-table td {
+        padding: 10px;
       }
     }
     
@@ -531,6 +552,81 @@
       padding: 25px;
       margin: 30px 0;
     }
+    
+    .table-flex-container {
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+    
+    .image-download-container {
+      flex: 1 1 220px;
+      min-width: 180px;
+      text-align: center;
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .product-image {
+      width: 400px;
+      border-radius: 10px;
+      border: 2px solid #000;
+      margin-bottom: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+      max-width: 100%;
+    }
+    
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #004080;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      margin-top: 10px;
+      font-size: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+    
+    .download-btn:hover {
+      background: #ff9800;
+      color: #fff;
+    }
+    
+    p.image-caption {
+      color: #666;
+      margin-top: 10px;
+      font-style: italic;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    
+    @media screen and (max-width: 900px) {
+      .table-flex-container {
+        flex-direction: column;
+        gap: 0;
+      }
+      
+      .image-download-container {
+        margin-bottom: 20px;
+      }
+      
+      .product-image {
+        max-width: 100%;
+        width: 200px;
+      }
+    }
   </style>
 
   <!-- Google tag (gtag.js) -->
@@ -542,9 +638,6 @@
 
   gtag('config', 'G-HQH77MSRY6');
 </script>
-
-
-
 </head>
 <body>
   <!-- Header -->
@@ -582,8 +675,6 @@
     <div class="container">
       <h2 class="section-title">Hooks & Swivels Overview</h2>
       <p>Our Crosby® hooks and swivels are forged from high-strength alloy steel, quenched and tempered for superior performance. Designed with safety as the top priority, these hooks feature self-locking latches, fatigue ratings, and meet OSHA regulations for personnel lifting applications.</p>
-      
-      
       
       <div class="features-list">
         <h3>SHUR-LOC® Hook Features</h3>
@@ -639,8 +730,8 @@
       <div id="s1326" class="tab-content active">
         <h3>S-1326 SHUR-LOC® Swivel Hooks</h3>
         <p>Positioning device not intended to rotate under load. Rated for wire rope and Grade 80/100 chain.</p>
-        <div style="display: flex; gap: 30px; align-items: flex-start; flex-wrap: wrap;">
-          <div style="flex: 2 1 400px;">
+        <div class="table-flex-container">
+          <div class="table-container">
             <table class="sling-table">
               <thead>
                 <tr>
@@ -736,7 +827,7 @@
               </tbody>
             </table>
           </div>
-          <div class="image-download-container" style="flex: 1 1 220px; min-width: 180px;">
+          <div class="image-download-container">
             <img src="S1326SHURLOCSwivelHooks.PNG" alt="S-1326 SHUR-LOC Swivel Hooks Drawing" class="product-image">
             <p class="image-caption">S-1326 SHUR-LOC® Swivel Hooks Drawing</p>
             <a href="S1326SHURLOCSwivelHooks.pdf" download class="download-btn">
@@ -749,8 +840,8 @@
       <div id="s13326" class="tab-content">
         <h3>S-13326 SHUR-LOC® Swivel Hooks with Bearing</h3>
         <p>Utilizes anti-friction bearing design which allows hook to rotate freely under load.</p>
-        <div style="display: flex; gap: 30px; align-items: flex-start; flex-wrap: wrap;">
-          <div style="flex: 2 1 400px;">
+        <div class="table-flex-container">
+          <div class="table-container">
             <table class="sling-table">
               <thead>
                 <tr>
@@ -824,7 +915,7 @@
               </tbody>
             </table>
           </div>
-          <div class="image-download-container" style="flex: 1 1 220px; min-width: 180px;">
+          <div class="image-download-container">
             <img src="S13326SHURLOCSwivelHooksWithBearing.PNG" alt="S-13326 SHUR-LOC Swivel Hooks With Bearing Drawing" class="product-image">
             <p class="image-caption">S-13326 SHUR-LOC® Swivel Hooks With Bearing Drawing</p>
             <a href="S13326SHURLOCSwivelHooksWithBearing.pdf" download class="download-btn">
@@ -837,8 +928,8 @@
       <div id="s1316" class="tab-content">
         <h3>S-1316 SHUR-LOC® Eye Hook with Positive Locking Latch</h3>
         <p>Meets performance requirements of EN1677-3. Suitable for Grade 100 and Grade 80 chain.</p>
-        <div style="display: flex; gap: 30px; align-items: flex-start; flex-wrap: wrap;">
-          <div style="flex: 2 1 400px;">
+        <div class="table-flex-container">
+          <div class="table-container">
             <table class="sling-table">
               <thead>
                 <tr>
@@ -912,7 +1003,7 @@
               </tbody>
             </table>
           </div>
-          <div class="image-download-container" style="flex: 1 1 220px; min-width: 180px;">
+          <div class="image-download-container">
             <img src="S1316 CrosbySHUR-LOC.PNG" alt="S-1316 SHUR-LOC Eye Hook Drawing" class="product-image">
             <p class="image-caption">S-1316 SHUR-LOC® Eye Hook Drawing</p>
             <a href="S1316 CrosbySHUR-LOC.pdf" download class="download-btn">
@@ -925,8 +1016,8 @@
       <div id="s1318a" class="tab-content">
         <h3>S-1318A SHUR-LOC® Shank Hook</h3>
         <p>Designed for applications requiring a straight shank configuration.</p>
-        <div style="display: flex; gap: 30px; align-items: flex-start; flex-wrap: wrap;">
-          <div style="flex: 2 1 400px;">
+        <div class="table-flex-container">
+          <div class="table-container">
             <table class="sling-table">
               <thead>
                 <tr>
@@ -979,7 +1070,7 @@
               </tbody>
             </table>
           </div>
-          <div class="image-download-container" style="flex: 1 1 220px; min-width: 180px;">
+          <div class="image-download-container">
             <img src="S-1318ASHUR-LOCShankHook.PNG" alt="S-1318A SHUR-LOC Shank Hook Drawing" class="product-image">
             <p class="image-caption">S-1318A SHUR-LOC® Shank Hook Drawing</p>
             <a href="S-1318ASHUR-LOCShankHook.pdf" download class="download-btn">
@@ -992,8 +1083,8 @@
       <div id="l320" class="tab-content">
         <h3>L-320 / L-320N Eye Hooks</h3>
         <p>Available in carbon steel and alloy steel. Fatigue rated to 20,000 cycles at 1.5 times WLL.</p>
-        <div style="display: flex; gap: 30px; align-items: flex-start; flex-wrap: wrap;">
-          <div style="flex: 2 1 400px;">
+        <div class="table-flex-container">
+          <div class="table-container">
             <table class="sling-table">
               <thead>
                 <tr>
@@ -1057,7 +1148,7 @@
               </tbody>
             </table>
           </div>
-          <div class="image-download-container" style="flex: 1 1 220px; min-width: 180px;">
+          <div class="image-download-container">
             <img src="L-320ANDL-320NEyeHooks.png" alt="L-320 / L-320N Eye Hooks Drawing" class="product-image">
             <p class="image-caption">L-320 / L-320N Eye Hooks Drawing</p>
             <a href="L-320ANDL-320NEyeHooks.pdf" download class="download-btn">
@@ -1132,8 +1223,6 @@
         <div class="footer-column">
           <h3>Products</h3>
           <ul class="footer-links">
-            
-            <!-- <li><a href="Shackles.html">Shackles</a></li> -->
             <li><a href="Hooks-hardware.html">Hooks & Swivels</a></li>
             <li><a href="Masterlinkes.html">Master Links</a></li>
             <li><a href="MetricSwivelAndAlloyChain.html">Metric Swivel & Alloy Chain</a></li>
@@ -1149,8 +1238,7 @@
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
-        
-        
+      </div>
       
       <div class="copyright">
         <p>&copy; 2025 Portside India Traders. All Rights Reserved. Crosby® is a registered trademark of The Crosby Group LLC.</p>
