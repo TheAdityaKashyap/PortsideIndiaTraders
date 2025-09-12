@@ -6,29 +6,19 @@
   <title>Portside India Traders - Crosby Alloy Chain & Connecting Links</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    * {
+    /* Global Styles */
+    body, h1, h2, h3, p, ul, li, a, section, header, footer {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    
-    :root {
-      --primary: #004080;
-      --secondary: #ff9800;
-      --accent: #e53935;
-      --light: #f8f9fa;
-      --dark: #333;
-      --text: #333;
-      --text-light: #666;
-      --border: #e0e0e0;
-      --shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    }
-    
-    body {
-      background-color: #fff;
-      color: var(--text);
+      font-family: Arial, sans-serif;
       line-height: 1.6;
+      color: #333;
+    }
+    
+    a {
+      text-decoration: none;
+      color: #004080;
     }
     
     .container {
@@ -39,239 +29,172 @@
     }
     
     section {
-      padding: 60px 0;
+      padding: 40px 0;
     }
     
-    /* Header Styles */
+    /* Header & Navigation */
     header {
-      background-color: var(--primary);
-      color: white;
-      padding: 15px 0;
+      background-color: #004080; /* Ocean Blue */
+      color: #fff;
+      padding: 20px 0;
       position: sticky;
       top: 0;
       z-index: 1000;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     }
     
-    .header-container {
+    header .container {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
     
-    .logo {
-      display: flex;
-      align-items: center;
-    }
-    
-    .logo-text {
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .logo-text h1 {
-      font-size: 1.8rem;
-      font-weight: 700;
+    .logo h1 {
+      font-size: 1.5em;
+      margin: 0;
       color: white;
-      letter-spacing: 0.5px;
-    }
-    
-    .logo-text span {
-      font-size: 0.9rem;
-      color: var(--secondary);
-      margin-top: 3px;
-      font-weight: 500;
     }
     
     nav ul {
-      display: flex;
       list-style: none;
+      display: flex;
     }
     
     nav ul li {
-      margin-left: 25px;
+      margin-left: 20px;
     }
     
     nav ul li a {
-      color: white;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      font-size: 1.05rem;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
     }
     
     nav ul li a:hover {
-      color: var(--secondary);
+      color: #ff9800;
     }
     
-    /* Hero Section */
+    /* Hero Section - Solid Color Background */
     .hero {
-      background: linear-gradient(135deg, #002b5c, #004080);
+      background: linear-gradient(135deg, #004080, #002b5c);
       color: white;
       text-align: center;
-      padding: 100px 20px;
-      position: relative;
-      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 20px;
     }
     
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" opacity="0.05"><path d="M0,0 L100,100 M100,0 L0,100" stroke="white" stroke-width="1"/></svg>');
-      background-size: 40px;
-      pointer-events: none;
-    }
-    
-    .hero-content {
+    .hero .content {
       max-width: 800px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
     }
     
     .hero h1 {
-      font-size: 3.2rem;
-      margin-bottom: 20px;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      font-size: 2.8rem;
+      margin-bottom: 15px;
     }
     
     .hero p {
-      font-size: 1.3rem;
-      max-width: 700px;
-      margin: 0 auto 30px;
+      font-size: 1.2em;
+      margin-bottom: 25px;
+      color: white;
       opacity: 0.9;
     }
     
-    .cta-button {
+    .hero .cta {
+      background: #fff;
+      color: #004080;
+      padding: 12px 30px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1.1em;
       display: inline-block;
-      background: white;
-      color: var(--primary);
-      padding: 15px 40px;
-      border-radius: 50px;
-      font-weight: 700;
-      font-size: 1.1rem;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s;
+      margin-top: 20px;
     }
     
-    .cta-button:hover {
-      background: var(--secondary);
+    .hero .cta:hover {
+      background: #ff9800;
       transform: translateY(-3px);
-      box-shadow: 0 7px 20px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     }
     
-    /* Section Title */
+    /* Section Headings */
     .section-title {
       text-align: center;
-      margin-bottom: 50px;
+      color: #004080;
+      margin-bottom: 30px;
       position: relative;
-    }
-    
-    .section-title h2 {
-      font-size: 2.5rem;
-      color: var(--primary);
-      margin-bottom: 15px;
-      font-weight: 700;
-    }
-    
-    .section-title p {
-      font-size: 1.2rem;
-      color: var(--text-light);
-      max-width: 700px;
-      margin: 0 auto;
+      padding-bottom: 15px;
     }
     
     .section-title:after {
       content: "";
       position: absolute;
-      bottom: -15px;
+      bottom: 0;
       left: 50%;
       transform: translateX(-50%);
       width: 80px;
       height: 4px;
-      background: var(--secondary);
+      background: #ff9800;
     }
     
     /* Features Section */
-    .features-grid {
+    .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin: 50px 0;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
     }
     
     .feature-card {
-      background: white;
-      border-radius: 10px;
-      padding: 30px;
-      box-shadow: var(--shadow);
-      transition: all 0.3s ease;
-      border-top: 4px solid var(--primary);
+      background: #fff;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       text-align: center;
+      border-top: 4px solid #004080;
     }
     
     .feature-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     }
     
-    .feature-icon {
-      width: 70px;
-      height: 70px;
-      background: rgba(0, 64, 128, 0.1);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-      color: var(--primary);
-      font-size: 1.8rem;
+    .feature-card i {
+      font-size: 2.5rem;
+      color: #004080;
+      margin-bottom: 15px;
     }
     
     .feature-card h3 {
-      font-size: 1.5rem;
+      color: #004080;
       margin-bottom: 15px;
-      color: var(--primary);
-    }
-    
-    .feature-card p {
-      color: var(--text-light);
     }
     
     /* Tabs */
-    .tabs-container {
-      margin: 40px 0;
-    }
-    
     .tabs {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-bottom: 30px;
+      margin: 30px 0;
       justify-content: center;
     }
     
     .tab-btn {
       background: #e0e0e0;
       border: none;
-      padding: 14px 30px;
-      border-radius: 50px;
+      padding: 12px 24px;
+      border-radius: 30px;
       font-weight: 600;
       cursor: pointer;
       transition: all 0.3s ease;
       font-size: 1rem;
-      color: var(--text);
     }
     
     .tab-btn.active, .tab-btn:hover {
-      background: var(--primary);
+      background: #004080;
       color: white;
     }
     
@@ -282,229 +205,191 @@
     
     .tab-content.active {
       display: block;
+    width: 100%;
+    overflow: hidden;
     }
-    
+    .table-wrap-container{
+      overflow-x: auto;
+    }
+    .table-flex-container{
+      display:flex;
+      gap: 15px;
+    }
+    .product-image{
+      width: 400px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
     
     /* Tables */
-    .product-table {
+    .sling-table {
       width: 100%;
       border-collapse: collapse;
-      margin: 30px 0;
-      background: white;
-      border-radius: 10px;
+      background: #fff;
+      border-radius: 8px;
       overflow: hidden;
-      box-shadow: var(--shadow);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     }
     
-    .product-table th {
-      background: var(--primary);
+    .sling-table th {
+      background: #004080;
       color: white;
-      padding: 16px 20px;
+      padding: 15px;
       text-align: left;
       font-weight: 600;
-      font-size: 1.05rem;
     }
     
-    .product-table td {
-      padding: 14px 20px;
-      border-bottom: 1px solid var(--border);
+    .sling-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #e0e0e0;
     }
     
-    .product-table tr:last-child td {
+    .sling-table tr:last-child td {
       border-bottom: none;
     }
     
-    .product-table tr:nth-child(even) {
-      background-color: #fafafa;
+    .sling-table tr:nth-child(even) {
+      background-color: #f8f9fa;
     }
     
-    .product-table tr:hover {
-      background-color: #f0f7ff;
+    .sling-table tr:hover {
+      background-color: #e3f2fd;
     }
     
-    .product-table .highlight {
-      font-weight: 700;
-      color: var(--primary);
+    a.download-btn{
+      display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #004080;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 10px;
+    }
+    .image-download-container{
+          display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    p.image-caption {
+    color: #666;
+    margin-top: 10px;
+    font-style: italic;
+    color: #666;
+    font-size: 0.9rem;
+    text-align: center;
+}
+    .table-container{
+    margin-top: 30px;
+    }
+    
+    .crosby-red {
+      color: #e53935;
+      font-weight: bold;
     }
     
     /* Notes Section */
-    .notes {
+    .note {
       background: #fff8e1;
-      border-left: 4px solid var(--secondary);
-      padding: 30px;
-      border-radius: 8px;
-      margin: 40px 0;
+      border-left: 4px solid #ff9800;
+      padding: 25px;
+      border-radius: 5px;
+      margin: 30px 0;
     }
     
-    .notes h3 {
-      color: var(--primary);
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 1.4rem;
-    }
-    
-    .notes ul {
-      padding-left: 20px;
-    }
-    
-    .notes li {
-      margin-bottom: 12px;
-      position: relative;
-      padding-left: 25px;
-    }
-    
-    .notes li:before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: var(--accent);
-      font-size: 1.2rem;
-    }
-    
-    .highlight {
-      color: var(--accent);
-      font-weight: 600;
-    }
-    
-    /* Product Showcase */
-    .product-showcase {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      margin: 50px 0;
-    }
-    
-    .product-image {
-      flex: 1;
-      min-width: 300px;
-      background: #f0f7ff;
-      border-radius: 10px;
-      padding: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: var(--shadow);
-    }
-    
-    .product-image img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-    
-    .product-specs {
-      flex: 1;
-      min-width: 300px;
-      background: white;
-      border-radius: 10px;
-      padding: 30px;
-      box-shadow: var(--shadow);
-    }
-    
-    .spec-item {
-      margin-bottom: 20px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid var(--border);
-    }
-    
-    .spec-item:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-      padding-bottom: 0;
-    }
-    
-    .spec-item h4 {
-      font-size: 1.2rem;
-      color: var(--primary);
-      margin-bottom: 10px;
+    .note h3 {
+      color: #004080;
+      margin-bottom: 15px;
       display: flex;
       align-items: center;
       gap: 10px;
     }
     
-    .spec-item p {
-      color: var(--text-light);
+    .note ul {
+      padding-left: 20px;
+    }
+    
+    .note li {
+      margin-bottom: 10px;
     }
     
     /* Contact Section */
-    .contact-section {
-      background: linear-gradient(rgba(0, 64, 128, 0.95), rgba(0, 43, 92, 0.95)), #004080;
-      color: white;
-      padding: 80px 0;
-    }
-    
-    .contact-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
-    }
-    
-    .contact-info {
-      display: flex;
-      flex-direction: column;
-      gap: 25px;
+    .contact-card {
+      background: white;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      max-width: 700px;
+      margin: 0 auto;
     }
     
     .contact-item {
       display: flex;
-      align-items: flex-start;
-      gap: 20px;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .contact-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
     }
     
     .contact-icon {
       width: 50px;
       height: 50px;
-      background: rgba(255, 255, 255, 0.1);
+      background: #e3f2fd;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-right: 20px;
+      color: #004080;
       font-size: 1.2rem;
-      flex-shrink: 0;
     }
     
-    .contact-details h3 {
-      font-size: 1.4rem;
-      margin-bottom: 8px;
-    }
-    
-    .contact-details p, 
-    .contact-details a {
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 1.1rem;
-      text-decoration: none;
-      transition: all 0.3s;
-    }
-    
-    .contact-details a:hover {
-      color: var(--secondary);
+    .contact-info {
+      flex: 1;
     }
     
     /* Footer */
     footer {
-      background: var(--dark);
-      color: white;
-      padding: 60px 0 20px;
+      background: #333;
+      color: #fff;
+      padding: 50px 0 20px;
+      margin-top: 50px;
     }
     
     .footer-content {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 40px;
-      margin-bottom: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+    
+    .footer-column {
+      flex: 1;
+      min-width: 250px;
+      margin-bottom: 30px;
+      padding: 0 15px;
     }
     
     .footer-column h3 {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       margin-bottom: 20px;
-      color: var(--secondary);
+      color: #ff9800;
     }
     
     .footer-links {
@@ -512,41 +397,42 @@
     }
     
     .footer-links li {
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
     
     .footer-links a {
       color: #ddd;
-      text-decoration: none;
-      transition: all 0.3s;
+      transition: color 0.3s;
     }
     
     .footer-links a:hover {
-      color: var(--secondary);
-      padding-left: 5px;
+      color: #ff9800;
     }
     
     .copyright {
       text-align: center;
-      padding-top: 30px;
+      padding-top: 20px;
       border-top: 1px solid #444;
-      color: #aaa;
-      font-size: 0.95rem;
     }
     
-    /* Responsive Design */
-    @media (max-width: 992px) {
+    /* Responsive */
+    @media screen and (max-width: 768px) {
       .hero h1 {
-        font-size: 2.8rem;
-      }
-      
-      .section-title h2 {
         font-size: 2.2rem;
       }
+      
+    .table-flex-container{
+        flex-direction: column;
     }
-    
-    @media (max-width: 768px) {
-      .header-container {
+    .product-image {
+    width: 200px;
+    }
+      .sling-table {
+        display: block;
+        overflow-x: auto;
+      }
+      
+      header .container {
         flex-direction: column;
       }
       
@@ -557,81 +443,94 @@
       }
       
       nav ul li {
-        margin: 8px 15px;
+        margin: 5px 10px;
       }
       
-      .hero {
-        padding: 80px 20px;
+      .contact-item {
+        flex-direction: column;
+        text-align: center;
       }
       
-      .hero h1 {
-        font-size: 2.4rem;
+      .contact-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
       }
       
-      .hero p {
-        font-size: 1.1rem;
-      }
-      
-      .section-title h2 {
-        font-size: 2rem;
-      }
-      
-      .tab-btn {
-        padding: 12px 20px;
-        font-size: 0.95rem;
-      }
-      
-      .product-table {
-        font-size: 0.9rem;
-      }
-      
-      .product-table th,
-      .product-table td {
-        padding: 12px 15px;
+      .footer-content {
+        flex-direction: column;
       }
     }
     
-    @media (max-width: 480px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
-      
-      .section-title h2 {
-        font-size: 1.8rem;
-      }
-      
-      .tab-btn {
-        padding: 10px 15px;
-        font-size: 0.9rem;
-      }
-      
-      .product-table {
-        display: block;
-        overflow-x: auto;
-      }
+    /* Crosby Branding */
+    .crosby-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    
+    .crosby-logo img {
+      max-width: 200px;
+    }
+    
+    .red-pin {
+      color: #e53935;
+      font-weight: bold;
+      font-style: italic;
+    }
+    
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+    
+    .spec-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      border-left: 4px solid #004080;
+    }
+    
+    .spec-card h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .spec-card i {
+      color: #ff9800;
+    }
+
+    /* Alloy Chain specific styles */
+    .highlight {
+      color: #e53935;
+      font-weight: bold;
     }
   </style>
 
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HQH77MSRY6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-HQH77MSRY6');
-</script>
-
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HQH77MSRY6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HQH77MSRY6');
+  </script>
 </head>
 <body>
   <!-- Header -->
   <header>
-    <div class="container header-container">
-      <div class="logo">
-        <img src="Images/FinalLogo.png" alt="Portside India Traders Logo" style="height:48px;margin-right:16px;">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
+      <div class="logo" style="display: flex; align-items: center;">
+        <img src="Images/FinalLogo.png" alt="Portside India Traders Logo" style="height:48px; margin-right:16px;">
         <div class="logo-text">
-          <h1>Portside India Traders</h1>
-          <span>Strength that Anchors Your Success</span>
+          <h1 style="margin:0; color:#fff;">Portside India Traders</h1>
+          <span style="color:#ff9800; font-size:1rem;">Strength that Anchors Your Success</span>
         </div>
       </div>
       <nav>
@@ -646,51 +545,69 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <h1>Crosby® Alloy Chain & Connecting Links</h1>
-        <p>Premium Grade 10 alloy chains and connecting links engineered for maximum safety and performance in demanding lifting applications</p>
-        <a href="#contact" class="cta-button">Request a Quote</a>
-      </div>
+  <section class="hero" id="home">
+    <div class="content">
+      <h1 style="color: white;">Crosby® Alloy Chain & Connecting Links</h1>
+      <p>Premium Grade 10 alloy chains and connecting links engineered for maximum safety and performance</p>
+      <a href="#contact" class="cta">Request a Quote</a>
     </div>
   </section>
 
   <!-- Product Overview -->
   <section id="overview">
     <div class="container">
-      <div class="section-title">
-        <h2>Product Overview</h2>
-        <p>Superior strength and reliability for critical lifting operations</p>
-      </div>
+      <h2 class="section-title">Product Overview</h2>
+      <p>Our Crosby® alloy chains and connecting links are forged from high-strength alloy steel, quenched and tempered for superior durability. Designed with safety as the top priority, these products feature a 4:1 design factor and are rigorously tested to exceed industry standards.</p>
       
-      <div class="features-grid">
+      <div class="features">
         <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-shield-alt"></i>
-          </div>
+          <i class="fas fa-shield-alt"></i>
           <h3>Maximum Strength</h3>
           <p>25% stronger than Grade 80 alloy chain for enhanced safety</p>
         </div>
         
         <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-certificate"></i>
-          </div>
+          <i class="fas fa-certificate"></i>
           <h3>Industry Compliant</h3>
           <p>Meets NACM and ASTM A952/A973M standards for Grade 10 chain</p>
         </div>
         
         <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-hammer"></i>
-          </div>
+          <i class="fas fa-hammer"></i>
           <h3>Premium Construction</h3>
           <p>Forged alloy steel construction, quenched and tempered</p>
         </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-lock"></i>
+          <h3>Secure Connection</h3>
+          <p>LOK-A-LOY® connecting links with locking system for simple assembly</p>
+        </div>
       </div>
       
-      <div class="notes">
+      <div class="specs-grid">
+        <div class="spec-card">
+          <h3><i class="fas fa-certificate"></i> Grade 10 Performance</h3>
+          <p>25% stronger than Grade 80 alloy chain with permanent identification markings.</p>
+        </div>
+        
+        <div class="spec-card">
+          <h3><i class="fas fa-paint-roller"></i> Protective Finish</h3>
+          <p>Black paint finish for enhanced corrosion resistance in demanding environments.</p>
+        </div>
+        
+        <div class="spec-card">
+          <h3><i class="fas fa-hammer"></i> Fatigue Rated</h3>
+          <p>Rated for extended service life with proof testing at 2 times Working Load Limit.</p>
+        </div>
+        
+        <div class="spec-card">
+          <h3><i class="fas fa-shield-alt"></i> Safety Factor</h3>
+          <p>4:1 Design Factor with maximum proof load at 2 times the Working Load Limit.</p>
+        </div>
+      </div>
+      
+      <div class="note">
         <h3><i class="fas fa-exclamation-circle"></i> Key Product Features</h3>
         <ul>
           <li><span class="highlight">Peerless 10 Alloy Chain:</span> 25% stronger than Grade 80 alloy chain</li>
@@ -706,363 +623,166 @@
     </div>
   </section>
 
-  <!-- Product Showcase -->
-  <section style="background-color: #f8f9fa;">
-    <div class="container">
-      <div class="section-title">
-        <h2>Product Specifications</h2>
-        <p>Detailed technical specifications for our alloy chain and connecting links</p>
-      </div>
-      
-        <div class="product-showcase">
-        
-        <div class="product-specs">
-          <div class="spec-item">
-            <h4><i class="fas fa-link"></i> Chain Specifications</h4>
-            <p>4:1 Design Factor | Proof tested at 2x WLL | Black paint finish</p>
-          </div>
-          
-          <div class="spec-item">
-            <h4><i class="fas fa-cogs"></i> Connecting Link Features</h4>
-            <p>Locking system for simple assembly | Fatigue rated for sizes 9/32" to 1" | Meets ASTM A-952 standards</p>
-          </div>
-          
-          <div class="spec-item">
-            <h4><i class="fas fa-industry"></i> Applications</h4>
-            <p>Overhead lifting | Construction | Marine operations | Industrial rigging | Mining operations</p>
-          </div>
-          
-          <div class="spec-item">
-            <h4><i class="fas fa-award"></i> Certifications</h4>
-            <p>NACM compliant | ASTM A952/A952M | ASTM A973/A973M | Grade 10 certification</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Specifications Section -->
-  <section id="specs">
+  <section id="specs" style="background-color: #f8f9fa;">
     <div class="container">
-      <div class="section-title">
-        <h2>Technical Specifications</h2>
-        <p>Comprehensive technical data for Crosby Alloy Chain & Connecting Links</p>
+      <h2 class="section-title">Technical Specifications</h2>
+      <p>Comprehensive technical data for Crosby Alloy Chain & Connecting Links with 4:1 Design Factor</p>
+      
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="chain">Grade 10 Alloy Chain</button>
+        <button class="tab-btn" data-tab="links">LOK-A-LOY® Connecting Links</button>
       </div>
       
-      <div class="tabs-container">
-        <div class="tabs">
-          <button class="tab-btn active" data-tab="chain">Grade 10 Alloy Chain</button>
-          <button class="tab-btn" data-tab="links">LOK-A-LOY® Connecting Links</button>
-        </div>
+      <div id="chain" class="tab-content active">
+        <h3>Grade 100 Alloy Chain Specifications</h3>
+        <p>Recommended for overhead lifting applications with 4:1 Design Factor</p>
         
-        <div id="chain" class="tab-content active">
-          <h3>Grade 100 Alloy Chain Specifications</h3>
-          <p>Recommended for overhead lifting applications with 4:1 Design Factor</p>
-          
-          <table class="product-table">
-            <thead>
-              <tr>
-                <th>Chain Size (in/mm)</th>
-                <th>Stock No.</th>
-                <th>Feet Per Drum/Crate</th>
-                <th>Material Size (in)</th>
-                <th>WLL (lb)</th>
-                <th>Inside Length (in)</th>
-                <th>Inside Width (in)</th>
-                <th>Weight Per Foot (lb)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>9/32 (7)</td>
-                <td>5510226</td>
-                <td>800</td>
-                <td>0.286</td>
-                <td class="highlight">4300</td>
-                <td>0.87</td>
-                <td>0.42</td>
-                <td>0.77</td>
-              </tr>
-              <tr>
-                <td>5/16 (8)</td>
-                <td>5510326</td>
-                <td>500</td>
-                <td>0.332</td>
-                <td class="highlight">5700</td>
-                <td>1.01</td>
-                <td>0.49</td>
-                <td>1.12</td>
-              </tr>
-              <tr>
-                <td>3/8 (10)</td>
-                <td>5510426</td>
-                <td>500</td>
-                <td>0.334</td>
-                <td class="highlight">8800</td>
-                <td>1.23</td>
-                <td>0.58</td>
-                <td>1.52</td>
-              </tr>
-              <tr>
-                <td>1/2 (13)</td>
-                <td>5510826</td>
-                <td>300</td>
-                <td>0.529</td>
-                <td class="highlight">15000</td>
-                <td>1.57</td>
-                <td>0.75</td>
-                <td>2.71</td>
-              </tr>
-              <tr>
-                <td>5/8 (16)</td>
-                <td>5510826</td>
-                <td>200</td>
-                <td>0.641</td>
-                <td class="highlight">22600</td>
-                <td>1.96</td>
-                <td>0.90</td>
-                <td>3.74</td>
-              </tr>
-              <tr>
-                <td>3/4 (20)</td>
-                <td>5510926</td>
-                <td>100</td>
-                <td>0.812</td>
-                <td class="highlight">35300</td>
-                <td>2.42</td>
-                <td>1.14</td>
-                <td>6.29</td>
-              </tr>
-              <tr>
-                <td>7/8 (22)</td>
-                <td>5511026</td>
-                <td>100</td>
-                <td>0.906</td>
-                <td class="highlight">42700</td>
-                <td>2.66</td>
-                <td>1.26</td>
-                <td>7.94</td>
-              </tr>
-              <tr>
-                <td>1 (26)</td>
-                <td>5511126</td>
-                <td>50</td>
-                <td>1.06</td>
-                <td class="highlight">59700</td>
-                <td>3.09</td>
-                <td>1.42</td>
-                <td>10.10</td>
-              </tr>
-              <tr>
-                <td>1-1/4 (32)</td>
-                <td>*1210075</td>
-                <td>82</td>
-                <td>1.34</td>
-                <td class="highlight">90400</td>
-                <td>3.89</td>
-                <td>1.73</td>
-                <td>16.40</td>
-              </tr>
-            </tbody>
-          </table>
-          
-          <div class="notes">
-            <h3><i class="fas fa-info-circle"></i> Chain Specifications Notes</h3>
-            <ul>
-              <li><span class="highlight">4:1 Design Factor</span> for all chain sizes</li>
-              <li>Size 1-1/4" (32mm) is embossed "CG" instead of "P"</li>
-              <li>Proof Tested at minimum 2 times the Working Load Limit with certification</li>
-              <li>Permanently embossed with P (Peerless) and 10 (Grade) for identification</li>
-              <li>Black paint finish for enhanced corrosion resistance</li>
-              <li>Meets latest guidelines of the National Association of Chain Manufacturers (NACM)</li>
-              <li>Compliant with ASTM A952/A952M and ASTM A973/A973M for Grade 10 chain</li>
-            </ul>
+        <div class="table-container">
+          <div class="table-flex-container">
+            <div class="table-wrap-container">
+              <table class="sling-table">
+                <thead>
+                  <tr>
+                    <th>Chain Size (in/mm)</th>
+                    <th>Stock No.</th>
+                    <th>Feet Per Drum/Crate</th>
+                    <th>Material Size (in)</th>
+                    <th>WLL (lb)</th>
+                    <th>Inside Length (in)</th>
+                    <th>Inside Width (in)</th>
+                    <th>Weight Per Foot (lb)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>9/32 (7)</td><td>5510226</td><td>800</td><td>0.286</td><td class="highlight">4300</td><td>0.87</td><td>0.42</td><td>0.77</td></tr>
+                  <tr><td>5/16 (8)</td><td>5510326</td><td>500</td><td>0.332</td><td class="highlight">5700</td><td>1.01</td><td>0.49</td><td>1.12</td></tr>
+                  <tr><td>3/8 (10)</td><td>5510426</td><td>500</td><td>0.334</td><td class="highlight">8800</td><td>1.23</td><td>0.58</td><td>1.52</td></tr>
+                  <tr><td>1/2 (13)</td><td>5510826</td><td>300</td><td>0.529</td><td class="highlight">15000</td><td>1.57</td><td>0.75</td><td>2.71</td></tr>
+                  <tr><td>5/8 (16)</td><td>5510826</td><td>200</td><td>0.641</td><td class="highlight">22600</td><td>1.96</td><td>0.90</td><td>3.74</td></tr>
+                  <tr><td>3/4 (20)</td><td>5510926</td><td>100</td><td>0.812</td><td class="highlight">35300</td><td>2.42</td><td>1.14</td><td>6.29</td></tr>
+                  <tr><td>7/8 (22)</td><td>5511026</td><td>100</td><td>0.906</td><td class="highlight">42700</td><td>2.66</td><td>1.26</td><td>7.94</td></tr>
+                  <tr><td>1 (26)</td><td>5511126</td><td>50</td><td>1.06</td><td class="highlight">59700</td><td>3.09</td><td>1.42</td><td>10.10</td></tr>
+                  <tr><td>1-1/4 (32)</td><td>*1210075</td><td>82</td><td>1.34</td><td class="highlight">90400</td><td>3.89</td><td>1.73</td><td>16.40</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="image-download-container">
+              <img src="Grade100AlloyChain.PNG" alt="Grade 10 Alloy Chain" class="product-image">
+              <p class="image-caption">Grade 10 Alloy Chain</p>
+              <a href="Grade100AlloyChain.pdf" download class="download-btn">
+                <i class="fas fa-download"></i> Download PDF
+              </a>
+            </div>
           </div>
         </div>
         
-        <div id="links" class="tab-content">
-          <h3>A-1337 LOK-A-LOY® 10 Alloy Connecting Links</h3>
-          <p>Premium connecting links for Grade 80 and Grade 100 chain applications</p>
-          
-          <table class="product-table">
-            <thead>
-              <tr>
-                <th>Chain Size (in/mm)</th>
-                <th>Stock No.</th>
-                <th>Weight Each (lb)</th>
-                <th>WLL (lb)</th>
-                <th>A (in)</th>
-                <th>B (in)</th>
-                <th>C (in)</th>
-                <th>D (in)</th>
-                <th>E (in)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>9/32 (7)</td>
-                <td>1015104</td>
-                <td>0.29</td>
-                <td class="highlight">4300</td>
-                <td>0.38</td>
-                <td>1.94</td>
-                <td>2.00</td>
-                <td>0.80</td>
-                <td>0.68</td>
-              </tr>
-              <tr>
-                <td>5/16 (8)</td>
-                <td>1015113</td>
-                <td>0.42</td>
-                <td class="highlight">5700</td>
-                <td>0.37</td>
-                <td>2.36</td>
-                <td>2.13</td>
-                <td>0.99</td>
-                <td>0.72</td>
-              </tr>
-              <tr>
-                <td>3/8 (10)</td>
-                <td>1015122</td>
-                <td>0.77</td>
-                <td class="highlight">8800</td>
-                <td>0.51</td>
-                <td>2.65</td>
-                <td>2.55</td>
-                <td>1.09</td>
-                <td>0.91</td>
-              </tr>
-              <tr>
-                <td>1/2 (13)</td>
-                <td>1015136</td>
-                <td>1.60</td>
-                <td class="highlight">15000</td>
-                <td>0.68</td>
-                <td>3.46</td>
-                <td>3.39</td>
-                <td>1.45</td>
-                <td>1.13</td>
-              </tr>
-              <tr>
-                <td>5/8 (16)</td>
-                <td>1015145</td>
-                <td>3.10</td>
-                <td class="highlight">22600</td>
-                <td>0.78</td>
-                <td>4.25</td>
-                <td>4.00</td>
-                <td>1.77</td>
-                <td>1.34</td>
-              </tr>
-              <tr>
-                <td>3/4 (20)</td>
-                <td>1015154</td>
-                <td>6.39</td>
-                <td class="highlight">35300</td>
-                <td>1.01</td>
-                <td>5.14</td>
-                <td>5.30</td>
-                <td>2.15</td>
-                <td>1.64</td>
-              </tr>
-              <tr>
-                <td>7/8 (22)</td>
-                <td>1015163</td>
-                <td>7.85</td>
-                <td class="highlight">42700</td>
-                <td>1.09</td>
-                <td>5.46</td>
-                <td>5.78</td>
-                <td>2.27</td>
-                <td>1.97</td>
-              </tr>
-              <tr>
-                <td>1 (26)</td>
-                <td>1015172</td>
-                <td>11.05</td>
-                <td class="highlight">59700</td>
-                <td>1.24</td>
-                <td>5.94</td>
-                <td>6.50</td>
-                <td>2.41</td>
-                <td>2.21</td>
-              </tr>
-              <tr>
-                <td>1-1/4 (32)</td>
-                <td>1015181</td>
-                <td>21.00</td>
-                <td class="highlight">90400</td>
-                <td>1.56</td>
-                <td>7.43</td>
-                <td>7.60</td>
-                <td>3.07</td>
-                <td>2.57</td>
-              </tr>
-            </tbody>
-          </table>
-          
-          <div class="notes">
-            <h3><i class="fas fa-info-circle"></i> Connecting Link Specifications</h3>
-            <ul>
-              <li><span class="highlight">4:1 Design Factor</span> for all connecting links</li>
-              <li>Suitable for use with both Grade 80 and Grade 100 chain</li>
-              <li>Individually Proof Tested at 2-1/2 times Working Load Limit with certification</li>
-              <li>Locking system provides for simple assembly and disassembly - no special tools needed</li>
-              <li>Meets ASTM A-952 standards for Grade 100 chain fittings</li>
-              <li>Forged alloy steel — Quenched & Tempered for maximum durability</li>
-              <li>Sizes 9/32 through 1 inch are fatigue rated for extended service life</li>
-            </ul>
+        <div class="note">
+          <h3><i class="fas fa-info-circle"></i> Chain Specifications Notes</h3>
+          <ul>
+            <li><span class="highlight">4:1 Design Factor</span> for all chain sizes</li>
+            <li>Size 1-1/4" (32mm) is embossed "CG" instead of "P"</li>
+            <li>Proof Tested at minimum 2 times the Working Load Limit with certification</li>
+            <li>Permanently embossed with P (Peerless) and 10 (Grade) for identification</li>
+            <li>Black paint finish for enhanced corrosion resistance</li>
+            <li>Meets latest guidelines of the National Association of Chain Manufacturers (NACM)</li>
+            <li>Compliant with ASTM A952/A952M and ASTM A973/A973M for Grade 10 chain</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div id="links" class="tab-content">
+        <h3>A-1337 LOK-A-LOY® 10 Alloy Connecting Links</h3>
+        <p>Premium connecting links for Grade 80 and Grade 100 chain applications</p>
+        
+        <div class="table-container">
+          <div class="table-flex-container">
+            <div class="table-wrap-container">
+              <table class="sling-table">
+                <thead>
+                  <tr>
+                    <th>Chain Size (in/mm)</th>
+                    <th>Stock No.</th>
+                    <th>Weight Each (lb)</th>
+                    <th>WLL (lb)</th>
+                    <th>A (in)</th>
+                    <th>B (in)</th>
+                    <th>C (in)</th>
+                    <th>D (in)</th>
+                    <th>E (in)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>9/32 (7)</td><td>1015104</td><td>0.29</td><td class="highlight">4300</td><td>0.38</td><td>1.94</td><td>2.00</td><td>0.80</td><td>0.68</td></tr>
+                  <tr><td>5/16 (8)</td><td>1015113</td><td>0.42</td><td class="highlight">5700</td><td>0.37</td><td>2.36</td><td>2.13</td><td>0.99</td><td>0.72</td></tr>
+                  <tr><td>3/8 (10)</td><td>1015122</td><td>0.77</td><td class="highlight">8800</td><td>0.51</td><td>2.65</td><td>2.55</td><td>1.09</td><td>0.91</td></tr>
+                  <tr><td>1/2 (13)</td><td>1015136</td><td>1.60</td><td class="highlight">15000</td><td>0.68</td><td>3.46</td><td>3.39</td><td>1.45</td><td>1.13</td></tr>
+                  <tr><td>5/8 (16)</td><td>1015145</td><td>3.10</td><td class="highlight">22600</td><td>0.78</td><td>4.25</td><td>4.00</td><td>1.77</td><td>1.34</td></tr>
+                  <tr><td>3/4 (20)</td><td>1015154</td><td>6.39</td><td class="highlight">35300</td><td>1.01</td><td>5.14</td><td>5.30</td><td>2.15</td><td>1.64</td></tr>
+                  <tr><td>7/8 (22)</td><td>1015163</td><td>7.85</td><td class="highlight">42700</td><td>1.09</td><td>5.46</td><td>5.78</td><td>2.27</td><td>1.97</td></tr>
+                  <tr><td>1 (26)</td><td>1015172</td><td>11.05</td><td class="highlight">59700</td><td>1.24</td><td>5.94</td><td>6.50</td><td>2.41</td><td>2.21</td></tr>
+                  <tr><td>1-1/4 (32)</td><td>1015181</td><td>21.00</td><td class="highlight">90400</td><td>1.56</td><td>7.43</td><td>7.60</td><td>3.07</td><td>2.57</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="image-download-container">
+              <img src="A-1337LOK-A-LOY.PNG" alt="LOK-A-LOY® Connecting Links" class="product-image">
+              <p class="image-caption">LOK-A-LOY® Connecting Links</p>
+              <a href="A-1337LOK-A-LOY.pdf" download class="download-btn">
+                <i class="fas fa-download"></i> Download PDF
+              </a>
+            </div>
           </div>
+        </div>
+        
+        <div class="note">
+          <h3><i class="fas fa-info-circle"></i> Connecting Link Specifications</h3>
+          <ul>
+            <li><span class="highlight">4:1 Design Factor</span> for all connecting links</li>
+            <li>Suitable for use with both Grade 80 and Grade 100 chain</li>
+            <li>Individually Proof Tested at 2-1/2 times Working Load Limit with certification</li>
+            <li>Locking system provides for simple assembly and disassembly - no special tools needed</li>
+            <li>Meets ASTM A-952 standards for Grade 100 chain fittings</li>
+            <li>Forged alloy steel — Quenched & Tempered for maximum durability</li>
+            <li>Sizes 9/32 through 1 inch are fatigue rated for extended service life</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="contact-section">
+  <section id="contact">
     <div class="container">
-      <div class="section-title">
-        <h2 style="color: white;">Contact Us</h2>
-        <p style="color: rgba(255, 255, 255, 0.8);">Get in touch for quotes and product information</p>
-      </div>
-      
-      <div class="contact-container">
-        <div class="contact-info">
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="fas fa-envelope"></i>
-            </div>
-            <div class="contact-details">
-              <h3>Email</h3>
-              <a href="mailto:sales@portsideindia.com">sales@portsideindia.com</a>
-            </div>
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-card">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
           </div>
-          
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="fas fa-phone"></i>
-            </div>
-            <div class="contact-details">
-              <h3>Phone</h3>
-              <p>Phone: <a href="https://wa.me/919307104214" target="_blank">+91 93071 04214</a></p>
-            </div>
-          </div>
-          
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="fas fa-map-marker-alt"></i>
-            </div>
-            <div class="contact-details">
-              <h3>Address</h3>
-              <p>I-WING GURUPREM SOCIETY KATRAP, BADALPUR, MUMBAI SUBURBS, 421503</p>
-            </div>
+          <div class="contact-info">
+            <h3>Email</h3>
+            <p><a href="mailto:sales@portsideindia.com">sales@portsideindia.com</a></p>
           </div>
         </div>
         
-        <div class="contact-form">
-          <div class="notes" style="background: rgba(255, 255, 255, 0.1); border-left-color: var(--secondary);">
-            <h3 style="color: var(--secondary);"><i class="fas fa-comments"></i> Inquiry Form</h3>
-            <p style="color: rgba(255, 255, 255, 0.9);">For product inquiries and quotes, please contact us directly via email or phone. Our team will respond promptly to your request with detailed product information and pricing.</p>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Phone</h3>
+            <p>Phone: <a href="https://wa.me/919307104214" target="_blank">+91 93071 04214</a></p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Address</h3>
+            <p>I-WING GURUPREM SOCIETY KATRAP, BADALPUR, MUMBAI SUBURBS, 421503</p>
           </div>
         </div>
       </div>
@@ -1081,8 +801,7 @@
         <div class="footer-column">
           <h3>Products</h3>
           <ul class="footer-links">
-            
-            <!-- <li><a href="Shackles.html">Shackles</a></li> -->
+            <li><a href="Shackles.html">Shackles</a></li>
             <li><a href="Hooks-hardware.html">Hooks & Swivels</a></li>
             <li><a href="Masterlinkes.html">Master Links</a></li>
             <li><a href="MetricSwivelAndAlloyChain.html">Metric Swivel & Alloy Chain</a></li>
@@ -1098,8 +817,7 @@
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
-        
-        
+      </div>
       
       <div class="copyright">
         <p>&copy; 2025 Portside India Traders. All Rights Reserved. Crosby® is a registered trademark of The Crosby Group LLC.</p>
